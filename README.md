@@ -1,10 +1,8 @@
 <div align="center">
 
-# Hi, I'm Sudipto Kumar 👋
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:111827,100:1F2937&height=190&section=header&text=Sudipto%20Kumar&fontSize=44&fontColor=FFFFFF&animation=fadeIn&fontAlignY=36&desc=Building%20useful%20products%20with%20code%2C%20automation%2C%20and%20AI&descAlignY=56&descSize=15&descColor=9CA3AF" width="100%" alt="Sudipto Kumar — Building useful products with code, automation, and AI"/>
 
-### Building useful products with code, automation, and AI.
-
-**BBA Student • Developer • Automation Builder • AI & Prompt Engineering Enthusiast**
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=500&size=20&pause=1200&color=60A5FA&center=true&vCenter=true&width=560&lines=BBA+Student;Developer;Automation+Builder;AI+%26+Prompt+Engineering+Enthusiast" alt="Typing SVG"/>
 
 <p>
   <a href="https://github.com/SudiptoKumar">
@@ -13,6 +11,9 @@
   <a href="https://github.com/SudiptoKumar">
     <img src="https://komarev.com/ghpvc/?username=sudiptokumar&label=Profile%20Views&style=flat-square&color=181717" alt="Profile views"/>
   </a>
+  <a href="https://github.com/SudiptoKumar/SudiptoKumar">
+    <img src="https://img.shields.io/github/last-commit/SudiptoKumar/SudiptoKumar?label=README%20updated&style=flat-square&color=181717" alt="Last updated"/>
+  </a>
 </p>
 
 <p>
@@ -20,6 +21,20 @@
   <a href="https://linkedin.com/in/sudipto-kumar">LinkedIn</a> ·
   <a href="mailto:sudipto.karn@gmail.com">Email</a>
 </p>
+
+<details>
+<summary><b>📖 Table of Contents</b></summary>
+<br/>
+
+- [About](#about)
+- [What I'm Building](#what-im-building)
+- [Core Stack](#core-stack)
+- [How I Work](#how-i-work)
+- [Current Interests](#current-interests)
+- [GitHub Activity](#github-activity)
+- [Connect](#connect)
+
+</details>
 
 </div>
 
@@ -154,6 +169,14 @@ I care about **reliability, maintainability, useful automation, and clean user-f
 
 <div align="center">
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/output/github-contribution-grid-snake.svg" />
+  <img alt="A snake eating through the contribution graph" src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/output/github-contribution-grid-snake.svg" width="100%"/>
+</picture>
+
+<br/><br/>
+
 <img height="170" src="https://github-readme-stats.vercel.app/api?username=sudiptokumar&show_icons=true&hide_border=true&count_private=true&rank_icon=github&theme=transparent" alt="GitHub stats"/>
 <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sudiptokumar&layout=compact&hide_border=true&langs_count=8&theme=transparent" alt="Top languages"/>
 
@@ -187,9 +210,11 @@ I care about **reliability, maintainability, useful automation, and clean user-f
 
 </div>
 
+<p align="right"><a href="#top">⬆ Back to top</a></p>
+
 <div align="center">
 
-<br/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1F2937,100:111827&height=120&section=footer&reversal=true" width="100%"/>
 
 ### Building systems, not just scripts.
 
