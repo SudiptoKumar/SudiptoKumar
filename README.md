@@ -32,9 +32,6 @@
 - [Tech Stack](#️-tech-stack)
 - [Featured Projects](#-featured-projects)
 - [Experience](#-experience)
-- [Achievements](#-achievements)
-- [Certifications](#-certifications)
-- [Coding Profiles](#-coding-profiles)
 - [GitHub Analytics](#-github-analytics)
 - [Current Focus](#-current-focus)
 - [Connect](#-connect)
@@ -176,39 +173,6 @@ Short description of the role.
 </details>
 
 *✏️ Replace the block above with your actual work experience — remove this section entirely if you don't have any yet.*
-
----
-
-## 🏆 Achievements
-
-<div align="center">
-
-| Recognition | Details |
-|---|---|
-| *Add your achievement* | *Add a short description* |
-
-</div>
-
-*✏️ Replace with real recognitions — hackathon placements, published work, competition results, etc.*
-
----
-
-## 📜 Certifications
-
-**AWS** · **Oracle** · **NPTEL** · **Cisco**
-
-*✏️ Add your certification badges here, grouped by issuing provider. Only include certifications you've actually earned — most providers give you an official badge/verification link you can embed directly.*
-
----
-
-## 👨‍💻 Coding Profiles
-
-<a href="#"><img src="https://img.shields.io/badge/LeetCode-1E1B4B?style=for-the-badge&logo=leetcode&logoColor=C4B5FD" alt="LeetCode"/></a>
-<a href="#"><img src="https://img.shields.io/badge/GeeksforGeeks-1E1B4B?style=for-the-badge&logo=geeksforgeeks&logoColor=C4B5FD" alt="GeeksforGeeks"/></a>
-<a href="#"><img src="https://img.shields.io/badge/HackerRank-1E1B4B?style=for-the-badge&logo=hackerrank&logoColor=C4B5FD" alt="HackerRank"/></a>
-<a href="#"><img src="https://img.shields.io/badge/CodeChef-1E1B4B?style=for-the-badge&logo=codechef&logoColor=C4B5FD" alt="CodeChef"/></a>
-
-*✏️ Swap the `#` links for your real profile URLs. Once you share your usernames, I can wire up live stats cards for these too.*
 
 ---
 
