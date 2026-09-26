@@ -8,6 +8,7 @@ on:
       - "logos/**"
       - ".github/scripts/generate_projects.py"
       - ".github/scripts/fetch_data.py"
+      - ".github/workflows/projects.yml"
   schedule:
     - cron: "0 */6 * * *"
   workflow_dispatch:
@@ -18,21 +19,23 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 10
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Fetch live repo data
+      - name: Fetch all public project repositories + live GitHub data
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 .github/scripts/fetch_data.py
 
-      - name: Generate projects.svg
+      - name: Generate dark/light projects SVGs
         run: |
+          rm -rf out
           mkdir -p out
           python3 .github/scripts/generate_projects.py merged.json out
 
-      - name: Push to projects branch
+      - name: Push generated projects panel
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: projects
