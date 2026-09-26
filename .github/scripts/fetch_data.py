@@ -55,28 +55,24 @@ def initials(name):
     return "".join(w[0] for w in words[:2]).upper()
 
 def make_logo(name, repo):
-    """Create a small theme-friendly SVG monogram logo, one unique file/repo."""
+    """Create a deterministic, visually distinct SVG logo for each repository."""
     LOGO_DIR.mkdir(parents=True, exist_ok=True)
     filename = f"{slugify(repo.split('/')[-1])}.svg"
     path = LOGO_DIR / filename
     seed = hashlib.sha256(repo.encode("utf-8")).hexdigest()
-    c1 = PALETTE[int(seed[:4], 16) % len(PALETTE)]
-    c2 = PALETTE[int(seed[4:8], 16) % len(PALETTE)]
+    n = int(seed[:8], 16)
+    c1 = PALETTE[n % len(PALETTE)]; c2 = PALETTE[(n // 7) % len(PALETTE)]
     txt = initials(name)
-    svg = (
-        '<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">\n'
-        '  <defs>\n'
-        f'    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">\n'
-        f'      <stop offset="0" stop-color="{c1}"/>\n'
-        f'      <stop offset="1" stop-color="{c2}"/>\n'
-        '    </linearGradient>\n'
-        '  </defs>\n'
-        '  <rect x="2" y="2" width="76" height="76" rx="18" fill="#0A101F" stroke="#334155" stroke-width="2"/>\n'
-        '  <rect x="9" y="9" width="62" height="62" rx="15" fill="url(#g)" opacity="0.95"/>\n'
-        '  <path d="M20 56 L28 30 L37 50 L46 34 L58 56" fill="none" stroke="#F8FAFC" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>\n'
-        f'  <text x="40" y="25" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" font-weight="700" fill="#F8FAFC">{txt}</text>\n'
-        '</svg>\n'
-    )
+    icons = [
+      '<path d="M20 56 L40 20 L60 56 Z" fill="none" stroke="#F8FAFC" stroke-width="4" stroke-linejoin="round"/>',
+      '<circle cx="40" cy="40" r="19" fill="none" stroke="#F8FAFC" stroke-width="4"/><circle cx="40" cy="40" r="7" fill="#F8FAFC"/>',
+      '<path d="M21 29 H59 M21 40 H59 M21 51 H59" stroke="#F8FAFC" stroke-width="4" stroke-linecap="round"/>',
+      '<path d="M24 52 L24 29 L40 42 L56 29 L56 52" fill="none" stroke="#F8FAFC" stroke-width="4" stroke-linejoin="round"/>',
+      '<path d="M25 25 H55 V55 H25 Z" fill="none" stroke="#F8FAFC" stroke-width="4"/><path d="M31 32 H49 M31 41 H49 M31 50 H43" stroke="#F8FAFC" stroke-width="3" stroke-linecap="round"/>',
+      '<path d="M22 50 C30 22,50 22,58 50" fill="none" stroke="#F8FAFC" stroke-width="4"/><circle cx="40" cy="40" r="4" fill="#F8FAFC"/>'
+    ]
+    icon = icons[n % len(icons)]
+    svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{c1}"/><stop offset="1" stop-color="{c2}"/></linearGradient></defs><rect x="2" y="2" width="76" height="76" rx="18" fill="#0A101F" stroke="#334155" stroke-width="2"/><rect x="9" y="9" width="62" height="62" rx="15" fill="url(#g)" opacity=".95"/>{icon}<text x="40" y="18" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" font-weight="700" fill="#F8FAFC">{txt}</text></svg>'
     path.write_text(svg)
     return f"auto/{filename}"
 
