@@ -1,0 +1,191 @@
+name: Import Project ZIP
+
+on:
+  workflow_dispatch:
+    inputs:
+      operation:
+        description: "Choose an operation"
+        required: true
+        default: "import"
+        type: choice
+        options:
+          - import
+          - clean
+
+permissions:
+  contents: write
+
+jobs:
+  project-manager:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          # Use the workflow's built-in token.
+          # This matches permissions: contents: write.
+          token: ${{ github.token }}
+
+      - name: Clean repository
+        if: ${{ inputs.operation == 'clean' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          echo "Cleaning repository..."
+
+          find . -mindepth 1 -maxdepth 1 \
+            ! -name ".git" \
+            ! -name ".github" \
+            ! -iname "*.zip" \
+            -exec rm -rf {} +
+
+          if [ -d ".github" ]; then
+            find .github -mindepth 1 -maxdepth 1 \
+              ! -name "workflows" \
+              -exec rm -rf {} +
+          fi
+
+          echo "Clean complete."
+          find . -maxdepth 3 -type f \
+            ! -path "./.git/*" | sort
+
+      - name: Find ZIP
+        if: ${{ inputs.operation == 'import' }}
+        id: find_zip
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          mapfile -t ZIPS < <(
+            find . -maxdepth 1 -type f -iname "*.zip" -print
+          )
+
+          if [ "${#ZIPS[@]}" -eq 0 ]; then
+            echo "::error::No ZIP file found in the repository root."
+            exit 1
+          fi
+
+          if [ "${#ZIPS[@]}" -gt 1 ]; then
+            echo "::error::More than one ZIP file found in the repository root."
+            printf '%s\n' "${ZIPS[@]}"
+            exit 1
+          fi
+
+          ZIP="${ZIPS[0]}"
+          echo "Found ZIP: $ZIP"
+          echo "ZIP=$ZIP" >> "$GITHUB_OUTPUT"
+
+      - name: Extract ZIP
+        if: ${{ inputs.operation == 'import' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          rm -rf /tmp/project
+          mkdir -p /tmp/project
+
+          unzip -q -o "${{ steps.find_zip.outputs.ZIP }}" -d /tmp/project
+
+          echo "ZIP contents:"
+          find /tmp/project -maxdepth 4 -print | sort
+
+      - name: Detect project root
+        if: ${{ inputs.operation == 'import' }}
+        id: project_root
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          ROOT="/tmp/project"
+
+          # Case 1: files are directly inside the ZIP.
+          if [ -f "$ROOT/README.md" ] || \
+             [ -d "$ROOT/.github" ] || \
+             [ -d "$ROOT/scripts" ] || \
+             [ -d "$ROOT/assets" ]; then
+            echo "Using ZIP root: $ROOT"
+            echo "ROOT=$ROOT" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # Case 2: ZIP contains exactly one top-level folder.
+          mapfile -t DIRS < <(
+            find "$ROOT" -mindepth 1 -maxdepth 1 -type d
+          )
+
+          mapfile -t FILES < <(
+            find "$ROOT" -mindepth 1 -maxdepth 1 -type f
+          )
+
+          if [ "${#DIRS[@]}" -eq 1 ] && [ "${#FILES[@]}" -eq 0 ]; then
+            echo "Using project folder: ${DIRS[0]}"
+            echo "ROOT=${DIRS[0]}" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "::error::Could not determine the project root."
+          echo "Top-level directories:"
+          printf '%s\n' "${DIRS[@]}"
+          echo "Top-level files:"
+          printf '%s\n' "${FILES[@]}"
+          exit 1
+
+      - name: Import project
+        if: ${{ inputs.operation == 'import' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          ROOT="${{ steps.project_root.outputs.ROOT }}"
+
+          rsync -a --delete-excluded \
+            --exclude=".git/" \
+            "$ROOT/" ./
+
+          echo "Project imported."
+          echo "Repository after import:"
+          find . -maxdepth 4 -type f \
+            ! -path "./.git/*" | sort
+
+      - name: Delete ZIP files
+        if: ${{ inputs.operation == 'import' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          find . -maxdepth 1 -type f -iname "*.zip" -delete
+          echo "ZIP file removed."
+
+      - name: Commit and push
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          if [ "${{ inputs.operation }}" = "clean" ]; then
+            MESSAGE="Clean repository"
+          else
+            MESSAGE="Import project from ZIP"
+          fi
+
+          git commit -m "$MESSAGE"
+
+          # Push using the built-in GITHUB_TOKEN.
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+
+          echo "========================================"
+          echo "SUCCESS"
+          echo "Operation: ${{ inputs.operation }}"
+          echo "========================================"
