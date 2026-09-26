@@ -1,14 +1,29 @@
-[
-  {
-    "name": "Gaming Newsroom Bot",
-    "repo": "SudiptoKumar/GamingNewsroomBot",
-    "description": "Automated gaming-news discovery, filtering, and Telegram publishing",
-    "tags": ["Python", "Telegram", "Automation"]
-  },
-  {
-    "name": "Business News Bot",
-    "repo": "SudiptoKumar/BusinessNewsBot",
-    "description": "Business-news aggregation and automated delivery workflow",
-    "tags": ["Python", "News APIs", "Automation"]
-  }
-]
+{
+  "owner": "SudiptoKumar",
+  "exclude_repos": [
+    "SudiptoKumar/SudiptoKumar"
+  ],
+  "auto_discover": true,
+  "projects": [
+    {
+      "name": "Gaming Newsroom Bot",
+      "repo": "SudiptoKumar/GamingNewsroomBot",
+      "description": "Automated gaming-news discovery, filtering, and Telegram publishing",
+      "tags": [
+        "Python",
+        "Telegram",
+        "Automation"
+      ]
+    },
+    {
+      "name": "Business News Bot",
+      "repo": "SudiptoKumar/BusinessNewsBot",
+      "description": "Business-news aggregation and automated delivery workflow",
+      "tags": [
+        "Python",
+        "News APIs",
+        "Automation"
+      ]
+    }
+  ]
+}
