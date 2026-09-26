@@ -1,25 +1,29 @@
+<!--
+  SETUP CHECKLIST (for Sudipto — delete this comment once done, it's invisible on GitHub anyway)
+  [x] Phase 1 — dark.svg / light.svg now carry your real dithered portrait (built from the
+      photo you sent). Optional later upgrade: a 3-logo morph animation in the same frame —
+      only worth doing if you want it, the banner is already complete without it.
+  [ ] Phase 2 — create a GitHub classic token (repo scope, no expiration), fork
+      anuraghazra/github-readme-stats, deploy it to Vercel (Hobby/free), add env var PAT_1,
+      then swap the placeholder domain below for your real *.vercel.app URL
+  [ ] Phase 3 — commit .github/workflows/snake.yml, then in THIS repo's
+      Settings → Actions → General → Workflow permissions, select "Read and write permissions"
+      (this is the repo's settings, not your account's) — the output branch won't exist until
+      the workflow runs green once
+  [ ] Upload dark.svg + light.svg to the repo root (branch: main)
+-->
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/light.svg">
+  <img alt="Sudipto Kumar — profile.sh --live" src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/light.svg">
+</picture>
+
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1E1B4B,50:4C1D95,100:0F0C29&height=200&section=header&text=Sudipto%20Kumar&fontSize=46&fontColor=E9D5FF&animation=fadeIn&fontAlignY=35&desc=Building%20useful%20products%20with%20code%2C%20automation%2C%20and%20AI&descAlignY=58&descSize=16&descColor=C4B5FD" width="100%" alt="Sudipto Kumar"/>
-
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=21&duration=3000&pause=1000&color=A78BFA&center=true&vCenter=true&width=620&lines=BBA+Student+%E2%80%94+Finance+%26+Banking;Full-Stack+%26+Automation+Developer;AI+%2F+Prompt+Engineering+Enthusiast;Building+Systems%2C+Not+Just+Scripts" alt="Typing SVG"/>
-
-<br/>
-
-<img src="https://img.shields.io/badge/BBA%20Student-Finance%20%26%20Banking-1E1B4B?style=for-the-badge&logoColor=C4B5FD" alt="Academic badge"/>
-
-<br/><br/>
-
-<a href="https://linkedin.com/in/sudipto-kumar"><img src="https://img.shields.io/badge/LinkedIn-1E1B4B?style=for-the-badge&logo=linkedin&logoColor=C4B5FD" alt="LinkedIn"/></a>
-<a href="mailto:sudipto.karn@gmail.com"><img src="https://img.shields.io/badge/Email-1E1B4B?style=for-the-badge&logo=gmail&logoColor=C4B5FD" alt="Email"/></a>
-<a href="https://github.com/SudiptoKumar"><img src="https://img.shields.io/badge/GitHub-1E1B4B?style=for-the-badge&logo=github&logoColor=C4B5FD" alt="GitHub"/></a>
-<a href="https://t.me/NewsroomHQ"><img src="https://img.shields.io/badge/Telegram-1E1B4B?style=for-the-badge&logo=telegram&logoColor=C4B5FD" alt="Telegram"/></a>
-
-<br/><br/>
-
-<a href="https://github.com/SudiptoKumar"><img src="https://img.shields.io/github/followers/SudiptoKumar?label=Followers&style=flat-square&color=1E1B4B&labelColor=0F0C29" alt="GitHub followers"/></a>
-<a href="https://github.com/SudiptoKumar"><img src="https://komarev.com/ghpvc/?username=sudiptokumar&label=Profile%20Views&style=flat-square&color=1E1B4B" alt="Profile views"/></a>
-<a href="https://github.com/SudiptoKumar/SudiptoKumar"><img src="https://img.shields.io/github/last-commit/SudiptoKumar/SudiptoKumar?label=README%20updated&style=flat-square&color=1E1B4B" alt="Last updated"/></a>
+<a href="https://github.com/SudiptoKumar"><img src="https://img.shields.io/github/followers/SudiptoKumar?label=Followers&style=flat-square&color=0A101F&labelColor=0A101F&logoColor=A78BFA" alt="GitHub followers"/></a>
+<a href="https://github.com/SudiptoKumar"><img src="https://komarev.com/ghpvc/?username=sudiptokumar&label=Profile%20Views&style=flat-square&color=0A101F" alt="Profile views"/></a>
+<a href="https://github.com/SudiptoKumar/SudiptoKumar"><img src="https://img.shields.io/github/last-commit/SudiptoKumar/SudiptoKumar?label=README%20updated&style=flat-square&color=0A101F" alt="Last updated"/></a>
 
 <br/><br/>
 
@@ -180,16 +184,31 @@ Short description of the role.
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=sudiptokumar&show_icons=true&hide_border=true&count_private=true&rank_icon=github&theme=nightowl&bg_color=00000000" alt="GitHub stats"/>
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sudiptokumar&layout=compact&hide_border=true&langs_count=8&theme=nightowl&bg_color=00000000" alt="Top languages"/>
+<!-- Streak — full width. Public instance, low collision risk, themed to the new palette. -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=sudiptokumar&hide_border=true&background=0A101F&stroke=22D3EE&ring=A78BFA&fire=10B981&currStreakLabel=22D3EE&sideLabels=94A3B8&currStreakNum=F8FAFC&sideNums=F8FAFC&dates=64748B&titleColor=22D3EE&card_width=1180" />
+  <img width="100%" src="https://streak-stats.demolab.com/?user=sudiptokumar&hide_border=true&background=FFFFFF&stroke=0891B2&ring=7C3AED&fire=059669&currStreakLabel=0891B2&sideLabels=475569&currStreakNum=0F172A&sideNums=0F172A&dates=94A3B8&titleColor=0891B2&card_width=1180" alt="Sudipto's streak" />
+</picture>
 
 <br/>
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=sudiptokumar&hide_border=true&theme=nightowl&background=00000000" alt="GitHub streak"/>
+<!-- Stats + Top languages — side by side. REPLACE the placeholder domain below once you've
+     self-hosted github-readme-stats on Vercel (see checklist at the top of this file) — the
+     public instance is shared by everyone and constantly hits its rate limit. -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://YOUR-STATS-INSTANCE.vercel.app/api?username=sudiptokumar&show_icons=true&count_private=true&include_all_commits=true&hide_rank=true&hide_border=true&title_color=22D3EE&icon_color=A78BFA&text_color=94A3B8&bg_color=0A101F&card_width=500" />
+  <img width="49%" src="https://YOUR-STATS-INSTANCE.vercel.app/api?username=sudiptokumar&show_icons=true&count_private=true&include_all_commits=true&hide_rank=true&hide_border=true&title_color=0891B2&icon_color=7C3AED&text_color=0F172A&bg_color=FFFFFF&card_width=500" alt="Sudipto's GitHub stats" />
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://YOUR-STATS-INSTANCE.vercel.app/api/top-langs/?username=sudiptokumar&layout=compact&langs_count=8&hide_border=true&title_color=22D3EE&text_color=94A3B8&bg_color=0A101F&card_width=500" />
+  <img width="49%" src="https://YOUR-STATS-INSTANCE.vercel.app/api/top-langs/?username=sudiptokumar&layout=compact&langs_count=8&hide_border=true&title_color=0891B2&text_color=0F172A&bg_color=FFFFFF&card_width=500" alt="Top languages" />
+</picture>
 
-<br/>
+<sub><i>Rank is hidden on purpose — it's a stars-weighted score that mostly reflects account age, so it undersells newer accounts more than it informs.</i></sub>
 
-<img src="https://github-profile-trophy.vercel.app/?username=sudiptokumar&theme=radical&no-frame=true&row=1&margin-w=8&column=7" alt="GitHub trophies"/>
+<br/><br/>
+
+<img src="https://github-profile-trophy.vercel.app/?username=sudiptokumar&theme=nightowl&no-frame=true&row=1&margin-w=8&column=7" alt="GitHub trophies"/>
 
 <br/>
 
@@ -197,10 +216,25 @@ Short description of the role.
 
 <br/><br/>
 
+<!-- Contribution snake — generated by .github/workflows/snake.yml onto the `output` branch -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/output/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/output/github-contribution-grid-snake.svg" />
-  <img alt="A snake eating through the contribution graph" src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/output/github-contribution-grid-snake.svg" width="100%"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/output/snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/output/snake-light.svg" />
+  <img alt="A snake eating through the contribution graph" src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/output/snake-light.svg" width="100%"/>
+</picture>
+
+</div>
+
+---
+
+## 🚀 Featured Projects
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/projects/projects.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/projects/projects-light.svg" />
+  <img alt="Sudipto's featured GitHub projects" src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/projects/projects-light.svg" width="100%" />
 </picture>
 
 </div>
@@ -232,20 +266,27 @@ current_focus:
 
 <div align="center">
 
+<!-- LinkedIn stays on brand blue #0A66C2 on purpose — shields.io's LinkedIn glyph only
+     renders on that exact background; any custom recolor makes the icon vanish and leaves
+     bare text. Every other badge below recolors fine. -->
 <a href="https://linkedin.com/in/sudipto-kumar">
-  <img src="https://img.shields.io/badge/LinkedIn-1E1B4B?style=for-the-badge&logo=linkedin&logoColor=C4B5FD" alt="LinkedIn"/>
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
 </a>
+&nbsp;&nbsp;
 <a href="https://twitter.com/sudiptokarn">
-  <img src="https://img.shields.io/badge/X%20%2F%20Twitter-1E1B4B?style=for-the-badge&logo=x&logoColor=C4B5FD" alt="X / Twitter"/>
+  <img src="https://img.shields.io/badge/X%20%2F%20Twitter-0A101F?style=for-the-badge&logo=x&logoColor=22D3EE&labelColor=0A101F" alt="X / Twitter"/>
 </a>
+&nbsp;&nbsp;
 <a href="https://instagram.com/real.sudipto">
-  <img src="https://img.shields.io/badge/Instagram-1E1B4B?style=for-the-badge&logo=instagram&logoColor=C4B5FD" alt="Instagram"/>
+  <img src="https://img.shields.io/badge/Instagram-0A101F?style=for-the-badge&logo=instagram&logoColor=A78BFA&labelColor=0A101F" alt="Instagram"/>
 </a>
+&nbsp;&nbsp;
 <a href="https://t.me/NewsroomHQ">
-  <img src="https://img.shields.io/badge/Telegram-1E1B4B?style=for-the-badge&logo=telegram&logoColor=C4B5FD" alt="Telegram"/>
+  <img src="https://img.shields.io/badge/Telegram-0A101F?style=for-the-badge&logo=telegram&logoColor=10B981&labelColor=0A101F" alt="Telegram"/>
 </a>
+&nbsp;&nbsp;
 <a href="mailto:sudipto.karn@gmail.com">
-  <img src="https://img.shields.io/badge/Email-1E1B4B?style=for-the-badge&logo=gmail&logoColor=C4B5FD" alt="Email"/>
+  <img src="https://img.shields.io/badge/Email-0A101F?style=for-the-badge&logo=gmail&logoColor=A78BFA&labelColor=0A101F" alt="Email"/>
 </a>
 
 </div>
@@ -254,7 +295,7 @@ current_focus:
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F0C29,50:4C1D95,100:1E1B4B&height=130&section=footer&reversal=true" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0A101F,50:1E1B4B,100:0A101F&height=130&section=footer&reversal=true" width="100%"/>
 
 ### Building systems, not just scripts.
 
