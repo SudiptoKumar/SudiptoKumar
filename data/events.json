@@ -2,6 +2,33 @@
   "version": 1,
   "events": [
     {
+      "id": "ach:trifecta",
+      "type": "milestone",
+      "title": "MILESTONE UNLOCKED",
+      "icon": "trophy",
+      "detail": "THE TRIFECTA",
+      "at": "2026-10-02T05:40:01.794Z",
+      "until": "2026-10-04T05:40:01.794Z"
+    },
+    {
+      "id": "ach:open_gate",
+      "type": "milestone",
+      "title": "MILESTONE UNLOCKED",
+      "icon": "trophy",
+      "detail": "OPEN GATE",
+      "at": "2026-10-02T05:40:01.794Z",
+      "until": "2026-10-04T05:40:01.794Z"
+    },
+    {
+      "id": "ach:ship_it",
+      "type": "milestone",
+      "title": "MILESTONE UNLOCKED",
+      "icon": "trophy",
+      "detail": "SHIP IT",
+      "at": "2026-10-02T05:40:01.794Z",
+      "until": "2026-10-04T05:40:01.794Z"
+    },
+    {
       "id": "levelup:17",
       "type": "milestone",
       "title": "MILESTONE UNLOCKED",
@@ -11,5 +38,13 @@
       "until": "2026-10-04T03:33:34.760Z"
     }
   ],
-  "raids": []
+  "raids": [
+    {
+      "id": 1,
+      "by": "SudiptoKumar",
+      "size": "small",
+      "status": "active",
+      "at": "2026-10-02T05:39:59.983Z"
+    }
+  ]
 }
