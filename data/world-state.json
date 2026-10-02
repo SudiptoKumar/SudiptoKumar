@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-02T05:40:01.794Z",
+  "generatedAt": "2026-10-02T06:29:36.004Z",
   "level": 17,
   "xp": 8162,
   "stars": 19,
@@ -31,9 +31,9 @@
     "kingdomDay": 1168
   },
   "time": {
-    "iso": "2026-10-02T05:40:01.794Z",
+    "iso": "2026-10-02T06:29:36.004Z",
     "tz": "Asia/Dhaka",
-    "hour": 11.67,
+    "hour": 12.48,
     "phase": "day",
     "season": "autumn",
     "date": "2026-10-02"
@@ -84,7 +84,7 @@
     "workflowHealth": 100,
     "failingRepos": [],
     "openPRs": 0,
-    "codeKb": 162655
+    "codeKb": 162719
   },
   "xpBreakdown": {
     "base": 2300,
@@ -437,10 +437,10 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-02T03:37:32Z",
+      "pushedAt": "2026-10-02T05:40:13Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 38.8
+      "importance": 40.3
     },
     {
       "name": "LetterShare",
@@ -1495,23 +1495,10 @@
     "visibleTotal": 12,
     "secretUnlocked": 2,
     "secretTotal": 4,
-    "fresh": [
-      "ship_it",
-      "open_gate",
-      "trifecta"
-    ]
+    "fresh": []
   },
   "events": {
     "active": [
-      {
-        "id": "raid:visitor:1",
-        "type": "raid",
-        "title": "BOSS RAID",
-        "icon": "skull",
-        "detail": "SENT BY @SudiptoKumar",
-        "at": "2026-10-02T05:39:59.983Z",
-        "until": "2026-10-02T11:39:59.983Z"
-      },
       {
         "id": "release:DocFlow:manual-12",
         "type": "release",
@@ -1522,11 +1509,11 @@
         "until": "2026-10-04T05:04:32.000Z"
       },
       {
-        "id": "ach:ship_it",
+        "id": "ach:trifecta",
         "type": "milestone",
         "title": "MILESTONE UNLOCKED",
         "icon": "trophy",
-        "detail": "SHIP IT",
+        "detail": "THE TRIFECTA",
         "at": "2026-10-02T05:40:01.794Z",
         "until": "2026-10-04T05:40:01.794Z"
       },
@@ -1540,11 +1527,11 @@
         "until": "2026-10-04T05:40:01.794Z"
       },
       {
-        "id": "ach:trifecta",
+        "id": "ach:ship_it",
         "type": "milestone",
         "title": "MILESTONE UNLOCKED",
         "icon": "trophy",
-        "detail": "THE TRIFECTA",
+        "detail": "SHIP IT",
         "at": "2026-10-02T05:40:01.794Z",
         "until": "2026-10-04T05:40:01.794Z"
       },
@@ -1659,11 +1646,11 @@
         "until": "2026-10-04T04:00:00.000Z"
       },
       {
-        "id": "ach:ship_it",
+        "id": "ach:trifecta",
         "type": "milestone",
         "title": "MILESTONE UNLOCKED",
         "icon": "trophy",
-        "detail": "SHIP IT",
+        "detail": "THE TRIFECTA",
         "at": "2026-10-02T05:40:01.794Z",
         "until": "2026-10-04T05:40:01.794Z"
       },
@@ -1677,22 +1664,13 @@
         "until": "2026-10-04T05:40:01.794Z"
       },
       {
-        "id": "ach:trifecta",
+        "id": "ach:ship_it",
         "type": "milestone",
         "title": "MILESTONE UNLOCKED",
         "icon": "trophy",
-        "detail": "THE TRIFECTA",
+        "detail": "SHIP IT",
         "at": "2026-10-02T05:40:01.794Z",
         "until": "2026-10-04T05:40:01.794Z"
-      },
-      {
-        "id": "raid:visitor:1",
-        "type": "raid",
-        "title": "BOSS RAID",
-        "icon": "skull",
-        "detail": "SENT BY @SudiptoKumar",
-        "at": "2026-10-02T05:39:59.983Z",
-        "until": "2026-10-02T11:39:59.983Z"
       },
       {
         "id": "release:DocFlow:manual-12",
@@ -1702,18 +1680,29 @@
         "detail": "DocFlow manual-12",
         "at": "2026-10-02T05:04:32Z",
         "until": "2026-10-04T05:04:32.000Z"
+      },
+      {
+        "id": "levelup:17",
+        "type": "milestone",
+        "title": "MILESTONE UNLOCKED",
+        "icon": "trophy",
+        "detail": "LEVEL 17",
+        "at": "2026-10-02T03:33:34.760Z",
+        "until": "2026-10-04T03:33:34.760Z"
       }
     ]
   },
   "raid": {
-    "active": true,
+    "active": false,
+    "done": true,
     "id": 1,
     "by": "SudiptoKumar",
     "at": "2026-10-02T05:39:59.983Z",
     "size": "small",
-    "goblins": 3,
+    "goblins": 0,
     "defense": 100,
-    "attack": 30
+    "attack": 30,
+    "won": true
   },
   "visitors": {
     "total": 0,
@@ -1953,7 +1942,7 @@
       "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-02T05:40:01.794Z"
+    "checkedAt": "2026-10-02T06:29:36.004Z"
   },
-  "contentHash": "032328ae282891a6"
+  "contentHash": "cd3a8c6076153a66"
 }

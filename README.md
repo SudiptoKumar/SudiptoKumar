@@ -21,10 +21,10 @@
 <p align="center"><b>Today in the kingdom</b></p>
 
 - 🌾 **HARVEST FESTIVAL** · 31 CONTRIBUTIONS · just now
-- 🏆 **MILESTONE UNLOCKED** · SHIP IT · just now
-- 🏆 **MILESTONE UNLOCKED** · OPEN GATE · just now
 - 🏆 **MILESTONE UNLOCKED** · THE TRIFECTA · just now
-- ⚔️ **BOSS RAID** · SENT BY @SudiptoKumar · just now
+- 🏆 **MILESTONE UNLOCKED** · OPEN GATE · just now
+- 🏆 **MILESTONE UNLOCKED** · SHIP IT · just now
+- 🚀 **RELEASE DAY** · DocFlow manual-12 · 1h ago
 
 <details>
 <summary><b>Map legend</b>: what every place means</summary>
