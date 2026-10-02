@@ -13,34 +13,38 @@
 <p align="center"><b>This is my kingdom.</b> GitHub activity keeps it alive.</p>
 
 <a id="character"></a>
-<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/hero.svg" width="720" alt="Character sheet: level 31 TYPESCRIPT PALADIN. 78 percent to the next level. Streak 13 days, 184 stars."></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/hero.svg" width="720" alt="Character sheet: level 16 TYPESCRIPT PALADIN. 100 percent to the next level. Streak 16 days, 19 stars."></p>
 
 <a id="kingdom"></a>
-<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/world.svg" width="720" alt="The kingdom map. It is day, the weather is clear and the season is autumn. 7 open issues, 184 stars, level 31."></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/world.svg" width="720" alt="The kingdom map. It is night, the weather is clear and the season is autumn. 0 open issues, 19 stars, level 16."></p>
 
 <p align="center"><b>Today in the kingdom</b></p>
 
-- 🌤️ A quiet day in the kingdom.
+- 👑 **KINGDOM EXPANSION** · SudiptoKumar · 12h ago
+- 👑 **KINGDOM EXPANSION** · WORKSHOP- · 14h ago
+- 👑 **KINGDOM EXPANSION** · LetterShare · 3d ago
+- 👑 **KINGDOM EXPANSION** · DocFlow · 3d ago
+- 👑 **KINGDOM EXPANSION** · ContrastLab- · 3d ago
 
 <details>
 <summary><b>Map legend</b>: what every place means</summary>
 
 | Place | What it shows | Now |
 | --- | --- | --- |
-| Castle | Your level and your main repository | Level 31 |
-| Tower | Followers | 23 |
-| CI tower | Workflow health. Red lamp and fire mean a failed workflow | 98% |
-| Shop | Commits. The workshop grows with them | 1,307 |
-| Library | Knowledge and docs repositories | 3 |
+| Castle | Your level and your main repository | Level 16 |
+| Tower | Followers | 0 |
+| CI tower | Workflow health. Red lamp and fire mean a failed workflow | 100% |
+| Shop | Commits. The workshop grows with them | 596 |
+| Library | Knowledge and docs repositories | 2 |
 | Mine | Data repositories | 0 |
-| Vault | Stars become gold | 184 stars |
-| Shrine | Achievements | 13/16 |
-| Training grounds | Open pull requests | 1 |
-| Farm | Contribution streak and recent work | 13 days |
+| Vault | Stars become gold | 19 stars |
+| Shrine | Achievements | 8/16 |
+| Training grounds | Open pull requests | 0 |
+| Farm | Contribution streak and recent work | 16 days |
 | Forest | One tree for every language | 4 |
-| Issue gate | Open issues are goblins | 7 |
-| Dungeon | Archived repositories | 1 |
-| Village | One house for each repository | 9 |
+| Issue gate | Open issues are goblins | 0 |
+| Dungeon | Archived repositories | 0 |
+| Village | One house for each repository | 20 |
 | Camp | Visitor flags | 0 |
 
 **What changes the map**
@@ -62,26 +66,29 @@
 
 </details>
 
-<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/stats.svg" width="720" alt="Kingdom statistics: population 2,922, 184 stars, 1,307 commits, 7 open issues, 57 pull requests."></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/stats.svg" width="720" alt="Kingdom statistics: population 984, 19 stars, 596 commits, 0 open issues, 1 pull requests."></p>
 
 <a id="achievements"></a>
-<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/achievements.svg" width="720" alt="Achievement hall: 11 of 12 unlocked."></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/achievements.svg" width="720" alt="Achievement hall: 7 of 12 unlocked."></p>
 
 <a id="repositories"></a>
 <p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/repos.svg" width="720" alt="Repository kingdom: each repository is a building."></p>
 
-- 🚧 [StudyMart](https://github.com/SudiptoKumar/StudyMart) · ⭐ 86 · 👹 2
-- 🚧 [NewsBots](https://github.com/SudiptoKumar/NewsBots) · ⭐ 39 · 👹 1
-- 🚧 [DailyFacts](https://github.com/SudiptoKumar/DailyFacts) · ⭐ 21 · 👹 1
-- 🟢 [Portfolio](https://github.com/SudiptoKumar/Portfolio) · ⭐ 17 · 👹 1
-- 🟢 [QuizArena](https://github.com/SudiptoKumar/QuizArena) · ⭐ 9 · 👹 1
-- 🚧 [SudiptoKumar](https://github.com/SudiptoKumar/SudiptoKumar) · ⭐ 4
-- 🟢 [CareerNewsroom](https://github.com/SudiptoKumar/CareerNewsroom) · ⭐ 6 · 👹 1
-- 🕸️ [NotesHub](https://github.com/SudiptoKumar/NotesHub) · ⭐ 2
-- 🏚️ [OldExperiments](https://github.com/SudiptoKumar/OldExperiments) · ⭐ 0
+- 🚧 [CareerNewsroomBot](https://github.com/SudiptoKumar/CareerNewsroomBot) · ⭐ 1
+- 🚧 [GamingNewsroomBot](https://github.com/SudiptoKumar/GamingNewsroomBot) · ⭐ 1
+- 🚧 [TelegramForwarder](https://github.com/SudiptoKumar/TelegramForwarder) · ⭐ 1
+- 🚧 [BusinessNewsBot](https://github.com/SudiptoKumar/BusinessNewsBot) · ⭐ 1
+- 🚧 [EntertainmentNewsBot](https://github.com/SudiptoKumar/EntertainmentNewsBot) · ⭐ 1
+- 🚧 [TheTechNewsroomBot](https://github.com/SudiptoKumar/TheTechNewsroomBot) · ⭐ 1
+- 🚧 [ScienceNewsroomBot](https://github.com/SudiptoKumar/ScienceNewsroomBot) · ⭐ 1
+- 🚧 [TheSportsNewsroom](https://github.com/SudiptoKumar/TheSportsNewsroom) · ⭐ 1
+- 🚧 [ComicsNewsroom](https://github.com/SudiptoKumar/ComicsNewsroom) · ⭐ 1
+- 🚧 [History-Newsroom](https://github.com/SudiptoKumar/History-Newsroom) · ⭐ 1
+- 🚧 [DailyFacts](https://github.com/SudiptoKumar/DailyFacts) · ⭐ 1
+- 🚧 [VocabularyBot](https://github.com/SudiptoKumar/VocabularyBot) · ⭐ 1
 
 <a id="harvest"></a>
-<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/harvest.svg" width="720" alt="Harvest field: the last 26 weeks of contributions as a farm. Current streak 13 days."></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/harvest.svg" width="720" alt="Harvest field: the last 26 weeks of contributions as a farm. Current streak 16 days."></p>
 
 <p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/history.svg" width="720" alt="Kingdom history: level over time."></p>
 
