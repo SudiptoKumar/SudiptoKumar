@@ -13,28 +13,28 @@
 <p align="center"><b>This is my kingdom.</b> GitHub activity keeps it alive.</p>
 
 <a id="character"></a>
-<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/hero.svg" width="720" alt="Character sheet: level 16 TYPESCRIPT PALADIN. 100 percent to the next level. Streak 16 days, 19 stars."></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/hero.svg" width="720" alt="Character sheet: level 17 TYPESCRIPT PALADIN. 0 percent to the next level. Streak 16 days, 19 stars."></p>
 
 <a id="kingdom"></a>
-<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/world.svg" width="720" alt="The kingdom map. It is night, the weather is clear and the season is autumn. 0 open issues, 19 stars, level 16."></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/world.svg" width="720" alt="The kingdom map. It is day, the weather is aurora and the season is autumn. 0 open issues, 19 stars, level 17."></p>
 
 <p align="center"><b>Today in the kingdom</b></p>
 
+- 🏆 **MILESTONE UNLOCKED** · LEVEL 17 · just now
 - 👑 **KINGDOM EXPANSION** · SudiptoKumar · 12h ago
 - 👑 **KINGDOM EXPANSION** · WORKSHOP- · 14h ago
 - 👑 **KINGDOM EXPANSION** · LetterShare · 3d ago
 - 👑 **KINGDOM EXPANSION** · DocFlow · 3d ago
-- 👑 **KINGDOM EXPANSION** · ContrastLab- · 3d ago
 
 <details>
 <summary><b>Map legend</b>: what every place means</summary>
 
 | Place | What it shows | Now |
 | --- | --- | --- |
-| Castle | Your level and your main repository | Level 16 |
+| Castle | Your level and your main repository | Level 17 |
 | Tower | Followers | 0 |
 | CI tower | Workflow health. Red lamp and fire mean a failed workflow | 100% |
-| Shop | Commits. The workshop grows with them | 596 |
+| Shop | Commits. The workshop grows with them | 597 |
 | Library | Knowledge and docs repositories | 2 |
 | Mine | Data repositories | 0 |
 | Vault | Stars become gold | 19 stars |
@@ -66,7 +66,7 @@
 
 </details>
 
-<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/stats.svg" width="720" alt="Kingdom statistics: population 984, 19 stars, 596 commits, 0 open issues, 1 pull requests."></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/stats.svg" width="720" alt="Kingdom statistics: population 995, 19 stars, 597 commits, 0 open issues, 1 pull requests."></p>
 
 <a id="achievements"></a>
 <p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/achievements.svg" width="720" alt="Achievement hall: 7 of 12 unlocked."></p>

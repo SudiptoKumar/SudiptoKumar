@@ -1,5 +1,15 @@
 {
   "version": 1,
-  "events": [],
+  "events": [
+    {
+      "id": "levelup:17",
+      "type": "milestone",
+      "title": "MILESTONE UNLOCKED",
+      "icon": "trophy",
+      "detail": "LEVEL 17",
+      "at": "2026-10-02T03:33:34.760Z",
+      "until": "2026-10-04T03:33:34.760Z"
+    }
+  ],
   "raids": []
 }
