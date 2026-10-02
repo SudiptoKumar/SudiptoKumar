@@ -1,8 +1,0 @@
-{
-  "owner": "SudiptoKumar",
-  "exclude_repos": [
-    "SudiptoKumar/SudiptoKumar"
-  ],
-  "auto_discover": true,
-  "projects": []
-}
