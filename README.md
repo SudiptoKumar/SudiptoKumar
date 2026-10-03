@@ -13,18 +13,18 @@
 <p align="center"><b>This is my kingdom.</b> GitHub activity keeps it alive.</p>
 
 <a id="character"></a>
-<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/hero.svg" width="720" alt="Character sheet: level 17 PYTHON ALCHEMIST. 74 percent to the next level. Streak 16 days, 19 stars."></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/hero.svg" width="720" alt="Character sheet: level 17 PYTHON ALCHEMIST. 85 percent to the next level. Streak 17 days, 19 stars."></p>
 
 <a id="kingdom"></a>
-<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/world.svg" width="720" alt="The kingdom map. It is night, the weather is aurora and the season is autumn. 0 open issues, 19 stars, level 17."></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/world.svg" width="720" alt="The kingdom map. It is day, the weather is aurora and the season is autumn. 0 open issues, 19 stars, level 17."></p>
 
 <p align="center"><b>Today in the kingdom</b></p>
 
-- 🌌 **NIGHT OF THE STARS** · THE SKY IS FULL OF STARS · just now
-- 👑 **KINGDOM EXPANSION** · Workshop-Certificate-Verify · 1h ago
-- 🌾 **HARVEST FESTIVAL** · 47 CONTRIBUTIONS · 10h ago
-- 🏆 **MILESTONE UNLOCKED** · THE TRIFECTA · 17h ago
-- 🏆 **MILESTONE UNLOCKED** · OPEN GATE · 17h ago
+- 🌾 **HARVEST FESTIVAL** · 47 CONTRIBUTIONS · just now
+- 👑 **KINGDOM EXPANSION** · Workshop-Certificate-Verify · 8h ago
+- 🏆 **MILESTONE UNLOCKED** · SHIP IT · 24h ago
+- 🏆 **MILESTONE UNLOCKED** · OPEN GATE · 24h ago
+- 🏆 **MILESTONE UNLOCKED** · THE TRIFECTA · 24h ago
 
 <details>
 <summary><b>Map legend</b>: what every place means</summary>
@@ -34,13 +34,13 @@
 | Castle | Your level and your main repository | Level 17 |
 | Tower | Followers | 0 |
 | CI tower | Workflow health. Red lamp and fire mean a failed workflow | 100% |
-| Shop | Commits. The workshop grows with them | 636 |
+| Shop | Commits. The workshop grows with them | 679 |
 | Library | Knowledge and docs repositories | 2 |
 | Mine | Data repositories | 0 |
 | Vault | Stars become gold | 19 stars |
 | Shrine | Achievements | 11/16 |
 | Training grounds | Open pull requests | 0 |
-| Farm | Contribution streak and recent work | 16 days |
+| Farm | Contribution streak and recent work | 17 days |
 | Forest | One tree for every language | 5 |
 | Issue gate | Open issues are goblins | 0 |
 | Dungeon | Archived repositories | 0 |
@@ -66,7 +66,7 @@
 
 </details>
 
-<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/stats.svg" width="720" alt="Kingdom statistics: population 1,027, 19 stars, 636 commits, 0 open issues, 1 pull requests."></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/stats.svg" width="720" alt="Kingdom statistics: population 1,038, 19 stars, 679 commits, 0 open issues, 1 pull requests."></p>
 
 <a id="achievements"></a>
 <p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/achievements.svg" width="720" alt="Achievement hall: 9 of 12 unlocked."></p>
@@ -88,7 +88,7 @@
 - 🚧 [Sudipto-Portfolio](https://github.com/SudiptoKumar/Sudipto-Portfolio) · ⭐ 1
 
 <a id="harvest"></a>
-<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/harvest.svg" width="720" alt="Harvest field: the last 26 weeks of contributions as a farm. Current streak 16 days."></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/harvest.svg" width="720" alt="Harvest field: the last 26 weeks of contributions as a farm. Current streak 17 days."></p>
 
 <p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/history.svg" width="720" alt="Kingdom history: level over time."></p>
 

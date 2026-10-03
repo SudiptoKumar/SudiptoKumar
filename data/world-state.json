@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-02T22:19:33.513Z",
+  "generatedAt": "2026-10-03T05:25:40.602Z",
   "level": 17,
-  "xp": 8262,
+  "xp": 8369,
   "stars": 19,
-  "commits": 636,
+  "commits": 679,
   "issues": 0,
   "pullRequests": 1,
   "workflowHealth": 100,
-  "streak": 16,
+  "streak": 17,
   "activeRepositories": 21,
   "topLanguage": "Python",
   "weather": "aurora",
   "weatherReason": "A release or milestone is being celebrated",
-  "timeOfDay": "night",
+  "timeOfDay": "day",
   "season": "autumn",
   "meta": {
     "demo": false,
@@ -31,10 +31,10 @@
     "kingdomDay": 1169
   },
   "time": {
-    "iso": "2026-10-02T22:19:33.513Z",
+    "iso": "2026-10-03T05:25:40.602Z",
     "tz": "Asia/Dhaka",
-    "hour": 4.32,
-    "phase": "night",
+    "hour": 11.42,
+    "phase": "day",
     "season": "autumn",
     "date": "2026-10-03"
   },
@@ -45,9 +45,9 @@
       "archetype": "alchemist",
       "name": "ALCHEMIST"
     },
-    "xpInto": 662,
+    "xpInto": 769,
     "xpNeed": 900,
-    "xpPct": 74,
+    "xpPct": 85,
     "xpNext": 8500,
     "activity": "high",
     "position": "plaza",
@@ -55,21 +55,21 @@
     "stats": {
       "codePower": 99,
       "reliability": 100,
-      "streak": 16,
+      "streak": 17,
       "reputation": 19
     },
     "streak": {
-      "current": 16,
-      "longest": 16,
+      "current": 17,
+      "longest": 17,
       "idleDays": 0,
-      "today": 47,
-      "yesterday": 6
+      "today": 43,
+      "yesterday": 47
     }
   },
   "totals": {
     "stars": 19,
     "forks": 0,
-    "commits": 636,
+    "commits": 679,
     "prs": 1,
     "mergedPrs": 1,
     "reviews": 0,
@@ -80,15 +80,15 @@
     "activeRepos": 21,
     "archivedRepos": 0,
     "followers": 0,
-    "yearContrib": 657,
+    "yearContrib": 700,
     "workflowHealth": 100,
     "failingRepos": [],
     "openPRs": 0,
-    "codeKb": 166045
+    "codeKb": 166984
   },
   "xpBreakdown": {
-    "base": 2300,
-    "streakBonus": 187,
+    "base": 2390,
+    "streakBonus": 204,
     "bonus": {
       "pullRequests": 50,
       "mergedPullRequests": 100,
@@ -98,7 +98,7 @@
     }
   },
   "population": {
-    "total": 1027,
+    "total": 1038,
     "npcs": 9,
     "houses": 12
   },
@@ -117,17 +117,17 @@
   "languages": [
     {
       "name": "Python",
-      "pct": 41,
+      "pct": 40,
       "color": "#3572A5"
     },
     {
       "name": "TypeScript",
-      "pct": 38,
+      "pct": 37,
       "color": "#3178c6"
     },
     {
       "name": "JavaScript",
-      "pct": 14,
+      "pct": 17,
       "color": "#f1e05a"
     },
     {
@@ -157,10 +157,10 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-02T21:34:54Z",
+      "pushedAt": "2026-10-03T02:35:38Z",
       "pushedDays": 0,
       "createdAt": "2026-09-17T18:58:59Z",
-      "importance": 473.7
+      "importance": 475.3
     },
     {
       "name": "GamingNewsroomBot",
@@ -317,10 +317,10 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-02T21:53:46Z",
+      "pushedAt": "2026-10-03T03:49:44Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T10:49:10Z",
-      "importance": 146.5
+      "importance": 148
     },
     {
       "name": "History-Newsroom",
@@ -423,6 +423,26 @@
       "importance": 67.9
     },
     {
+      "name": "Workshop-Certificate-Verify",
+      "url": "https://github.com/SudiptoKumar/Workshop-Certificate-Verify",
+      "description": "Certificate Verify",
+      "stars": 0,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "HTML",
+      "color": "#e34c26",
+      "archetype": "house",
+      "state": "building",
+      "workflow": "none",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-03T05:23:18Z",
+      "pushedDays": 0,
+      "createdAt": "2026-10-02T21:18:15Z",
+      "importance": 59.1
+    },
+    {
       "name": "SudiptoKumar",
       "url": "https://github.com/SudiptoKumar/SudiptoKumar",
       "description": "Hello, Dev!",
@@ -437,10 +457,10 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-02T12:47:30Z",
+      "pushedAt": "2026-10-02T22:19:46Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 43.5
+      "importance": 45.1
     },
     {
       "name": "LetterShare",
@@ -503,6 +523,26 @@
       "importance": 21.5
     },
     {
+      "name": "WORKSHOP-",
+      "url": "https://github.com/SudiptoKumar/WORKSHOP-",
+      "description": "It's an Automation for Workshop.",
+      "stars": 0,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "JavaScript",
+      "color": "#f1e05a",
+      "archetype": "tower",
+      "state": "building",
+      "workflow": "none",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-03T02:13:00Z",
+      "pushedDays": 0,
+      "createdAt": "2026-10-01T13:12:44Z",
+      "importance": 17.1
+    },
+    {
       "name": "ContrastLab-",
       "url": "https://github.com/SudiptoKumar/ContrastLab-",
       "description": "a web-based WCAG color contrast checker and color exploration workbench.",
@@ -521,53 +561,9 @@
       "pushedDays": 4,
       "createdAt": "2026-09-28T22:11:39Z",
       "importance": 15.6
-    },
-    {
-      "name": "WORKSHOP-",
-      "url": "https://github.com/SudiptoKumar/WORKSHOP-",
-      "description": "It's an Automation for Workshop.",
-      "stars": 0,
-      "forks": 0,
-      "issues": 0,
-      "prs": 0,
-      "language": null,
-      "color": null,
-      "archetype": "tower",
-      "state": "building",
-      "workflow": "none",
-      "recovered": false,
-      "lastFailAt": null,
-      "pushedAt": "2026-10-02T21:35:20Z",
-      "pushedDays": 0,
-      "createdAt": "2026-10-01T13:12:44Z",
-      "importance": 14
-    },
-    {
-      "name": "Workshop-Certificate-Verify",
-      "url": "https://github.com/SudiptoKumar/Workshop-Certificate-Verify",
-      "description": "Certificate Verify",
-      "stars": 0,
-      "forks": 0,
-      "issues": 0,
-      "prs": 0,
-      "language": "JavaScript",
-      "color": "#f1e05a",
-      "archetype": "house",
-      "state": "building",
-      "workflow": "none",
-      "recovered": false,
-      "lastFailAt": null,
-      "pushedAt": "2026-10-02T22:15:18Z",
-      "pushedDays": 0,
-      "createdAt": "2026-10-02T21:18:15Z",
-      "importance": 12.5
     }
   ],
   "calendar": [
-    {
-      "date": "2026-03-28",
-      "count": 0
-    },
     {
       "date": "2026-03-29",
       "count": 0
@@ -1344,6 +1340,11 @@
       "date": "2026-10-02",
       "count": 47,
       "gold": 1
+    },
+    {
+      "date": "2026-10-03",
+      "count": 43,
+      "gold": 1
     }
   ],
   "achievements": {
@@ -1529,11 +1530,11 @@
         "until": "2026-10-04T05:04:32.000Z"
       },
       {
-        "id": "ach:trifecta",
+        "id": "ach:ship_it",
         "type": "milestone",
         "title": "MILESTONE UNLOCKED",
         "icon": "trophy",
-        "detail": "THE TRIFECTA",
+        "detail": "SHIP IT",
         "at": "2026-10-02T05:40:01.794Z",
         "until": "2026-10-04T05:40:01.794Z"
       },
@@ -1547,11 +1548,11 @@
         "until": "2026-10-04T05:40:01.794Z"
       },
       {
-        "id": "ach:ship_it",
+        "id": "ach:trifecta",
         "type": "milestone",
         "title": "MILESTONE UNLOCKED",
         "icon": "trophy",
-        "detail": "SHIP IT",
+        "detail": "THE TRIFECTA",
         "at": "2026-10-02T05:40:01.794Z",
         "until": "2026-10-04T05:40:01.794Z"
       },
@@ -1646,33 +1647,24 @@
         "until": "2026-10-05T15:28:45.000Z"
       },
       {
-        "id": "harvest:2026-10-02",
+        "id": "harvest:2026-10-03",
         "type": "harvest",
         "title": "HARVEST FESTIVAL",
         "icon": "wheat",
         "detail": "47 CONTRIBUTIONS",
-        "at": "2026-10-02T12:00:00.000Z",
-        "until": "2026-10-04T04:00:00.000Z"
-      },
-      {
-        "id": "nightstars:2026-10-03",
-        "type": "nightstars",
-        "title": "NIGHT OF THE STARS",
-        "icon": "star",
-        "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-02T22:19:33.513Z",
-        "until": "2026-10-02T23:19:33.513Z"
+        "at": "2026-10-03T12:00:00.000Z",
+        "until": "2026-10-05T04:00:00.000Z"
       }
     ],
     "recent": [
       {
-        "id": "nightstars:2026-10-03",
-        "type": "nightstars",
-        "title": "NIGHT OF THE STARS",
-        "icon": "star",
-        "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-02T22:19:33.513Z",
-        "until": "2026-10-02T23:19:33.513Z"
+        "id": "harvest:2026-10-03",
+        "type": "harvest",
+        "title": "HARVEST FESTIVAL",
+        "icon": "wheat",
+        "detail": "47 CONTRIBUTIONS",
+        "at": "2026-10-03T12:00:00.000Z",
+        "until": "2026-10-05T04:00:00.000Z"
       },
       {
         "id": "expansion:Workshop-Certificate-Verify",
@@ -1684,20 +1676,11 @@
         "until": "2026-10-09T21:18:15.000Z"
       },
       {
-        "id": "harvest:2026-10-02",
-        "type": "harvest",
-        "title": "HARVEST FESTIVAL",
-        "icon": "wheat",
-        "detail": "47 CONTRIBUTIONS",
-        "at": "2026-10-02T12:00:00.000Z",
-        "until": "2026-10-04T04:00:00.000Z"
-      },
-      {
-        "id": "ach:trifecta",
+        "id": "ach:ship_it",
         "type": "milestone",
         "title": "MILESTONE UNLOCKED",
         "icon": "trophy",
-        "detail": "THE TRIFECTA",
+        "detail": "SHIP IT",
         "at": "2026-10-02T05:40:01.794Z",
         "until": "2026-10-04T05:40:01.794Z"
       },
@@ -1711,13 +1694,22 @@
         "until": "2026-10-04T05:40:01.794Z"
       },
       {
-        "id": "ach:ship_it",
+        "id": "ach:trifecta",
         "type": "milestone",
         "title": "MILESTONE UNLOCKED",
         "icon": "trophy",
-        "detail": "SHIP IT",
+        "detail": "THE TRIFECTA",
         "at": "2026-10-02T05:40:01.794Z",
         "until": "2026-10-04T05:40:01.794Z"
+      },
+      {
+        "id": "release:DocFlow:manual-12",
+        "type": "release",
+        "title": "RELEASE DAY",
+        "icon": "rocket",
+        "detail": "DocFlow manual-12",
+        "at": "2026-10-02T05:04:32Z",
+        "until": "2026-10-04T05:04:32.000Z"
       }
     ]
   },
@@ -1952,10 +1944,10 @@
       {
         "d": "2026-10-03",
         "l": 17,
-        "x": 8262,
+        "x": 8369,
         "s": 19,
-        "c": 636,
-        "p": 1027
+        "c": 679,
+        "p": 1038
       }
     ]
   },
@@ -1971,7 +1963,7 @@
       "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-02T22:19:33.513Z"
+    "checkedAt": "2026-10-03T05:25:40.602Z"
   },
-  "contentHash": "e6cc2ef6db5d34b2"
+  "contentHash": "9baa8cf15c8e0a6b"
 }
