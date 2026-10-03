@@ -22,9 +22,9 @@
 
 - 🌾 **HARVEST FESTIVAL** · 47 CONTRIBUTIONS · just now
 - 👑 **KINGDOM EXPANSION** · Workshop-Certificate-Verify · 8h ago
-- 🏆 **MILESTONE UNLOCKED** · SHIP IT · 24h ago
-- 🏆 **MILESTONE UNLOCKED** · OPEN GATE · 24h ago
 - 🏆 **MILESTONE UNLOCKED** · THE TRIFECTA · 24h ago
+- 🏆 **MILESTONE UNLOCKED** · OPEN GATE · 24h ago
+- 🏆 **MILESTONE UNLOCKED** · SHIP IT · 24h ago
 
 <details>
 <summary><b>Map legend</b>: what every place means</summary>
@@ -34,7 +34,7 @@
 | Castle | Your level and your main repository | Level 17 |
 | Tower | Followers | 0 |
 | CI tower | Workflow health. Red lamp and fire mean a failed workflow | 100% |
-| Shop | Commits. The workshop grows with them | 679 |
+| Shop | Commits. The workshop grows with them | 680 |
 | Library | Knowledge and docs repositories | 2 |
 | Mine | Data repositories | 0 |
 | Vault | Stars become gold | 19 stars |
@@ -66,7 +66,7 @@
 
 </details>
 
-<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/stats.svg" width="720" alt="Kingdom statistics: population 1,038, 19 stars, 679 commits, 0 open issues, 1 pull requests."></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/stats.svg" width="720" alt="Kingdom statistics: population 1,038, 19 stars, 680 commits, 0 open issues, 1 pull requests."></p>
 
 <a id="achievements"></a>
 <p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/achievements.svg" width="720" alt="Achievement hall: 9 of 12 unlocked."></p>
