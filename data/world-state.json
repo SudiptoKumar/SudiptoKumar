@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-03T05:43:13.216Z",
+  "generatedAt": "2026-10-03T11:47:33.537Z",
   "level": 17,
   "xp": 8369,
   "stars": 19,
-  "commits": 680,
+  "commits": 689,
   "issues": 0,
   "pullRequests": 1,
   "workflowHealth": 100,
@@ -13,7 +13,7 @@
   "topLanguage": "Python",
   "weather": "aurora",
   "weatherReason": "A release or milestone is being celebrated",
-  "timeOfDay": "day",
+  "timeOfDay": "evening",
   "season": "autumn",
   "meta": {
     "demo": false,
@@ -31,10 +31,10 @@
     "kingdomDay": 1169
   },
   "time": {
-    "iso": "2026-10-03T05:43:13.216Z",
+    "iso": "2026-10-03T11:47:33.537Z",
     "tz": "Asia/Dhaka",
-    "hour": 11.72,
-    "phase": "day",
+    "hour": 17.78,
+    "phase": "evening",
     "season": "autumn",
     "date": "2026-10-03"
   },
@@ -62,14 +62,14 @@
       "current": 17,
       "longest": 17,
       "idleDays": 0,
-      "today": 44,
+      "today": 53,
       "yesterday": 47
     }
   },
   "totals": {
     "stars": 19,
     "forks": 0,
-    "commits": 680,
+    "commits": 689,
     "prs": 1,
     "mergedPrs": 1,
     "reviews": 0,
@@ -80,11 +80,11 @@
     "activeRepos": 21,
     "archivedRepos": 0,
     "followers": 0,
-    "yearContrib": 701,
+    "yearContrib": 710,
     "workflowHealth": 100,
     "failingRepos": [],
     "openPRs": 0,
-    "codeKb": 166984
+    "codeKb": 169572
   },
   "xpBreakdown": {
     "base": 2390,
@@ -98,7 +98,7 @@
     }
   },
   "population": {
-    "total": 1038,
+    "total": 1040,
     "npcs": 9,
     "houses": 12
   },
@@ -127,7 +127,7 @@
     },
     {
       "name": "JavaScript",
-      "pct": 17,
+      "pct": 18,
       "color": "#f1e05a"
     },
     {
@@ -157,10 +157,10 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-03T02:35:38Z",
+      "pushedAt": "2026-10-03T08:43:46Z",
       "pushedDays": 0,
       "createdAt": "2026-09-17T18:58:59Z",
-      "importance": 475.3
+      "importance": 476.9
     },
     {
       "name": "GamingNewsroomBot",
@@ -177,10 +177,10 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-02T19:17:53Z",
+      "pushedAt": "2026-10-03T06:06:25Z",
       "pushedDays": 0,
       "createdAt": "2026-08-28T14:21:15Z",
-      "importance": 400
+      "importance": 401.5
     },
     {
       "name": "TelegramForwarder",
@@ -197,10 +197,10 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-02T20:53:30Z",
+      "pushedAt": "2026-10-03T08:28:53Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T17:29:46Z",
-      "importance": 328.4
+      "importance": 329.7
     },
     {
       "name": "BusinessNewsBot",
@@ -217,10 +217,10 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-02T19:12:54Z",
+      "pushedAt": "2026-10-03T06:22:50Z",
       "pushedDays": 0,
       "createdAt": "2026-08-27T10:01:41Z",
-      "importance": 308.5
+      "importance": 310
     },
     {
       "name": "EntertainmentNewsBot",
@@ -237,10 +237,10 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-02T19:19:48Z",
+      "pushedAt": "2026-10-03T06:18:21Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T04:24:35Z",
-      "importance": 302.5
+      "importance": 304
     },
     {
       "name": "TheTechNewsroomBot",
@@ -257,10 +257,10 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-02T19:20:32Z",
+      "pushedAt": "2026-10-03T11:37:02Z",
       "pushedDays": 0,
       "createdAt": "2026-08-28T19:08:24Z",
-      "importance": 289
+      "importance": 292
     },
     {
       "name": "ScienceNewsroomBot",
@@ -277,10 +277,10 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-02T19:15:00Z",
+      "pushedAt": "2026-10-03T11:28:08Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T16:33:20Z",
-      "importance": 235
+      "importance": 238
     },
     {
       "name": "TheSportsNewsroom",
@@ -297,10 +297,10 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-02T19:34:00Z",
+      "pushedAt": "2026-10-03T08:16:29Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T16:56:23Z",
-      "importance": 186.3
+      "importance": 187.9
     },
     {
       "name": "ComicsNewsroom",
@@ -317,10 +317,10 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-03T03:49:44Z",
+      "pushedAt": "2026-10-03T11:10:00Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T10:49:10Z",
-      "importance": 148
+      "importance": 149.5
     },
     {
       "name": "History-Newsroom",
@@ -337,10 +337,10 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-02T16:31:01Z",
+      "pushedAt": "2026-10-03T07:14:29Z",
       "pushedDays": 0,
       "createdAt": "2026-09-21T10:44:06Z",
-      "importance": 104.5
+      "importance": 106
     },
     {
       "name": "DailyFacts",
@@ -357,7 +357,7 @@
       "workflow": "recovered",
       "recovered": true,
       "lastFailAt": null,
-      "pushedAt": "2026-10-02T16:34:29Z",
+      "pushedAt": "2026-10-03T07:15:50Z",
       "pushedDays": 0,
       "createdAt": "2026-09-22T15:26:48Z",
       "importance": 93
@@ -397,10 +397,30 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-02T07:59:18Z",
+      "pushedAt": "2026-10-03T07:40:29Z",
       "pushedDays": 0,
       "createdAt": "2026-09-25T11:07:52Z",
       "importance": 75.4
+    },
+    {
+      "name": "Workshop-Certificate-Verify",
+      "url": "https://github.com/SudiptoKumar/Workshop-Certificate-Verify",
+      "description": "Certificate Verify",
+      "stars": 0,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "HTML",
+      "color": "#e34c26",
+      "archetype": "house",
+      "state": "building",
+      "workflow": "none",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-03T05:47:47Z",
+      "pushedDays": 0,
+      "createdAt": "2026-10-02T21:18:15Z",
+      "importance": 68.1
     },
     {
       "name": "DocFlow",
@@ -423,26 +443,6 @@
       "importance": 67.9
     },
     {
-      "name": "Workshop-Certificate-Verify",
-      "url": "https://github.com/SudiptoKumar/Workshop-Certificate-Verify",
-      "description": "Certificate Verify",
-      "stars": 0,
-      "forks": 0,
-      "issues": 0,
-      "prs": 0,
-      "language": "HTML",
-      "color": "#e34c26",
-      "archetype": "house",
-      "state": "building",
-      "workflow": "none",
-      "recovered": false,
-      "lastFailAt": null,
-      "pushedAt": "2026-10-03T05:29:26Z",
-      "pushedDays": 0,
-      "createdAt": "2026-10-02T21:18:15Z",
-      "importance": 60.6
-    },
-    {
       "name": "SudiptoKumar",
       "url": "https://github.com/SudiptoKumar/SudiptoKumar",
       "description": "Hello, Dev!",
@@ -457,10 +457,10 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-03T05:25:53Z",
+      "pushedAt": "2026-10-03T05:43:22Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 46.6
+      "importance": 48.1
     },
     {
       "name": "LetterShare",
@@ -493,34 +493,14 @@
       "language": "TypeScript",
       "color": "#3178c6",
       "archetype": "castle",
-      "state": "building",
+      "state": "active",
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-30T07:31:35Z",
-      "pushedDays": 2,
+      "pushedDays": 3,
       "createdAt": "2026-09-28T22:00:39Z",
       "importance": 29.2
-    },
-    {
-      "name": "CampusDuty",
-      "url": "https://github.com/SudiptoKumar/CampusDuty",
-      "description": "Student productivity application.",
-      "stars": 1,
-      "forks": 0,
-      "issues": 0,
-      "prs": 0,
-      "language": "TypeScript",
-      "color": "#3178c6",
-      "archetype": "guild",
-      "state": "building",
-      "workflow": "passing",
-      "recovered": false,
-      "lastFailAt": null,
-      "pushedAt": "2026-09-30T06:49:50Z",
-      "pushedDays": 2,
-      "createdAt": "2026-09-28T22:07:51Z",
-      "importance": 21.5
     },
     {
       "name": "WORKSHOP-",
@@ -537,10 +517,30 @@
       "workflow": "none",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-03T02:13:00Z",
+      "pushedAt": "2026-10-03T06:02:35Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T13:12:44Z",
-      "importance": 17.1
+      "importance": 23.1
+    },
+    {
+      "name": "CampusDuty",
+      "url": "https://github.com/SudiptoKumar/CampusDuty",
+      "description": "Student productivity application.",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "TypeScript",
+      "color": "#3178c6",
+      "archetype": "guild",
+      "state": "active",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-09-30T06:49:50Z",
+      "pushedDays": 3,
+      "createdAt": "2026-09-28T22:07:51Z",
+      "importance": 21.5
     },
     {
       "name": "ContrastLab-",
@@ -1343,7 +1343,7 @@
     },
     {
       "date": "2026-10-03",
-      "count": 44,
+      "count": 53,
       "gold": 1
     }
   ],
@@ -1530,11 +1530,11 @@
         "until": "2026-10-04T05:04:32.000Z"
       },
       {
-        "id": "ach:trifecta",
+        "id": "ach:ship_it",
         "type": "milestone",
         "title": "MILESTONE UNLOCKED",
         "icon": "trophy",
-        "detail": "THE TRIFECTA",
+        "detail": "SHIP IT",
         "at": "2026-10-02T05:40:01.794Z",
         "until": "2026-10-04T05:40:01.794Z"
       },
@@ -1548,11 +1548,11 @@
         "until": "2026-10-04T05:40:01.794Z"
       },
       {
-        "id": "ach:ship_it",
+        "id": "ach:trifecta",
         "type": "milestone",
         "title": "MILESTONE UNLOCKED",
         "icon": "trophy",
-        "detail": "SHIP IT",
+        "detail": "THE TRIFECTA",
         "at": "2026-10-02T05:40:01.794Z",
         "until": "2026-10-04T05:40:01.794Z"
       },
@@ -1651,7 +1651,7 @@
         "type": "harvest",
         "title": "HARVEST FESTIVAL",
         "icon": "wheat",
-        "detail": "47 CONTRIBUTIONS",
+        "detail": "53 CONTRIBUTIONS",
         "at": "2026-10-03T12:00:00.000Z",
         "until": "2026-10-05T04:00:00.000Z"
       }
@@ -1662,7 +1662,7 @@
         "type": "harvest",
         "title": "HARVEST FESTIVAL",
         "icon": "wheat",
-        "detail": "47 CONTRIBUTIONS",
+        "detail": "53 CONTRIBUTIONS",
         "at": "2026-10-03T12:00:00.000Z",
         "until": "2026-10-05T04:00:00.000Z"
       },
@@ -1676,11 +1676,11 @@
         "until": "2026-10-09T21:18:15.000Z"
       },
       {
-        "id": "ach:trifecta",
+        "id": "ach:ship_it",
         "type": "milestone",
         "title": "MILESTONE UNLOCKED",
         "icon": "trophy",
-        "detail": "THE TRIFECTA",
+        "detail": "SHIP IT",
         "at": "2026-10-02T05:40:01.794Z",
         "until": "2026-10-04T05:40:01.794Z"
       },
@@ -1694,11 +1694,11 @@
         "until": "2026-10-04T05:40:01.794Z"
       },
       {
-        "id": "ach:ship_it",
+        "id": "ach:trifecta",
         "type": "milestone",
         "title": "MILESTONE UNLOCKED",
         "icon": "trophy",
-        "detail": "SHIP IT",
+        "detail": "THE TRIFECTA",
         "at": "2026-10-02T05:40:01.794Z",
         "until": "2026-10-04T05:40:01.794Z"
       },
@@ -1946,8 +1946,8 @@
         "l": 17,
         "x": 8369,
         "s": 19,
-        "c": 680,
-        "p": 1038
+        "c": 689,
+        "p": 1040
       }
     ]
   },
@@ -1955,10 +1955,15 @@
     "assets": {
       "world": "ok",
       "hero": "ok",
+      "stats": "ok",
       "hall": "ok",
+      "repos": "ok",
+      "harvest": "ok",
+      "history": "ok",
+      "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-03T05:43:13.216Z"
+    "checkedAt": "2026-10-03T11:47:33.537Z"
   },
-  "contentHash": "partial:0aeb2d44a6d0ec0b"
+  "contentHash": "3ac4d241df039c6a"
 }
