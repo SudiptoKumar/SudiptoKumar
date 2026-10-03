@@ -16,15 +16,15 @@
 <p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/hero.svg" width="720" alt="Character sheet: level 17 PYTHON ALCHEMIST. 85 percent to the next level. Streak 17 days, 19 stars."></p>
 
 <a id="kingdom"></a>
-<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/world.svg" width="720" alt="The kingdom map. It is evening, the weather is aurora and the season is autumn. 0 open issues, 19 stars, level 17."></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/world.svg" width="720" alt="The kingdom map. It is night, the weather is aurora and the season is autumn. 0 open issues, 19 stars, level 17."></p>
 
 <p align="center"><b>Today in the kingdom</b></p>
 
-- 🌾 **HARVEST FESTIVAL** · 53 CONTRIBUTIONS · just now
-- 👑 **KINGDOM EXPANSION** · Workshop-Certificate-Verify · 14h ago
-- 🏆 **MILESTONE UNLOCKED** · SHIP IT · 30h ago
-- 🏆 **MILESTONE UNLOCKED** · OPEN GATE · 30h ago
-- 🏆 **MILESTONE UNLOCKED** · THE TRIFECTA · 30h ago
+- 🌌 **NIGHT OF THE STARS** · THE SKY IS FULL OF STARS · just now
+- 🌾 **HARVEST FESTIVAL** · 53 CONTRIBUTIONS · 4h ago
+- 👑 **KINGDOM EXPANSION** · Workshop-Certificate-Verify · 19h ago
+- 🏆 **MILESTONE UNLOCKED** · THE TRIFECTA · 35h ago
+- 🏆 **MILESTONE UNLOCKED** · OPEN GATE · 35h ago
 
 <details>
 <summary><b>Map legend</b>: what every place means</summary>
