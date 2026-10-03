@@ -21,10 +21,10 @@
 <p align="center"><b>Today in the kingdom</b></p>
 
 - 🌌 **NIGHT OF THE STARS** · THE SKY IS FULL OF STARS · just now
-- 🌾 **HARVEST FESTIVAL** · 53 CONTRIBUTIONS · 4h ago
-- 👑 **KINGDOM EXPANSION** · Workshop-Certificate-Verify · 19h ago
-- 🏆 **MILESTONE UNLOCKED** · THE TRIFECTA · 35h ago
-- 🏆 **MILESTONE UNLOCKED** · OPEN GATE · 35h ago
+- 🌾 **HARVEST FESTIVAL** · 53 CONTRIBUTIONS · 9h ago
+- 👑 **KINGDOM EXPANSION** · Workshop-Certificate-Verify · 24h ago
+- 🏆 **MILESTONE UNLOCKED** · SHIP IT · 40h ago
+- 🏆 **MILESTONE UNLOCKED** · OPEN GATE · 40h ago
 
 <details>
 <summary><b>Map legend</b>: what every place means</summary>
