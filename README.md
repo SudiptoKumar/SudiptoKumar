@@ -16,15 +16,15 @@
 <p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/hero.svg" width="720" alt="Character sheet: level 17 PYTHON ALCHEMIST. 85 percent to the next level. Streak 17 days, 19 stars."></p>
 
 <a id="kingdom"></a>
-<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/world.svg" width="720" alt="The kingdom map. It is day, the weather is clear and the season is autumn. 0 open issues, 19 stars, level 17."></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/world.svg" width="720" alt="The kingdom map. It is evening, the weather is clear and the season is autumn. 0 open issues, 19 stars, level 17."></p>
 
 <p align="center"><b>Today in the kingdom</b></p>
 
 - 🌾 **HARVEST FESTIVAL** · 53 CONTRIBUTIONS · just now
-- 👑 **KINGDOM EXPANSION** · Workshop-Certificate-Verify · 33h ago
-- 🏆 **MILESTONE UNLOCKED** · SHIP IT · 2d ago
-- 🏆 **MILESTONE UNLOCKED** · OPEN GATE · 2d ago
+- 👑 **KINGDOM EXPANSION** · Workshop-Certificate-Verify · 39h ago
 - 🏆 **MILESTONE UNLOCKED** · THE TRIFECTA · 2d ago
+- 🏆 **MILESTONE UNLOCKED** · OPEN GATE · 2d ago
+- 🏆 **MILESTONE UNLOCKED** · SHIP IT · 2d ago
 
 <details>
 <summary><b>Map legend</b>: what every place means</summary>
