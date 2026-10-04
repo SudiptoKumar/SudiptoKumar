@@ -1,0 +1,1959 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-02T05:40:01.794Z",
+  "level": 17,
+  "xp": 8162,
+  "stars": 19,
+  "commits": 621,
+  "issues": 0,
+  "pullRequests": 1,
+  "workflowHealth": 100,
+  "streak": 16,
+  "activeRepositories": 20,
+  "topLanguage": "Python",
+  "weather": "aurora",
+  "weatherReason": "A release or milestone is being celebrated",
+  "timeOfDay": "day",
+  "season": "autumn",
+  "meta": {
+    "demo": false,
+    "source": "github",
+    "dataStatus": "fresh",
+    "errors": [],
+    "apiCalls": 27
+  },
+  "profile": {
+    "login": "SudiptoKumar",
+    "name": "Sudipto Kumar",
+    "createdAt": "2023-07-22T03:36:18Z",
+    "followers": 0,
+    "following": 0,
+    "kingdomDay": 1168
+  },
+  "time": {
+    "iso": "2026-10-02T05:40:01.794Z",
+    "tz": "Asia/Dhaka",
+    "hour": 11.67,
+    "phase": "day",
+    "season": "autumn",
+    "date": "2026-10-02"
+  },
+  "hero": {
+    "class": {
+      "language": "Python",
+      "title": "PYTHON ALCHEMIST",
+      "archetype": "alchemist",
+      "name": "ALCHEMIST"
+    },
+    "xpInto": 562,
+    "xpNeed": 900,
+    "xpPct": 62,
+    "xpNext": 8500,
+    "activity": "high",
+    "position": "plaza",
+    "sleeping": false,
+    "stats": {
+      "codePower": 99,
+      "reliability": 100,
+      "streak": 16,
+      "reputation": 19
+    },
+    "streak": {
+      "current": 16,
+      "longest": 16,
+      "idleDays": 0,
+      "today": 31,
+      "yesterday": 6
+    }
+  },
+  "totals": {
+    "stars": 19,
+    "forks": 0,
+    "commits": 621,
+    "prs": 1,
+    "mergedPrs": 1,
+    "reviews": 0,
+    "issuesOpen": 0,
+    "issuesClosed": 1,
+    "releases": 2,
+    "repos": 20,
+    "activeRepos": 20,
+    "archivedRepos": 0,
+    "followers": 0,
+    "yearContrib": 641,
+    "workflowHealth": 100,
+    "failingRepos": [],
+    "openPRs": 0,
+    "codeKb": 162655
+  },
+  "xpBreakdown": {
+    "base": 2300,
+    "streakBonus": 187,
+    "bonus": {
+      "pullRequests": 50,
+      "mergedPullRequests": 100,
+      "issuesClosed": 25,
+      "releases": 500,
+      "repositories": 5000
+    }
+  },
+  "population": {
+    "total": 1001,
+    "npcs": 9,
+    "houses": 12
+  },
+  "goblins": {
+    "count": 0,
+    "tier": "none"
+  },
+  "treasure": {
+    "stars": 19,
+    "tier": "medium",
+    "coins": 6
+  },
+  "castle": {
+    "tier": 3
+  },
+  "languages": [
+    {
+      "name": "Python",
+      "pct": 42,
+      "color": "#3572A5"
+    },
+    {
+      "name": "TypeScript",
+      "pct": 39,
+      "color": "#3178c6"
+    },
+    {
+      "name": "JavaScript",
+      "pct": 13,
+      "color": "#f1e05a"
+    },
+    {
+      "name": "PLpgSQL",
+      "pct": 4,
+      "color": "#336790"
+    },
+    {
+      "name": "Kotlin",
+      "pct": 2,
+      "color": "#A97BFF"
+    }
+  ],
+  "repos": [
+    {
+      "name": "CareerNewsroomBot",
+      "url": "https://github.com/SudiptoKumar/CareerNewsroomBot",
+      "description": "Job News 🗞️",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "Python",
+      "color": "#3572A5",
+      "archetype": "tower",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-02T02:48:12Z",
+      "pushedDays": 0,
+      "createdAt": "2026-09-17T18:58:59Z",
+      "importance": 469
+    },
+    {
+      "name": "GamingNewsroomBot",
+      "url": "https://github.com/SudiptoKumar/GamingNewsroomBot",
+      "description": "Gaming News 🎮",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "Python",
+      "color": "#3572A5",
+      "archetype": "tower",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-01T14:28:46Z",
+      "pushedDays": 0,
+      "createdAt": "2026-08-28T14:21:15Z",
+      "importance": 395.5
+    },
+    {
+      "name": "TelegramForwarder",
+      "url": "https://github.com/SudiptoKumar/TelegramForwarder",
+      "description": "Post pass though the channel",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "Python",
+      "color": "#3572A5",
+      "archetype": "house",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-01T21:57:15Z",
+      "pushedDays": 0,
+      "createdAt": "2026-08-29T17:29:46Z",
+      "importance": 323.9
+    },
+    {
+      "name": "BusinessNewsBot",
+      "url": "https://github.com/SudiptoKumar/BusinessNewsBot",
+      "description": "Business News 🗞️",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "Python",
+      "color": "#3572A5",
+      "archetype": "tower",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-01T21:02:28Z",
+      "pushedDays": 0,
+      "createdAt": "2026-08-27T10:01:41Z",
+      "importance": 304
+    },
+    {
+      "name": "EntertainmentNewsBot",
+      "url": "https://github.com/SudiptoKumar/EntertainmentNewsBot",
+      "description": "Entertainment News 🗞️",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "Python",
+      "color": "#3572A5",
+      "archetype": "tower",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-01T20:34:45Z",
+      "pushedDays": 0,
+      "createdAt": "2026-08-29T04:24:35Z",
+      "importance": 298
+    },
+    {
+      "name": "TheTechNewsroomBot",
+      "url": "https://github.com/SudiptoKumar/TheTechNewsroomBot",
+      "description": "Tech News 🗞️",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "Python",
+      "color": "#3572A5",
+      "archetype": "tower",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-01T20:24:42Z",
+      "pushedDays": 0,
+      "createdAt": "2026-08-28T19:08:24Z",
+      "importance": 284.5
+    },
+    {
+      "name": "ScienceNewsroomBot",
+      "url": "https://github.com/SudiptoKumar/ScienceNewsroomBot",
+      "description": "Science News 🗞️",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "Python",
+      "color": "#3572A5",
+      "archetype": "tower",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-01T20:23:01Z",
+      "pushedDays": 0,
+      "createdAt": "2026-08-29T16:33:20Z",
+      "importance": 230.5
+    },
+    {
+      "name": "TheSportsNewsroom",
+      "url": "https://github.com/SudiptoKumar/TheSportsNewsroom",
+      "description": "Sports and Games News",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "Python",
+      "color": "#3572A5",
+      "archetype": "tower",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-01T19:42:45Z",
+      "pushedDays": 0,
+      "createdAt": "2026-09-20T16:56:23Z",
+      "importance": 183.2
+    },
+    {
+      "name": "ComicsNewsroom",
+      "url": "https://github.com/SudiptoKumar/ComicsNewsroom",
+      "description": "Comic and Anime News 🗞️",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "Python",
+      "color": "#3572A5",
+      "archetype": "tower",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-02T00:36:47Z",
+      "pushedDays": 0,
+      "createdAt": "2026-09-20T10:49:10Z",
+      "importance": 141.6
+    },
+    {
+      "name": "History-Newsroom",
+      "url": "https://github.com/SudiptoKumar/History-Newsroom",
+      "description": "Today in History",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "Python",
+      "color": "#3572A5",
+      "archetype": "tower",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-01T17:17:49Z",
+      "pushedDays": 0,
+      "createdAt": "2026-09-21T10:44:06Z",
+      "importance": 101.5
+    },
+    {
+      "name": "DailyFacts",
+      "url": "https://github.com/SudiptoKumar/DailyFacts",
+      "description": "Facts Only",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "Python",
+      "color": "#3572A5",
+      "archetype": "library",
+      "state": "building",
+      "workflow": "recovered",
+      "recovered": true,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-01T17:20:00Z",
+      "pushedDays": 0,
+      "createdAt": "2026-09-22T15:26:48Z",
+      "importance": 93
+    },
+    {
+      "name": "VocabularyBot",
+      "url": "https://github.com/SudiptoKumar/VocabularyBot",
+      "description": "Daily Vocabulary",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "Python",
+      "color": "#3572A5",
+      "archetype": "tower",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-01T08:22:51Z",
+      "pushedDays": 0,
+      "createdAt": "2026-09-25T11:07:52Z",
+      "importance": 75.4
+    },
+    {
+      "name": "DocFlow",
+      "url": "https://github.com/SudiptoKumar/DocFlow",
+      "description": "A browser-based Markdown editor and document conversion tool.",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "Kotlin",
+      "color": "#A97BFF",
+      "archetype": "library",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-02T05:34:12Z",
+      "pushedDays": 0,
+      "createdAt": "2026-09-28T22:15:20Z",
+      "importance": 67.9
+    },
+    {
+      "name": "Sudipto-Portfolio",
+      "url": "https://github.com/SudiptoKumar/Sudipto-Portfolio",
+      "description": "My Portfolio",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "JavaScript",
+      "color": "#f1e05a",
+      "archetype": "guild",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-02T03:13:35Z",
+      "pushedDays": 0,
+      "createdAt": "2026-09-28T15:28:45Z",
+      "importance": 42.5
+    },
+    {
+      "name": "SudiptoKumar",
+      "url": "https://github.com/SudiptoKumar/SudiptoKumar",
+      "description": "Hello, Dev!",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "JavaScript",
+      "color": "#f1e05a",
+      "archetype": "house",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-02T03:37:32Z",
+      "pushedDays": 0,
+      "createdAt": "2026-10-01T15:17:58Z",
+      "importance": 38.8
+    },
+    {
+      "name": "LetterShare",
+      "url": "https://github.com/SudiptoKumar/LetterShare",
+      "description": "A Next.js web application for publishing and reading letters, interacting with authors, s~",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "TypeScript",
+      "color": "#3178c6",
+      "archetype": "guild",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-09-30T12:21:58Z",
+      "pushedDays": 1,
+      "createdAt": "2026-09-28T22:18:56Z",
+      "importance": 34.5
+    },
+    {
+      "name": "StudyMart",
+      "url": "https://github.com/SudiptoKumar/StudyMart",
+      "description": "A single-owner digital product store.",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "TypeScript",
+      "color": "#3178c6",
+      "archetype": "castle",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-09-30T07:31:35Z",
+      "pushedDays": 1,
+      "createdAt": "2026-09-28T22:00:39Z",
+      "importance": 29.2
+    },
+    {
+      "name": "CampusDuty",
+      "url": "https://github.com/SudiptoKumar/CampusDuty",
+      "description": "Student productivity application.",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "TypeScript",
+      "color": "#3178c6",
+      "archetype": "guild",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-09-30T06:49:50Z",
+      "pushedDays": 1,
+      "createdAt": "2026-09-28T22:07:51Z",
+      "importance": 21.5
+    },
+    {
+      "name": "ContrastLab-",
+      "url": "https://github.com/SudiptoKumar/ContrastLab-",
+      "description": "a web-based WCAG color contrast checker and color exploration workbench.",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "TypeScript",
+      "color": "#3178c6",
+      "archetype": "guild",
+      "state": "active",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-09-28T22:13:31Z",
+      "pushedDays": 3,
+      "createdAt": "2026-09-28T22:11:39Z",
+      "importance": 15.6
+    },
+    {
+      "name": "WORKSHOP-",
+      "url": "https://github.com/SudiptoKumar/WORKSHOP-",
+      "description": "It's an Automation for Workshop.",
+      "stars": 0,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": null,
+      "color": null,
+      "archetype": "tower",
+      "state": "building",
+      "workflow": "none",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-01T13:12:46Z",
+      "pushedDays": 0,
+      "createdAt": "2026-10-01T13:12:44Z",
+      "importance": 6.5
+    }
+  ],
+  "calendar": [
+    {
+      "date": "2026-03-28",
+      "count": 0
+    },
+    {
+      "date": "2026-03-29",
+      "count": 0
+    },
+    {
+      "date": "2026-03-30",
+      "count": 0
+    },
+    {
+      "date": "2026-03-31",
+      "count": 0
+    },
+    {
+      "date": "2026-04-01",
+      "count": 0
+    },
+    {
+      "date": "2026-04-02",
+      "count": 0
+    },
+    {
+      "date": "2026-04-03",
+      "count": 0
+    },
+    {
+      "date": "2026-04-04",
+      "count": 0
+    },
+    {
+      "date": "2026-04-05",
+      "count": 0
+    },
+    {
+      "date": "2026-04-06",
+      "count": 0
+    },
+    {
+      "date": "2026-04-07",
+      "count": 0
+    },
+    {
+      "date": "2026-04-08",
+      "count": 0
+    },
+    {
+      "date": "2026-04-09",
+      "count": 0
+    },
+    {
+      "date": "2026-04-10",
+      "count": 0
+    },
+    {
+      "date": "2026-04-11",
+      "count": 0
+    },
+    {
+      "date": "2026-04-12",
+      "count": 0
+    },
+    {
+      "date": "2026-04-13",
+      "count": 0
+    },
+    {
+      "date": "2026-04-14",
+      "count": 0
+    },
+    {
+      "date": "2026-04-15",
+      "count": 0
+    },
+    {
+      "date": "2026-04-16",
+      "count": 0
+    },
+    {
+      "date": "2026-04-17",
+      "count": 0
+    },
+    {
+      "date": "2026-04-18",
+      "count": 0
+    },
+    {
+      "date": "2026-04-19",
+      "count": 0
+    },
+    {
+      "date": "2026-04-20",
+      "count": 0
+    },
+    {
+      "date": "2026-04-21",
+      "count": 0
+    },
+    {
+      "date": "2026-04-22",
+      "count": 0
+    },
+    {
+      "date": "2026-04-23",
+      "count": 0
+    },
+    {
+      "date": "2026-04-24",
+      "count": 0
+    },
+    {
+      "date": "2026-04-25",
+      "count": 0
+    },
+    {
+      "date": "2026-04-26",
+      "count": 0
+    },
+    {
+      "date": "2026-04-27",
+      "count": 0
+    },
+    {
+      "date": "2026-04-28",
+      "count": 0
+    },
+    {
+      "date": "2026-04-29",
+      "count": 0
+    },
+    {
+      "date": "2026-04-30",
+      "count": 0
+    },
+    {
+      "date": "2026-05-01",
+      "count": 0
+    },
+    {
+      "date": "2026-05-02",
+      "count": 0
+    },
+    {
+      "date": "2026-05-03",
+      "count": 0
+    },
+    {
+      "date": "2026-05-04",
+      "count": 0
+    },
+    {
+      "date": "2026-05-05",
+      "count": 0
+    },
+    {
+      "date": "2026-05-06",
+      "count": 0
+    },
+    {
+      "date": "2026-05-07",
+      "count": 0
+    },
+    {
+      "date": "2026-05-08",
+      "count": 0
+    },
+    {
+      "date": "2026-05-09",
+      "count": 0
+    },
+    {
+      "date": "2026-05-10",
+      "count": 0
+    },
+    {
+      "date": "2026-05-11",
+      "count": 0
+    },
+    {
+      "date": "2026-05-12",
+      "count": 0
+    },
+    {
+      "date": "2026-05-13",
+      "count": 0
+    },
+    {
+      "date": "2026-05-14",
+      "count": 0
+    },
+    {
+      "date": "2026-05-15",
+      "count": 0
+    },
+    {
+      "date": "2026-05-16",
+      "count": 0
+    },
+    {
+      "date": "2026-05-17",
+      "count": 0
+    },
+    {
+      "date": "2026-05-18",
+      "count": 0
+    },
+    {
+      "date": "2026-05-19",
+      "count": 0
+    },
+    {
+      "date": "2026-05-20",
+      "count": 0
+    },
+    {
+      "date": "2026-05-21",
+      "count": 0
+    },
+    {
+      "date": "2026-05-22",
+      "count": 0
+    },
+    {
+      "date": "2026-05-23",
+      "count": 0
+    },
+    {
+      "date": "2026-05-24",
+      "count": 0
+    },
+    {
+      "date": "2026-05-25",
+      "count": 0
+    },
+    {
+      "date": "2026-05-26",
+      "count": 0
+    },
+    {
+      "date": "2026-05-27",
+      "count": 0
+    },
+    {
+      "date": "2026-05-28",
+      "count": 0
+    },
+    {
+      "date": "2026-05-29",
+      "count": 0
+    },
+    {
+      "date": "2026-05-30",
+      "count": 0
+    },
+    {
+      "date": "2026-05-31",
+      "count": 0
+    },
+    {
+      "date": "2026-06-01",
+      "count": 0
+    },
+    {
+      "date": "2026-06-02",
+      "count": 0
+    },
+    {
+      "date": "2026-06-03",
+      "count": 0
+    },
+    {
+      "date": "2026-06-04",
+      "count": 0
+    },
+    {
+      "date": "2026-06-05",
+      "count": 0
+    },
+    {
+      "date": "2026-06-06",
+      "count": 0
+    },
+    {
+      "date": "2026-06-07",
+      "count": 0
+    },
+    {
+      "date": "2026-06-08",
+      "count": 0
+    },
+    {
+      "date": "2026-06-09",
+      "count": 0
+    },
+    {
+      "date": "2026-06-10",
+      "count": 0
+    },
+    {
+      "date": "2026-06-11",
+      "count": 0
+    },
+    {
+      "date": "2026-06-12",
+      "count": 0
+    },
+    {
+      "date": "2026-06-13",
+      "count": 0
+    },
+    {
+      "date": "2026-06-14",
+      "count": 0
+    },
+    {
+      "date": "2026-06-15",
+      "count": 0
+    },
+    {
+      "date": "2026-06-16",
+      "count": 0
+    },
+    {
+      "date": "2026-06-17",
+      "count": 0
+    },
+    {
+      "date": "2026-06-18",
+      "count": 0
+    },
+    {
+      "date": "2026-06-19",
+      "count": 0
+    },
+    {
+      "date": "2026-06-20",
+      "count": 0
+    },
+    {
+      "date": "2026-06-21",
+      "count": 0
+    },
+    {
+      "date": "2026-06-22",
+      "count": 0
+    },
+    {
+      "date": "2026-06-23",
+      "count": 0
+    },
+    {
+      "date": "2026-06-24",
+      "count": 0
+    },
+    {
+      "date": "2026-06-25",
+      "count": 0
+    },
+    {
+      "date": "2026-06-26",
+      "count": 0
+    },
+    {
+      "date": "2026-06-27",
+      "count": 0
+    },
+    {
+      "date": "2026-06-28",
+      "count": 0
+    },
+    {
+      "date": "2026-06-29",
+      "count": 0
+    },
+    {
+      "date": "2026-06-30",
+      "count": 0
+    },
+    {
+      "date": "2026-07-01",
+      "count": 0
+    },
+    {
+      "date": "2026-07-02",
+      "count": 0
+    },
+    {
+      "date": "2026-07-03",
+      "count": 0
+    },
+    {
+      "date": "2026-07-04",
+      "count": 0
+    },
+    {
+      "date": "2026-07-05",
+      "count": 0
+    },
+    {
+      "date": "2026-07-06",
+      "count": 0
+    },
+    {
+      "date": "2026-07-07",
+      "count": 0
+    },
+    {
+      "date": "2026-07-08",
+      "count": 0
+    },
+    {
+      "date": "2026-07-09",
+      "count": 0
+    },
+    {
+      "date": "2026-07-10",
+      "count": 0
+    },
+    {
+      "date": "2026-07-11",
+      "count": 0
+    },
+    {
+      "date": "2026-07-12",
+      "count": 0
+    },
+    {
+      "date": "2026-07-13",
+      "count": 0
+    },
+    {
+      "date": "2026-07-14",
+      "count": 0
+    },
+    {
+      "date": "2026-07-15",
+      "count": 0
+    },
+    {
+      "date": "2026-07-16",
+      "count": 0
+    },
+    {
+      "date": "2026-07-17",
+      "count": 0
+    },
+    {
+      "date": "2026-07-18",
+      "count": 0
+    },
+    {
+      "date": "2026-07-19",
+      "count": 0
+    },
+    {
+      "date": "2026-07-20",
+      "count": 0
+    },
+    {
+      "date": "2026-07-21",
+      "count": 0
+    },
+    {
+      "date": "2026-07-22",
+      "count": 0
+    },
+    {
+      "date": "2026-07-23",
+      "count": 0
+    },
+    {
+      "date": "2026-07-24",
+      "count": 0
+    },
+    {
+      "date": "2026-07-25",
+      "count": 0
+    },
+    {
+      "date": "2026-07-26",
+      "count": 0
+    },
+    {
+      "date": "2026-07-27",
+      "count": 0
+    },
+    {
+      "date": "2026-07-28",
+      "count": 0
+    },
+    {
+      "date": "2026-07-29",
+      "count": 0
+    },
+    {
+      "date": "2026-07-30",
+      "count": 0
+    },
+    {
+      "date": "2026-07-31",
+      "count": 0
+    },
+    {
+      "date": "2026-08-01",
+      "count": 0
+    },
+    {
+      "date": "2026-08-02",
+      "count": 0
+    },
+    {
+      "date": "2026-08-03",
+      "count": 0
+    },
+    {
+      "date": "2026-08-04",
+      "count": 0
+    },
+    {
+      "date": "2026-08-05",
+      "count": 0
+    },
+    {
+      "date": "2026-08-06",
+      "count": 0
+    },
+    {
+      "date": "2026-08-07",
+      "count": 0
+    },
+    {
+      "date": "2026-08-08",
+      "count": 0
+    },
+    {
+      "date": "2026-08-09",
+      "count": 0
+    },
+    {
+      "date": "2026-08-10",
+      "count": 0
+    },
+    {
+      "date": "2026-08-11",
+      "count": 0
+    },
+    {
+      "date": "2026-08-12",
+      "count": 0
+    },
+    {
+      "date": "2026-08-13",
+      "count": 0
+    },
+    {
+      "date": "2026-08-14",
+      "count": 0
+    },
+    {
+      "date": "2026-08-15",
+      "count": 0
+    },
+    {
+      "date": "2026-08-16",
+      "count": 0
+    },
+    {
+      "date": "2026-08-17",
+      "count": 0
+    },
+    {
+      "date": "2026-08-18",
+      "count": 0
+    },
+    {
+      "date": "2026-08-19",
+      "count": 0
+    },
+    {
+      "date": "2026-08-20",
+      "count": 0
+    },
+    {
+      "date": "2026-08-21",
+      "count": 0
+    },
+    {
+      "date": "2026-08-22",
+      "count": 0
+    },
+    {
+      "date": "2026-08-23",
+      "count": 0
+    },
+    {
+      "date": "2026-08-24",
+      "count": 0
+    },
+    {
+      "date": "2026-08-25",
+      "count": 0
+    },
+    {
+      "date": "2026-08-26",
+      "count": 0
+    },
+    {
+      "date": "2026-08-27",
+      "count": 13
+    },
+    {
+      "date": "2026-08-28",
+      "count": 42
+    },
+    {
+      "date": "2026-08-29",
+      "count": 64
+    },
+    {
+      "date": "2026-08-30",
+      "count": 40
+    },
+    {
+      "date": "2026-08-31",
+      "count": 14
+    },
+    {
+      "date": "2026-09-01",
+      "count": 0
+    },
+    {
+      "date": "2026-09-02",
+      "count": 0
+    },
+    {
+      "date": "2026-09-03",
+      "count": 17
+    },
+    {
+      "date": "2026-09-04",
+      "count": 0
+    },
+    {
+      "date": "2026-09-05",
+      "count": 25,
+      "gold": 1
+    },
+    {
+      "date": "2026-09-06",
+      "count": 4,
+      "gold": 1
+    },
+    {
+      "date": "2026-09-07",
+      "count": 16,
+      "gold": 1
+    },
+    {
+      "date": "2026-09-08",
+      "count": 20,
+      "gold": 1
+    },
+    {
+      "date": "2026-09-09",
+      "count": 20,
+      "gold": 1
+    },
+    {
+      "date": "2026-09-10",
+      "count": 1,
+      "gold": 1
+    },
+    {
+      "date": "2026-09-11",
+      "count": 1,
+      "gold": 1
+    },
+    {
+      "date": "2026-09-12",
+      "count": 2,
+      "gold": 1
+    },
+    {
+      "date": "2026-09-13",
+      "count": 2,
+      "gold": 1
+    },
+    {
+      "date": "2026-09-14",
+      "count": 0
+    },
+    {
+      "date": "2026-09-15",
+      "count": 2
+    },
+    {
+      "date": "2026-09-16",
+      "count": 0
+    },
+    {
+      "date": "2026-09-17",
+      "count": 7,
+      "gold": 1
+    },
+    {
+      "date": "2026-09-18",
+      "count": 56,
+      "gold": 1
+    },
+    {
+      "date": "2026-09-19",
+      "count": 42,
+      "gold": 1
+    },
+    {
+      "date": "2026-09-20",
+      "count": 42,
+      "gold": 1
+    },
+    {
+      "date": "2026-09-21",
+      "count": 25,
+      "gold": 1
+    },
+    {
+      "date": "2026-09-22",
+      "count": 22,
+      "gold": 1
+    },
+    {
+      "date": "2026-09-23",
+      "count": 16,
+      "gold": 1
+    },
+    {
+      "date": "2026-09-24",
+      "count": 18,
+      "gold": 1
+    },
+    {
+      "date": "2026-09-25",
+      "count": 18,
+      "gold": 1
+    },
+    {
+      "date": "2026-09-26",
+      "count": 4,
+      "gold": 1
+    },
+    {
+      "date": "2026-09-27",
+      "count": 38,
+      "gold": 1
+    },
+    {
+      "date": "2026-09-28",
+      "count": 8,
+      "gold": 1
+    },
+    {
+      "date": "2026-09-29",
+      "count": 18,
+      "gold": 1
+    },
+    {
+      "date": "2026-09-30",
+      "count": 7,
+      "gold": 1
+    },
+    {
+      "date": "2026-10-01",
+      "count": 6,
+      "gold": 1
+    },
+    {
+      "date": "2026-10-02",
+      "count": 31,
+      "gold": 1
+    }
+  ],
+  "achievements": {
+    "list": [
+      {
+        "id": "first_blood",
+        "name": "FIRST BLOOD",
+        "desc": "First public repo",
+        "icon": "sword",
+        "secret": false,
+        "unlocked": true,
+        "at": "2026-10-02T03:26:17.962Z",
+        "isNew": false
+      },
+      {
+        "id": "builder",
+        "name": "BUILDER",
+        "desc": "100 commits",
+        "icon": "hammer",
+        "secret": false,
+        "unlocked": true,
+        "at": "2026-10-02T03:26:17.962Z",
+        "isNew": false
+      },
+      {
+        "id": "master_builder",
+        "name": "MASTER BUILDER",
+        "desc": "1,000 commits",
+        "icon": "castle",
+        "secret": false,
+        "unlocked": false,
+        "at": null,
+        "isNew": false
+      },
+      {
+        "id": "streakkeeper",
+        "name": "STREAKKEEPER",
+        "desc": "7 day streak",
+        "icon": "wheat",
+        "secret": false,
+        "unlocked": true,
+        "at": "2026-10-02T03:26:17.962Z",
+        "isNew": false
+      },
+      {
+        "id": "iron_streak",
+        "name": "IRON STREAK",
+        "desc": "30 day streak",
+        "icon": "shield",
+        "secret": false,
+        "unlocked": false,
+        "at": null,
+        "isNew": false
+      },
+      {
+        "id": "night_coder",
+        "name": "NIGHT CODER",
+        "desc": "Code at night",
+        "icon": "moon",
+        "secret": false,
+        "unlocked": true,
+        "at": "2026-10-02T03:26:17.962Z",
+        "isNew": false
+      },
+      {
+        "id": "ship_it",
+        "name": "SHIP IT",
+        "desc": "Publish a release",
+        "icon": "rocket",
+        "secret": false,
+        "unlocked": true,
+        "at": "2026-10-02T05:40:01.794Z",
+        "isNew": true
+      },
+      {
+        "id": "open_gate",
+        "name": "OPEN GATE",
+        "desc": "First issue talk",
+        "icon": "flag",
+        "secret": false,
+        "unlocked": true,
+        "at": "2026-10-02T05:40:01.794Z",
+        "isNew": true
+      },
+      {
+        "id": "architect",
+        "name": "ARCHITECT",
+        "desc": "3 active repos",
+        "icon": "house",
+        "secret": false,
+        "unlocked": true,
+        "at": "2026-10-02T03:26:17.962Z",
+        "isNew": false
+      },
+      {
+        "id": "boss_fight",
+        "name": "BOSS FIGHT",
+        "desc": "Solve a hard issue",
+        "icon": "skull",
+        "secret": false,
+        "unlocked": false,
+        "at": null,
+        "isNew": false
+      },
+      {
+        "id": "fire_fighter",
+        "name": "FIRE FIGHTER",
+        "desc": "Fix a failed workflow",
+        "icon": "flame",
+        "secret": false,
+        "unlocked": true,
+        "at": "2026-10-02T03:26:17.962Z",
+        "isNew": false
+      },
+      {
+        "id": "gold_rush",
+        "name": "GOLD RUSH",
+        "desc": "10 stars",
+        "icon": "coin",
+        "secret": false,
+        "unlocked": true,
+        "at": "2026-10-02T03:26:17.962Z",
+        "isNew": false
+      },
+      {
+        "id": "trifecta",
+        "name": "THE TRIFECTA",
+        "desc": "100 commits, 7 streak, release",
+        "icon": "crown",
+        "secret": true,
+        "unlocked": true,
+        "at": "2026-10-02T05:40:01.794Z",
+        "isNew": true
+      },
+      {
+        "id": "dawn_patrol",
+        "name": "DAWN PATROL",
+        "desc": "Code at sunrise",
+        "icon": "sun",
+        "secret": true,
+        "unlocked": true,
+        "at": "2026-10-02T03:26:17.962Z",
+        "isNew": false
+      },
+      {
+        "id": "polyglot",
+        "name": "???",
+        "desc": "SECRET",
+        "icon": "book",
+        "secret": true,
+        "unlocked": false,
+        "at": null,
+        "isNew": false
+      },
+      {
+        "id": "centurion",
+        "name": "???",
+        "desc": "SECRET",
+        "icon": "trophy",
+        "secret": true,
+        "unlocked": false,
+        "at": null,
+        "isNew": false
+      }
+    ],
+    "count": 11,
+    "total": 16,
+    "visibleUnlocked": 9,
+    "visibleTotal": 12,
+    "secretUnlocked": 2,
+    "secretTotal": 4,
+    "fresh": [
+      "ship_it",
+      "open_gate",
+      "trifecta"
+    ]
+  },
+  "events": {
+    "active": [
+      {
+        "id": "raid:visitor:1",
+        "type": "raid",
+        "title": "BOSS RAID",
+        "icon": "skull",
+        "detail": "SENT BY @SudiptoKumar",
+        "at": "2026-10-02T05:39:59.983Z",
+        "until": "2026-10-02T11:39:59.983Z"
+      },
+      {
+        "id": "release:DocFlow:manual-12",
+        "type": "release",
+        "title": "RELEASE DAY",
+        "icon": "rocket",
+        "detail": "DocFlow manual-12",
+        "at": "2026-10-02T05:04:32Z",
+        "until": "2026-10-04T05:04:32.000Z"
+      },
+      {
+        "id": "ach:ship_it",
+        "type": "milestone",
+        "title": "MILESTONE UNLOCKED",
+        "icon": "trophy",
+        "detail": "SHIP IT",
+        "at": "2026-10-02T05:40:01.794Z",
+        "until": "2026-10-04T05:40:01.794Z"
+      },
+      {
+        "id": "ach:open_gate",
+        "type": "milestone",
+        "title": "MILESTONE UNLOCKED",
+        "icon": "trophy",
+        "detail": "OPEN GATE",
+        "at": "2026-10-02T05:40:01.794Z",
+        "until": "2026-10-04T05:40:01.794Z"
+      },
+      {
+        "id": "ach:trifecta",
+        "type": "milestone",
+        "title": "MILESTONE UNLOCKED",
+        "icon": "trophy",
+        "detail": "THE TRIFECTA",
+        "at": "2026-10-02T05:40:01.794Z",
+        "until": "2026-10-04T05:40:01.794Z"
+      },
+      {
+        "id": "levelup:17",
+        "type": "milestone",
+        "title": "MILESTONE UNLOCKED",
+        "icon": "trophy",
+        "detail": "LEVEL 17",
+        "at": "2026-10-02T03:33:34.760Z",
+        "until": "2026-10-04T03:33:34.760Z"
+      },
+      {
+        "id": "expansion:SudiptoKumar",
+        "type": "expansion",
+        "title": "KINGDOM EXPANSION",
+        "icon": "crown",
+        "detail": "SudiptoKumar",
+        "at": "2026-10-01T15:17:58Z",
+        "until": "2026-10-08T15:17:58.000Z"
+      },
+      {
+        "id": "expansion:WORKSHOP-",
+        "type": "expansion",
+        "title": "KINGDOM EXPANSION",
+        "icon": "crown",
+        "detail": "WORKSHOP-",
+        "at": "2026-10-01T13:12:44Z",
+        "until": "2026-10-08T13:12:44.000Z"
+      },
+      {
+        "id": "expansion:LetterShare",
+        "type": "expansion",
+        "title": "KINGDOM EXPANSION",
+        "icon": "crown",
+        "detail": "LetterShare",
+        "at": "2026-09-28T22:18:56Z",
+        "until": "2026-10-05T22:18:56.000Z"
+      },
+      {
+        "id": "expansion:DocFlow",
+        "type": "expansion",
+        "title": "KINGDOM EXPANSION",
+        "icon": "crown",
+        "detail": "DocFlow",
+        "at": "2026-09-28T22:15:20Z",
+        "until": "2026-10-05T22:15:20.000Z"
+      },
+      {
+        "id": "expansion:ContrastLab-",
+        "type": "expansion",
+        "title": "KINGDOM EXPANSION",
+        "icon": "crown",
+        "detail": "ContrastLab-",
+        "at": "2026-09-28T22:11:39Z",
+        "until": "2026-10-05T22:11:39.000Z"
+      },
+      {
+        "id": "expansion:CampusDuty",
+        "type": "expansion",
+        "title": "KINGDOM EXPANSION",
+        "icon": "crown",
+        "detail": "CampusDuty",
+        "at": "2026-09-28T22:07:51Z",
+        "until": "2026-10-05T22:07:51.000Z"
+      },
+      {
+        "id": "expansion:StudyMart",
+        "type": "expansion",
+        "title": "KINGDOM EXPANSION",
+        "icon": "crown",
+        "detail": "StudyMart",
+        "at": "2026-09-28T22:00:39Z",
+        "until": "2026-10-05T22:00:39.000Z"
+      },
+      {
+        "id": "expansion:Sudipto-Portfolio",
+        "type": "expansion",
+        "title": "KINGDOM EXPANSION",
+        "icon": "crown",
+        "detail": "Sudipto-Portfolio",
+        "at": "2026-09-28T15:28:45Z",
+        "until": "2026-10-05T15:28:45.000Z"
+      },
+      {
+        "id": "expansion:VocabularyBot",
+        "type": "expansion",
+        "title": "KINGDOM EXPANSION",
+        "icon": "crown",
+        "detail": "VocabularyBot",
+        "at": "2026-09-25T11:07:52Z",
+        "until": "2026-10-02T11:07:52.000Z"
+      },
+      {
+        "id": "harvest:2026-10-02",
+        "type": "harvest",
+        "title": "HARVEST FESTIVAL",
+        "icon": "wheat",
+        "detail": "31 CONTRIBUTIONS",
+        "at": "2026-10-02T12:00:00.000Z",
+        "until": "2026-10-04T04:00:00.000Z"
+      }
+    ],
+    "recent": [
+      {
+        "id": "harvest:2026-10-02",
+        "type": "harvest",
+        "title": "HARVEST FESTIVAL",
+        "icon": "wheat",
+        "detail": "31 CONTRIBUTIONS",
+        "at": "2026-10-02T12:00:00.000Z",
+        "until": "2026-10-04T04:00:00.000Z"
+      },
+      {
+        "id": "ach:ship_it",
+        "type": "milestone",
+        "title": "MILESTONE UNLOCKED",
+        "icon": "trophy",
+        "detail": "SHIP IT",
+        "at": "2026-10-02T05:40:01.794Z",
+        "until": "2026-10-04T05:40:01.794Z"
+      },
+      {
+        "id": "ach:open_gate",
+        "type": "milestone",
+        "title": "MILESTONE UNLOCKED",
+        "icon": "trophy",
+        "detail": "OPEN GATE",
+        "at": "2026-10-02T05:40:01.794Z",
+        "until": "2026-10-04T05:40:01.794Z"
+      },
+      {
+        "id": "ach:trifecta",
+        "type": "milestone",
+        "title": "MILESTONE UNLOCKED",
+        "icon": "trophy",
+        "detail": "THE TRIFECTA",
+        "at": "2026-10-02T05:40:01.794Z",
+        "until": "2026-10-04T05:40:01.794Z"
+      },
+      {
+        "id": "raid:visitor:1",
+        "type": "raid",
+        "title": "BOSS RAID",
+        "icon": "skull",
+        "detail": "SENT BY @SudiptoKumar",
+        "at": "2026-10-02T05:39:59.983Z",
+        "until": "2026-10-02T11:39:59.983Z"
+      },
+      {
+        "id": "release:DocFlow:manual-12",
+        "type": "release",
+        "title": "RELEASE DAY",
+        "icon": "rocket",
+        "detail": "DocFlow manual-12",
+        "at": "2026-10-02T05:04:32Z",
+        "until": "2026-10-04T05:04:32.000Z"
+      }
+    ]
+  },
+  "raid": {
+    "active": true,
+    "id": 1,
+    "by": "SudiptoKumar",
+    "at": "2026-10-02T05:39:59.983Z",
+    "size": "small",
+    "goblins": 3,
+    "defense": 100,
+    "attack": 30
+  },
+  "visitors": {
+    "total": 0,
+    "flags": []
+  },
+  "history": {
+    "points": [
+      {
+        "d": "2023-11-30",
+        "l": 1,
+        "x": 31,
+        "e": 1
+      },
+      {
+        "d": "2023-12-31",
+        "l": 1,
+        "x": 31,
+        "e": 1
+      },
+      {
+        "d": "2024-01-31",
+        "l": 1,
+        "x": 31,
+        "e": 1
+      },
+      {
+        "d": "2024-02-29",
+        "l": 1,
+        "x": 31,
+        "e": 1
+      },
+      {
+        "d": "2024-03-31",
+        "l": 1,
+        "x": 31,
+        "e": 1
+      },
+      {
+        "d": "2024-04-30",
+        "l": 1,
+        "x": 31,
+        "e": 1
+      },
+      {
+        "d": "2024-05-31",
+        "l": 1,
+        "x": 93,
+        "e": 1
+      },
+      {
+        "d": "2024-06-30",
+        "l": 1,
+        "x": 93,
+        "e": 1
+      },
+      {
+        "d": "2024-07-31",
+        "l": 1,
+        "x": 93,
+        "e": 1
+      },
+      {
+        "d": "2024-08-31",
+        "l": 1,
+        "x": 93,
+        "e": 1
+      },
+      {
+        "d": "2024-09-30",
+        "l": 1,
+        "x": 93,
+        "e": 1
+      },
+      {
+        "d": "2024-10-31",
+        "l": 1,
+        "x": 93,
+        "e": 1
+      },
+      {
+        "d": "2024-11-30",
+        "l": 1,
+        "x": 93,
+        "e": 1
+      },
+      {
+        "d": "2024-12-31",
+        "l": 1,
+        "x": 93,
+        "e": 1
+      },
+      {
+        "d": "2025-01-31",
+        "l": 1,
+        "x": 93,
+        "e": 1
+      },
+      {
+        "d": "2025-02-28",
+        "l": 1,
+        "x": 93,
+        "e": 1
+      },
+      {
+        "d": "2025-03-31",
+        "l": 1,
+        "x": 93,
+        "e": 1
+      },
+      {
+        "d": "2025-04-30",
+        "l": 1,
+        "x": 93,
+        "e": 1
+      },
+      {
+        "d": "2025-05-31",
+        "l": 1,
+        "x": 93,
+        "e": 1
+      },
+      {
+        "d": "2025-06-30",
+        "l": 1,
+        "x": 93,
+        "e": 1
+      },
+      {
+        "d": "2025-07-31",
+        "l": 1,
+        "x": 93,
+        "e": 1
+      },
+      {
+        "d": "2025-08-31",
+        "l": 1,
+        "x": 93,
+        "e": 1
+      },
+      {
+        "d": "2025-09-30",
+        "l": 1,
+        "x": 93,
+        "e": 1
+      },
+      {
+        "d": "2025-10-31",
+        "l": 1,
+        "x": 93,
+        "e": 1
+      },
+      {
+        "d": "2025-11-30",
+        "l": 1,
+        "x": 93,
+        "e": 1
+      },
+      {
+        "d": "2025-12-31",
+        "l": 1,
+        "x": 93,
+        "e": 1
+      },
+      {
+        "d": "2026-01-31",
+        "l": 1,
+        "x": 93,
+        "e": 1
+      },
+      {
+        "d": "2026-02-28",
+        "l": 1,
+        "x": 93,
+        "e": 1
+      },
+      {
+        "d": "2026-03-31",
+        "l": 1,
+        "x": 93,
+        "e": 1
+      },
+      {
+        "d": "2026-04-30",
+        "l": 1,
+        "x": 93,
+        "e": 1
+      },
+      {
+        "d": "2026-05-31",
+        "l": 1,
+        "x": 93,
+        "e": 1
+      },
+      {
+        "d": "2026-06-30",
+        "l": 1,
+        "x": 93,
+        "e": 1
+      },
+      {
+        "d": "2026-07-31",
+        "l": 1,
+        "x": 93,
+        "e": 1
+      },
+      {
+        "d": "2026-08-31",
+        "l": 7,
+        "x": 1490,
+        "e": 1
+      },
+      {
+        "d": "2026-09-30",
+        "l": 16,
+        "x": 7178,
+        "e": 1
+      },
+      {
+        "d": "2026-10-02",
+        "l": 17,
+        "x": 8162,
+        "s": 19,
+        "c": 621,
+        "p": 1001
+      }
+    ]
+  },
+  "status": {
+    "assets": {
+      "world": "ok",
+      "hero": "ok",
+      "stats": "ok",
+      "hall": "ok",
+      "repos": "ok",
+      "harvest": "ok",
+      "history": "ok",
+      "camp": "ok",
+      "status": "ok"
+    },
+    "checkedAt": "2026-10-02T05:40:01.794Z"
+  },
+  "contentHash": "032328ae282891a6"
+}

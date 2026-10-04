@@ -1,0 +1,63 @@
+name: Visitor update
+
+# Visitors fill in a form (an issue). This workflow checks the form with strict rules,
+# saves only safe data, answers the visitor, and redraws the map.
+# It never runs code from the issue and never puts issue text into a shell command.
+on:
+  issues:
+    types: [opened, reopened]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+  actions: read
+
+concurrency:
+  group: kingdom-write
+  cancel-in-progress: false
+
+jobs:
+  visitors:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      contains(github.event.issue.labels.*.name, 'flag-request') ||
+      contains(github.event.issue.labels.*.name, 'raid-request')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check the request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node engine/cli.mjs visitors
+      - name: Update the kingdom
+        env:
+          GH_TOKEN: ${{ secrets.KINGDOM_TOKEN || secrets.GITHUB_TOKEN }}
+        run: node engine/cli.mjs update --force
+      - name: Safety check for all pictures
+        run: node engine/cli.mjs lint
+      - name: Save changes
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          BRANCH="${DEFAULT_BRANCH:-$GITHUB_REF_NAME}"
+          git config user.name "kingdom-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data renderer README.md
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+            exit 0
+          fi
+          git commit -m "kingdom: visitor update [skip ci]"
+          for i in 1 2 3; do
+            git pull --rebase origin "$BRANCH" && git push origin "HEAD:$BRANCH" && exit 0
+            sleep 5
+          done
+          exit 1

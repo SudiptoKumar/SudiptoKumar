@@ -1,0 +1,48 @@
+name: Generate Projects, Stats and Languages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/projects.json'
+      - 'assets/logos/**'
+      - 'scripts/**'
+      - '.github/workflows/projects.yml'
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  generate:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch repositories and metadata
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/fetch_data.py
+
+      - name: Generate projects
+        run: |
+          rm -rf out
+          mkdir -p out
+          python3 scripts/generate_projects.py merged.json out
+
+      - name: Generate stats and languages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/generate_stats.py
+
+      - name: Publish generated assets
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: projects
+          build_dir: out
+          commit_message: 'Update profile generated assets [skip ci]'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
