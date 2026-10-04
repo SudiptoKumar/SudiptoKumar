@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-04T16:30:30.291Z",
+  "generatedAt": "2026-10-04T16:32:55.462Z",
   "level": 17,
   "xp": 8427,
   "stars": 19,
@@ -31,9 +31,9 @@
     "kingdomDay": 1170
   },
   "time": {
-    "iso": "2026-10-04T16:30:30.291Z",
+    "iso": "2026-10-04T16:32:55.462Z",
     "tz": "Asia/Dhaka",
-    "hour": 22.5,
+    "hour": 22.53,
     "phase": "night",
     "season": "autumn",
     "date": "2026-10-04"
@@ -861,6 +861,46 @@
       }
     },
     {
+      "name": "SudiptoKumar",
+      "url": "https://github.com/SudiptoKumar/SudiptoKumar",
+      "description": "Hello, Dev!",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "JavaScript",
+      "color": "#f1e05a",
+      "archetype": "house",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-04T16:30:42Z",
+      "pushedDays": 0,
+      "createdAt": "2026-10-01T15:17:58Z",
+      "importance": 67.9,
+      "commits": 38,
+      "commits90": 38,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 3,
+      "evolution": {
+        "level": 3,
+        "name": "BUILDING",
+        "score": 64,
+        "toNext": 0,
+        "capped": "age",
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 0,
+          "depth": 12,
+          "release": 0,
+          "reputation": 2
+        }
+      }
+    },
+    {
       "name": "DocFlow",
       "url": "https://github.com/SudiptoKumar/DocFlow",
       "description": "A browser-based Markdown editor and document conversion tool.",
@@ -896,46 +936,6 @@
           "maturity": 0,
           "depth": 12,
           "release": 10,
-          "reputation": 2
-        }
-      }
-    },
-    {
-      "name": "SudiptoKumar",
-      "url": "https://github.com/SudiptoKumar/SudiptoKumar",
-      "description": "Hello, Dev!",
-      "stars": 1,
-      "forks": 0,
-      "issues": 0,
-      "prs": 0,
-      "language": "JavaScript",
-      "color": "#f1e05a",
-      "archetype": "house",
-      "state": "building",
-      "workflow": "passing",
-      "recovered": false,
-      "lastFailAt": null,
-      "pushedAt": "2026-10-04T16:30:21Z",
-      "pushedDays": 0,
-      "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 66.4,
-      "commits": 37,
-      "commits90": 37,
-      "releases": 0,
-      "recoveredAt": null,
-      "ageDays": 3,
-      "evolution": {
-        "level": 3,
-        "name": "BUILDING",
-        "score": 64,
-        "toNext": 0,
-        "capped": "age",
-        "parts": {
-          "activity": 30,
-          "recency": 20,
-          "maturity": 0,
-          "depth": 12,
-          "release": 0,
           "reputation": 2
         }
       }
@@ -2220,8 +2220,8 @@
         "title": "NIGHT OF THE STARS",
         "icon": "star",
         "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-04T16:30:30.291Z",
-        "until": "2026-10-04T17:30:30.291Z"
+        "at": "2026-10-04T16:32:55.462Z",
+        "until": "2026-10-04T17:32:55.462Z"
       }
     ],
     "recent": [
@@ -2231,8 +2231,8 @@
         "title": "NIGHT OF THE STARS",
         "icon": "star",
         "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-04T16:30:30.291Z",
-        "until": "2026-10-04T17:30:30.291Z"
+        "at": "2026-10-04T16:32:55.462Z",
+        "until": "2026-10-04T17:32:55.462Z"
       },
       {
         "id": "recovery:DailyFacts",
@@ -2543,7 +2543,7 @@
       "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-04T16:30:30.291Z"
+    "checkedAt": "2026-10-04T16:32:55.462Z"
   },
   "v": 2,
   "featured": [
@@ -2632,8 +2632,8 @@
       "build": {
         "Sudipto-Portfolio": "construction",
         "Workshop-Certificate-Verify": "builders",
-        "DocFlow": "construction",
         "SudiptoKumar": "construction",
+        "DocFlow": "construction",
         "LetterShare": "construction",
         "StudyMart": "construction",
         "WORKSHOP-": "construction",
@@ -2681,5 +2681,5 @@
       }
     ]
   },
-  "contentHash": "f6662f2892a45a4d"
+  "contentHash": "9bcf590e419c8f47"
 }
