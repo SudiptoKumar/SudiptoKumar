@@ -22,9 +22,9 @@
 
 - 🌾 **HARVEST FESTIVAL** · 53 CONTRIBUTIONS · just now
 - 👑 **KINGDOM EXPANSION** · Workshop-Certificate-Verify · 33h ago
-- 🏆 **MILESTONE UNLOCKED** · THE TRIFECTA · 2d ago
-- 🏆 **MILESTONE UNLOCKED** · OPEN GATE · 2d ago
 - 🏆 **MILESTONE UNLOCKED** · SHIP IT · 2d ago
+- 🏆 **MILESTONE UNLOCKED** · OPEN GATE · 2d ago
+- 🏆 **MILESTONE UNLOCKED** · THE TRIFECTA · 2d ago
 
 <details>
 <summary><b>Map legend</b>: what every place means</summary>

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-04T06:00:57.515Z",
+  "generatedAt": "2026-10-04T06:19:12.774Z",
   "level": 17,
   "xp": 8369,
   "stars": 19,
@@ -31,9 +31,9 @@
     "kingdomDay": 1170
   },
   "time": {
-    "iso": "2026-10-04T06:00:57.515Z",
+    "iso": "2026-10-04T06:19:12.774Z",
     "tz": "Asia/Dhaka",
-    "hour": 12,
+    "hour": 12.32,
     "phase": "day",
     "season": "autumn",
     "date": "2026-10-04"
@@ -457,10 +457,10 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-03T21:24:56Z",
+      "pushedAt": "2026-10-04T06:01:09Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 52.8
+      "importance": 54.3
     },
     {
       "name": "LetterShare",
@@ -518,7 +518,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-03T06:02:35Z",
-      "pushedDays": 0,
+      "pushedDays": 1,
       "createdAt": "2026-10-01T13:12:44Z",
       "importance": 23.1
     },
@@ -1631,11 +1631,11 @@
         "until": "2026-10-09T21:18:15.000Z"
       },
       {
-        "id": "ach:trifecta",
+        "id": "ach:ship_it",
         "type": "milestone",
         "title": "MILESTONE UNLOCKED",
         "icon": "trophy",
-        "detail": "THE TRIFECTA",
+        "detail": "SHIP IT",
         "at": "2026-10-02T05:40:01.794Z",
         "until": "2026-10-04T05:40:01.794Z"
       },
@@ -1649,11 +1649,11 @@
         "until": "2026-10-04T05:40:01.794Z"
       },
       {
-        "id": "ach:ship_it",
+        "id": "ach:trifecta",
         "type": "milestone",
         "title": "MILESTONE UNLOCKED",
         "icon": "trophy",
-        "detail": "SHIP IT",
+        "detail": "THE TRIFECTA",
         "at": "2026-10-02T05:40:01.794Z",
         "until": "2026-10-04T05:40:01.794Z"
       },
@@ -1918,15 +1918,10 @@
     "assets": {
       "world": "ok",
       "hero": "ok",
-      "stats": "ok",
       "hall": "ok",
-      "repos": "ok",
-      "harvest": "ok",
-      "history": "ok",
-      "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-04T06:00:57.515Z"
+    "checkedAt": "2026-10-04T06:19:12.774Z"
   },
-  "contentHash": "f328c8335671de6e"
+  "contentHash": "partial:d1d071d883f8d752"
 }
