@@ -2,11 +2,11 @@
   "version": 1,
   "events": [
     {
-      "id": "ach:trifecta",
+      "id": "ach:ship_it",
       "type": "milestone",
       "title": "MILESTONE UNLOCKED",
       "icon": "trophy",
-      "detail": "THE TRIFECTA",
+      "detail": "SHIP IT",
       "at": "2026-10-02T05:40:01.794Z",
       "until": "2026-10-04T05:40:01.794Z"
     },
@@ -20,11 +20,11 @@
       "until": "2026-10-04T05:40:01.794Z"
     },
     {
-      "id": "ach:ship_it",
+      "id": "ach:trifecta",
       "type": "milestone",
       "title": "MILESTONE UNLOCKED",
       "icon": "trophy",
-      "detail": "SHIP IT",
+      "detail": "THE TRIFECTA",
       "at": "2026-10-02T05:40:01.794Z",
       "until": "2026-10-04T05:40:01.794Z"
     },
