@@ -2,6 +2,15 @@
   "version": 1,
   "events": [
     {
+      "id": "levelup:18",
+      "type": "milestone",
+      "title": "MILESTONE UNLOCKED",
+      "icon": "trophy",
+      "detail": "LEVEL 18",
+      "at": "2026-10-04T21:32:01.915Z",
+      "until": "2026-10-06T21:32:01.915Z"
+    },
+    {
       "id": "ach:open_gate",
       "type": "milestone",
       "title": "MILESTONE UNLOCKED",
