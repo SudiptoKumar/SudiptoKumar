@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-04T16:32:55.462Z",
+  "generatedAt": "2026-10-04T16:33:28.529Z",
   "level": 17,
   "xp": 8427,
   "stars": 19,
@@ -31,9 +31,9 @@
     "kingdomDay": 1170
   },
   "time": {
-    "iso": "2026-10-04T16:32:55.462Z",
+    "iso": "2026-10-04T16:33:28.529Z",
     "tz": "Asia/Dhaka",
-    "hour": 22.53,
+    "hour": 22.55,
     "phase": "night",
     "season": "autumn",
     "date": "2026-10-04"
@@ -563,7 +563,7 @@
       "commits90": 150,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 35,
+      "ageDays": 36,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -821,6 +821,46 @@
       }
     },
     {
+      "name": "SudiptoKumar",
+      "url": "https://github.com/SudiptoKumar/SudiptoKumar",
+      "description": "Hello, Dev!",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "JavaScript",
+      "color": "#f1e05a",
+      "archetype": "house",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-04T16:33:04Z",
+      "pushedDays": 0,
+      "createdAt": "2026-10-01T15:17:58Z",
+      "importance": 69.4,
+      "commits": 39,
+      "commits90": 39,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 3,
+      "evolution": {
+        "level": 3,
+        "name": "BUILDING",
+        "score": 64,
+        "toNext": 0,
+        "capped": "age",
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 0,
+          "depth": 12,
+          "release": 0,
+          "reputation": 2
+        }
+      }
+    },
+    {
       "name": "Workshop-Certificate-Verify",
       "url": "https://github.com/SudiptoKumar/Workshop-Certificate-Verify",
       "description": "Certificate Verify",
@@ -857,46 +897,6 @@
           "depth": 12,
           "release": 0,
           "reputation": 0
-        }
-      }
-    },
-    {
-      "name": "SudiptoKumar",
-      "url": "https://github.com/SudiptoKumar/SudiptoKumar",
-      "description": "Hello, Dev!",
-      "stars": 1,
-      "forks": 0,
-      "issues": 0,
-      "prs": 0,
-      "language": "JavaScript",
-      "color": "#f1e05a",
-      "archetype": "house",
-      "state": "building",
-      "workflow": "passing",
-      "recovered": false,
-      "lastFailAt": null,
-      "pushedAt": "2026-10-04T16:30:42Z",
-      "pushedDays": 0,
-      "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 67.9,
-      "commits": 38,
-      "commits90": 38,
-      "releases": 0,
-      "recoveredAt": null,
-      "ageDays": 3,
-      "evolution": {
-        "level": 3,
-        "name": "BUILDING",
-        "score": 64,
-        "toNext": 0,
-        "capped": "age",
-        "parts": {
-          "activity": 30,
-          "recency": 20,
-          "maturity": 0,
-          "depth": 12,
-          "release": 0,
-          "reputation": 2
         }
       }
     },
@@ -2220,8 +2220,8 @@
         "title": "NIGHT OF THE STARS",
         "icon": "star",
         "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-04T16:32:55.462Z",
-        "until": "2026-10-04T17:32:55.462Z"
+        "at": "2026-10-04T16:33:28.529Z",
+        "until": "2026-10-04T17:33:28.529Z"
       }
     ],
     "recent": [
@@ -2231,8 +2231,8 @@
         "title": "NIGHT OF THE STARS",
         "icon": "star",
         "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-04T16:32:55.462Z",
-        "until": "2026-10-04T17:32:55.462Z"
+        "at": "2026-10-04T16:33:28.529Z",
+        "until": "2026-10-04T17:33:28.529Z"
       },
       {
         "id": "recovery:DailyFacts",
@@ -2538,12 +2538,9 @@
       "quest": "ok",
       "districts": "ok",
       "trophies": "ok",
-      "harvest": "ok",
-      "history": "ok",
-      "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-04T16:32:55.462Z"
+    "checkedAt": "2026-10-04T16:33:28.529Z"
   },
   "v": 2,
   "featured": [
@@ -2631,8 +2628,8 @@
       },
       "build": {
         "Sudipto-Portfolio": "construction",
-        "Workshop-Certificate-Verify": "builders",
         "SudiptoKumar": "construction",
+        "Workshop-Certificate-Verify": "builders",
         "DocFlow": "construction",
         "LetterShare": "construction",
         "StudyMart": "construction",
@@ -2681,5 +2678,5 @@
       }
     ]
   },
-  "contentHash": "9bcf590e419c8f47"
+  "contentHash": "partial:40037f0d828087b8"
 }
