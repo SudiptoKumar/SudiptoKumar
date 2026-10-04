@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-04T16:33:28.529Z",
+  "generatedAt": "2026-10-04T16:33:47.536Z",
   "level": 17,
   "xp": 8427,
   "stars": 19,
@@ -31,7 +31,7 @@
     "kingdomDay": 1170
   },
   "time": {
-    "iso": "2026-10-04T16:33:28.529Z",
+    "iso": "2026-10-04T16:33:47.536Z",
     "tz": "Asia/Dhaka",
     "hour": 22.55,
     "phase": "night",
@@ -835,12 +835,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-04T16:33:04Z",
+      "pushedAt": "2026-10-04T16:33:38Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 69.4,
-      "commits": 39,
-      "commits90": 39,
+      "importance": 70.9,
+      "commits": 40,
+      "commits90": 40,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 3,
@@ -2220,8 +2220,8 @@
         "title": "NIGHT OF THE STARS",
         "icon": "star",
         "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-04T16:33:28.529Z",
-        "until": "2026-10-04T17:33:28.529Z"
+        "at": "2026-10-04T16:33:47.536Z",
+        "until": "2026-10-04T17:33:47.536Z"
       }
     ],
     "recent": [
@@ -2231,8 +2231,8 @@
         "title": "NIGHT OF THE STARS",
         "icon": "star",
         "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-04T16:33:28.529Z",
-        "until": "2026-10-04T17:33:28.529Z"
+        "at": "2026-10-04T16:33:47.536Z",
+        "until": "2026-10-04T17:33:47.536Z"
       },
       {
         "id": "recovery:DailyFacts",
@@ -2534,13 +2534,11 @@
     "assets": {
       "world": "ok",
       "hero": "ok",
-      "events": "ok",
       "quest": "ok",
-      "districts": "ok",
       "trophies": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-04T16:33:28.529Z"
+    "checkedAt": "2026-10-04T16:33:47.536Z"
   },
   "v": 2,
   "featured": [
@@ -2678,5 +2676,5 @@
       }
     ]
   },
-  "contentHash": "partial:40037f0d828087b8"
+  "contentHash": "partial:7407ae7bb926254e"
 }
