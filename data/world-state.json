@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-04T21:32:01.915Z",
+  "generatedAt": "2026-10-05T05:46:59.467Z",
   "level": 18,
-  "xp": 9287,
+  "xp": 9392,
   "stars": 19,
-  "commits": 693,
+  "commits": 707,
   "issues": 0,
   "pullRequests": 1,
   "workflowHealth": 100,
-  "streak": 18,
+  "streak": 19,
   "activeRepositories": 22,
   "topLanguage": "Python",
   "weather": "aurora",
   "weatherReason": "A release or milestone is being celebrated",
-  "timeOfDay": "night",
+  "timeOfDay": "day",
   "season": "autumn",
   "meta": {
     "demo": false,
@@ -31,10 +31,10 @@
     "kingdomDay": 1171
   },
   "time": {
-    "iso": "2026-10-04T21:32:01.915Z",
+    "iso": "2026-10-05T05:46:59.467Z",
     "tz": "Asia/Dhaka",
-    "hour": 3.53,
-    "phase": "night",
+    "hour": 11.77,
+    "phase": "day",
     "season": "autumn",
     "date": "2026-10-05"
   },
@@ -45,25 +45,25 @@
       "archetype": "alchemist",
       "name": "ALCHEMIST"
     },
-    "xpInto": 787,
+    "xpInto": 892,
     "xpNeed": 950,
-    "xpPct": 83,
+    "xpPct": 94,
     "xpNext": 9450,
-    "activity": "normal",
+    "activity": "high",
     "position": "plaza",
     "sleeping": false,
     "stats": {
       "codePower": 99,
       "reliability": 100,
-      "streak": 18,
+      "streak": 19,
       "reputation": 19
     },
     "streak": {
-      "current": 18,
-      "longest": 18,
+      "current": 19,
+      "longest": 19,
       "idleDays": 0,
-      "today": 5,
-      "yesterday": 53
+      "today": 14,
+      "yesterday": 5
     },
     "title": "KINGDOM BUILDER",
     "roles": [
@@ -91,7 +91,7 @@
   "totals": {
     "stars": 19,
     "forks": 0,
-    "commits": 693,
+    "commits": 707,
     "prs": 1,
     "mergedPrs": 1,
     "reviews": 0,
@@ -102,15 +102,15 @@
     "activeRepos": 22,
     "archivedRepos": 0,
     "followers": 0,
-    "yearContrib": 715,
+    "yearContrib": 729,
     "workflowHealth": 100,
     "failingRepos": [],
     "openPRs": 0,
-    "codeKb": 175074
+    "codeKb": 176534
   },
   "xpBreakdown": {
-    "base": 2440,
-    "streakBonus": 222,
+    "base": 2526,
+    "streakBonus": 241,
     "bonus": {
       "pullRequests": 50,
       "mergedPullRequests": 100,
@@ -128,9 +128,9 @@
         "title": "HOLD A 30 DAY STREAK",
         "icon": "wheat",
         "state": "ACTIVE",
-        "progress": 18,
+        "progress": 19,
         "target": 30,
-        "pct": 60,
+        "pct": 63,
         "xp": 80,
         "unit": "DAYS",
         "at": null,
@@ -212,9 +212,9 @@
         "title": "HOLD A 30 DAY STREAK",
         "icon": "wheat",
         "state": "ACTIVE",
-        "progress": 18,
+        "progress": 19,
         "target": 30,
-        "pct": 60,
+        "pct": 63,
         "xp": 80,
         "unit": "DAYS",
         "at": null,
@@ -254,9 +254,9 @@
       "title": "HOLD A 30 DAY STREAK",
       "icon": "wheat",
       "state": "ACTIVE",
-      "progress": 18,
+      "progress": 19,
       "target": 30,
-      "pct": 60,
+      "pct": 63,
       "xp": 80,
       "unit": "DAYS",
       "at": null,
@@ -269,7 +269,7 @@
     "xp": 0
   },
   "population": {
-    "total": 1073,
+    "total": 1077,
     "npcs": 10,
     "houses": 12
   },
@@ -293,12 +293,12 @@
     },
     {
       "name": "TypeScript",
-      "pct": 36,
+      "pct": 35,
       "color": "#3178c6"
     },
     {
       "name": "JavaScript",
-      "pct": 18,
+      "pct": 19,
       "color": "#f1e05a"
     },
     {
@@ -333,12 +333,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-04T20:38:08Z",
+      "pushedAt": "2026-10-05T02:38:03Z",
       "pushedDays": 0,
       "createdAt": "2026-09-17T18:58:59Z",
-      "importance": 487.9,
-      "commits": 314,
-      "commits90": 314,
+      "importance": 491.4,
+      "commits": 316,
+      "commits90": 316,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 17,
@@ -413,12 +413,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-04T18:44:40Z",
+      "pushedAt": "2026-10-04T22:26:55Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T17:29:46Z",
-      "importance": 338.7,
-      "commits": 214,
-      "commits90": 214,
+      "importance": 340.2,
+      "commits": 215,
+      "commits90": 215,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 36,
@@ -501,7 +501,7 @@
       "commits90": 195,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 36,
+      "ageDays": 37,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -653,12 +653,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-04T20:56:10Z",
+      "pushedAt": "2026-10-05T04:03:26Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T10:49:10Z",
-      "importance": 160,
-      "commits": 94,
-      "commits90": 94,
+      "importance": 163,
+      "commits": 96,
+      "commits90": 96,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 14,
@@ -672,7 +672,7 @@
           "activity": 30,
           "recency": 20,
           "maturity": 1,
-          "depth": 14,
+          "depth": 15,
           "release": 0,
           "reputation": 2
         }
@@ -799,6 +799,46 @@
       }
     },
     {
+      "name": "SudiptoKumar",
+      "url": "https://github.com/SudiptoKumar/SudiptoKumar",
+      "description": "Hello, Dev!",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "JavaScript",
+      "color": "#f1e05a",
+      "archetype": "house",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-04T21:32:13Z",
+      "pushedDays": 0,
+      "createdAt": "2026-10-01T15:17:58Z",
+      "importance": 75.4,
+      "commits": 42,
+      "commits90": 42,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 3,
+      "evolution": {
+        "level": 3,
+        "name": "BUILDING",
+        "score": 64,
+        "toNext": 0,
+        "capped": "age",
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 0,
+          "depth": 12,
+          "release": 0,
+          "reputation": 2
+        }
+      }
+    },
+    {
       "name": "VocabularyBot",
       "url": "https://github.com/SudiptoKumar/VocabularyBot",
       "description": "Daily Vocabulary",
@@ -839,46 +879,6 @@
       }
     },
     {
-      "name": "SudiptoKumar",
-      "url": "https://github.com/SudiptoKumar/SudiptoKumar",
-      "description": "Hello, Dev!",
-      "stars": 1,
-      "forks": 0,
-      "issues": 0,
-      "prs": 0,
-      "language": "JavaScript",
-      "color": "#f1e05a",
-      "archetype": "house",
-      "state": "building",
-      "workflow": "passing",
-      "recovered": false,
-      "lastFailAt": null,
-      "pushedAt": "2026-10-04T16:33:56Z",
-      "pushedDays": 0,
-      "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 73.8,
-      "commits": 41,
-      "commits90": 41,
-      "releases": 0,
-      "recoveredAt": null,
-      "ageDays": 3,
-      "evolution": {
-        "level": 3,
-        "name": "BUILDING",
-        "score": 64,
-        "toNext": 0,
-        "capped": "age",
-        "parts": {
-          "activity": 30,
-          "recency": 20,
-          "maturity": 0,
-          "depth": 12,
-          "release": 0,
-          "reputation": 2
-        }
-      }
-    },
-    {
       "name": "Workshop-Certificate-Verify",
       "url": "https://github.com/SudiptoKumar/Workshop-Certificate-Verify",
       "description": "Certificate Verify",
@@ -893,12 +893,12 @@
       "workflow": "none",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-03T05:47:47Z",
-      "pushedDays": 1,
+      "pushedAt": "2026-10-05T01:33:58Z",
+      "pushedDays": 0,
       "createdAt": "2026-10-02T21:18:15Z",
-      "importance": 68.1,
-      "commits": 42,
-      "commits90": 42,
+      "importance": 69.6,
+      "commits": 43,
+      "commits90": 43,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 2,
@@ -929,19 +929,19 @@
       "language": "Kotlin",
       "color": "#A97BFF",
       "archetype": "library",
-      "state": "building",
+      "state": "active",
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-02T05:34:12Z",
-      "pushedDays": 2,
+      "pushedDays": 3,
       "createdAt": "2026-09-28T22:15:20Z",
       "importance": 67.9,
       "commits": 38,
       "commits90": 38,
       "releases": 2,
       "recoveredAt": null,
-      "ageDays": 5,
+      "ageDays": 6,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -981,7 +981,7 @@
       "commits90": 16,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 5,
+      "ageDays": 6,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1039,6 +1039,46 @@
       }
     },
     {
+      "name": "WORKSHOP-",
+      "url": "https://github.com/SudiptoKumar/WORKSHOP-",
+      "description": "It's an Automation for Workshop.",
+      "stars": 0,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "JavaScript",
+      "color": "#f1e05a",
+      "archetype": "tower",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-05T01:53:21Z",
+      "pushedDays": 0,
+      "createdAt": "2026-10-01T13:12:44Z",
+      "importance": 29.3,
+      "commits": 16,
+      "commits90": 16,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 3,
+      "evolution": {
+        "level": 3,
+        "name": "BUILDING",
+        "score": 53,
+        "toNext": 0,
+        "capped": "age",
+        "parts": {
+          "activity": 24,
+          "recency": 20,
+          "maturity": 0,
+          "depth": 9,
+          "release": 0,
+          "reputation": 0
+        }
+      }
+    },
+    {
       "name": "StudyMart",
       "url": "https://github.com/SudiptoKumar/StudyMart",
       "description": "A single-owner digital product store.",
@@ -1061,7 +1101,7 @@
       "commits90": 11,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 5,
+      "ageDays": 6,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1075,46 +1115,6 @@
           "depth": 8,
           "release": 0,
           "reputation": 2
-        }
-      }
-    },
-    {
-      "name": "WORKSHOP-",
-      "url": "https://github.com/SudiptoKumar/WORKSHOP-",
-      "description": "It's an Automation for Workshop.",
-      "stars": 0,
-      "forks": 0,
-      "issues": 0,
-      "prs": 0,
-      "language": "JavaScript",
-      "color": "#f1e05a",
-      "archetype": "tower",
-      "state": "building",
-      "workflow": "none",
-      "recovered": false,
-      "lastFailAt": null,
-      "pushedAt": "2026-10-03T06:02:35Z",
-      "pushedDays": 1,
-      "createdAt": "2026-10-01T13:12:44Z",
-      "importance": 23.1,
-      "commits": 12,
-      "commits90": 12,
-      "releases": 0,
-      "recoveredAt": null,
-      "ageDays": 3,
-      "evolution": {
-        "level": 3,
-        "name": "BUILDING",
-        "score": 46,
-        "toNext": 2,
-        "capped": null,
-        "parts": {
-          "activity": 18,
-          "recency": 20,
-          "maturity": 0,
-          "depth": 8,
-          "release": 0,
-          "reputation": 0
         }
       }
     },
@@ -1141,7 +1141,7 @@
       "commits90": 6,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 5,
+      "ageDays": 6,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1174,14 +1174,14 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-28T22:13:31Z",
-      "pushedDays": 5,
+      "pushedDays": 6,
       "createdAt": "2026-09-28T22:11:39Z",
       "importance": 15.6,
       "commits": 4,
       "commits90": 4,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 5,
+      "ageDays": 6,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1200,10 +1200,6 @@
     }
   ],
   "calendar": [
-    {
-      "date": "2026-03-30",
-      "count": 0
-    },
     {
       "date": "2026-03-31",
       "count": 0
@@ -1982,6 +1978,11 @@
       "date": "2026-10-04",
       "count": 5,
       "gold": 1
+    },
+    {
+      "date": "2026-10-05",
+      "count": 14,
+      "gold": 1
     }
   ],
   "achievements": {
@@ -2291,33 +2292,24 @@
         "until": "2026-10-05T15:28:45.000Z"
       },
       {
-        "id": "harvest:2026-10-04",
+        "id": "harvest:2026-10-05",
         "type": "harvest",
         "title": "HARVEST FESTIVAL",
         "icon": "wheat",
-        "detail": "53 CONTRIBUTIONS",
-        "at": "2026-10-04T12:00:00.000Z",
-        "until": "2026-10-06T04:00:00.000Z"
-      },
-      {
-        "id": "nightstars:2026-10-05",
-        "type": "nightstars",
-        "title": "NIGHT OF THE STARS",
-        "icon": "star",
-        "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-04T21:32:01.915Z",
-        "until": "2026-10-04T22:32:01.915Z"
+        "detail": "14 CONTRIBUTIONS",
+        "at": "2026-10-05T12:00:00.000Z",
+        "until": "2026-10-07T04:00:00.000Z"
       }
     ],
     "recent": [
       {
-        "id": "nightstars:2026-10-05",
-        "type": "nightstars",
-        "title": "NIGHT OF THE STARS",
-        "icon": "star",
-        "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-04T21:32:01.915Z",
-        "until": "2026-10-04T22:32:01.915Z"
+        "id": "harvest:2026-10-05",
+        "type": "harvest",
+        "title": "HARVEST FESTIVAL",
+        "icon": "wheat",
+        "detail": "14 CONTRIBUTIONS",
+        "at": "2026-10-05T12:00:00.000Z",
+        "until": "2026-10-07T04:00:00.000Z"
       },
       {
         "id": "levelup:18",
@@ -2356,28 +2348,20 @@
         "until": "2026-10-06T15:43:53.000Z"
       },
       {
-        "id": "harvest:2026-10-04",
-        "type": "harvest",
-        "title": "HARVEST FESTIVAL",
-        "icon": "wheat",
-        "detail": "53 CONTRIBUTIONS",
-        "at": "2026-10-04T12:00:00.000Z",
-        "until": "2026-10-06T04:00:00.000Z"
+        "id": "expansion:Workshop-Certificate-Verify",
+        "type": "expansion",
+        "title": "KINGDOM EXPANSION",
+        "icon": "crown",
+        "detail": "Workshop-Certificate-Verify",
+        "at": "2026-10-02T21:18:15Z",
+        "until": "2026-10-09T21:18:15.000Z"
       }
     ]
   },
   "raid": {
     "active": false,
-    "done": true,
-    "id": 1,
-    "by": "SudiptoKumar",
-    "at": "2026-10-02T05:39:59.983Z",
-    "size": "small",
-    "goblins": 0,
-    "defense": 100,
-    "attack": 30,
-    "won": true,
-    "phase": "won",
+    "done": false,
+    "phase": "idle",
     "available": true,
     "cooldownLeftH": 0
   },
@@ -2616,10 +2600,10 @@
       {
         "d": "2026-10-05",
         "l": 18,
-        "x": 9287,
+        "x": 9392,
         "s": 19,
-        "c": 693,
-        "p": 1073
+        "c": 707,
+        "p": 1077
       }
     ]
   },
@@ -2636,7 +2620,7 @@
       "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-04T21:32:01.915Z"
+    "checkedAt": "2026-10-05T05:46:59.467Z"
   },
   "v": 2,
   "featured": [
@@ -2647,10 +2631,10 @@
     "Clipboard"
   ],
   "power": {
-    "value": 74,
+    "value": 75,
     "parts": {
       "progress": 21.7,
-      "consistency": 12,
+      "consistency": 12.7,
       "reliability": 20,
       "reach": 5.7,
       "vitality": 15,
@@ -2663,11 +2647,10 @@
       "RECOVERY",
       "CELEBRATION",
       "HARVEST",
-      "NIGHT",
       "WORKING",
       "ACTIVE"
     ],
-    "frame": 6,
+    "frame": 0,
     "hero": {
       "state": "working",
       "spot": "ci",
@@ -2687,10 +2670,10 @@
       "villager": 5
     },
     "light": {
-      "phase": "night",
-      "windows": true,
-      "torches": true,
-      "moon": true,
+      "phase": "day",
+      "windows": false,
+      "torches": false,
+      "moon": false,
       "accent": "repair",
       "danger": [],
       "gate": false,
@@ -2704,23 +2687,23 @@
       "rain": 0,
       "lightning": false,
       "snow": false,
-      "aurora": 1,
+      "aurora": 0.25,
       "sunrise": false,
       "wet": false,
       "frozen": false,
       "season": "autumn"
     },
     "behavior": {
-      "home": true,
+      "home": false,
       "returning": false,
       "shelter": false,
-      "patrol": true,
-      "farmersIn": true
+      "patrol": false,
+      "farmersIn": false
     },
     "stages": {
       "fail": {},
       "repair": {
-        "DailyFacts": "firefighter"
+        "DailyFacts": "repair"
       },
       "build": {
         "Sudipto-Portfolio": "construction",
@@ -2729,14 +2712,14 @@
         "DocFlow": "construction",
         "LetterShare": "construction",
         "Clipboard": "foundation",
-        "StudyMart": "construction",
         "WORKSHOP-": "construction",
+        "StudyMart": "construction",
         "CampusDuty": "construction",
         "ContrastLab-": "construction"
       },
       "release": "peak",
       "visitor": null,
-      "raid": "won"
+      "raid": "idle"
     },
     "fx": [
       "firefighter",
@@ -2748,8 +2731,7 @@
       "fireworks",
       "shrineGlow",
       "construction",
-      "harvestFestival",
-      "shootingStars"
+      "harvestFestival"
     ],
     "labels": {
       "ci": false,
@@ -2758,12 +2740,6 @@
       "event": null
     },
     "hud": [
-      {
-        "kind": "RAID",
-        "text": "DEFEATED",
-        "icon": "skull",
-        "tone": "good"
-      },
       {
         "kind": "REPAIR",
         "text": "CI IS FIXED",
@@ -2775,8 +2751,14 @@
         "text": "CLIPBOARD 3",
         "icon": "rocket",
         "tone": "gold"
+      },
+      {
+        "kind": "EVENT",
+        "text": "LEVEL 18 REACHED",
+        "icon": "trophy",
+        "tone": "gold"
       }
     ]
   },
-  "contentHash": "19980b91f93e7183"
+  "contentHash": "2e49d806f94256e4"
 }
