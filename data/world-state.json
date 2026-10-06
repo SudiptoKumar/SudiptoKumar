@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-06T23:07:38.055Z",
+  "generatedAt": "2026-10-06T23:08:20.556Z",
   "level": 19,
   "xp": 9961,
   "stars": 19,
@@ -31,9 +31,9 @@
     "kingdomDay": 1173
   },
   "time": {
-    "iso": "2026-10-06T23:07:38.055Z",
+    "iso": "2026-10-06T23:08:20.556Z",
     "tz": "Asia/Dhaka",
-    "hour": 5.12,
+    "hour": 5.13,
     "phase": "night",
     "season": "autumn",
     "date": "2026-10-07"
@@ -720,12 +720,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-06T23:06:51Z",
+      "pushedAt": "2026-10-06T23:07:50Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 97.3,
-      "commits": 57,
-      "commits90": 57,
+      "importance": 98.8,
+      "commits": 58,
+      "commits90": 58,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 5,
@@ -2240,8 +2240,8 @@
         "title": "NIGHT OF THE STARS",
         "icon": "star",
         "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-06T23:07:38.055Z",
-        "until": "2026-10-07T00:07:38.055Z"
+        "at": "2026-10-06T23:08:20.556Z",
+        "until": "2026-10-07T00:08:20.556Z"
       }
     ],
     "recent": [
@@ -2251,8 +2251,8 @@
         "title": "NIGHT OF THE STARS",
         "icon": "star",
         "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-06T23:07:38.055Z",
-        "until": "2026-10-07T00:07:38.055Z"
+        "at": "2026-10-06T23:08:20.556Z",
+        "until": "2026-10-07T00:08:20.556Z"
       },
       {
         "id": "levelup:19",
@@ -2559,13 +2559,13 @@
       "districts": "ok",
       "trophies": "ok",
       "harvest": "ok",
-      "history": "skipped",
+      "history": "ok",
       "camp": "ok",
       "castle": "ok",
       "dungeon": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-06T23:07:38.055Z"
+    "checkedAt": "2026-10-06T23:08:20.556Z"
   },
   "v": 2,
   "featured": [
@@ -2702,5 +2702,5 @@
   },
   "worldVersion": 1,
   "renderVersion": 2,
-  "contentHash": "partial:fcdf0ed35168fb6a"
+  "contentHash": "3cd37b03a3f312ff"
 }
