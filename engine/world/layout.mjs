@@ -21,6 +21,8 @@ export const L = {
   castle: [88, 86], vault: [54, 96], shrine: [119, 96], plaza: [88, 110], well: [88, 112],
   ci: [152, 88], mine: [22, 62], farm: [8, 170], camp: [138, 188], gate: [88, 208], pond: [22, 208],
   river: [160, 166],
+  // V3 districts
+  warfront: [88, 226], builderyard: [28, 108], heroguild: [112, 102], harbor: [158, 180],
 };
 
 // where the hero stands for each scene.hero.spot (top-left of the 12 x 16 sprite)
@@ -106,6 +108,10 @@ export const CAMERA_RECTS = {
   farm: [0, 160, 88, 210],
   dungeon: [36, 194, 140, 240],
   visitor: [106, 166, 174, 212],
+  // V3 cameras
+  warfront: [48, 200, 128, 240],
+  builderyard: [0, 88, 60, 130],
+  heroguild: [88, 82, 136, 122],
   // trophy_hall is an interior view anchored at the shrine; it has no map rectangle
 };
 

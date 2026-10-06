@@ -104,7 +104,8 @@ test('districts and camera rects stay inside the world', () => {
 
 // ------------------------------------------------------------------ cameras
 test('seven cameras, all valid', () => {
-  assert.deepEqual(CAMERA_IDS.sort(), ['castle', 'dungeon', 'farm', 'overworld', 'project', 'trophy', 'visitor']);
+  // V3: 10 cameras (7 V2 + warfront, builderyard, heroguild)
+  assert.deepEqual(CAMERA_IDS.sort(), ['builderyard', 'castle', 'dungeon', 'farm', 'heroguild', 'overworld', 'project', 'trophy', 'visitor', 'warfront']);
   for (const c of Object.values(CAMERAS)) {
     assert.ok(c.id && c.title && c.asset, c.id);
     const f = cameraFocus(c);

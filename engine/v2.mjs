@@ -6,6 +6,8 @@ import { kingdomPower, heroTitle, heroRoles } from './power.mjs';
 import { buildScene } from './scene.mjs';
 import { evaluateQuests } from './quests.mjs';
 import { buildWorld, WORLD_VERSION, RENDER_VERSION } from './world/index.mjs';
+import { buildSimulation } from './world/simulation.mjs';
+import { SIM_VERSION } from './world/constants.mjs';
 import { daysSince, hoursSince, normName } from './util.mjs';
 
 /** Old saves (V1) never stored commit counts. This guess is the importance formula run backwards. */
@@ -70,5 +72,8 @@ export function finalizeV2(S, { cfg = {}, store = null, now = new Date(S.generat
   S.worldVersion = WORLD_VERSION;
   S.renderVersion = RENDER_VERSION;
   S.world = buildWorld(S, { cfg, now });
+  // ---- TRUE V3: the authoritative simulation. Derived from world + tick, never persisted.
+  S.simVersion = SIM_VERSION;
+  S.simulation = buildSimulation(S.world, { tick: now.getHours(), now });
   return S;
 }

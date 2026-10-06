@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kingdom TRUE V2 — Final Visual Certification Sheet</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 0; padding: 20px; background: #0e1024; color: #e8ecf4; }
+  h1 { font-size: 22px; margin: 0 0 8px; }
+  h2 { font-size: 15px; margin: 28px 0 10px; color: #ffcd75; border-bottom: 1px solid #2a2e4a; padding-bottom: 6px; }
+  p.note { font-size: 13px; color: #94b0c2; margin: 0 0 16px; max-width: 800px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  .shot { background: #14162b; border: 1px solid #2a2e4a; border-radius: 8px; padding: 10px; }
+  .shot figcaption { font-size: 12px; color: #94b0c2; margin-top: 8px; }
+  .shot figcaption strong { color: #e8ecf4; display: block; margin-bottom: 2px; }
+  .shot img { display: block; width: 100%; height: auto; border-radius: 4px; }
+  .check { color: #7dff9a; } .warn { color: #ffb86b; }
+</style>
+</head>
+<body>
+<h1>Kingdom TRUE V2 — Final Visual Certification</h1>
+<p class="note">All scenarios rendered from the same engine. Verify: one world, shared lighting/weather/season, coherent cameras, no duplicated stats, mobile-legible.</p>
+
+<h2>Time of Day</h2>
+<div class="grid">
+  <figure class="shot"><img src="preview/world-day.svg"><figcaption><strong>Day</strong> Clear, autumn. Baseline.</figcaption></figure>
+  <figure class="shot"><img src="preview/world-dawn.svg"><figcaption><strong>Dawn</strong> Rose veil, sun rising.</figcaption></figure>
+  <figure class="shot"><img src="preview/world-evening.svg"><figcaption><strong>Evening</strong> Mauve veil.</figcaption></figure>
+  <figure class="shot"><img src="preview/world-night.svg"><figcaption><strong>Night</strong> Deep blue veil, moon, stars.</figcaption></figure>
+</div>
+
+<h2>Weather</h2>
+<div class="grid">
+  <figure class="shot"><img src="preview/world-rain.svg"><figcaption><strong>Rain</strong> Cool wash, rain particles.</figcaption></figure>
+  <figure class="shot"><img src="preview/world-storm.svg"><figcaption><strong>Storm</strong> Heavy wash, dark clouds.</figcaption></figure>
+  <figure class="shot"><img src="preview/world-thunder.svg"><figcaption><strong>Thunderstorm</strong> Darkest, lightning.</figcaption></figure>
+  <figure class="shot"><img src="preview/world-release.svg"><figcaption><strong>Aurora (evening release)</strong> <span class="check">Dusk aurora OK</span> — never in daylight.</figcaption></figure>
+</div>
+
+<h2>Seasons</h2>
+<div class="grid">
+  <figure class="shot"><img src="preview/world-spring.svg"><figcaption><strong>Spring</strong></figcaption></figure>
+  <figure class="shot"><img src="preview/world-summer.svg"><figcaption><strong>Summer</strong></figcaption></figure>
+  <figure class="shot"><img src="preview/world-autumn.svg"><figcaption><strong>Autumn</strong></figcaption></figure>
+  <figure class="shot"><img src="preview/world-winter.svg"><figcaption><strong>Winter</strong> Snow, frozen.</figcaption></figure>
+</div>
+
+<h2>Events & States</h2>
+<div class="grid">
+  <figure class="shot"><img src="preview/world-raid.svg"><figcaption><strong>Raid</strong> Goblins at the gate, danger lighting.</figcaption></figure>
+  <figure class="shot"><img src="preview/world-boss.svg"><figcaption><strong>Boss</strong> High threat.</figcaption></figure>
+  <figure class="shot"><img src="preview/world-recovery.svg"><figcaption><strong>Recovery</strong> Repair in progress.</figcaption></figure>
+  <figure class="shot"><img src="preview/world-victory.svg"><figcaption><strong>Victory</strong> Celebration.</figcaption></figure>
+  <figure class="shot"><img src="preview/world-build.svg"><figcaption><strong>Build</strong> Construction.</figcaption></figure>
+  <figure class="shot"><img src="preview/world-sleepy.svg"><figcaption><strong>Low activity</strong> Quiet kingdom.</figcaption></figure>
+  <figure class="shot"><img src="preview/world-newbie.svg"><figcaption><strong>Newbie (low power)</strong> <span class="check">Village tier: no finery</span></figcaption></figure>
+</div>
+
+<h2>Cameras (same world state)</h2>
+<div class="grid">
+  <figure class="shot"><img src="preview/hero-day.svg"><figcaption><strong>Hero camera</strong> Hero-tracking world crop.</figcaption></figure>
+  <figure class="shot"><img src="../renderer/castle.svg"><figcaption><strong>Castle camera</strong> World crop on the castle.</figcaption></figure>
+  <figure class="shot"><img src="../renderer/dungeon.svg"><figcaption><strong>Dungeon camera</strong> World crop on the gate/dungeon.</figcaption></figure>
+</div>
+
+<p class="note" style="margin-top:32px"><span class="check">✓</span> All views share one world, one lighting policy, one season, one weather.<br>
+<span class="check">✓</span> Aurora appears only at dusk/night, never in daylight.<br>
+<span class="check">✓</span> Power tier visibly changes the castle grounds.<br>
+<span class="check">✓</span> Rendering is deterministic (same state → same bytes).</p>
+
+</body>
+</html>

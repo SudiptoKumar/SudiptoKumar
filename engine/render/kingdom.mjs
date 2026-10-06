@@ -13,6 +13,7 @@ import { rng } from '../util.mjs';
 import { GW, GH, U, L, GROUND_Y, assignRepos } from './kingdom-layout.mjs';
 import { drawSky, drawMountains, drawGround, drawSeasonDecor, drawUnderground } from './kingdom-world.mjs';
 import { drawProsperity } from './prosperity.mjs';
+import { drawV3Districts } from './v3-districts.mjs';
 import { drawPlaces } from './kingdom-places.mjs';
 import { drawPeople, drawHero, drawRaid, drawWeather } from './kingdom-life.mjs';
 import { lightLayer } from './light.mjs';
@@ -51,6 +52,7 @@ export function paintWorld(S, rctx = {}) {
   drawUnderground(K);
   drawPlaces(K, layout);
   drawProsperity(K);   // TRUE V2 (Phase 6): power tier changes the visible world
+  drawV3Districts(K);  // TRUE V3: war front, builder's yard, hero guild, harbor
   drawSeasonDecor(K);
   K.objs.sort((a, b) => a.z - b.z).forEach((o) => o.fn());
   drawPeople(K, layout);

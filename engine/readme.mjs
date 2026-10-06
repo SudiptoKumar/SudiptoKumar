@@ -25,7 +25,7 @@ export function buildBlock(state, cfg, now = new Date()) {
 
   // A. hero, B. world
   L.push(img('hero.svg', `Hero: ${S.profile.name}, level ${S.level} ${S.hero.class.title}. Title ${S.hero.title}. ${S.hero.status.toLowerCase()}. Quest: ${S.quests.current.title.toLowerCase()}.`));
-  L.push(img('world.svg', `The living kingdom. It is ${S.time.phase}, the weather is ${S.weather}, the season is ${S.time.season}. The hero is ${sc.hero.state}. ${t.repos} repositories stand as buildings, ${t.issuesOpen} open issues wait as goblins, ${S.visitors.total} visitor flags. Power: ${powerTier}.`));
+  L.push(img('world.svg', `The living kingdom. It is ${S.time.phase}, the weather is ${S.weather}, the season is ${S.time.season}. The hero is ${sc.hero.state}. ${t.repos} repositories stand as buildings, ${t.issuesOpen} open issues wait as goblins, ${S.visitors.total} visitor flags.`));
   // C. world event, D. quests and power
   if (has('events') && S.world.events.length) { const ev = S.world.events[0]; L.push(img('events.svg', `World event: ${ev.title}${ev.detail ? ` — ${ev.detail}` : ''}. Phase: ${ev.phase}.`, 720)); }
   L.push(img('quest.svg', `Kingdom power ${S.power.value} of 100 (${powerTier}). Quests: ${S.quests.rows.map((q) => `${q.state.toLowerCase()} ${q.title.toLowerCase()}`).join(', ')}.`));
@@ -37,13 +37,17 @@ export function buildBlock(state, cfg, now = new Date()) {
   }
   // E2. castle and dungeon: the heart of the kingdom and its depths
   if (has('castle')) L.push(img('castle.svg', `The castle: heart of the ${powerTier.toLowerCase()}.`, 720));
-  if (has('dungeon')) L.push(img('dungeon.svg', `The dungeon: where ${t.issuesOpen} open issues wait as goblins.`, 720));
+  if (has('dungeon')) L.push(img('dungeon.svg', `The dungeon beneath the gate: where open issues wait as goblins.`, 720));
+  // E3. V3 districts: war front, builder's yard, hero guild
+  if (has('warfront')) L.push(img('warfront.svg', `The war front: defenses south of the gate.`, 720));
+  if (has('builderyard')) L.push(img('builderyard.svg', `The builder's yard: where the kingdom grows.`, 720));
+  if (has('heroguild')) L.push(img('heroguild.svg', `The hero guild: home base of ${S.hero.class.title}.`, 720));
   // F. trophy hall, G. harvest, H. history
   L.push(img('trophies.svg', `Trophy hall: ${S.achievements.count} of ${S.achievements.total} trophies unlocked.`));
   L.push(img('harvest.svg', `Harvest field: the last 26 weeks of contributions as crops. Streak ${S.streak} days.`));
   L.push(img('history.svg', `Kingdom history: the castle and the settlement over time. Level ${S.level} today.`));
   // I. visitor camp, with two small signposts for the actions
-  L.push(img('visitors.svg', `Visitor camp: ${S.visitors.total} flags planted.`));
+  L.push(img('visitors.svg', `Visitor camp: where visitors plant their flags.`));
   L.push('<p align="center">');
   L.push(`<a href="${issuesUrl}plant-your-flag.yml"><img src="${base}/ui/post-flag.svg" width="300" alt="Plant your flag"></a>&nbsp;`);
   L.push(`<a href="${issuesUrl}send-goblin-raid.yml"><img src="${base}/ui/post-raid.svg" width="300" alt="Send a goblin raid"></a>`);

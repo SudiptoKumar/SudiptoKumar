@@ -19,6 +19,10 @@ export const CAMERAS = {
   dungeon:   { id: 'dungeon',   title: 'Dungeon',           asset: 'dungeon', rect: CAMERA_RECTS.dungeon },
   trophy:    { id: 'trophy',    title: 'Trophy Hall',       asset: 'trophies', anchor: 'shrine' },
   visitor:   { id: 'visitor',   title: 'Visitor Camp',      asset: 'camp', rect: CAMERA_RECTS.visitor },
+  // V3 cameras
+  warfront:  { id: 'warfront',  title: 'War Front',         asset: 'warfront', rect: CAMERA_RECTS.warfront },
+  builderyard: { id: 'builderyard', title: "Builder's Yard", asset: 'builderyard', rect: CAMERA_RECTS.builderyard },
+  heroguild: { id: 'heroguild', title: 'Hero Guild',        asset: 'heroguild', rect: CAMERA_RECTS.heroguild },
 };
 export const CAMERA_IDS = Object.keys(CAMERAS);
 

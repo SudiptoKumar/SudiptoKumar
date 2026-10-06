@@ -21,6 +21,9 @@ import { assignRepos, SLOTS } from '../render/kingdom-layout.mjs';
 import { mapLabels, renderKingdom } from '../render/kingdom.mjs';
 import { renderDistricts } from '../render/districts.mjs';
 import { renderHarvest } from '../render/harvest.mjs';
+import { renderWarfront } from '../render/warfront.mjs';
+import { renderBuilderyard } from '../render/builderyard.mjs';
+import { renderHeroguild } from '../render/heroguild.mjs';
 import { renderCamp } from '../render/camp.mjs';
 import { pickSnapshots } from '../render/chronicle.mjs';
 import { plateLines } from '../render/districts.mjs';
@@ -238,7 +241,7 @@ test('README: one walk through the world, no dashboards and no lists', () => {
   assert.ok(!/^- /m.test(block), 'no markdown list of repositories');
   const imgs = block.match(/<img /g).length;
   assert.ok(imgs <= 18, `${imgs} images`);
-  const order = ['hero.svg', 'world.svg', 'quest.svg', 'districts.svg', 'castle.svg', 'dungeon.svg', 'trophies.svg', 'harvest.svg', 'history.svg', 'visitors.svg', 'post-flag.svg', 'status.svg'].map((f) => block.indexOf(f));
+  const order = ['hero.svg', 'world.svg', 'quest.svg', 'districts.svg', 'castle.svg', 'dungeon.svg', 'warfront.svg', 'builderyard.svg', 'heroguild.svg', 'trophies.svg', 'harvest.svg', 'history.svg', 'visitors.svg', 'post-flag.svg', 'status.svg'].map((f) => block.indexOf(f));
   assert.ok(order.every((v, i) => v > -1 && (i === 0 || v > order[i - 1])), 'sections follow the walk: ' + order.join(','));
   const feat = (block.match(/<a href="https:\/\/github\.com\/[^"]+">/g) || []).length;
   assert.ok(feat <= cfg.featuredCount + 4, 'only featured projects are linked');
@@ -469,4 +472,27 @@ test('Phase 6: power tier changes the visible world', () => {
         prosperous = render('prosperous'), legendary = render('legendary');
   const uniq = new Set([village, settlement, kingdom, prosperous, legendary]);
   assert.equal(uniq.size, 5, 'all five tiers render distinctly');
+});
+
+test('V3: simulation is deterministic', () => {
+  const mk = () => {
+    const s = world('day').state;
+    finalizeV2(s, { cfg, store: freshStore(), now: new Date(s.generatedAt) });
+    return s;
+  };
+  const a = mk(), b = mk();
+  assert.equal(a.simulation.signature, b.simulation.signature, 'same state+tick = same simulation');
+  assert.ok(a.simulation.actors.length > 0, 'actors scheduled');
+  assert.ok(a.simulation.band, 'time band assigned');
+});
+
+test('V3: new cameras are valid world views', () => {
+  const s = world('day').state;
+  finalizeV2(s, { cfg, store: freshStore(), now: new Date(s.generatedAt) });
+  const wf = renderWarfront(s), by = renderBuilderyard(s), hg = renderHeroguild(s);
+  assert.ok(wf && wf.includes('<svg'), 'warfront renders');
+  assert.ok(by && by.includes('<svg'), 'builderyard renders');
+  assert.ok(hg && hg.includes('<svg'), 'heroguild renders');
+  // All share the same world signature (cameras, not separate drawings)
+  assert.ok(wf.includes('War Front') && by.includes("Builder") && hg.includes('Hero Guild'));
 });

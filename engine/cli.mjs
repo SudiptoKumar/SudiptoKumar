@@ -27,6 +27,9 @@ import { renderHistory } from './render/chronicle.mjs';
 import { renderCamp } from './render/camp.mjs';
 import { renderCastle } from './render/castle.mjs';
 import { renderDungeon } from './render/dungeon.mjs';
+import { renderWarfront } from './render/warfront.mjs';
+import { renderBuilderyard } from './render/builderyard.mjs';
+import { renderHeroguild } from './render/heroguild.mjs';
 import { renderStatus } from './render/status.mjs';
 import { renderPost, POST_KEYS } from './render/signposts.mjs';
 import { renderGuildBanner } from './render/guild.mjs';
@@ -47,6 +50,9 @@ export const ASSETS = [
   { key: 'camp', file: 'visitors.svg', render: renderCamp },
   { key: 'castle', file: 'castle.svg', render: renderCastle },
   { key: 'dungeon', file: 'dungeon.svg', render: renderDungeon },
+  { key: 'warfront', file: 'warfront.svg', render: renderWarfront },
+  { key: 'builderyard', file: 'builderyard.svg', render: renderBuilderyard },
+  { key: 'heroguild', file: 'heroguild.svg', render: renderHeroguild },
   { key: 'status', file: 'status.svg', render: renderStatus },
 ];
 /** V1 pictures that no longer exist. They are deleted so old files do not linger. */
@@ -111,7 +117,7 @@ export const hashOf = (s) => sha(canonical({ ...s, generatedAt: null, contentHas
  */
 const ONLY_DEPS = {
   hero: ['world', 'harvest'],                       // the hero camera and the hero on the harvest road
-  world: ['districts', 'harvest', 'camp', 'trophies', 'castle', 'dungeon', 'events'], // every camera shares the world
+  world: ['districts', 'harvest', 'camp', 'trophies', 'castle', 'dungeon', 'events', 'warfront', 'builderyard', 'heroguild'], // every camera shares the world
   events: ['world'],                                // the event camera looks at the world
   districts: ['world'],
   trophies: ['world'],
