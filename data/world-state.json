@@ -1,26 +1,26 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-02T05:40:01.794Z",
-  "level": 17,
-  "xp": 8162,
+  "generatedAt": "2026-10-06T23:50:19.293Z",
+  "level": 19,
+  "xp": 9961,
   "stars": 19,
-  "commits": 621,
+  "commits": 710,
   "issues": 0,
   "pullRequests": 1,
   "workflowHealth": 100,
-  "streak": 16,
-  "activeRepositories": 20,
+  "streak": 20,
+  "activeRepositories": 22,
   "topLanguage": "Python",
   "weather": "aurora",
   "weatherReason": "A release or milestone is being celebrated",
-  "timeOfDay": "day",
+  "timeOfDay": "dawn",
   "season": "autumn",
   "meta": {
     "demo": false,
     "source": "github",
     "dataStatus": "fresh",
     "errors": [],
-    "apiCalls": 27
+    "apiCalls": 29
   },
   "profile": {
     "login": "SudiptoKumar",
@@ -28,15 +28,15 @@
     "createdAt": "2023-07-22T03:36:18Z",
     "followers": 0,
     "following": 0,
-    "kingdomDay": 1168
+    "kingdomDay": 1173
   },
   "time": {
-    "iso": "2026-10-02T05:40:01.794Z",
+    "iso": "2026-10-06T23:50:19.293Z",
     "tz": "Asia/Dhaka",
-    "hour": 11.67,
-    "phase": "day",
+    "hour": 5.83,
+    "phase": "dawn",
     "season": "autumn",
-    "date": "2026-10-02"
+    "date": "2026-10-07"
   },
   "hero": {
     "class": {
@@ -45,61 +45,219 @@
       "archetype": "alchemist",
       "name": "ALCHEMIST"
     },
-    "xpInto": 562,
-    "xpNeed": 900,
-    "xpPct": 62,
-    "xpNext": 8500,
-    "activity": "high",
+    "xpInto": 511,
+    "xpNeed": 1000,
+    "xpPct": 51,
+    "xpNext": 10450,
+    "activity": "normal",
     "position": "plaza",
     "sleeping": false,
     "stats": {
       "codePower": 99,
       "reliability": 100,
-      "streak": 16,
+      "streak": 20,
       "reputation": 19
     },
     "streak": {
-      "current": 16,
-      "longest": 16,
+      "current": 20,
+      "longest": 20,
       "idleDays": 0,
-      "today": 31,
-      "yesterday": 6
-    }
+      "today": 2,
+      "yesterday": 16
+    },
+    "title": "KINGDOM BUILDER",
+    "roles": [
+      {
+        "id": "builder",
+        "icon": "hammer"
+      },
+      {
+        "id": "farmer",
+        "icon": "wheat"
+      },
+      {
+        "id": "guardian",
+        "icon": "shield"
+      },
+      {
+        "id": "merchant",
+        "icon": "coin"
+      }
+    ],
+    "state": "working",
+    "spot": "ci",
+    "status": "REPAIRING THE CI"
   },
   "totals": {
     "stars": 19,
     "forks": 0,
-    "commits": 621,
+    "commits": 710,
     "prs": 1,
     "mergedPrs": 1,
     "reviews": 0,
     "issuesOpen": 0,
-    "issuesClosed": 1,
-    "releases": 2,
-    "repos": 20,
-    "activeRepos": 20,
+    "issuesClosed": 2,
+    "releases": 7,
+    "repos": 22,
+    "activeRepos": 22,
     "archivedRepos": 0,
     "followers": 0,
-    "yearContrib": 641,
+    "yearContrib": 733,
     "workflowHealth": 100,
     "failingRepos": [],
     "openPRs": 0,
-    "codeKb": 162655
+    "codeKb": 177812
   },
   "xpBreakdown": {
-    "base": 2300,
-    "streakBonus": 187,
+    "base": 2550,
+    "streakBonus": 261,
     "bonus": {
       "pullRequests": 50,
       "mergedPullRequests": 100,
-      "issuesClosed": 25,
-      "releases": 500,
-      "repositories": 5000
-    }
+      "issuesClosed": 50,
+      "releases": 1750,
+      "repositories": 5200
+    },
+    "quests": 0
+  },
+  "quests": {
+    "list": [
+      {
+        "id": "streak:30",
+        "track": "streak",
+        "title": "HOLD A 30 DAY STREAK",
+        "icon": "wheat",
+        "state": "ACTIVE",
+        "progress": 20,
+        "target": 30,
+        "pct": 67,
+        "xp": 80,
+        "unit": "DAYS",
+        "at": null,
+        "isNew": false
+      },
+      {
+        "id": "streak:60",
+        "track": "streak",
+        "title": "HOLD A 60 DAY STREAK",
+        "icon": "wheat",
+        "state": "LOCKED",
+        "progress": 0,
+        "target": 60,
+        "pct": 0,
+        "xp": 100,
+        "unit": "DAYS",
+        "at": null,
+        "isNew": false
+      },
+      {
+        "id": "release:month",
+        "track": "release",
+        "title": "SHIP A RELEASE",
+        "icon": "rocket",
+        "state": "COMPLETE",
+        "progress": 1,
+        "target": 1,
+        "pct": 100,
+        "xp": 0,
+        "at": null,
+        "isNew": true
+      },
+      {
+        "id": "stars:25",
+        "track": "stars",
+        "title": "EARN 25 STARS",
+        "icon": "star",
+        "state": "ACTIVE",
+        "progress": 19,
+        "target": 25,
+        "pct": 76,
+        "xp": 80,
+        "unit": "STARS",
+        "at": null,
+        "isNew": false
+      },
+      {
+        "id": "stars:50",
+        "track": "stars",
+        "title": "EARN 50 STARS",
+        "icon": "star",
+        "state": "LOCKED",
+        "progress": 0,
+        "target": 50,
+        "pct": 0,
+        "xp": 100,
+        "unit": "STARS",
+        "at": null,
+        "isNew": false
+      }
+    ],
+    "rows": [
+      {
+        "id": "streak:30",
+        "track": "streak",
+        "title": "HOLD A 30 DAY STREAK",
+        "icon": "wheat",
+        "state": "ACTIVE",
+        "progress": 20,
+        "target": 30,
+        "pct": 67,
+        "xp": 80,
+        "unit": "DAYS",
+        "at": null,
+        "isNew": false
+      },
+      {
+        "id": "stars:25",
+        "track": "stars",
+        "title": "EARN 25 STARS",
+        "icon": "star",
+        "state": "ACTIVE",
+        "progress": 19,
+        "target": 25,
+        "pct": 76,
+        "xp": 80,
+        "unit": "STARS",
+        "at": null,
+        "isNew": false
+      },
+      {
+        "id": "release:month",
+        "track": "release",
+        "title": "SHIP A RELEASE",
+        "icon": "rocket",
+        "state": "COMPLETE",
+        "progress": 1,
+        "target": 1,
+        "pct": 100,
+        "xp": 0,
+        "at": null,
+        "isNew": true
+      }
+    ],
+    "current": {
+      "id": "streak:30",
+      "track": "streak",
+      "title": "HOLD A 30 DAY STREAK",
+      "icon": "wheat",
+      "state": "ACTIVE",
+      "progress": 20,
+      "target": 30,
+      "pct": 67,
+      "xp": 80,
+      "unit": "DAYS",
+      "at": null,
+      "isNew": false
+    },
+    "counts": {
+      "active": 2,
+      "complete": 6
+    },
+    "xp": 0
   },
   "population": {
-    "total": 1001,
-    "npcs": 9,
+    "total": 1088,
+    "npcs": 10,
     "houses": 12
   },
   "goblins": {
@@ -117,18 +275,23 @@
   "languages": [
     {
       "name": "Python",
-      "pct": 42,
+      "pct": 38,
       "color": "#3572A5"
     },
     {
       "name": "TypeScript",
-      "pct": 39,
+      "pct": 35,
       "color": "#3178c6"
     },
     {
       "name": "JavaScript",
-      "pct": 13,
+      "pct": 19,
       "color": "#f1e05a"
+    },
+    {
+      "name": "Kotlin",
+      "pct": 4,
+      "color": "#A97BFF"
     },
     {
       "name": "PLpgSQL",
@@ -136,9 +299,9 @@
       "color": "#336790"
     },
     {
-      "name": "Kotlin",
-      "pct": 2,
-      "color": "#A97BFF"
+      "name": "Shell",
+      "pct": 0,
+      "color": "#89e051"
     }
   ],
   "repos": [
@@ -157,10 +320,30 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-02T02:48:12Z",
+      "pushedAt": "2026-10-06T22:00:39Z",
       "pushedDays": 0,
       "createdAt": "2026-09-17T18:58:59Z",
-      "importance": 469
+      "importance": 501.4,
+      "commits": 322,
+      "commits90": 322,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 19,
+      "evolution": {
+        "level": 4,
+        "name": "SPECIALIZED",
+        "score": 68,
+        "toNext": 4,
+        "capped": null,
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 1,
+          "depth": 15,
+          "release": 0,
+          "reputation": 2
+        }
+      }
     },
     {
       "name": "GamingNewsroomBot",
@@ -177,10 +360,30 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-01T14:28:46Z",
+      "pushedAt": "2026-10-06T15:02:01Z",
       "pushedDays": 0,
       "createdAt": "2026-08-28T14:21:15Z",
-      "importance": 395.5
+      "importance": 418,
+      "commits": 266,
+      "commits90": 266,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 39,
+      "evolution": {
+        "level": 4,
+        "name": "SPECIALIZED",
+        "score": 69,
+        "toNext": 3,
+        "capped": null,
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 2,
+          "depth": 15,
+          "release": 0,
+          "reputation": 2
+        }
+      }
     },
     {
       "name": "TelegramForwarder",
@@ -197,10 +400,30 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-01T21:57:15Z",
+      "pushedAt": "2026-10-06T21:09:17Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T17:29:46Z",
-      "importance": 323.9
+      "importance": 349.2,
+      "commits": 221,
+      "commits90": 221,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 38,
+      "evolution": {
+        "level": 4,
+        "name": "SPECIALIZED",
+        "score": 69,
+        "toNext": 3,
+        "capped": null,
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 2,
+          "depth": 15,
+          "release": 0,
+          "reputation": 2
+        }
+      }
     },
     {
       "name": "BusinessNewsBot",
@@ -217,10 +440,30 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-01T21:02:28Z",
+      "pushedAt": "2026-10-06T20:30:20Z",
       "pushedDays": 0,
       "createdAt": "2026-08-27T10:01:41Z",
-      "importance": 304
+      "importance": 326.5,
+      "commits": 205,
+      "commits90": 205,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 40,
+      "evolution": {
+        "level": 4,
+        "name": "SPECIALIZED",
+        "score": 69,
+        "toNext": 3,
+        "capped": null,
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 2,
+          "depth": 15,
+          "release": 0,
+          "reputation": 2
+        }
+      }
     },
     {
       "name": "EntertainmentNewsBot",
@@ -237,10 +480,30 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-01T20:34:45Z",
+      "pushedAt": "2026-10-06T20:29:18Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T04:24:35Z",
-      "importance": 298
+      "importance": 320.5,
+      "commits": 201,
+      "commits90": 201,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 38,
+      "evolution": {
+        "level": 4,
+        "name": "SPECIALIZED",
+        "score": 69,
+        "toNext": 3,
+        "capped": null,
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 2,
+          "depth": 15,
+          "release": 0,
+          "reputation": 2
+        }
+      }
     },
     {
       "name": "TheTechNewsroomBot",
@@ -257,10 +520,30 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-01T20:24:42Z",
+      "pushedAt": "2026-10-06T20:26:04Z",
       "pushedDays": 0,
       "createdAt": "2026-08-28T19:08:24Z",
-      "importance": 284.5
+      "importance": 308.5,
+      "commits": 193,
+      "commits90": 193,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 39,
+      "evolution": {
+        "level": 4,
+        "name": "SPECIALIZED",
+        "score": 69,
+        "toNext": 3,
+        "capped": null,
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 2,
+          "depth": 15,
+          "release": 0,
+          "reputation": 2
+        }
+      }
     },
     {
       "name": "ScienceNewsroomBot",
@@ -277,10 +560,30 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-01T20:23:01Z",
+      "pushedAt": "2026-10-06T20:17:02Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T16:33:20Z",
-      "importance": 230.5
+      "importance": 254.5,
+      "commits": 157,
+      "commits90": 157,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 38,
+      "evolution": {
+        "level": 4,
+        "name": "SPECIALIZED",
+        "score": 69,
+        "toNext": 3,
+        "capped": null,
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 2,
+          "depth": 15,
+          "release": 0,
+          "reputation": 2
+        }
+      }
     },
     {
       "name": "TheSportsNewsroom",
@@ -297,10 +600,30 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-01T19:42:45Z",
+      "pushedAt": "2026-10-06T19:45:07Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T16:56:23Z",
-      "importance": 183.2
+      "importance": 198.9,
+      "commits": 124,
+      "commits90": 124,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 16,
+      "evolution": {
+        "level": 4,
+        "name": "SPECIALIZED",
+        "score": 68,
+        "toNext": 4,
+        "capped": null,
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 1,
+          "depth": 15,
+          "release": 0,
+          "reputation": 2
+        }
+      }
     },
     {
       "name": "ComicsNewsroom",
@@ -317,10 +640,30 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-02T00:36:47Z",
+      "pushedAt": "2026-10-06T20:13:56Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T10:49:10Z",
-      "importance": 141.6
+      "importance": 170.5,
+      "commits": 101,
+      "commits90": 101,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 16,
+      "evolution": {
+        "level": 4,
+        "name": "SPECIALIZED",
+        "score": 68,
+        "toNext": 4,
+        "capped": null,
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 1,
+          "depth": 15,
+          "release": 0,
+          "reputation": 2
+        }
+      }
     },
     {
       "name": "History-Newsroom",
@@ -337,10 +680,70 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-01T17:17:49Z",
+      "pushedAt": "2026-10-06T17:03:00Z",
       "pushedDays": 0,
       "createdAt": "2026-09-21T10:44:06Z",
-      "importance": 101.5
+      "importance": 116.5,
+      "commits": 70,
+      "commits90": 70,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 15,
+      "evolution": {
+        "level": 4,
+        "name": "SPECIALIZED",
+        "score": 66,
+        "toNext": 6,
+        "capped": null,
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 1,
+          "depth": 14,
+          "release": 0,
+          "reputation": 2
+        }
+      }
+    },
+    {
+      "name": "SudiptoKumar",
+      "url": "https://github.com/SudiptoKumar/SudiptoKumar",
+      "description": "Hello, Dev!",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "JavaScript",
+      "color": "#f1e05a",
+      "archetype": "house",
+      "state": "building",
+      "workflow": "recovered",
+      "recovered": true,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-06T23:50:10Z",
+      "pushedDays": 0,
+      "createdAt": "2026-10-01T15:17:58Z",
+      "importance": 110.8,
+      "commits": 66,
+      "commits90": 66,
+      "releases": 0,
+      "recoveredAt": "2026-10-06T23:50:19Z",
+      "ageDays": 5,
+      "evolution": {
+        "level": 3,
+        "name": "BUILDING",
+        "score": 66,
+        "toNext": 0,
+        "capped": "age",
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 0,
+          "depth": 13,
+          "release": 0,
+          "reputation": 2
+        }
+      }
     },
     {
       "name": "DailyFacts",
@@ -357,10 +760,70 @@
       "workflow": "recovered",
       "recovered": true,
       "lastFailAt": null,
-      "pushedAt": "2026-10-01T17:20:00Z",
+      "pushedAt": "2026-10-06T17:06:34Z",
       "pushedDays": 0,
       "createdAt": "2026-09-22T15:26:48Z",
-      "importance": 93
+      "importance": 93,
+      "commits": 53,
+      "commits90": 53,
+      "releases": 0,
+      "recoveredAt": "2026-10-06T17:06:40Z",
+      "ageDays": 14,
+      "evolution": {
+        "level": 4,
+        "name": "SPECIALIZED",
+        "score": 65,
+        "toNext": 7,
+        "capped": null,
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 1,
+          "depth": 13,
+          "release": 0,
+          "reputation": 2
+        }
+      }
+    },
+    {
+      "name": "Sudipto-Portfolio",
+      "url": "https://github.com/SudiptoKumar/Sudipto-Portfolio",
+      "description": "My Portfolio",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "JavaScript",
+      "color": "#f1e05a",
+      "archetype": "guild",
+      "state": "active",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-02T14:31:40Z",
+      "pushedDays": 4,
+      "createdAt": "2026-09-28T15:28:45Z",
+      "importance": 80.1,
+      "commits": 45,
+      "commits90": 45,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 8,
+      "evolution": {
+        "level": 4,
+        "name": "SPECIALIZED",
+        "score": 60,
+        "toNext": 12,
+        "capped": null,
+        "parts": {
+          "activity": 30,
+          "recency": 15,
+          "maturity": 0,
+          "depth": 12,
+          "release": 0,
+          "reputation": 2
+        }
+      }
     },
     {
       "name": "VocabularyBot",
@@ -377,10 +840,70 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-01T08:22:51Z",
+      "pushedAt": "2026-10-06T08:37:30Z",
       "pushedDays": 0,
       "createdAt": "2026-09-25T11:07:52Z",
-      "importance": 75.4
+      "importance": 75.4,
+      "commits": 40,
+      "commits90": 40,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 11,
+      "evolution": {
+        "level": 4,
+        "name": "SPECIALIZED",
+        "score": 64,
+        "toNext": 8,
+        "capped": null,
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 1,
+          "depth": 12,
+          "release": 0,
+          "reputation": 2
+        }
+      }
+    },
+    {
+      "name": "Workshop-Certificate-Verify",
+      "url": "https://github.com/SudiptoKumar/Workshop-Certificate-Verify",
+      "description": "Certificate Verify",
+      "stars": 0,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "HTML",
+      "color": "#e34c26",
+      "archetype": "house",
+      "state": "building",
+      "workflow": "none",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-06T08:05:18Z",
+      "pushedDays": 0,
+      "createdAt": "2026-10-02T21:18:15Z",
+      "importance": 71.1,
+      "commits": 44,
+      "commits90": 44,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 4,
+      "evolution": {
+        "level": 3,
+        "name": "BUILDING",
+        "score": 62,
+        "toNext": 0,
+        "capped": "age",
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 0,
+          "depth": 12,
+          "release": 0,
+          "reputation": 0
+        }
+      }
     },
     {
       "name": "DocFlow",
@@ -393,54 +916,74 @@
       "language": "Kotlin",
       "color": "#A97BFF",
       "archetype": "library",
-      "state": "building",
+      "state": "active",
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-02T05:34:12Z",
-      "pushedDays": 0,
+      "pushedDays": 4,
       "createdAt": "2026-09-28T22:15:20Z",
-      "importance": 67.9
+      "importance": 67.9,
+      "commits": 38,
+      "commits90": 38,
+      "releases": 2,
+      "recoveredAt": null,
+      "ageDays": 8,
+      "evolution": {
+        "level": 4,
+        "name": "SPECIALIZED",
+        "score": 69,
+        "toNext": 3,
+        "capped": null,
+        "parts": {
+          "activity": 30,
+          "recency": 15,
+          "maturity": 0,
+          "depth": 12,
+          "release": 10,
+          "reputation": 2
+        }
+      }
     },
     {
-      "name": "Sudipto-Portfolio",
-      "url": "https://github.com/SudiptoKumar/Sudipto-Portfolio",
-      "description": "My Portfolio",
-      "stars": 1,
+      "name": "WORKSHOP-",
+      "url": "https://github.com/SudiptoKumar/WORKSHOP-",
+      "description": "It's an Automation for Workshop.",
+      "stars": 0,
       "forks": 0,
       "issues": 0,
       "prs": 0,
       "language": "JavaScript",
       "color": "#f1e05a",
-      "archetype": "guild",
+      "archetype": "tower",
       "state": "building",
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-02T03:13:35Z",
+      "pushedAt": "2026-10-06T10:51:19Z",
       "pushedDays": 0,
-      "createdAt": "2026-09-28T15:28:45Z",
-      "importance": 42.5
-    },
-    {
-      "name": "SudiptoKumar",
-      "url": "https://github.com/SudiptoKumar/SudiptoKumar",
-      "description": "Hello, Dev!",
-      "stars": 1,
-      "forks": 0,
-      "issues": 0,
-      "prs": 0,
-      "language": "JavaScript",
-      "color": "#f1e05a",
-      "archetype": "house",
-      "state": "building",
-      "workflow": "passing",
-      "recovered": false,
-      "lastFailAt": null,
-      "pushedAt": "2026-10-02T03:37:32Z",
-      "pushedDays": 0,
-      "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 38.8
+      "createdAt": "2026-10-01T13:12:44Z",
+      "importance": 35.5,
+      "commits": 20,
+      "commits90": 20,
+      "releases": 2,
+      "recoveredAt": null,
+      "ageDays": 5,
+      "evolution": {
+        "level": 3,
+        "name": "BUILDING",
+        "score": 70,
+        "toNext": 0,
+        "capped": "age",
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 0,
+          "depth": 10,
+          "release": 10,
+          "reputation": 0
+        }
+      }
     },
     {
       "name": "LetterShare",
@@ -453,14 +996,74 @@
       "language": "TypeScript",
       "color": "#3178c6",
       "archetype": "guild",
-      "state": "building",
+      "state": "active",
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-30T12:21:58Z",
-      "pushedDays": 1,
+      "pushedDays": 6,
       "createdAt": "2026-09-28T22:18:56Z",
-      "importance": 34.5
+      "importance": 34.5,
+      "commits": 16,
+      "commits90": 16,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 8,
+      "evolution": {
+        "level": 4,
+        "name": "SPECIALIZED",
+        "score": 50,
+        "toNext": 22,
+        "capped": null,
+        "parts": {
+          "activity": 24,
+          "recency": 15,
+          "maturity": 0,
+          "depth": 9,
+          "release": 0,
+          "reputation": 2
+        }
+      }
+    },
+    {
+      "name": "Clipboard",
+      "url": "https://github.com/SudiptoKumar/Clipboard",
+      "description": "No restrictions how many line you copy and paste.",
+      "stars": 0,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "Kotlin",
+      "color": "#A97BFF",
+      "archetype": "workshop",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-04T21:07:31Z",
+      "pushedDays": 2,
+      "createdAt": "2026-10-04T19:12:38Z",
+      "importance": 32.2,
+      "commits": 18,
+      "commits90": 18,
+      "releases": 3,
+      "recoveredAt": null,
+      "ageDays": 2,
+      "evolution": {
+        "level": 2,
+        "name": "FRAME",
+        "score": 66,
+        "toNext": 0,
+        "capped": "age",
+        "parts": {
+          "activity": 27,
+          "recency": 20,
+          "maturity": 0,
+          "depth": 9,
+          "release": 10,
+          "reputation": 0
+        }
+      }
     },
     {
       "name": "StudyMart",
@@ -473,14 +1076,34 @@
       "language": "TypeScript",
       "color": "#3178c6",
       "archetype": "castle",
-      "state": "building",
+      "state": "active",
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-30T07:31:35Z",
-      "pushedDays": 1,
+      "pushedDays": 6,
       "createdAt": "2026-09-28T22:00:39Z",
-      "importance": 29.2
+      "importance": 29.2,
+      "commits": 11,
+      "commits90": 11,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 8,
+      "evolution": {
+        "level": 3,
+        "name": "BUILDING",
+        "score": 42,
+        "toNext": 6,
+        "capped": null,
+        "parts": {
+          "activity": 17,
+          "recency": 15,
+          "maturity": 0,
+          "depth": 8,
+          "release": 0,
+          "reputation": 2
+        }
+      }
     },
     {
       "name": "CampusDuty",
@@ -493,14 +1116,34 @@
       "language": "TypeScript",
       "color": "#3178c6",
       "archetype": "guild",
-      "state": "building",
+      "state": "active",
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-30T06:49:50Z",
-      "pushedDays": 1,
+      "pushedDays": 6,
       "createdAt": "2026-09-28T22:07:51Z",
-      "importance": 21.5
+      "importance": 21.5,
+      "commits": 6,
+      "commits90": 6,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 8,
+      "evolution": {
+        "level": 3,
+        "name": "BUILDING",
+        "score": 33,
+        "toNext": 15,
+        "capped": null,
+        "parts": {
+          "activity": 9,
+          "recency": 15,
+          "maturity": 0,
+          "depth": 6,
+          "release": 0,
+          "reputation": 2
+        }
+      }
     },
     {
       "name": "ContrastLab-",
@@ -512,54 +1155,38 @@
       "prs": 0,
       "language": "TypeScript",
       "color": "#3178c6",
-      "archetype": "guild",
+      "archetype": "lab",
       "state": "active",
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-28T22:13:31Z",
-      "pushedDays": 3,
+      "pushedDays": 8,
       "createdAt": "2026-09-28T22:11:39Z",
-      "importance": 15.6
-    },
-    {
-      "name": "WORKSHOP-",
-      "url": "https://github.com/SudiptoKumar/WORKSHOP-",
-      "description": "It's an Automation for Workshop.",
-      "stars": 0,
-      "forks": 0,
-      "issues": 0,
-      "prs": 0,
-      "language": null,
-      "color": null,
-      "archetype": "tower",
-      "state": "building",
-      "workflow": "none",
-      "recovered": false,
-      "lastFailAt": null,
-      "pushedAt": "2026-10-01T13:12:46Z",
-      "pushedDays": 0,
-      "createdAt": "2026-10-01T13:12:44Z",
-      "importance": 6.5
+      "importance": 15.6,
+      "commits": 4,
+      "commits90": 4,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 8,
+      "evolution": {
+        "level": 3,
+        "name": "BUILDING",
+        "score": 29,
+        "toNext": 19,
+        "capped": null,
+        "parts": {
+          "activity": 6,
+          "recency": 15,
+          "maturity": 0,
+          "depth": 5,
+          "release": 0,
+          "reputation": 2
+        }
+      }
     }
   ],
   "calendar": [
-    {
-      "date": "2026-03-28",
-      "count": 0
-    },
-    {
-      "date": "2026-03-29",
-      "count": 0
-    },
-    {
-      "date": "2026-03-30",
-      "count": 0
-    },
-    {
-      "date": "2026-03-31",
-      "count": 0
-    },
     {
       "date": "2026-04-01",
       "count": 0
@@ -1322,7 +1949,27 @@
     },
     {
       "date": "2026-10-02",
-      "count": 31,
+      "count": 47,
+      "gold": 1
+    },
+    {
+      "date": "2026-10-03",
+      "count": 53,
+      "gold": 1
+    },
+    {
+      "date": "2026-10-04",
+      "count": 5,
+      "gold": 1
+    },
+    {
+      "date": "2026-10-05",
+      "count": 16,
+      "gold": 1
+    },
+    {
+      "date": "2026-10-06",
+      "count": 2,
       "gold": 1
     }
   ],
@@ -1334,6 +1981,7 @@
         "desc": "First public repo",
         "icon": "sword",
         "secret": false,
+        "major": false,
         "unlocked": true,
         "at": "2026-10-02T03:26:17.962Z",
         "isNew": false
@@ -1344,6 +1992,7 @@
         "desc": "100 commits",
         "icon": "hammer",
         "secret": false,
+        "major": false,
         "unlocked": true,
         "at": "2026-10-02T03:26:17.962Z",
         "isNew": false
@@ -1354,6 +2003,7 @@
         "desc": "1,000 commits",
         "icon": "castle",
         "secret": false,
+        "major": true,
         "unlocked": false,
         "at": null,
         "isNew": false
@@ -1364,6 +2014,7 @@
         "desc": "7 day streak",
         "icon": "wheat",
         "secret": false,
+        "major": false,
         "unlocked": true,
         "at": "2026-10-02T03:26:17.962Z",
         "isNew": false
@@ -1374,6 +2025,7 @@
         "desc": "30 day streak",
         "icon": "shield",
         "secret": false,
+        "major": true,
         "unlocked": false,
         "at": null,
         "isNew": false
@@ -1384,6 +2036,7 @@
         "desc": "Code at night",
         "icon": "moon",
         "secret": false,
+        "major": false,
         "unlocked": true,
         "at": "2026-10-02T03:26:17.962Z",
         "isNew": false
@@ -1394,9 +2047,10 @@
         "desc": "Publish a release",
         "icon": "rocket",
         "secret": false,
+        "major": false,
         "unlocked": true,
         "at": "2026-10-02T05:40:01.794Z",
-        "isNew": true
+        "isNew": false
       },
       {
         "id": "open_gate",
@@ -1404,9 +2058,10 @@
         "desc": "First issue talk",
         "icon": "flag",
         "secret": false,
+        "major": false,
         "unlocked": true,
         "at": "2026-10-02T05:40:01.794Z",
-        "isNew": true
+        "isNew": false
       },
       {
         "id": "architect",
@@ -1414,6 +2069,7 @@
         "desc": "3 active repos",
         "icon": "house",
         "secret": false,
+        "major": false,
         "unlocked": true,
         "at": "2026-10-02T03:26:17.962Z",
         "isNew": false
@@ -1424,6 +2080,7 @@
         "desc": "Solve a hard issue",
         "icon": "skull",
         "secret": false,
+        "major": true,
         "unlocked": false,
         "at": null,
         "isNew": false
@@ -1434,6 +2091,7 @@
         "desc": "Fix a failed workflow",
         "icon": "flame",
         "secret": false,
+        "major": false,
         "unlocked": true,
         "at": "2026-10-02T03:26:17.962Z",
         "isNew": false
@@ -1444,6 +2102,7 @@
         "desc": "10 stars",
         "icon": "coin",
         "secret": false,
+        "major": false,
         "unlocked": true,
         "at": "2026-10-02T03:26:17.962Z",
         "isNew": false
@@ -1454,9 +2113,10 @@
         "desc": "100 commits, 7 streak, release",
         "icon": "crown",
         "secret": true,
+        "major": true,
         "unlocked": true,
         "at": "2026-10-02T05:40:01.794Z",
-        "isNew": true
+        "isNew": false
       },
       {
         "id": "dawn_patrol",
@@ -1464,6 +2124,7 @@
         "desc": "Code at sunrise",
         "icon": "sun",
         "secret": true,
+        "major": false,
         "unlocked": true,
         "at": "2026-10-02T03:26:17.962Z",
         "isNew": false
@@ -1474,6 +2135,7 @@
         "desc": "SECRET",
         "icon": "book",
         "secret": true,
+        "major": false,
         "unlocked": false,
         "at": null,
         "isNew": false
@@ -1484,6 +2146,7 @@
         "desc": "SECRET",
         "icon": "trophy",
         "secret": true,
+        "major": true,
         "unlocked": false,
         "at": null,
         "isNew": false
@@ -1495,67 +2158,63 @@
     "visibleTotal": 12,
     "secretUnlocked": 2,
     "secretTotal": 4,
-    "fresh": [
-      "ship_it",
-      "open_gate",
-      "trifecta"
-    ]
+    "fresh": []
   },
   "events": {
     "active": [
       {
-        "id": "raid:visitor:1",
-        "type": "raid",
-        "title": "BOSS RAID",
-        "icon": "skull",
-        "detail": "SENT BY @SudiptoKumar",
-        "at": "2026-10-02T05:39:59.983Z",
-        "until": "2026-10-02T11:39:59.983Z"
+        "id": "recovery:SudiptoKumar",
+        "type": "recovery",
+        "title": "WORKFLOW RECOVERED",
+        "icon": "check",
+        "detail": "SudiptoKumar",
+        "at": "2026-10-06T23:50:19Z",
+        "until": "2026-10-08T23:50:19.000Z"
       },
       {
-        "id": "release:DocFlow:manual-12",
+        "id": "recovery:DailyFacts",
+        "type": "recovery",
+        "title": "WORKFLOW RECOVERED",
+        "icon": "check",
+        "detail": "DailyFacts",
+        "at": "2026-10-06T17:06:40Z",
+        "until": "2026-10-08T17:06:40.000Z"
+      },
+      {
+        "id": "release:WORKSHOP-:v1.0.1",
         "type": "release",
         "title": "RELEASE DAY",
         "icon": "rocket",
-        "detail": "DocFlow manual-12",
-        "at": "2026-10-02T05:04:32Z",
-        "until": "2026-10-04T05:04:32.000Z"
+        "detail": "WORKSHOP- v1.0.1",
+        "at": "2026-10-06T10:51:20Z",
+        "until": "2026-10-08T10:51:20.000Z"
       },
       {
-        "id": "ach:ship_it",
+        "id": "levelup:19",
         "type": "milestone",
         "title": "MILESTONE UNLOCKED",
         "icon": "trophy",
-        "detail": "SHIP IT",
-        "at": "2026-10-02T05:40:01.794Z",
-        "until": "2026-10-04T05:40:01.794Z"
+        "detail": "LEVEL 19",
+        "at": "2026-10-06T23:50:19.293Z",
+        "until": "2026-10-08T23:50:19.293Z"
       },
       {
-        "id": "ach:open_gate",
-        "type": "milestone",
-        "title": "MILESTONE UNLOCKED",
-        "icon": "trophy",
-        "detail": "OPEN GATE",
-        "at": "2026-10-02T05:40:01.794Z",
-        "until": "2026-10-04T05:40:01.794Z"
+        "id": "expansion:Clipboard",
+        "type": "expansion",
+        "title": "KINGDOM EXPANSION",
+        "icon": "crown",
+        "detail": "Clipboard",
+        "at": "2026-10-04T19:12:38Z",
+        "until": "2026-10-11T19:12:38.000Z"
       },
       {
-        "id": "ach:trifecta",
-        "type": "milestone",
-        "title": "MILESTONE UNLOCKED",
-        "icon": "trophy",
-        "detail": "THE TRIFECTA",
-        "at": "2026-10-02T05:40:01.794Z",
-        "until": "2026-10-04T05:40:01.794Z"
-      },
-      {
-        "id": "levelup:17",
-        "type": "milestone",
-        "title": "MILESTONE UNLOCKED",
-        "icon": "trophy",
-        "detail": "LEVEL 17",
-        "at": "2026-10-02T03:33:34.760Z",
-        "until": "2026-10-04T03:33:34.760Z"
+        "id": "expansion:Workshop-Certificate-Verify",
+        "type": "expansion",
+        "title": "KINGDOM EXPANSION",
+        "icon": "crown",
+        "detail": "Workshop-Certificate-Verify",
+        "at": "2026-10-02T21:18:15Z",
+        "until": "2026-10-09T21:18:15.000Z"
       },
       {
         "id": "expansion:SudiptoKumar",
@@ -1576,144 +2235,86 @@
         "until": "2026-10-08T13:12:44.000Z"
       },
       {
-        "id": "expansion:LetterShare",
-        "type": "expansion",
-        "title": "KINGDOM EXPANSION",
-        "icon": "crown",
-        "detail": "LetterShare",
-        "at": "2026-09-28T22:18:56Z",
-        "until": "2026-10-05T22:18:56.000Z"
-      },
-      {
-        "id": "expansion:DocFlow",
-        "type": "expansion",
-        "title": "KINGDOM EXPANSION",
-        "icon": "crown",
-        "detail": "DocFlow",
-        "at": "2026-09-28T22:15:20Z",
-        "until": "2026-10-05T22:15:20.000Z"
-      },
-      {
-        "id": "expansion:ContrastLab-",
-        "type": "expansion",
-        "title": "KINGDOM EXPANSION",
-        "icon": "crown",
-        "detail": "ContrastLab-",
-        "at": "2026-09-28T22:11:39Z",
-        "until": "2026-10-05T22:11:39.000Z"
-      },
-      {
-        "id": "expansion:CampusDuty",
-        "type": "expansion",
-        "title": "KINGDOM EXPANSION",
-        "icon": "crown",
-        "detail": "CampusDuty",
-        "at": "2026-09-28T22:07:51Z",
-        "until": "2026-10-05T22:07:51.000Z"
-      },
-      {
-        "id": "expansion:StudyMart",
-        "type": "expansion",
-        "title": "KINGDOM EXPANSION",
-        "icon": "crown",
-        "detail": "StudyMart",
-        "at": "2026-09-28T22:00:39Z",
-        "until": "2026-10-05T22:00:39.000Z"
-      },
-      {
-        "id": "expansion:Sudipto-Portfolio",
-        "type": "expansion",
-        "title": "KINGDOM EXPANSION",
-        "icon": "crown",
-        "detail": "Sudipto-Portfolio",
-        "at": "2026-09-28T15:28:45Z",
-        "until": "2026-10-05T15:28:45.000Z"
-      },
-      {
-        "id": "expansion:VocabularyBot",
-        "type": "expansion",
-        "title": "KINGDOM EXPANSION",
-        "icon": "crown",
-        "detail": "VocabularyBot",
-        "at": "2026-09-25T11:07:52Z",
-        "until": "2026-10-02T11:07:52.000Z"
-      },
-      {
-        "id": "harvest:2026-10-02",
+        "id": "harvest:2026-10-06",
         "type": "harvest",
         "title": "HARVEST FESTIVAL",
         "icon": "wheat",
-        "detail": "31 CONTRIBUTIONS",
-        "at": "2026-10-02T12:00:00.000Z",
-        "until": "2026-10-04T04:00:00.000Z"
+        "detail": "16 CONTRIBUTIONS",
+        "at": "2026-10-06T12:00:00.000Z",
+        "until": "2026-10-08T04:00:00.000Z"
       }
     ],
     "recent": [
       {
-        "id": "harvest:2026-10-02",
+        "id": "recovery:SudiptoKumar",
+        "type": "recovery",
+        "title": "WORKFLOW RECOVERED",
+        "icon": "check",
+        "detail": "SudiptoKumar",
+        "at": "2026-10-06T23:50:19Z",
+        "until": "2026-10-08T23:50:19.000Z"
+      },
+      {
+        "id": "levelup:19",
+        "type": "milestone",
+        "title": "MILESTONE UNLOCKED",
+        "icon": "trophy",
+        "detail": "LEVEL 19",
+        "at": "2026-10-06T23:50:19.293Z",
+        "until": "2026-10-08T23:50:19.293Z"
+      },
+      {
+        "id": "recovery:DailyFacts",
+        "type": "recovery",
+        "title": "WORKFLOW RECOVERED",
+        "icon": "check",
+        "detail": "DailyFacts",
+        "at": "2026-10-06T17:06:40Z",
+        "until": "2026-10-08T17:06:40.000Z"
+      },
+      {
+        "id": "harvest:2026-10-06",
         "type": "harvest",
         "title": "HARVEST FESTIVAL",
         "icon": "wheat",
-        "detail": "31 CONTRIBUTIONS",
-        "at": "2026-10-02T12:00:00.000Z",
-        "until": "2026-10-04T04:00:00.000Z"
+        "detail": "16 CONTRIBUTIONS",
+        "at": "2026-10-06T12:00:00.000Z",
+        "until": "2026-10-08T04:00:00.000Z"
       },
       {
-        "id": "ach:ship_it",
-        "type": "milestone",
-        "title": "MILESTONE UNLOCKED",
-        "icon": "trophy",
-        "detail": "SHIP IT",
-        "at": "2026-10-02T05:40:01.794Z",
-        "until": "2026-10-04T05:40:01.794Z"
-      },
-      {
-        "id": "ach:open_gate",
-        "type": "milestone",
-        "title": "MILESTONE UNLOCKED",
-        "icon": "trophy",
-        "detail": "OPEN GATE",
-        "at": "2026-10-02T05:40:01.794Z",
-        "until": "2026-10-04T05:40:01.794Z"
-      },
-      {
-        "id": "ach:trifecta",
-        "type": "milestone",
-        "title": "MILESTONE UNLOCKED",
-        "icon": "trophy",
-        "detail": "THE TRIFECTA",
-        "at": "2026-10-02T05:40:01.794Z",
-        "until": "2026-10-04T05:40:01.794Z"
-      },
-      {
-        "id": "raid:visitor:1",
-        "type": "raid",
-        "title": "BOSS RAID",
-        "icon": "skull",
-        "detail": "SENT BY @SudiptoKumar",
-        "at": "2026-10-02T05:39:59.983Z",
-        "until": "2026-10-02T11:39:59.983Z"
-      },
-      {
-        "id": "release:DocFlow:manual-12",
+        "id": "release:WORKSHOP-:v1.0.1",
         "type": "release",
         "title": "RELEASE DAY",
         "icon": "rocket",
-        "detail": "DocFlow manual-12",
-        "at": "2026-10-02T05:04:32Z",
-        "until": "2026-10-04T05:04:32.000Z"
+        "detail": "WORKSHOP- v1.0.1",
+        "at": "2026-10-06T10:51:20Z",
+        "until": "2026-10-08T10:51:20.000Z"
+      },
+      {
+        "id": "expansion:Clipboard",
+        "type": "expansion",
+        "title": "KINGDOM EXPANSION",
+        "icon": "crown",
+        "detail": "Clipboard",
+        "at": "2026-10-04T19:12:38Z",
+        "until": "2026-10-11T19:12:38.000Z"
       }
     ]
   },
   "raid": {
-    "active": true,
+    "active": false,
+    "done": true,
     "id": 1,
     "by": "SudiptoKumar",
     "at": "2026-10-02T05:39:59.983Z",
     "size": "small",
-    "goblins": 3,
+    "goblins": 0,
     "defense": 100,
-    "attack": 30
+    "attack": 30,
+    "won": true,
+    "phase": "won",
+    "available": true,
+    "cooldownLeftH": 0
   },
   "visitors": {
     "total": 0,
@@ -1938,6 +2539,14 @@
         "s": 19,
         "c": 621,
         "p": 1001
+      },
+      {
+        "d": "2026-10-07",
+        "l": 19,
+        "x": 9961,
+        "s": 19,
+        "c": 710,
+        "p": 1088
       }
     ]
   },
@@ -1945,15 +2554,668 @@
     "assets": {
       "world": "ok",
       "hero": "ok",
-      "stats": "ok",
-      "hall": "ok",
-      "repos": "ok",
+      "events": "ok",
+      "quest": "ok",
+      "districts": "ok",
+      "trophies": "ok",
       "harvest": "ok",
       "history": "ok",
       "camp": "ok",
+      "castle": "ok",
+      "dungeon": "ok",
+      "warfront": "ok",
+      "builderyard": "ok",
+      "heroguild": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-02T05:40:01.794Z"
+    "checkedAt": "2026-10-06T23:50:19.293Z"
   },
-  "contentHash": "032328ae282891a6"
+  "v": 2,
+  "featured": [
+    "WORKSHOP-",
+    "GamingNewsroomBot",
+    "TelegramForwarder",
+    "DocFlow",
+    "Clipboard"
+  ],
+  "power": {
+    "value": 76,
+    "parts": {
+      "progress": 22.3,
+      "consistency": 13.3,
+      "reliability": 20,
+      "reach": 5.7,
+      "vitality": 15,
+      "gate": 0
+    }
+  },
+  "scene": {
+    "mode": "RECOVERY",
+    "modes": [
+      "RECOVERY",
+      "CELEBRATION",
+      "HARVEST",
+      "WORKING",
+      "ACTIVE"
+    ],
+    "frame": 0,
+    "hero": {
+      "state": "working",
+      "spot": "ci",
+      "why": "recovery",
+      "label": "REPAIRING THE CI",
+      "umbrella": false
+    },
+    "npcs": {
+      "builder": 6,
+      "farmer": 5,
+      "miner": 1,
+      "guard": 2,
+      "merchant": 3,
+      "librarian": 2,
+      "researcher": 2,
+      "messenger": 1,
+      "villager": 5
+    },
+    "light": {
+      "phase": "dawn",
+      "windows": true,
+      "torches": true,
+      "moon": false,
+      "accent": "repair",
+      "danger": [],
+      "gate": false,
+      "repair": [
+        "SudiptoKumar",
+        "DailyFacts"
+      ],
+      "gold": true
+    },
+    "weather": {
+      "kind": "aurora",
+      "rain": 0,
+      "lightning": false,
+      "snow": false,
+      "aurora": 0.6,
+      "sunrise": false,
+      "wet": false,
+      "frozen": false,
+      "season": "autumn"
+    },
+    "behavior": {
+      "home": false,
+      "returning": false,
+      "shelter": false,
+      "patrol": false,
+      "farmersIn": false
+    },
+    "stages": {
+      "fail": {},
+      "repair": {
+        "SudiptoKumar": "firefighter",
+        "DailyFacts": "repair"
+      },
+      "build": {
+        "SudiptoKumar": "construction",
+        "Workshop-Certificate-Verify": "construction",
+        "WORKSHOP-": "construction",
+        "Clipboard": "builders"
+      },
+      "visitor": null,
+      "raid": "won"
+    },
+    "fx": [
+      "firefighter",
+      "repair",
+      "sparkles",
+      "castleLights",
+      "banner",
+      "confetti",
+      "fireworks",
+      "shrineGlow",
+      "construction",
+      "harvestFestival"
+    ],
+    "labels": {
+      "ci": false,
+      "issues": 0,
+      "raid": false,
+      "event": null
+    },
+    "hud": [
+      {
+        "kind": "RAID",
+        "text": "DEFEATED",
+        "icon": "skull",
+        "tone": "good"
+      },
+      {
+        "kind": "REPAIR",
+        "text": "CI IS FIXED",
+        "icon": "check",
+        "tone": "good"
+      },
+      {
+        "kind": "RELEASE",
+        "text": "WORKSHOP- V1.0.1",
+        "icon": "rocket",
+        "tone": "gold"
+      }
+    ]
+  },
+  "worldVersion": 1,
+  "renderVersion": 2,
+  "simVersion": 1,
+  "simulation": {
+    "version": 1,
+    "tick": 23,
+    "band": "dawn",
+    "seed": "sim:630ce5b26f595fb3:23",
+    "actors": [
+      {
+        "id": "builder:0",
+        "role": "builder",
+        "x": 119,
+        "y": 126,
+        "home": "construction sites",
+        "work": null,
+        "state": "walking",
+        "walking": true,
+        "facing": "left",
+        "band": "dawn"
+      },
+      {
+        "id": "builder:1",
+        "role": "builder",
+        "x": 133,
+        "y": 126,
+        "home": "construction sites",
+        "work": null,
+        "state": "walking",
+        "walking": true,
+        "facing": "left",
+        "band": "dawn"
+      },
+      {
+        "id": "builder:2",
+        "role": "builder",
+        "x": 62,
+        "y": 124,
+        "home": "construction sites",
+        "work": null,
+        "state": "walking",
+        "walking": true,
+        "facing": "left",
+        "band": "dawn"
+      },
+      {
+        "id": "builder:3",
+        "role": "builder",
+        "x": 147,
+        "y": 126,
+        "home": "construction sites",
+        "work": null,
+        "state": "walking",
+        "walking": true,
+        "facing": "right",
+        "band": "dawn"
+      },
+      {
+        "id": "builder:4",
+        "role": "builder",
+        "x": 161,
+        "y": 126,
+        "home": "construction sites",
+        "work": null,
+        "state": "walking",
+        "walking": true,
+        "facing": "left",
+        "band": "dawn"
+      },
+      {
+        "id": "builder:5",
+        "role": "builder",
+        "x": 119,
+        "y": 141,
+        "home": "construction sites",
+        "work": null,
+        "state": "walking",
+        "walking": true,
+        "facing": "right",
+        "band": "dawn"
+      },
+      {
+        "id": "farmer:0",
+        "role": "farmer",
+        "x": 10,
+        "y": 204,
+        "home": "farm",
+        "work": null,
+        "state": "walking",
+        "walking": true,
+        "facing": "right",
+        "band": "dawn"
+      },
+      {
+        "id": "farmer:1",
+        "role": "farmer",
+        "x": 32,
+        "y": 192,
+        "home": "farm",
+        "work": null,
+        "state": "walking",
+        "walking": true,
+        "facing": "left",
+        "band": "dawn"
+      },
+      {
+        "id": "farmer:2",
+        "role": "farmer",
+        "x": 54,
+        "y": 204,
+        "home": "farm",
+        "work": null,
+        "state": "walking",
+        "walking": true,
+        "facing": "left",
+        "band": "dawn"
+      },
+      {
+        "id": "farmer:3",
+        "role": "farmer",
+        "x": 10,
+        "y": 192,
+        "home": "farm",
+        "work": null,
+        "state": "walking",
+        "walking": true,
+        "facing": "left",
+        "band": "dawn"
+      },
+      {
+        "id": "farmer:4",
+        "role": "farmer",
+        "x": 32,
+        "y": 204,
+        "home": "farm",
+        "work": null,
+        "state": "walking",
+        "walking": true,
+        "facing": "right",
+        "band": "dawn"
+      },
+      {
+        "id": "miner:0",
+        "role": "miner",
+        "x": 12,
+        "y": 70,
+        "home": "mine",
+        "work": null,
+        "state": "walking",
+        "walking": true,
+        "facing": "right",
+        "band": "dawn"
+      },
+      {
+        "id": "guard:0",
+        "role": "guard",
+        "x": 74,
+        "y": 207,
+        "home": "gate",
+        "work": null,
+        "state": "patrolling",
+        "walking": true,
+        "facing": "right",
+        "band": "dawn"
+      },
+      {
+        "id": "guard:1",
+        "role": "guard",
+        "x": 102,
+        "y": 207,
+        "home": "gate",
+        "work": null,
+        "state": "patrolling",
+        "walking": true,
+        "facing": "left",
+        "band": "dawn"
+      },
+      {
+        "id": "merchant:0",
+        "role": "merchant",
+        "x": 70,
+        "y": 120,
+        "home": "plaza",
+        "work": null,
+        "state": "waking",
+        "walking": false,
+        "facing": "left",
+        "band": "dawn"
+      },
+      {
+        "id": "merchant:1",
+        "role": "merchant",
+        "x": 106,
+        "y": 120,
+        "home": "plaza",
+        "work": null,
+        "state": "waking",
+        "walking": false,
+        "facing": "right",
+        "band": "dawn"
+      },
+      {
+        "id": "merchant:2",
+        "role": "merchant",
+        "x": 80,
+        "y": 114,
+        "home": "plaza",
+        "work": null,
+        "state": "waking",
+        "walking": false,
+        "facing": "left",
+        "band": "dawn"
+      },
+      {
+        "id": "librarian:0",
+        "role": "librarian",
+        "x": 32,
+        "y": 124,
+        "home": "library",
+        "work": null,
+        "state": "waking",
+        "walking": false,
+        "facing": "left",
+        "band": "dawn"
+      },
+      {
+        "id": "librarian:1",
+        "role": "librarian",
+        "x": 58,
+        "y": 124,
+        "home": "library",
+        "work": null,
+        "state": "waking",
+        "walking": false,
+        "facing": "right",
+        "band": "dawn"
+      },
+      {
+        "id": "researcher:0",
+        "role": "researcher",
+        "x": 31,
+        "y": 140,
+        "home": "lab",
+        "work": null,
+        "state": "waking",
+        "walking": false,
+        "facing": "left",
+        "band": "dawn"
+      },
+      {
+        "id": "researcher:1",
+        "role": "researcher",
+        "x": 57,
+        "y": 124,
+        "home": "lab",
+        "work": null,
+        "state": "waking",
+        "walking": false,
+        "facing": "left",
+        "band": "dawn"
+      },
+      {
+        "id": "messenger:0",
+        "role": "messenger",
+        "x": 20,
+        "y": 111,
+        "home": "road",
+        "work": null,
+        "state": "waking",
+        "walking": false,
+        "facing": "right",
+        "band": "dawn"
+      },
+      {
+        "id": "villager:0",
+        "role": "villager",
+        "x": 79,
+        "y": 125,
+        "home": "village",
+        "work": null,
+        "state": "waking",
+        "walking": false,
+        "facing": "left",
+        "band": "dawn"
+      },
+      {
+        "id": "villager:1",
+        "role": "villager",
+        "x": 119,
+        "y": 125,
+        "home": "village",
+        "work": null,
+        "state": "waking",
+        "walking": false,
+        "facing": "right",
+        "band": "dawn"
+      },
+      {
+        "id": "villager:2",
+        "role": "villager",
+        "x": 79,
+        "y": 141,
+        "home": "village",
+        "work": null,
+        "state": "waking",
+        "walking": false,
+        "facing": "right",
+        "band": "dawn"
+      },
+      {
+        "id": "villager:3",
+        "role": "villager",
+        "x": 119,
+        "y": 141,
+        "home": "village",
+        "work": null,
+        "state": "waking",
+        "walking": false,
+        "facing": "right",
+        "band": "dawn"
+      },
+      {
+        "id": "villager:4",
+        "role": "villager",
+        "x": 79,
+        "y": 125,
+        "home": "village",
+        "work": null,
+        "state": "waking",
+        "walking": false,
+        "facing": "right",
+        "band": "dawn"
+      }
+    ],
+    "buildings": [
+      {
+        "name": "StudyMart",
+        "x": 88,
+        "y": 86,
+        "level": 3,
+        "lifecycle": "active",
+        "construction": null
+      },
+      {
+        "name": "CareerNewsroomBot",
+        "x": 127,
+        "y": 126,
+        "level": 4,
+        "lifecycle": "building",
+        "construction": 0.62
+      },
+      {
+        "name": "GamingNewsroomBot",
+        "x": 141,
+        "y": 126,
+        "level": 4,
+        "lifecycle": "building",
+        "construction": 0.83
+      },
+      {
+        "name": "TelegramForwarder",
+        "x": 70,
+        "y": 124,
+        "level": 4,
+        "lifecycle": "building",
+        "construction": 0.12
+      },
+      {
+        "name": "BusinessNewsBot",
+        "x": 155,
+        "y": 126,
+        "level": 4,
+        "lifecycle": "building",
+        "construction": 0.75
+      },
+      {
+        "name": "EntertainmentNewsBot",
+        "x": 169,
+        "y": 126,
+        "level": 4,
+        "lifecycle": "building",
+        "construction": 0.13
+      },
+      {
+        "name": "TheTechNewsroomBot",
+        "x": 127,
+        "y": 141,
+        "level": 4,
+        "lifecycle": "building",
+        "construction": 0.52
+      },
+      {
+        "name": "ScienceNewsroomBot",
+        "x": 141,
+        "y": 141,
+        "level": 4,
+        "lifecycle": "building",
+        "construction": 0.24
+      },
+      {
+        "name": "TheSportsNewsroom",
+        "x": 155,
+        "y": 141,
+        "level": 4,
+        "lifecycle": "building",
+        "construction": 0.38
+      },
+      {
+        "name": "ComicsNewsroom",
+        "x": 169,
+        "y": 141,
+        "level": 4,
+        "lifecycle": "building",
+        "construction": 0.45
+      },
+      {
+        "name": "History-Newsroom",
+        "x": 127,
+        "y": 156,
+        "level": 4,
+        "lifecycle": "building",
+        "construction": 0.13
+      },
+      {
+        "name": "DailyFacts",
+        "x": 20,
+        "y": 124,
+        "level": 4,
+        "lifecycle": "recovering",
+        "construction": null
+      },
+      {
+        "name": "Sudipto-Portfolio",
+        "x": 20,
+        "y": 156,
+        "level": 4,
+        "lifecycle": "active",
+        "construction": null
+      },
+      {
+        "name": "VocabularyBot",
+        "x": 141,
+        "y": 156,
+        "level": 4,
+        "lifecycle": "building",
+        "construction": 0.96
+      },
+      {
+        "name": "DocFlow",
+        "x": 46,
+        "y": 124,
+        "level": 4,
+        "lifecycle": "active",
+        "construction": null
+      },
+      {
+        "name": "LetterShare",
+        "x": 46,
+        "y": 156,
+        "level": 4,
+        "lifecycle": "active",
+        "construction": null
+      },
+      {
+        "name": "SudiptoKumar",
+        "x": 106,
+        "y": 124,
+        "level": 3,
+        "lifecycle": "recovering",
+        "construction": null
+      },
+      {
+        "name": "Workshop-Certificate-Verify",
+        "x": 70,
+        "y": 140,
+        "level": 3,
+        "lifecycle": "building",
+        "construction": 0.06
+      },
+      {
+        "name": "WORKSHOP-",
+        "x": 155,
+        "y": 156,
+        "level": 3,
+        "lifecycle": "building",
+        "construction": 0.72
+      },
+      {
+        "name": "CampusDuty",
+        "x": 106,
+        "y": 140,
+        "level": 3,
+        "lifecycle": "active",
+        "construction": null
+      },
+      {
+        "name": "ContrastLab-",
+        "x": 20,
+        "y": 140,
+        "level": 3,
+        "lifecycle": "active",
+        "construction": null
+      },
+      {
+        "name": "Clipboard",
+        "x": 46,
+        "y": 140,
+        "level": 2,
+        "lifecycle": "building",
+        "construction": 0.64
+      }
+    ],
+    "signature": "f8ae7225d7696e2e"
+  },
+  "contentHash": "f0760a2e6430547d"
 }
