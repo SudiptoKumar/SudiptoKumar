@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-06T06:26:11.913Z",
+  "generatedAt": "2026-10-06T06:50:34.865Z",
   "level": 19,
   "xp": 9671,
   "stars": 19,
@@ -31,9 +31,9 @@
     "kingdomDay": 1172
   },
   "time": {
-    "iso": "2026-10-06T06:26:11.913Z",
+    "iso": "2026-10-06T06:50:34.865Z",
     "tz": "Asia/Dhaka",
-    "hour": 12.43,
+    "hour": 12.83,
     "phase": "day",
     "season": "autumn",
     "date": "2026-10-06"
@@ -773,12 +773,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-06T00:06:16Z",
+      "pushedAt": "2026-10-06T06:26:25Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 82.1,
-      "commits": 47,
-      "commits90": 47,
+      "importance": 83.6,
+      "commits": 48,
+      "commits90": 48,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 4,
@@ -1134,7 +1134,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-30T06:49:50Z",
-      "pushedDays": 5,
+      "pushedDays": 6,
       "createdAt": "2026-09-28T22:07:51Z",
       "importance": 21.5,
       "commits": 6,
@@ -2593,16 +2593,11 @@
     "assets": {
       "world": "ok",
       "hero": "ok",
-      "events": "ok",
       "quest": "ok",
-      "districts": "ok",
       "trophies": "ok",
-      "harvest": "ok",
-      "history": "ok",
-      "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-06T06:26:11.913Z"
+    "checkedAt": "2026-10-06T06:50:34.865Z"
   },
   "v": 2,
   "featured": [
@@ -2738,5 +2733,5 @@
       }
     ]
   },
-  "contentHash": "0bc4bb98fff9c703"
+  "contentHash": "partial:e2d3b78bc5e93869"
 }
