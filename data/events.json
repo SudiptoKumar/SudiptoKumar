@@ -2,6 +2,15 @@
   "version": 1,
   "events": [
     {
+      "id": "levelup:19",
+      "type": "milestone",
+      "title": "MILESTONE UNLOCKED",
+      "icon": "trophy",
+      "detail": "LEVEL 19",
+      "at": "2026-10-06T00:06:02.871Z",
+      "until": "2026-10-08T00:06:02.871Z"
+    },
+    {
       "id": "levelup:18",
       "type": "milestone",
       "title": "MILESTONE UNLOCKED",
