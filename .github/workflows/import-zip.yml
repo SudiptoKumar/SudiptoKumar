@@ -1,22 +1,113 @@
 name: Import Project ZIP
 
+# Starts by itself when a ZIP file is pushed to the repository root.
+# Works on any branch and with any project type (Python, TypeScript, and so on).
+# No manual inputs. No GH_PAT needed (see notes below about .github/workflows).
+#
+# Files that must survive every import: write one path per line in a file
+# named .keep-files in the repository root (lines with # are notes).
+#
+# This one file does everything:
+#   1. Automatic: push a ZIP to the repository root -> project is imported.
+#   2. Manual: Actions > "Import Project ZIP" > Run workflow, then pick:
+#        restore       Put the repository back to a backup tag (one click).
+#                      Leave "backup_tag" empty to use the newest backup tag.
+#        clean-repo    Delete all files (a backup tag is made first).
+#        clean-deploy  Delete the Deployments history.
+#      Just pick one and press Run. No other setting is needed.
+#
+# Manual actions add a NEW commit. Old history is never rewritten.
+# Files in .github/workflows and .keep-files are never removed by them.
+# The Run button shows only when this file is on the default branch.
 on:
+  push:
+    branches: ["**"]
+    paths:
+      - "*.zip"
+      - "*.ZIP"
   workflow_dispatch:
     inputs:
-      operation:
-        description: "Choose an operation"
-        required: true
-        default: "import"
+      action:
+        description: "What do you want to do?"
         type: choice
+        required: true
         options:
-          - clean
-          - import
+          - restore
+          - clean-repo
+          - clean-deploy
+      backup_tag:
+        description: "Only for restore: tag name. Leave empty = newest backup"
+        type: string
+        required: false
+        default: ""
 
 permissions:
   contents: write
+  actions: write   # needed to delete old workflow runs
+  pull-requests: write   # only used when PR_MODE is "true"
+  deployments: write   # needed by clean-deploy
+
+# Only one import at a time. A second upload waits for the first one.
+concurrency:
+  group: import-project-zip
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+env:
+  # Optional: files that must survive every import (space separated).
+  # Example: PRESERVE_FILES: "news_state.json posted_urls.txt"
+  # You can also list them (one per line) in a .keep-files file in the repo.
+  PRESERVE_FILES: ""
+
+  # ZIP safety checks. The import stops if a limit is passed.
+  MAX_ZIP_MB: "200"          # size of the ZIP file
+  MAX_UNZIPPED_MB: "1000"    # size after unzip (protects from ZIP bombs)
+  MAX_FILES: "50000"         # number of files in the ZIP
+  MAX_FILE_MB: "100"         # one file (GitHub rejects files above 100 MB)
+  BLOCK_SECRET_FILES: "true" # stop if the ZIP has .env, private keys, etc.
+
+  # Bad ZIP check: stop if the import would remove more than this percent
+  # of the old files. 0 = check is off.
+  # If you really want it, put the word "force" in the ZIP file name.
+  MAX_REMOVED_PERCENT: "80"
+
+  # "true" = open a pull request for you to check and merge.
+  # "false" = push straight to the branch.
+  # Needs: Settings > Actions > General > "Allow GitHub Actions to create
+  # and approve pull requests".
+  PR_MODE: "false"
+
+  # Make a backup tag before the repository is cleaned ("true" or "false").
+  # The newest BACKUP_KEEP backup tags are kept (import and clean-repo
+  # backups together). Older backup tags are deleted every time a new one
+  # is made. To go back later, use the "restore" manual action.
+  BACKUP_TAG: "true"
+  BACKUP_KEEP: "3"
+
+  # clean-deploy: how many newest deployments to keep (0 = delete all).
+  DEPLOY_KEEP_LATEST: "1"
+  # clean-deploy: only this environment name (empty = all environments).
+  DEPLOY_ENVIRONMENT: ""
+
+  # Old run history: keep this many newest finished runs.
+  KEEP_RUNS: "5"
+  # Delete only runs older than this many days. 0 = no age limit.
+  DELETE_RUNS_OLDER_THAN_DAYS: "0"
+
+  # Start these workflows after a successful import (space separated).
+  # Example: TRIGGER_WORKFLOWS: "build.yml deploy.yml"
+  # Each one needs "workflow_dispatch:" in its "on:" list.
+  TRIGGER_WORKFLOWS: ""
+
+  # "true" only if you added a GH_PAT secret. Without it, GITHUB_TOKEN is used.
+  PAT_AVAILABLE: ${{ secrets.GH_PAT != '' }}
 
 jobs:
-  project-manager:
+  import:
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
 
     steps:
@@ -26,251 +117,424 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-          token: ${{ secrets.GH_PAT }}
+          token: ${{ secrets.GH_PAT || github.token }}
 
       # ==================================================
-      # CLEAN
-      #
-      # Deletes everything except:
-      #   1. .github/workflows/
-      #   2. ZIP files in repository root
-      #
-      # ZIP files are NOT extracted or deleted.
+      # 1 + 2. DETECT ZIP AND ALLOW ONLY ONE
       # ==================================================
-      - name: Clean repository
-        if: ${{ inputs.operation == 'clean' }}
-        shell: bash
+      - name: Detect ZIP
+        id: find
         run: |
           set -euo pipefail
 
-          echo "Cleaning repository..."
-
-          # Delete everything at repository root except .git, .github and ZIP files.
-          find . -mindepth 1 -maxdepth 1 \
-            ! -name ".git" \
-            ! -name ".github" \
-            ! -iname "*.zip" \
-            -exec rm -rf {} +
-
-          # Keep only .github/workflows inside .github.
-          if [ -d ".github" ]; then
-            find .github -mindepth 1 -maxdepth 1 \
-              ! -name "workflows" \
-              -exec rm -rf {} +
-          fi
-
-          echo ""
-          echo "Cleanup complete."
-          echo "Preserved:"
-          echo "  .github/workflows/"
-          echo "  ZIP files in repository root"
-
-          echo ""
-          echo "Remaining files:"
-          find . -maxdepth 3 -type f \
-            ! -path "./.git/*" \
-            | sort
-
-      # ==================================================
-      # FIND ZIP
-      # ==================================================
-      - name: Find ZIP
-        if: ${{ inputs.operation == 'import' }}
-        id: find_zip
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          mapfile -t ZIPS < <(
-            find . -maxdepth 1 \
-              -type f \
-              -iname "*.zip" \
-              -print
-          )
+          mapfile -t ZIPS < <(find . -maxdepth 1 -type f -iname "*.zip" | sort)
 
           if [ "${#ZIPS[@]}" -eq 0 ]; then
-            echo "::error::No ZIP file found in repository root."
-            exit 1
+            echo "::notice::No ZIP file in repository root. Nothing to import."
+            echo "found=false" >> "$GITHUB_OUTPUT"
+            exit 0
           fi
 
           if [ "${#ZIPS[@]}" -gt 1 ]; then
-            echo "::error::More than one ZIP file found."
-            echo "Please keep only one ZIP before running Import."
+            echo "::error::Only one ZIP file is allowed in the repository root."
             printf '%s\n' "${ZIPS[@]}"
             exit 1
           fi
 
-          ZIP="${ZIPS[0]}"
-
-          echo "Found: $ZIP"
-          echo "ZIP=$ZIP" >> "$GITHUB_OUTPUT"
+          echo "Found: ${ZIPS[0]}"
+          echo "found=true" >> "$GITHUB_OUTPUT"
+          echo "zip=${ZIPS[0]}" >> "$GITHUB_OUTPUT"
 
       # ==================================================
-      # EXTRACT ZIP
+      # 3 + 4. VALIDATE ZIP (not corrupted, safe paths)
+      # ==================================================
+      - name: Validate ZIP
+        if: steps.find.outputs.found == 'true'
+        env:
+          ZIP: ${{ steps.find.outputs.zip }}
+        run: |
+          set -euo pipefail
+
+          ZIP_BYTES="$(stat -c%s "$ZIP")"
+          if [ "$ZIP_BYTES" -gt $((MAX_ZIP_MB * 1024 * 1024)) ]; then
+            echo "::error::The ZIP file is bigger than ${MAX_ZIP_MB} MB."
+            exit 1
+          fi
+
+          if ! unzip -tq "$ZIP" > /dev/null; then
+            echo "::error::The ZIP file is corrupted or not a valid ZIP."
+            exit 1
+          fi
+
+          LIST="$(mktemp)"
+          unzip -Z1 "$ZIP" > "$LIST"
+
+          if [ ! -s "$LIST" ]; then
+            echo "::error::The ZIP file is empty."
+            exit 1
+          fi
+
+          # Reject: absolute paths, drive letters, backslashes, ".." parts.
+          if grep -qE '^/|^[A-Za-z]:|\\|(^|/)\.\.(/|$)' "$LIST"; then
+            echo "::error::Unsafe path found in ZIP (path traversal). Import stopped."
+            grep -nE '^/|^[A-Za-z]:|\\|(^|/)\.\.(/|$)' "$LIST" | head -20
+            exit 1
+          fi
+
+          # Number of files and size after unzip.
+          STATS="$(unzip -Zt "$ZIP")"
+          FILE_COUNT="$(printf '%s\n' "$STATS" | awk '{print $1}')"
+          RAW_BYTES="$(printf '%s\n' "$STATS" | awk '{print $3}')"
+
+          if [ "$FILE_COUNT" -gt "$MAX_FILES" ]; then
+            echo "::error::The ZIP has $FILE_COUNT files. The limit is $MAX_FILES."
+            exit 1
+          fi
+          if [ "$RAW_BYTES" -gt $((MAX_UNZIPPED_MB * 1024 * 1024)) ]; then
+            echo "::error::The ZIP is bigger than ${MAX_UNZIPPED_MB} MB after unzip."
+            exit 1
+          fi
+
+          # Secret files. Example files like .env.example are allowed.
+          if [ "$BLOCK_SECRET_FILES" = "true" ]; then
+            SECRETS="$(grep -E '(^|/)\.env$|(^|/)\.env\.[^/]+$|\.pem$|\.p12$|\.pfx$|(^|/)id_(rsa|dsa|ecdsa|ed25519)$' "$LIST" \
+              | grep -viE '\.env\.(example|sample|template|dist)$' || true)"
+            if [ -n "$SECRETS" ]; then
+              echo "::error::The ZIP has files that look like secrets. Import stopped."
+              printf '%s\n' "$SECRETS" | head -20
+              echo "Remove them from the ZIP, or set BLOCK_SECRET_FILES to false."
+              exit 1
+            fi
+          fi
+
+          echo "ZIP is valid and safe. Files: $FILE_COUNT"
+
+      # ==================================================
+      # 5. COPY ZIP TO TEMP + BACK UP IMPORTER WORKFLOW
+      # ==================================================
+      - name: Back up ZIP and importer workflow
+        if: steps.find.outputs.found == 'true'
+        env:
+          ZIP: ${{ steps.find.outputs.zip }}
+        run: |
+          set -euo pipefail
+
+          STAGE="$RUNNER_TEMP/zip-import"
+          rm -rf "$STAGE"
+          mkdir -p "$STAGE/workflows" "$STAGE/keep"
+
+          # ZIP copy
+          cp "$ZIP" "$STAGE/upload.zip"
+
+          # Path of the workflow that is running now
+          WF_PATH="${GITHUB_WORKFLOW_REF#"${GITHUB_REPOSITORY}/"}"
+          WF_PATH="${WF_PATH%%@*}"
+          echo "Importer workflow: $WF_PATH"
+
+          if [ ! -f "$WF_PATH" ]; then
+            echo "::error::Cannot find the importer workflow file: $WF_PATH"
+            exit 1
+          fi
+          echo "$WF_PATH" > "$STAGE/workflow-path.txt"
+
+          if [ "$PAT_AVAILABLE" = "true" ]; then
+            # Keep only this workflow file.
+            cp -p --parents "$WF_PATH" "$STAGE/workflows/"
+          else
+            # GITHUB_TOKEN cannot change anything in .github/workflows,
+            # so keep that whole folder exactly as it is.
+            mkdir -p "$STAGE/workflows/.github"
+            cp -a .github/workflows "$STAGE/workflows/.github/"
+          fi
+
+          # Files and folders to keep: PRESERVE_FILES + the .keep-files file.
+          KEEP_LIST="$STAGE/keep-list.txt"
+          printf '%s\n' ".keep-files" > "$KEEP_LIST"
+
+          read -ra ITEMS <<< "$PRESERVE_FILES"
+          for item in "${ITEMS[@]}"; do
+            printf '%s\n' "$item" >> "$KEEP_LIST"
+          done
+
+          if [ -f .keep-files ]; then
+            while IFS= read -r line || [ -n "$line" ]; do
+              line="${line%$'\r'}"
+              case "$line" in
+                ''|'#'*) continue ;;
+              esac
+              printf '%s\n' "$line" >> "$KEEP_LIST"
+            done < .keep-files
+          fi
+
+          while IFS= read -r p; do
+            p="${p#./}"
+            p="${p%/}"
+            if [ -z "$p" ]; then
+              continue
+            fi
+            case "$p" in
+              /*|..|../*|*/..|*/../*|.git|.git/*)
+                echo "::error::Not allowed in the keep list: $p"
+                exit 1
+                ;;
+            esac
+            if [ -e "$p" ]; then
+              rsync -aR -- "$p" "$STAGE/keep/"
+              echo "Keeping: $p"
+            fi
+          done < <(sort -u "$KEEP_LIST")
+
+      # ==================================================
+      # BACKUP TAG
+      # A bookmark of the repository before it is cleaned.
+      # The new ZIP file is NOT included in the backup.
+      # After the new tag is saved, only the newest BACKUP_KEEP tags stay.
+      # ==================================================
+      - name: Create backup tag
+        if: steps.find.outputs.found == 'true' && env.BACKUP_TAG == 'true'
+        id: backup
+        run: |
+          set -euo pipefail
+
+          TAG="backup-before-import-${GITHUB_RUN_ID}"
+
+          # Make a backup commit that is the same as now, but without the
+          # new ZIP file. The ZIP is the upload, not part of the old project.
+          export GIT_AUTHOR_NAME="github-actions[bot]"
+          export GIT_AUTHOR_EMAIL="41898282+github-actions[bot]@users.noreply.github.com"
+          export GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+          export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+
+          export GIT_INDEX_FILE="$RUNNER_TEMP/backup-index"
+          rm -f "$GIT_INDEX_FILE"
+          git read-tree HEAD
+
+          while IFS= read -r -d '' f; do
+            git rm -r -q --cached -- "$f"
+            echo "Not in backup: $f"
+          done < <(git ls-tree -z --name-only HEAD | grep -zi '\.zip$' || true)
+
+          BACKUP_TREE="$(git write-tree)"
+          BACKUP_COMMIT="$(git commit-tree "$BACKUP_TREE" -p HEAD -m "Backup before import $GITHUB_RUN_ID")"
+          unset GIT_INDEX_FILE
+
+          git tag "$TAG" "$BACKUP_COMMIT"
+
+          if git push origin "refs/tags/$TAG"; then
+            echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+            echo "Backup tag created: $TAG"
+
+            # Keep the newest BACKUP_KEEP backup tags. Delete the rest.
+            # Tags end with the run number, so a bigger number is newer.
+            git ls-remote --tags --refs origin 'refs/tags/backup-*' \
+              | awk '{print $2}' \
+              | sed 's|^refs/tags/||' \
+              | awk -F- '{print $NF, $0}' \
+              | sort -rn \
+              | awk -v keep="$BACKUP_KEEP" 'NR>keep {print $2}' \
+              | while read -r OLD; do
+                  if [ "$OLD" = "$TAG" ]; then
+                    continue
+                  fi
+                  if git push origin --delete "refs/tags/$OLD"; then
+                    echo "Removed old backup tag: $OLD"
+                  else
+                    echo "::warning::Could not remove old backup tag: $OLD"
+                  fi
+                done
+          else
+            echo "::warning::Could not push the backup tag. Old backup tags are kept."
+          fi
+
+      # ==================================================
+      # 6. CLEAN REPOSITORY (all except .git)
+      # The importer workflow is restored later.
+      # ==================================================
+      - name: Clean repository
+        if: steps.find.outputs.found == 'true'
+        run: |
+          set -euo pipefail
+
+          find . -mindepth 1 -maxdepth 1 ! -name ".git" -exec rm -rf {} +
+
+          echo "Repository cleaned. Remaining at root:"
+          ls -A
+
+      # ==================================================
+      # 7. EXTRACT ZIP
       # ==================================================
       - name: Extract ZIP
-        if: ${{ inputs.operation == 'import' }}
-        shell: bash
+        if: steps.find.outputs.found == 'true'
         run: |
           set -euo pipefail
 
-          rm -rf /tmp/project
-          mkdir -p /tmp/project
+          STAGE="$RUNNER_TEMP/zip-import"
+          EX="$STAGE/extract"
+          mkdir -p "$EX"
 
-          unzip -q -o \
-            "${{ steps.find_zip.outputs.ZIP }}" \
-            -d /tmp/project
+          unzip -q "$STAGE/upload.zip" -d "$EX"
 
-          echo "ZIP extracted successfully."
+          # Remove junk from macOS and any .git folders inside the ZIP
+          rm -rf "$EX/__MACOSX"
+          find "$EX" -name ".DS_Store" -type f -delete
+          find "$EX" -name ".git" -prune -exec rm -rf {} +
+
+          # Reject symlinks that point outside the extracted folder
+          EXR="$(realpath "$EX")"
+          while IFS= read -r -d '' link; do
+            target="$(readlink "$link")"
+            case "$target" in
+              /*) resolved="$(realpath -m "$target")" ;;
+              *)  resolved="$(realpath -m "$(dirname "$link")/$target")" ;;
+            esac
+            case "$resolved" in
+              "$EXR"|"$EXR"/*) ;;
+              *)
+                echo "::error::Unsafe symlink in ZIP: $link -> $target"
+                exit 1
+                ;;
+            esac
+          done < <(find "$EX" -type l -print0)
+
+          if [ -z "$(ls -A "$EX")" ]; then
+            echo "::error::ZIP has no project files."
+            exit 1
+          fi
+
+          # GitHub does not accept single files above 100 MB.
+          BIG="$(find "$EX" -type f -size +"${MAX_FILE_MB}"M | head -20)"
+          if [ -n "$BIG" ]; then
+            echo "::error::Files bigger than ${MAX_FILE_MB} MB found in the ZIP:"
+            printf '%s\n' "$BIG"
+            exit 1
+          fi
+
+          echo "ZIP extracted."
 
       # ==================================================
-      # DETECT PROJECT ROOT
+      # 8 + 9. DETECT PROJECT ROOT
+      # One top-level folder   -> use that folder (flatten)
+      # Files at the ZIP root  -> use the ZIP root
       # ==================================================
       - name: Detect project root
-        if: ${{ inputs.operation == 'import' }}
-        id: project_root
-        shell: bash
+        if: steps.find.outputs.found == 'true'
+        id: root
         run: |
           set -euo pipefail
 
-          ROOT="/tmp/project"
+          EX="$RUNNER_TEMP/zip-import/extract"
+          ROOT="$EX"
 
-          # ZIP contains project files directly.
-          if [ -f "$ROOT/main.py" ] || \
-             [ -f "$ROOT/package.json" ] || \
-             [ -f "$ROOT/requirements.txt" ] || \
-             [ -d "$ROOT/app" ] || \
-             [ -d "$ROOT/src" ] || \
-             [ -d "$ROOT/tests" ] || \
-             [ -d "$ROOT/.github" ]; then
+          mapfile -t TOP < <(find "$EX" -mindepth 1 -maxdepth 1)
 
-            echo "ROOT=$ROOT" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          # ZIP contains one top-level project folder.
-          mapfile -t DIRS < <(
-            find "$ROOT" \
-              -mindepth 1 \
-              -maxdepth 1 \
-              -type d
-          )
-
-          mapfile -t FILES < <(
-            find "$ROOT" \
-              -mindepth 1 \
-              -maxdepth 1 \
-              -type f
-          )
-
-          if [ "${#DIRS[@]}" -eq 1 ] && \
-             [ "${#FILES[@]}" -eq 0 ]; then
-
-            echo "ROOT=${DIRS[0]}" >> "$GITHUB_OUTPUT"
-          else
-            echo "ROOT=$ROOT" >> "$GITHUB_OUTPUT"
-          fi
-
-      # ==================================================
-      # BACK UP PERSISTENT STATE
-      #
-      # Code releases may replace main.py/workflows/etc., but these two files are
-      # production data and must survive every import.
-      # ==================================================
-      - name: Back up persistent state
-        if: ${{ inputs.operation == 'import' }}
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          STATE_DIR="/tmp/careernewsroom-state"
-          rm -rf "$STATE_DIR"
-          mkdir -p "$STATE_DIR"
-
-          for file in news_state.json posted_urls.txt; do
-            if [ -f "$file" ]; then
-              cp "$file" "$STATE_DIR/$file"
-              echo "Preserving existing $file"
-            else
-              echo "No existing $file found; import may create it if supplied."
+          if [ "${#TOP[@]}" -eq 1 ] && [ -d "${TOP[0]}" ] && [ ! -L "${TOP[0]}" ]; then
+            # A lone .github folder is project content, not a wrapper folder.
+            if [ "$(basename "${TOP[0]}")" != ".github" ]; then
+              ROOT="${TOP[0]}"
+              echo "One top-level folder found. It will be flattened."
             fi
-          done
+          fi
+
+          echo "Project root: $ROOT"
+          echo "path=$ROOT" >> "$GITHUB_OUTPUT"
 
       # ==================================================
-      # IMPORT EVERYTHING
-      #
-      # .github is NOT excluded. Existing files with the same path are replaced.
-      # Persistent state is restored immediately afterward.
+      # IMPORT PROJECT
       # ==================================================
       - name: Import project
-        if: ${{ inputs.operation == 'import' }}
-        shell: bash
+        if: steps.find.outputs.found == 'true'
+        env:
+          PROJECT_ROOT: ${{ steps.root.outputs.path }}
         run: |
           set -euo pipefail
 
-          ROOT="${{ steps.project_root.outputs.ROOT }}"
+          EXCLUDES=(--exclude="/.git")
 
-          rsync -a \
-            --exclude=".git/" \
-            "$ROOT/" ./
+          if [ "$PAT_AVAILABLE" != "true" ]; then
+            # GITHUB_TOKEN cannot push workflow changes, so skip them.
+            EXCLUDES+=(--exclude="/.github/workflows/")
+            echo "::warning::No GH_PAT secret. Workflow files inside the ZIP are skipped."
+          fi
 
-          STATE_DIR="/tmp/careernewsroom-state"
-          for file in news_state.json posted_urls.txt; do
-            if [ -f "$STATE_DIR/$file" ]; then
-              cp "$STATE_DIR/$file" "$file"
-              echo "Restored persistent $file"
-            fi
-          done
+          rsync -a "${EXCLUDES[@]}" "$PROJECT_ROOT/" ./
 
-          echo "Project imported successfully with persistent state preserved."
+          echo "Project imported."
 
       # ==================================================
-      # DELETE ZIP FILES
+      # 10. RESTORE IMPORTER WORKFLOW (and optional kept files)
       # ==================================================
-      - name: Delete ZIP files
-        if: ${{ inputs.operation == 'import' }}
-        shell: bash
+      - name: Restore importer workflow
+        if: steps.find.outputs.found == 'true'
         run: |
           set -euo pipefail
 
-          find . -maxdepth 1 \
-            -type f \
-            -iname "*.zip" \
-            -delete
+          STAGE="$RUNNER_TEMP/zip-import"
 
-          echo "All ZIP files deleted."
+          cp -a "$STAGE/workflows/.github" ./
+
+          if [ -d "$STAGE/keep" ]; then
+            cp -a "$STAGE/keep/." ./
+          fi
+
+          WF_PATH="$(cat "$STAGE/workflow-path.txt")"
+          if [ ! -f "$WF_PATH" ]; then
+            echo "::error::Importer workflow was not restored. Nothing will be pushed."
+            exit 1
+          fi
+
+          echo "Importer workflow restored: $WF_PATH"
 
       # ==================================================
-      # COMMIT AND PUSH
+      # 11. DELETE UPLOADED ZIP
+      # ==================================================
+      - name: Delete uploaded ZIP
+        if: steps.find.outputs.found == 'true'
+        env:
+          ZIP: ${{ steps.find.outputs.zip }}
+        run: |
+          set -euo pipefail
+          rm -f "$ZIP"
+          echo "Deleted $ZIP"
+
+      # ==================================================
+      # 12 + 13. COMMIT AND PUSH TO THE SAME BRANCH
+      # (or open a pull request when PR_MODE is "true")
+      # Runs only if every step before it passed.
+      # Also writes a summary report on the run page.
       # ==================================================
       - name: Commit and push
-        shell: bash
+        if: steps.find.outputs.found == 'true'
+        id: push
+        env:
+          ZIP: ${{ steps.find.outputs.zip }}
+          BACKUP: ${{ steps.backup.outputs.tag }}
+          GH_TOKEN: ${{ secrets.GH_PAT || github.token }}
         run: |
           set -euo pipefail
 
           git config user.name "github-actions[bot]"
-          git config user.email \
-            "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add -A
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            {
+              echo "### Nothing changed"
+              echo ""
+              echo "The ZIP had the same files as the repository."
+            } >> "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
 
-          if [ "${{ inputs.operation }}" = "clean" ]; then
-            MESSAGE="Clean repository"
-          else
-            MESSAGE="Import project from ZIP"
-          fi
+          # Count changes. The uploaded ZIP itself is not counted as removed.
+          STATUS="$(git diff --cached --name-status --no-renames)"
+          ADDED="$(printf '%s\n' "$STATUS" | awk -F'\t' '$1=="A"{n++} END{print n+0}')"
+          CHANGED="$(printf '%s\n' "$STATUS" | awk -F'\t' '$1=="M"{n++} END{print n+0}')"
+          REMOVED="$(printf '%s\n' "$STATUS" | awk -F'\t' '$1=="D" && tolower($2) !~ /^[^\/]*\.zip$/ {n++} END{print n+0}')"
+          OLD_COUNT="$(git ls-tree -r --name-only HEAD | awk 'tolower($0) !~ /^[^\/]*\.zip$/ {n++} END{print n+0}')"
 
-          git commit -m "$MESSAGE"
-          git push
-
-          echo ""
-          echo "========================================"
-          echo "SUCCESS"
-          echo "Operation: ${{ inputs.operation }}"
-          echo "========================================"
+          # Bad ZIP check: too many old files would be removed.
+          if [ "$MAX_REMOVED_PERCENT" -gt 0 ] && [ "$OLD_COUNT" -ge 10 ]; then
+            ZNAME="$(basename "$ZIP"
