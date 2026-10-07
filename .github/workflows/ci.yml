@@ -1,0 +1,35 @@
+name: CI gate
+
+# Pull-request / release gate (spec §25.10): tests, lint/safety, render,
+# asset budgets, README generation. Read-only: commits nothing.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Tests
+        run: npm test
+      - name: Lint and safety
+        run: npm run lint
+      - name: Offline update (full pipeline)
+        run: node engine/cli.mjs update --offline --out /tmp/ci-renderer
+      - name: Render from saved world
+        run: node engine/cli.mjs render --out /tmp/ci-renderer
+      - name: Lint generated pictures
+        run: node engine/cli.mjs lint --dir /tmp/ci-renderer
+      - name: "Demo one scenario (contract: never touches data/)"
+        run: node engine/cli.mjs demo --only quiet-night --out /tmp/ci-demos

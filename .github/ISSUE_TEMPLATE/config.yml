@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Kingdom status
+    url: https://github.com/OWNER/OWNER/actions
+    about: Watch the kingdom update itself.

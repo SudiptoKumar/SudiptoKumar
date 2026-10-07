@@ -1,0 +1,55 @@
+name: World update
+
+# The game tick. Every 6 hours this fetches GitHub, rebuilds the kingdom
+# (fetch -> normalize -> persist -> build -> simulate -> render -> README)
+# and saves the new pictures. Without GH_TOKEN it renders the marked
+# offline demo fixture instead of failing.
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: kingdom-write
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Update the kingdom
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node engine/cli.mjs update
+      - name: Safety check for all pictures
+        run: node engine/cli.mjs lint
+      - name: Save changes
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          BRANCH="${DEFAULT_BRANCH:-$GITHUB_REF_NAME}"
+          git config user.name "kingdom-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data renderer
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+            exit 0
+          fi
+          git commit -m "kingdom: update world [skip ci]"
+          for i in 1 2 3; do
+            git pull --rebase origin "$BRANCH" && git push origin "HEAD:$BRANCH" && exit 0
+            sleep 5
+          done
+          exit 1

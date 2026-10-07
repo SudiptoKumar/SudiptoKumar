@@ -1,0 +1,49 @@
+name: Cleanup
+
+# Once a week: prune visitor entries older than 90 days and verify the
+# data files still parse. Never touches engine/, renderer/ or the README.
+
+on:
+  schedule:
+    - cron: "30 3 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: kingdom-write
+  cancel-in-progress: false
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Prune stale data
+        run: node engine/cli.mjs cleanup
+      - name: Save changes
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          BRANCH="${DEFAULT_BRANCH:-$GITHUB_REF_NAME}"
+          git config user.name "kingdom-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+            exit 0
+          fi
+          git commit -m "kingdom: weekly cleanup [skip ci]"
+          for i in 1 2 3; do
+            git pull --rebase origin "$BRANCH" && git push origin "HEAD:$BRANCH" && exit 0
+            sleep 5
+          done
+          exit 1

@@ -1,0 +1,41 @@
+name: Plant your flag
+description: Put your flag and a tent in the visitor camp.
+title: "🏳 Visitor Flag Request"
+labels: ["flag-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Welcome, traveler! A bot checks this form with strict rules.
+        Your GitHub name and a short message will show at the harbor.
+        Only plain text is shown. No links. One active flag per day.
+  - type: input
+    id: username
+    attributes:
+      label: GitHub username
+      description: Your own GitHub name, without the @ sign.
+      placeholder: octocat
+    validations:
+      required: true
+  - type: input
+    id: message
+    attributes:
+      label: Message
+      description: Up to 48 characters. Use letters, numbers, spaces and . , ! ? - only.
+      placeholder: Hello from the road!
+    validations:
+      required: true
+  - type: dropdown
+    id: color
+    attributes:
+      label: Flag colour
+      options:
+        - Red
+        - Blue
+        - Green
+        - Gold
+        - Purple
+        - Orange
+      default: 2
+    validations:
+      required: true
