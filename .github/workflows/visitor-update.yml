@@ -1,10 +1,8 @@
 name: Visitor update
 
-# Visitors arrive through an issue form (plant-your-flag / send-goblin-raid).
-# This workflow validates the request with strict rules, records only safe
-# data, and redraws the harbor and the camp. It never runs code from the
-# issue and never puts issue text into a shell command.
-
+# Visitors fill in a form (an issue). This workflow checks the form with strict rules,
+# saves only safe data, answers the visitor, and redraws the map.
+# It never runs code from the issue and never puts issue text into a shell command.
 on:
   issues:
     types: [opened, reopened]
@@ -13,6 +11,7 @@ on:
 permissions:
   contents: write
   issues: write
+  actions: read
 
 concurrency:
   group: kingdom-write
@@ -25,7 +24,7 @@ jobs:
       contains(github.event.issue.labels.*.name, 'flag-request') ||
       contains(github.event.issue.labels.*.name, 'raid-request')
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
@@ -34,12 +33,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Check the visitor request
+      - name: Check the request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node engine/cli.mjs visitors
       - name: Update the kingdom
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: node engine/cli.mjs update
+          GH_TOKEN: ${{ secrets.KINGDOM_TOKEN || secrets.GITHUB_TOKEN }}
+        run: node engine/cli.mjs update --force
       - name: Safety check for all pictures
         run: node engine/cli.mjs lint
       - name: Save changes
@@ -49,7 +50,7 @@ jobs:
           BRANCH="${DEFAULT_BRANCH:-$GITHUB_REF_NAME}"
           git config user.name "kingdom-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A data renderer
+          git add -A data renderer README.md
           if git diff --cached --quiet; then
             echo "Nothing changed."
             exit 0

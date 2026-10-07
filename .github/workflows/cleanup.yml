@@ -1,8 +1,6 @@
 name: Cleanup
 
-# Once a week: prune visitor entries older than 90 days and verify the
-# data files still parse. Never touches engine/, renderer/ or the README.
-
+# Once a week: make the history files small and delete old workflow runs.
 on:
   schedule:
     - cron: "30 3 * * 0"
@@ -10,6 +8,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: kingdom-write
@@ -27,7 +26,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Prune stale data
+      - name: Compact data and delete old runs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node engine/cli.mjs cleanup
       - name: Save changes
         env:

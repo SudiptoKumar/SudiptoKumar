@@ -1,17 +1,22 @@
 name: World update
 
-# The game tick. Every 6 hours this fetches GitHub, rebuilds the kingdom
-# (fetch -> normalize -> persist -> build -> simulate -> render -> README)
-# and saves the new pictures. Without GH_TOKEN it renders the marked
-# offline demo fixture instead of failing.
-
+# The game tick. Every 6 hours this reads GitHub, updates the kingdom
+# (XP, level, achievements, events, weather) and saves the new pictures.
 on:
   schedule:
     - cron: "17 */6 * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "engine/**"
+      - "kingdom.config.json"
+      - ".github/workflows/world-update.yml"
 
 permissions:
   contents: write
+  issues: write
+  actions: read
 
 concurrency:
   group: kingdom-write
@@ -20,7 +25,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
@@ -29,9 +34,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Update the kingdom
+      - name: Make sure the visitor labels exist
+        continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node engine/cli.mjs labels
+      - name: Update the kingdom
+        env:
+          # Optional: add a secret named KINGDOM_TOKEN to count private contributions.
+          GH_TOKEN: ${{ secrets.KINGDOM_TOKEN || secrets.GITHUB_TOKEN }}
         run: node engine/cli.mjs update
       - name: Safety check for all pictures
         run: node engine/cli.mjs lint
@@ -42,7 +53,7 @@ jobs:
           BRANCH="${DEFAULT_BRANCH:-$GITHUB_REF_NAME}"
           git config user.name "kingdom-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A data renderer
+          git add -A data renderer README.md
           if git diff --cached --quiet; then
             echo "Nothing changed."
             exit 0

@@ -1,108 +1,98 @@
-// hud.mjs — L10: small top status strip, event banner, hero state chip,
-// quest marker, small building labels. Panels used sparingly; no
-// dashboard chrome (spec §04.9). All text escaped; vector only.
-import { R, T, C, P, LN, G } from './svg.mjs';
-import { esc } from '../util.mjs';
-import { activeStory } from './camera.mjs';
+// The two compact HUD strips (V2).
+//   - renderEvents: the Primary Event camera — a window into the one world, aimed at where the story is.
+//     When nothing is happening the slot is empty and the section hides itself.
+//   - renderQuest: kingdom power and the quests, each quest tagged with the world anchor it points to.
+import { Pix, svgDoc, textW } from './pixel.mjs';
+import { T, TONE, card, box, bar, fitScale, wrapFit, demoRibbon, pctColor } from './ui.mjs';
+import { drawIcon } from './sprites.mjs';
+import { renderWorldCamera, centerRect, overlayCanvas, ANCHOR_NAMES } from './camera.mjs';
+import { fmt } from '../util.mjs';
 
-const prettify = (s) => String(s ?? '').replace(/^(landmark|repo|plot)-/, '').replace(/_/g, ' ')
-  .replace(/\b\w/g, (c) => c.toUpperCase()).slice(0, 26);
+const EVENT_TONE = { raid: 'danger', emergency: 'danger', recovery: 'good', release: 'gold', milestone: 'gold', expansion: 'info', harvest: 'gold', nightstars: 'info' };
 
-function pill(x, y, w, h, fill, opacity) {
-  const r = Math.min(10, h / 2);
-  return `<rect x="${Math.round(x)}" y="${Math.round(y)}" width="${Math.round(w)}" height="${Math.round(h)}"`
-    + ` rx="${r}" fill="${fill}" opacity="${opacity}"/>`;
-}
-
-/** Top status strip: identity, time, weather, power — one quiet line.
- * Right-aligned: the castle dominates the top-center, so the HUD lives in
- * the top-right corner clear of it. */
-function statusStrip(world, snap, ctx, rect, fs) {
-  const k = world.kingdom ?? {};
-  const bits = [String(k.name ?? 'Kingdom').slice(0, 24), ctx.band, ctx.season, ctx.pal.weather, k.powerTier]
-    .filter(Boolean)
-    .map((b) => esc(String(b)));
-  const text = bits.join(' · ');
-  const w = text.length * fs * 0.62 + fs * 1.6;
-  const h = fs * 1.9;
-  const x = rect.x + rect.w - w - fs * 0.8, y = rect.y + fs * 0.6;
-  return G(pill(x, y, w, h, '#141a26', 0.78)
-    + T(x + fs * 0.8, y + h * 0.68, text, fs, '#e8dcc0'), { 'aria-hidden': 'true' });
-}
-
-/** Event banner: only when something meaningful is happening. Right-aligned
- * under the status strip. */
-function eventBanner(world, snap, rect, fs) {
-  const story = activeStory(world, snap);
-  if (!story) return '';
-  const phase = story.phase ? ` — ${esc(String(story.phase)).toLowerCase().replace(/_/g, ' ')}` : '';
-  const anchor = story.anchor ? ` · ${esc(String(story.anchor).replace(/_/g, ' '))}` : '';
-  const text = `» ${esc(String(story.title).slice(0, 52))}${phase}${anchor}`;
-  const w = text.length * fs * 0.62 + fs * 1.6;
-  const h = fs * 1.9;
-  const x = rect.x + rect.w - w - fs * 0.8, y = rect.y + fs * 0.6 + fs * 2.4;
-  return G(pill(x, y, w, h, '#5e3a1e', 0.85)
-    + T(x + fs * 0.8, y + h * 0.68, text, fs, '#f7d774'), { 'aria-hidden': 'true' });
-}
-
-/** Hero state chip: who, doing what, heading where. */
-function heroChip(snap, ctx, rect, fs) {
-  const hero = (snap.actors ?? []).find((a) => a.id === 'hero');
-  if (!hero) return '';
-  const dest = hero.destinationKind && hero.destinationKind !== 'routine'
-    ? ` → ${esc(String(hero.destinationKind).replace(/-/g, ' '))}` : '';
-  const text = `${esc(String(hero.name ?? 'Hero').slice(0, 18))} · ${esc(String(hero.state ?? 'idle').replace(/-/g, ' '))}${dest}`;
-  const w = text.length * fs * 0.62 + fs * 1.6;
-  const h = fs * 1.9;
-  const x = rect.x + fs * 0.8, y = rect.y + rect.h - h - fs * 0.6;
-  return G(pill(x, y, w, h, '#1d2433', 0.8)
-    + T(x + fs * 0.8, y + h * 0.68, text, fs, '#bfe0f2'), { 'aria-hidden': 'true' });
-}
-
-/** Quest marker: flag + ring at the hero's destination anchor (world-space). */
-function questMarker(world, snap, ctx) {
-  const hero = (snap.actors ?? []).find((a) => a.id === 'hero');
-  if (!hero || !hero.destinationKind || hero.destinationKind === 'routine') return '';
-  const nodeId = { war: 'war_front', 'ci-failure': 'automation_fortress', release: 'royal_plaza', achievement: 'hall_of_heroes', visitor: 'visitor_camp' }[hero.destinationKind];
-  if (!nodeId) return '';
-  const n = (world.roads.nodes ?? []).find((nd) => nd.id === nodeId);
-  if (!n) return '';
-  const s = 1; // world units marker
-  return G(
-    C(n.x, n.y, 26, 'none', { stroke: '#f2c14e', 'stroke-width': 4, opacity: 0.9 })
-    + LN(n.x, n.y, n.x, n.y - 44, '#8a5a33', 4)
-    + P([[n.x, n.y - 44], [n.x + 26, n.y - 37], [n.x, n.y - 30]], '#f2c14e'),
-    { 'aria-hidden': 'true' });
-}
-
-/** Small labels over landmark buildings (LOD1+), capped. */
-function buildingLabels(world, ctx, rect, fs) {
-  if (ctx.lod < 1) return '';
-  const LANDMARK = new Set(['castle', 'guild_hall', 'fortress', 'library', 'market_hall', 'mill', 'shrine', 'observatory', 'barracks']);
-  const vis = world.buildings
-    .filter((b) => LANDMARK.has(b.archetype))
-    .filter((b) => b.x < rect.x + rect.w && b.x + b.w > rect.x && b.y < rect.y + rect.h && b.y + b.h > rect.y)
-    .sort((a, b) => (a.id < b.id ? -1 : 1))
-    .slice(0, 10);
-  let s = '';
-  for (const b of vis) {
-    const label = esc(prettify(b.archetype));
-    const cx = b.x + b.w / 2;
-    const ly = b.y - 14;
-    const w = label.length * fs * 0.62 + fs;
-    s += G(pill(cx - w / 2, ly - fs * 1.5, w, fs * 1.7, '#141a26', 0.65)
-      + T(cx, ly - fs * 0.28, label, fs, '#e8dcc0', { 'text-anchor': 'middle' }), { 'aria-hidden': 'true' });
+/** Where the camera points for an event: the place the story is happening. */
+function eventAnchor(W, ev) {
+  const A = W.anchors;
+  const repoAt = (name) => { const b = (W.repositories || []).find((r) => r.name === name); return b ? [b.x, b.y] : null; };
+  switch (ev.type) {
+    case 'release': return A.castle;
+    case 'emergency':
+    case 'recovery': return repoAt(ev.detail) || A.ci;
+    case 'raid': return A.gate;
+    case 'milestone': return A.shrine;
+    case 'harvest': return [A.farm[0] + 37, A.farm[1] + 17];
+    case 'expansion': return repoAt(ev.detail) || A.plaza;
+    default: return A.plaza;
   }
-  return s;
 }
 
-export function paintHud(world, snap, ctx, camera) {
-  const rect = camera.rect;
-  const fs = Math.max(13, Math.round(rect.w * 0.02)); // ≥13u keeps mobile legible
-  let s = statusStrip(world, snap, ctx, rect, fs);
-  s += eventBanner(world, snap, rect, fs);
-  s += heroChip(snap, ctx, rect, fs);
-  if (ctx.lod >= 1) s += questMarker(world, snap, ctx);
-  s += buildingLabels(world, ctx, rect, fs);
-  return `<g id="k-hud">${s}</g>`;
+// ---------------------------------------------------------------- primary event camera
+export function renderEvents(S) {
+  const W = S.world;
+  const ev = (W.events || [])[0];
+  if (!ev) return null;
+  const anchor = eventAnchor(W, ev);
+  const rect = centerRect(anchor[0], anchor[1], 80, 30);
+  const { p, vx, vy, vw, vh } = overlayCanvas(rect);
+  const tone = EVENT_TONE[ev.type] || 'gold', col = TONE[tone] || T.gold;
+  // caption strip along the bottom of the camera
+  p.r(vx, vy + vh - 46, vw, 46, '#14162b', 0.92).r(vx, vy + vh - 46, vw, 3, col);
+  p.raw(tone === 'danger' ? '<g class="fl">' : '<g>');
+  drawIcon(p, ev.icon, vx + 12, vy + vh - 38, 3);
+  p.raw('</g>');
+  p.text(ev.title, vx + 50, vy + vh - 36, fitScale(ev.title, vw - 62, [2.5, 2, 1.5]), T.dim);
+  const caption = ev.detail && ev.detail !== ev.title ? `${ev.detail}` : '';
+  if (caption) { const t = wrapFit(caption, vw - 150, [3, 2.5, 2], 1); t.lines.forEach((ln, k) => p.text(ln, vx + 50, vy + vh - 20 + k * 20, t.s, T.white)); }
+  if (S.meta.demo) p.text('DEMO', vx + vw - 12, vy + 14, 2, '#ff9a9a', { align: 'r' });
+  return renderWorldCamera(S, {}, {
+    rect, w: 640, h: 240,
+    title: `World event: ${ev.title}`,
+    desc: `${ev.title}${ev.detail ? ` — ${ev.detail}` : ''}`,
+    overlay: p.toString(),
+  });
+}
+
+// ---------------------------------------------------------------- quests and the kingdom's power
+const STATE_ICON = { ACTIVE: 'flag', COMPLETE: 'check', LOCKED: 'lock' };
+export function renderQuest(S) {
+  const W = 640, p = new Pix(1);
+  const rows = S.quests.rows;
+  const anchorById = new Map(((S.world && S.world.quests) || []).map((q) => [q.id, q.anchor]));
+  const H = 108 + rows.length * 48 + 16;
+  card(p, W, H);
+  // ---- kingdom power
+  drawIcon(p, 'crown', 28, 24, 4);
+  p.text('KINGDOM POWER', 72, 26, 3, T.gold, { shadow: T.dark });
+  p.text(String(S.power.value), W - 28, 18, 6, T.white, { align: 'r', shadow: T.dark });
+  bar(p, 28, 62, W - 56, 26, S.power.value, { fill: pctColor(S.power.value) });
+  // ---- quests, each tagged with the world anchor it points to
+  rows.forEach((q, i) => {
+    const y = 108 + i * 48, done = q.state === 'COMPLETE', locked = q.state === 'LOCKED';
+    box(p, 28, y, W - 56, 40, { fill: done ? '#1c3a2c' : T.panel, border: done ? '#2e6b4a' : locked ? '#2b2e4d' : T.goldD, t: 3, n: 3 });
+    p.raw(q.state === 'ACTIVE' ? '<g class="bob">' : '<g>');
+    drawIcon(p, STATE_ICON[q.state], 42, y + 12, 2.5, locked ? { A: '#566c86' } : undefined);
+    p.raw('</g>');
+    const col = locked ? '#566c86' : done ? T.green : T.white;
+    const bw = 110, tx = 74, barX = 388;
+    p.text(q.title, tx, y + 11, fitScale(q.title, (q.state === 'ACTIVE' && q.target > 1 ? barX : W - 130) - tx - 10, [3, 2.5, 2]), col);
+    if (q.state === 'ACTIVE' && q.target > 1) {
+      bar(p, barX, y + 10, bw, 20, q.pct, { fill: T.cyan });
+      p.text(`${fmt(q.progress)}/${fmt(q.target)}`, W - 28 - 14, y + 14, 2.5, T.dim, { align: 'r' });
+    } else if (q.state === 'ACTIVE') p.text('IN PROGRESS', W - 42, y + 14, 2.5, T.dim, { align: 'r' });
+    if (locked) drawIcon(p, 'lock', W - 62, y + 10, 2.5);
+    if (done) p.text(q.xp ? `+${q.xp} XP` : 'DONE', W - 42, y + 12, 3, T.green, { align: 'r' });
+    const anchor = anchorById.get(q.id);
+    if (anchor && ANCHOR_NAMES[anchor]) p.text(`AT ${ANCHOR_NAMES[anchor]}`, W - 42, y + 29, 1.5, T.dim, { align: 'r' });
+  });
+  if (S.meta.demo) demoRibbon(p, W);
+  const t = S.totals;
+  const questDesc = rows.map((q) => {
+    const a = anchorById.get(q.id);
+    return `${q.state.toLowerCase()} ${q.title.toLowerCase()}${a && ANCHOR_NAMES[a] ? ` at ${ANCHOR_NAMES[a].toLowerCase()}` : ''}`;
+  }).join('; ');
+  return svgDoc({
+    w: W, h: H, title: 'Kingdom power and quests',
+    desc: `Kingdom power ${S.power.value} of 100. ${t.stars} stars, ${S.streak} day streak, ${t.activeRepos} active repositories. Quests: ${questDesc}.`,
+    body: p.toString(), defs: p.defs.join(''),
+  });
 }

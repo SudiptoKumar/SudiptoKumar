@@ -1,404 +1,371 @@
 #!/usr/bin/env node
-// Kingdom V3 CLI: update | render | demo | visitors | cleanup | lint
-// Contracts (spec §25):
-//   update   fetch -> normalize -> persist -> build -> simulate -> render -> README
-//            works fully OFFLINE with a marked demo fixture when no GH_TOKEN.
-//   render   world.json -> simulate -> render assets -> profile README.md
-//   demo     deterministic scenarios -> ../demos/ (never touches data/)
-//   visitors process an issue-form event into data/visitors.json (strict rules)
-//   cleanup  prune stale visitor entries; verify data integrity
-//   lint     syntax/determinism guardrails + safety lint of renderer SVGs
-// Error isolation: one failing asset never stops the others (spec §13.11).
+// Commands:  update | render | visitors | cleanup | demo | lint | init | labels | status
+// GitHub Actions calls this file. You can also run it on your own computer.
 import fs from 'node:fs';
 import path from 'node:path';
-import { pathToFileURL } from 'node:url';
-import { execFileSync } from 'node:child_process';
 import { loadConfig } from './config.mjs';
-import { writeIfChanged, loadJson, toJson } from './store.mjs';
-import { buildNormalizedState } from './domain/state.mjs';
-import { deriveAchievements } from './domain/achievements.mjs';
-import { offlineSnap } from './domain/offline-snap.mjs';
-import { fetchSnapshot } from './github.mjs';
-import { isLogin, sanitizeMessage } from './validation/safety.mjs';
-import { buildWorld, serializeWorld, contentHash } from './world/world.mjs';
-import { simulate } from './simulation/simulate.mjs';
-import { checkWorldInvariants } from './validation/world-invariants.mjs';
-import { validateWorldSchema } from './validation/schema.mjs';
-import { lintSvg } from './validation/safety.mjs';
-import { checkReadmeBudget } from './validation/visual-budget.mjs';
-import { canonical, sha } from './util.mjs';
-import { registerRenderAssets, renderProblems } from './render/register.mjs';
-import { SCENARIOS, buildScenario } from './render/scenarios.mjs';
-import { renderCamera, isQuiet } from './render/index.mjs';
-import { composeReadme } from './render/readme.mjs';
+import { loadStore, saveStore, writeIfChanged, toJson, EMPTY } from './store.mjs';
+import { collect, makeIO } from './github.mjs';
+import { mockSnapshot, demoScenarios, seedDemoStore } from './mock.mjs';
+import { buildState } from './state.mjs';
+import { timeInfo } from './rules.mjs';
+import { lintSvg } from './safety.mjs';
+import { buildBlock, injectBlock, linkList } from './readme.mjs';
+import { processIssue, replyFor } from './visitors.mjs';
+import { compactHistory } from './history.mjs';
+import { canonical, sha, daysSince } from './util.mjs';
+import { RENDER_VERSION } from './world/constants.mjs';
+import { fallbackSvg } from './render/fallback.mjs';
+import { finalizeV2 } from './v2.mjs';
+import { renderKingdom } from './render/kingdom.mjs';
+import { renderHero } from './render/hero.mjs';
+import { renderEvents, renderQuest } from './render/hud.mjs';
+import { renderDistricts } from './render/districts.mjs';
+import { renderTrophies } from './render/trophies.mjs';
+import { renderHarvest } from './render/harvest.mjs';
+import { renderHistory } from './render/chronicle.mjs';
+import { renderCamp } from './render/camp.mjs';
+import { renderCastle } from './render/castle.mjs';
+import { renderDungeon } from './render/dungeon.mjs';
+import { renderStatus } from './render/status.mjs';
+import { renderPost, POST_KEYS } from './render/signposts.mjs';
+import { renderGuildBanner } from './render/guild.mjs';
 
 /**
- * Asset registry. The RENDER agent registers painters here:
- *   registerAsset('grand', 'grand.svg', (world, ctx) => '<svg ...>...</svg>')
- * A render fn may return null => "nothing to show" (file removed).
+ * Every picture is its own job. If one fails, the others still work. Status is last.
+ * A render function may return null: "nothing to show" (no events, no featured repositories). The file is then removed.
  */
-const ASSETS = [];
-export function registerAsset(key, file, render) {
-  if (ASSETS.some((a) => a.key === key)) throw new Error(`asset already registered: ${key}`);
-  ASSETS.push({ key, file, render });
-  return ASSETS.length;
-}
-export const assetKeys = () => ASSETS.map((a) => a.key);
+export const ASSETS = [
+  { key: 'world', file: 'world.svg', render: renderKingdom },
+  { key: 'hero', file: 'hero.svg', render: renderHero },
+  { key: 'events', file: 'events.svg', render: renderEvents },
+  { key: 'quest', file: 'quest.svg', render: renderQuest },
+  { key: 'districts', file: 'districts.svg', render: renderDistricts },
+  { key: 'trophies', file: 'trophies.svg', render: renderTrophies },
+  { key: 'harvest', file: 'harvest.svg', render: renderHarvest },
+  { key: 'history', file: 'history.svg', render: renderHistory },
+  { key: 'camp', file: 'visitors.svg', render: renderCamp },
+  { key: 'castle', file: 'castle.svg', render: renderCastle },
+  { key: 'dungeon', file: 'dungeon.svg', render: renderDungeon },
+  { key: 'status', file: 'status.svg', render: renderStatus },
+];
+/** V1 pictures that no longer exist. They are deleted so old files do not linger. */
+export const LEGACY_FILES = ['stats.svg', 'repos.svg', 'achievements.svg', 'ui/action-flag.svg', 'ui/action-raid.svg', 'ui/nav-achievements.svg', 'ui/nav-character.svg', 'ui/nav-harvest.svg', 'ui/nav-kingdom.svg', 'ui/nav-repositories.svg', 'ui/nav-visit.svg'];
 
-/** A safe fallback card when a renderer fails (spec §13.11). */
-export function fallbackSvg(key, message) {
-  const msg = String(message).replace(/[<>&"']/g, '').slice(0, 80);
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="480" height="120" viewBox="0 0 480 120"><rect width="480" height="120" fill="#1a1a2e"/><text x="24" y="56" fill="#e0e0e0" font-family="monospace" font-size="16">KINGDOM ${key}</text><text x="24" y="84" fill="#888888" font-family="monospace" font-size="12">${msg || 'renderer unavailable'}</text></svg>`;
+/** Small pictures that are not part of the main list: the two action posts and the guild banners. */
+export function extraAssets(state, cfg) {
+  const out = POST_KEYS.map((k) => [`ui/post-${k}.svg`, renderPost(k, state)]);
+  for (const l of linkList(cfg)) out.push([`ui/guild-${l.id.toLowerCase()}.svg`, renderGuildBanner(l)]);
+  return out.map(([f, svg]) => { const bad = lintSvg(svg); if (bad.length) throw new Error(`unsafe picture ${f}: ${bad.join(', ')}`); return [f, svg]; });
+}
+function removeFiles(root, rels) {
+  const gone = [];
+  for (const rel of rels) { const f = path.join(root, 'renderer', rel); if (fs.existsSync(f)) { fs.rmSync(f); gone.push(`renderer/${rel}`); } }
+  return gone;
 }
 
-/**
- * Render every registered asset with per-asset error isolation.
- * Returns {files: [[rel, svg|null]], status: {key: 'ok'|'empty'|'failed'|'skipped'}}.
- */
-export function renderAll(world, ctx = {}, only = null) {
-  const out = []; const status = {};
+function parseFlags(argv) {
+  const f = {};
+  for (const a of argv) {
+    const m = /^--([\w-]+)(?:=(.*))?$/.exec(a);
+    if (m) f[m[1]] = m[2] === undefined ? true : m[2];
+  }
+  return f;
+}
+const log = (...a) => console.log(...a);
+
+/** Draw all pictures. Returns [[file, svg]]. */
+export function renderAll(state, ctx, only = null) {
+  const out = [];
   for (const a of ASSETS) {
-    if (only && !only.includes(a.key)) { status[a.key] = 'skipped'; continue; }
+    if (only && !only.includes(a.key) && a.key !== 'status') { state.status.assets[a.key] = 'skipped'; continue; }
     let svg;
     try {
-      svg = a.render(world, ctx);
-      if (svg == null) { status[a.key] = 'empty'; out.push([a.file, null]); continue; }
+      svg = a.render(state, ctx);
+      if (svg == null) { state.status.assets[a.key] = 'empty'; out.push([a.file, null]); continue; }
       const bad = lintSvg(svg);
       if (bad.length) throw new Error(`unsafe picture: ${bad.join(', ')}`);
-      status[a.key] = 'ok';
+      state.status.assets[a.key] = 'ok';
     } catch (e) {
       console.error(`[${a.key}] failed: ${e.message}`);
-      status[a.key] = 'failed';
-      svg = fallbackSvg(a.key, e.message);
+      state.status.assets[a.key] = 'failed';
+      svg = fallbackSvg(a.key, String(e.message).replace(/[^\w .,:-]/g, '').slice(0, 70));
     }
     out.push([a.file, svg]);
   }
-  return { files: out, status };
+  return out;
 }
-
-export function parseArgs(argv) {
-  const args = argv.slice(2);
-  const command = args[0] && !args[0].startsWith('-') ? args[0] : null;
-  const rest = args.slice(command ? 1 : 0);
-  const flags = {};
-  for (let i = 0; i < rest.length; i++) {
-    const m = /^--([\w-]+)(?:=(.*))?$/.exec(rest[i]);
-    if (!m) continue;
-    if (m[2] !== undefined) flags[m[1]] = m[2];
-    else if (rest[i + 1] !== undefined && !rest[i + 1].startsWith('-')) flags[m[1]] = rest[++i];
-    else flags[m[1]] = true;
-  }
-  return { command, flags };
-}
+/**
+ * The content hash: what "nothing changed" is measured against.
+ * Includes the renderer and world versions (D10), so a renderer change always
+ * regenerates the pictures. The derived world itself is excluded: it is fully
+ * determined by the state, so hashing it would only waste time.
+ */
+export const hashOf = (s) => sha(canonical({ ...s, generatedAt: null, contentHash: null, world: undefined, time: { ...s.time, iso: null, hour: null }, meta: { ...s.meta, apiCalls: null }, status: { assets: s.status.assets } }), 16);
 
 /**
- * Resolve the input snapshot for `update`.
- * Priority: --state FILE > GH_TOKEN live fetch > --offline / no-token fixture.
- * The offline fixture is deterministic and clearly marked (snap.offline).
+ * TRUE V2 --only safety (D9). Partial rendering must never publish incompatible views:
+ *   - when the renderer changed since the last saved run, force a full render
+ *   - otherwise expand the requested keys with the views that draw the same world objects
+ * Returns null for "render everything".
  */
-export async function resolveSnapshot(flags, cfg) {
-  if (flags.state) {
-    const snap = loadJson(path.resolve(process.cwd(), flags.state), null);
-    if (!snap) throw new Error(`state file not found: ${flags.state}`);
-    return { snap, note: `state file ${flags.state}` };
-  }
-  const token = process.env.GH_TOKEN || process.env.GITHUB_TOKEN || '';
-  if (!flags.offline && token) {
-    const owner = cfg.owner || '';
-    if (!owner) throw new Error('kingdom.config.json "owner" is required for live fetch (or use --offline)');
-    const snap = await fetchSnapshot({ token, owner, config: cfg });
-    snap.achievements = deriveAchievements(snap);
-    return { snap, note: `live GitHub data for ${owner}` };
-  }
-  const snap = offlineSnap({ owner: cfg.owner || 'sample-owner', kingdomName: cfg.displayName });
-  return { snap, note: 'OFFLINE demo fixture (no GH_TOKEN)' };
+const ONLY_DEPS = {
+  hero: ['world', 'harvest'],                       // the hero camera and the hero on the harvest road
+  world: ['districts', 'harvest', 'camp', 'trophies', 'castle', 'dungeon', 'events'], // every camera shares the world
+  events: ['world'],                                // the event camera looks at the world
+  districts: ['world'],
+  trophies: ['world'],
+  harvest: ['world'],
+  camp: ['world'],
+  castle: ['world'],
+  dungeon: ['world'],
+  quest: [], history: [], status: [],
+};
+export function resolveOnly(only, prev) {
+  if (!only || !only.length) return null;
+  if ((prev?.renderVersion ?? 0) !== RENDER_VERSION) return null;   // renderer changed: full render, no stale pictures
+  const out = new Set(['status']);
+  for (const k of only) { out.add(k); for (const d of ONLY_DEPS[k] || []) out.add(d); }
+  return [...out];
 }
 
-/** Shared: render assets + profile README into outDir. */
-function renderToDir({ world, simSnap, root, outDir, inputSignature, only = null, scenarioName = 'live', config, state, provenance = 'live' }) {
-  registerRenderAssets(world, simSnap, { inputSignature });
-  fs.mkdirSync(outDir, { recursive: true });
-  const { files, status } = renderAll(world, { root }, only);
-  let written = 0;
-  for (const [file, svg] of files) {
-    const full = path.join(outDir, file);
-    if (svg == null) { if (fs.existsSync(full)) fs.rmSync(full); continue; }
-    if (writeIfChanged(full, svg)) written++;
-  }
-  // README composition (not an SVG asset; written alongside).
-  if (!only || only.includes('readme')) {
-    const readmeFiles = {
-      grand: 'grand.svg', grandMobile: 'grand-mobile.svg',
-      cameras: Object.fromEntries(['capital', 'projects', 'farm', 'warfront', 'dungeon', 'guild', 'harbor'].map((id) => [id, `${id}.svg`])),
-      hero: 'hero.svg', event: isQuiet(world, simSnap) ? null : 'event.svg',
-    };
-    const md = composeReadme({
-      world, snap: simSnap, scenario: { name: scenarioName }, files: readmeFiles,
-      config, state, provenance,
-    });
-    const probs = checkReadmeBudget(Buffer.byteLength(md));
-    if (probs.length) console.error(`readme budget: ${probs.join('; ')}`);
-    if (writeIfChanged(path.join(outDir, 'README.md'), md)) written++;
-    status.readme = 'ok';
-  }
-  for (const p of renderProblems()) console.error(`budget: [${p.key}] ${p.problem}`);
-  return { status, written };
+/** The derived world is never persisted: strip it before the state is saved. */
+export const persistable = (s) => { const { world, ...rest } = s; return rest; };
+
+function staleState(prev, now, cfg) {
+  const s = JSON.parse(JSON.stringify(prev));
+  s.time = timeInfo(now, cfg);
+  s.timeOfDay = s.time.phase; s.season = s.time.season; s.generatedAt = now.toISOString();
+  s.meta.dataStatus = 'stale'; s.status = { assets: {}, checkedAt: now.toISOString() };
+  return s;
 }
 
-/**
- * update: fetch -> normalize -> persist -> build -> simulate -> render -> README.
- */
-async function cmdUpdate(flags, root) {
+async function cmdUpdate(flags) {
+  const root = process.cwd();
   const cfg = loadConfig(root);
-  const { snap, note } = await resolveSnapshot(flags, cfg);
-  // visitors recorded by the issue-driven workflow join the snapshot
-  const visitorStore = loadJson(path.join(root, 'data', 'visitors.json'), null);
-  if (visitorStore?.visitors?.length) {
-    const extra = visitorStore.visitors.map((v) => ({ login: v.login, kind: v.kind, message: v.message }));
-    snap.visitors = [...(snap.visitors ?? []), ...extra];
+  if (!cfg.owner) throw new Error('Missing "owner". Set it in kingdom.config.json.');
+  const now = flags.now ? new Date(flags.now) : new Date();
+  const store = loadStore(root);
+  const only = resolveOnly(flags.only ? String(flags.only).split(',') : null, store.prev);
+  let snap = null, stale = false;
+  if (flags.mock) {
+    const sc = flags.scenario ? demoScenarios()[flags.scenario] : null;
+    snap = mockSnapshot({ now, tz: cfg.timezone, login: cfg.owner, name: cfg.displayName || 'Sudipto Kumar', scenario: sc?.scenario || {} });
+  } else {
+    const token = process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
+    if (!token) throw new Error('No GH_TOKEN or GITHUB_TOKEN found.');
+    try { snap = await collect({ io: makeIO(token), login: cfg.owner, cfg, now }); }
+    catch (e) { console.error('Could not read GitHub:', e.message); if (!store.prev) throw e; stale = true; }
   }
-  const prev = loadJson(path.join(root, 'data', 'world-state.json'), null);
-  const state = buildNormalizedState({ snap, config: cfg, prev, now: flags.now ?? Date.now() });
-  fs.mkdirSync(path.join(root, 'data'), { recursive: true });
-  writeIfChanged(path.join(root, 'data', 'world-state.json'), toJson(state));
-  writeIfChanged(path.join(root, 'data', 'snapshot.json'), toJson(snap));
-  const world = buildWorld(state, { config: cfg });
-  const inv = checkWorldInvariants(world);
-  if (inv.length) throw new Error(`world invariants failed:\n - ${inv.slice(0, 10).join('\n - ')}`);
-  const schemaErr = validateWorldSchema(world);
-  if (schemaErr.length) throw new Error(`world schema failed:\n - ${schemaErr.slice(0, 10).join('\n - ')}`);
-  const t = world.time ?? {};
-  const simSnap = simulate(world, { timeBucket: `${t.phase}-${t.season}-${t.weather}-update`, inputs: {} });
-  const inputSignature = sha(canonical({ ...state, generatedAt: null }), 12);
-  const hash = contentHash({ inputSignature, world });
-  const wrote = writeIfChanged(path.join(root, 'data/world.json'), toJson({ ...world, contentHash: hash, inputSignature }));
-  const outDir = path.resolve(root, flags.out ?? 'renderer');
-  const { status, written } = renderToDir({
-    world, simSnap, root, outDir, inputSignature,
-    scenarioName: 'live', config: cfg, state,
-    provenance: snap.offline ? 'offline-demo' : (snap.provenance ?? 'live'),
-  });
-  console.log(`update: ${note}`);
-  console.log(`world built: ${world.buildings.length} buildings, ${world.actors.length} actors`);
-  console.log(`signature: ${world.signature}  contentHash: ${hash}${wrote ? '' : ' (unchanged)'}`);
-  console.log(`render: ${written} written to ${path.relative(root, outDir) || outDir}, status: ${JSON.stringify(status)}`);
-  return { world, wrote, status, note };
+  const state = stale ? staleState(store.prev, now, cfg) : buildState({ snap, cfg, now, store, demo: !!flags.demo });
+  if (flags.phase) { state.time.phase = flags.phase; state.timeOfDay = flags.phase; }
+  if (flags.weather) { state.weather = flags.weather; }
+  if (flags.season) { state.time.season = flags.season; state.season = flags.season; }
+  finalizeV2(state, { cfg, store, now });                       // V2 layer: levels, power, quests (old saves), scene. Runs after any override.
+
+  const files = renderAll(state, { cfg, avatars: store.avatars.items }, only);
+  state.contentHash = only ? `partial:${hashOf(state)}` : hashOf(state);
+  if (!flags.force && store.prev?.contentHash === state.contentHash && !flags.mock) { log('Nothing changed. No files written.'); return state; }
+
+  const changed = [];
+  const put = (rel, text) => { if (writeIfChanged(path.join(root, rel), text)) changed.push(rel); };
+  for (const [file, svg] of files) { if (svg == null) changed.push(...removeFiles(root, [file])); else put(`renderer/${file}`, svg); }
+  for (const [file, svg] of extraAssets(state, cfg)) put(`renderer/${file}`, svg);
+  changed.push(...removeFiles(root, LEGACY_FILES));
+  if (!flags['no-data']) {
+    changed.push(...saveStore(root, store));
+    put('data/world-state.json', toJson(persistable(state)));   // the derived world is rebuilt on every run, never saved
+  }
+  const readmePath = path.join(root, 'README.md');
+  if (fs.existsSync(readmePath) && !flags['no-readme']) {
+    const next = injectBlock(fs.readFileSync(readmePath, 'utf8'), buildBlock(state, cfg, now));
+    if (next === null) console.error('README.md has no KINGDOM markers, so it was not changed.');
+    else put('README.md', next);
+  }
+  summary(state, changed, stale);
+  return state;
 }
 
-/** render: persisted world -> simulate -> render assets -> profile README. */
-function cmdRender(flags, root) {
-  const cfg = loadConfig(root);
-  const worldFile = flags.world ?? path.join(root, 'data/world.json');
-  const stored = loadJson(path.resolve(root, worldFile), null);
-  if (!stored) throw new Error(`no world found at ${worldFile} (run 'update' first)`);
-  const snap = loadJson(path.join(root, 'data', 'snapshot.json'), null);
-  const state = snap ? buildNormalizedState({ snap, config: cfg }) : null;
-  const only = flags.only ? String(flags.only).split(',') : null;
-  const t = stored.time ?? {};
-  const bucket = flags.bucket ?? `${t.phase ?? 'morning'}-${t.season ?? 'summer'}-${t.weather ?? 'clear'}-render`;
-  const simSnap = simulate(stored, { timeBucket: bucket, inputs: {} });
-  const inputSignature = sha(canonical({ seed: stored.seed }), 8);
-  const outDir = path.resolve(root, flags.out ?? 'renderer');
-  const { status, written } = renderToDir({
-    world: stored, simSnap, root, outDir, inputSignature, only,
-    scenarioName: 'live', config: cfg, state,
-    provenance: snap?.offline ? 'offline-demo' : (snap?.provenance ?? 'live'),
-  });
-  console.log(`render: ${written} written, status: ${JSON.stringify(status)}`);
-  return { status, written };
+function summary(state, changed, stale) {
+  const failed = Object.entries(state.status.assets).filter(([, v]) => v !== 'ok' && v !== 'empty').map(([k]) => k);
+  const lines = [
+    `Level ${state.level} (${state.xp} XP) | ${state.hero.class.title} | ${state.time.phase}, ${state.weather}, ${state.season}`,
+    `Stars ${state.stars} | Open issues ${state.issues} | Streak ${state.streak} | Workflows ${state.workflowHealth ?? 'n/a'}%`,
+    `Scene: ${state.scene.mode} | hero ${state.hero.state} (${state.hero.status}) | power ${state.power.value}/100 | quest: ${state.quests.current.title}`,
+    `Events: ${state.events.active.map((e) => e.title).join(', ') || 'none'}`,
+    `Pictures: ${failed.length ? 'FAILED ' + failed.join(', ') : 'all ok'}${stale ? ' | DATA IS OLD (GitHub could not be read)' : ''}`,
+    `Files changed: ${changed.length}`,
+  ];
+  lines.forEach((l) => log(l));
+  if (process.env.GITHUB_STEP_SUMMARY) { try { fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, '### Kingdom update\n' + lines.map((l) => `- ${l}`).join('\n') + '\n'); } catch { /* ignore */ } }
 }
 
-/**
- * Demo: render the 20 deterministic scenarios (spec §21). Each scenario gets
- * grand.svg + grand-mobile.svg + relevant close camera(s) + hero/event views
- * + a composed README, written under <root>/../demos/<name>/ (outside the
- * repo). Never touches data/ or renderer/.
- */
-function cmdDemo(flags, root) {
+/** Draw again from data/world-state.json without calling GitHub. */
+async function cmdRender(flags) {
+  const root = process.cwd();
   const cfg = loadConfig(root);
-  const demoConfig = {
-    ...cfg,
-    owner: cfg.owner || 'demo-owner',
-    links: cfg.links && Object.keys(cfg.links).length ? cfg.links : { website: 'https://github.com/demo-owner' },
-  };
-  const outBase = path.resolve(root, flags.out ?? path.join('..', 'demos'));
-  const only = flags.only ? String(flags.only).split(',') : null;
-  const results = [];
-  const table = [];
-  for (const sc of SCENARIOS) {
-    if (only && !only.includes(sc.name)) continue;
-    try {
-      const { world, snap, state } = buildScenario(sc.name);
-      const outDir = path.join(outBase, sc.name);
-      fs.mkdirSync(outDir, { recursive: true });
-      const sizes = {};
-      const put = (file, svg) => {
-        const bad = lintSvg(svg);
-        if (bad.length) throw new Error(`unsafe svg ${file}: ${bad.join(', ')}`);
-        fs.writeFileSync(path.join(outDir, file), svg);
-        sizes[file] = Math.round(Buffer.byteLength(svg) / 1024);
-      };
-      const inputSignature = sha(canonical({ seed: world.seed }), 8);
-      put('grand.svg', renderCamera(world, snap, 'grand', { inputSignature }).svg);
-      put('grand-mobile.svg', renderCamera(world, snap, 'grand', { variant: 'mobile', inputSignature }).svg);
-      const camFiles = {};
-      for (const cid of [...sc.closeCameras, 'hero']) {
-        const r = renderCamera(world, snap, cid, { inputSignature });
-        if (!r) continue;
-        put(`${cid}.svg`, r.svg);
-        camFiles[cid] = `${cid}.svg`;
-      }
-      const ev = renderCamera(world, snap, 'event', { inputSignature });
-      let eventFile = null;
-      if (ev) { put('event.svg', ev.svg); eventFile = 'event.svg'; }
-      const md = composeReadme({
-        world, snap, scenario: sc,
-        files: { grand: 'grand.svg', grandMobile: 'grand-mobile.svg', cameras: camFiles, hero: camFiles.hero ?? null, event: eventFile },
-        config: demoConfig, state, provenance: 'demo',
-      });
-      const rprobs = checkReadmeBudget(Buffer.byteLength(md));
-      if (rprobs.length) throw new Error(rprobs[0]);
-      fs.writeFileSync(path.join(outDir, 'README.md'), md);
-      sizes['README.md'] = Math.round(Buffer.byteLength(md) / 1024);
-      console.log(`[demo:${sc.name}] ok signature=${world.signature} sizes=${JSON.stringify(sizes)}`);
-      table.push({ name: sc.name, ...sizes });
-      results.push({ name: sc.name, ok: true, signature: world.signature, sizes });
-    } catch (e) {
-      console.error(`[demo:${sc.name}] failed: ${e.message}`);
-      results.push({ name: sc.name, ok: false, error: e.message });
+  const store = loadStore(root);
+  if (!store.prev) throw new Error('No data/world-state.json yet. Run "update" first.');
+  const now = flags.now ? new Date(flags.now) : new Date();
+  const state = staleState(store.prev, now, cfg);
+  state.meta.dataStatus = store.prev.meta?.dataStatus || 'fresh';
+  if (flags.phase) { state.time.phase = flags.phase; state.timeOfDay = flags.phase; }
+  if (flags.weather) state.weather = flags.weather;
+  if (flags.season) { state.time.season = flags.season; state.season = flags.season; }
+  finalizeV2(state, { cfg, store, now });                       // also upgrades a saved V1 state on the fly
+  const files = renderAll(state, { cfg, avatars: store.avatars.items });
+  const changed = [];
+  for (const [file, svg] of files) { if (svg == null) changed.push(...removeFiles(root, [file])); else if (writeIfChanged(path.join(root, 'renderer', file), svg)) changed.push(file); }
+  for (const [file, svg] of extraAssets(state, cfg)) if (writeIfChanged(path.join(root, 'renderer', file), svg)) changed.push(file);
+  changed.push(...removeFiles(root, LEGACY_FILES));
+  const readmePath = path.join(root, 'README.md');
+  if (fs.existsSync(readmePath) && !flags['no-readme']) { const next = injectBlock(fs.readFileSync(readmePath, 'utf8'), buildBlock(state, cfg, now)); if (next !== null && writeIfChanged(readmePath, next)) changed.push('README.md'); }
+  log(`Rendered ${files.length} pictures, ${changed.length} files changed.`);
+}
+
+async function cmdVisitors() {
+  const root = process.cwd();
+  const cfg = loadConfig(root);
+  const token = process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
+  if (!token) throw new Error('No token found.');
+  const io = makeIO(token);
+  const now = new Date();
+  const store = loadStore(root);
+  let issues = [];
+  const evFile = process.env.GITHUB_EVENT_PATH;
+  if (process.env.GITHUB_EVENT_NAME === 'issues' && evFile) {
+    const ev = JSON.parse(fs.readFileSync(evFile, 'utf8'));
+    if (ev.action === 'opened' || ev.action === 'reopened') issues = [ev.issue];
+  } else {
+    for (const label of ['flag-request', 'raid-request']) {
+      const r = await io.rest(`/repos/${cfg.owner}/${cfg.repo}/issues?state=open&labels=${label}&per_page=30`);
+      if (r.ok) issues.push(...r.json.filter((i) => !i.pull_request));
     }
+    issues.sort((a, b) => a.number - b.number);
   }
-  if (table.length) {
-    console.log('\nscenario size table (KiB):');
-    for (const row of table) {
-      console.log(`  ${row.name}: ${Object.entries(row).filter(([k]) => k !== 'name').map(([k, v]) => `${k}=${v}`).join(' ')}`);
-    }
+  const base = `/repos/${cfg.owner}/${cfg.repo}/issues`;
+  const json = { 'Content-Type': 'application/json' };
+  let handled = 0;
+  for (const issue of issues) {
+    const res = await processIssue({ issue, io, store, cfg, now });
+    if (res.skipped) continue;
+    handled++;
+    log(`Issue #${issue.number}: ${res.kind} ${res.ok ? 'accepted' : 'rejected (' + res.reason + ')'}`);
+    await io.rest(`${base}/${issue.number}/comments`, { method: 'POST', headers: json, body: JSON.stringify({ body: replyFor(res.kind, res) }) });
+    await io.rest(`${base}/${issue.number}`, { method: 'PATCH', headers: json, body: JSON.stringify({ state: 'closed', state_reason: res.ok ? 'completed' : 'not_planned' }) });
   }
-  return results;
+  saveStore(root, store);
+  log(`Handled ${handled} request(s).`);
 }
 
-/** Extract an issue-form field value ("### Label\n\nvalue") from the body. */
-function formField(body, label) {
-  const escLabel = label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const m = new RegExp(`### ${escLabel}\\s*\\n+([\\s\\S]*?)(?=\\n### |$)`, 'i').exec(String(body ?? ''));
-  return m ? m[1].trim() : '';
+async function cmdCleanup() {
+  const root = process.cwd();
+  const cfg = loadConfig(root);
+  const now = new Date();
+  const store = loadStore(root);
+  compactHistory(store.history, now.toISOString().slice(0, 10));
+  store.events.events = store.events.events.filter((e) => daysSince(e.at, now) < 30);
+  store.events.raids = store.events.raids.slice(-20);
+  const keep = new Set(store.visitors.flags.map((f) => f.login));
+  for (const k of Object.keys(store.avatars.items)) if (!keep.has(k)) delete store.avatars.items[k];
+  const changed = saveStore(root, store);
+  log(`Data compacted. Changed: ${changed.join(', ') || 'nothing'}`);
+  const token = process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
+  if (!token || process.env.SKIP_RUN_CLEANUP) return;
+  const io = makeIO(token);
+  let deleted = 0;
+  const runs = [];
+  for (let page = 1; page <= 5; page++) {
+    const r = await io.rest(`/repos/${cfg.owner}/${cfg.repo}/actions/runs?per_page=100&status=completed&page=${page}`);
+    if (!r.ok || !r.json.workflow_runs?.length) break;
+    runs.push(...r.json.workflow_runs);
+  }
+  runs.sort((a, b) => (a.created_at < b.created_at ? 1 : -1));
+  for (const run of runs.slice(30)) {
+    if (daysSince(run.created_at, now) < 14) continue;
+    const d = await io.rest(`/repos/${cfg.owner}/${cfg.repo}/actions/runs/${run.id}`, { method: 'DELETE' });
+    if (d.status === 204) deleted++;
+  }
+  log(`Deleted ${deleted} old workflow run(s).`);
 }
 
-/**
- * visitors: process one issue-form event (plant-your-flag / send-goblin-raid)
- * into data/visitors.json. Strict rules (spec §17): login allowlist,
- * message sanitization, 24h per-login rate limit. Never runs issue text
- * through a shell; never stores raw hostile text.
- */
-function cmdVisitors(flags, root) {
-  const eventPath = flags.event ?? process.env.GITHUB_EVENT_PATH;
-  if (!eventPath) throw new Error('visitors: no event file (set GITHUB_EVENT_PATH or --event FILE)');
-  const event = loadJson(path.resolve(String(eventPath)), null);
-  const issue = event?.issue;
-  if (!issue) throw new Error('visitors: event has no issue payload');
-  const labels = (issue.labels ?? []).map((l) => String(l.name ?? l));
-  const kind = labels.includes('raid-request') ? 'raid' : labels.includes('flag-request') ? 'flag' : null;
-  if (!kind) { console.log('visitors: issue carries no visitor label; nothing to do'); return { skipped: true }; }
-  // flag form carries a username field; raid forms fall back to the issue author
-  const fieldLogin = formField(issue.body, 'GitHub username').trim().toLowerCase();
-  const login = fieldLogin || String(issue.user?.login ?? '').toLowerCase();
-  if (!isLogin(login)) throw new Error(`visitors: rejected username ${JSON.stringify(formField(issue.body, 'GitHub username')).slice(0, 40)}`);
-  const clean = sanitizeMessage(formField(issue.body, 'Message'), { max: 48 });
-  const file = path.join(root, 'data', 'visitors.json');
-  const store = loadJson(file, { visitors: [] });
-  const cutoff = Date.now() - 24 * 3600 * 1000;
-  if ((store.visitors ?? []).some((v) => v.login === login && Date.parse(v.addedAt ?? 0) > cutoff)) {
-    throw new Error(`visitors: ${login} already has an active entry (24h rate limit)`);
-  }
-  store.visitors = [...(store.visitors ?? []), {
-    login, kind,
-    message: clean.ok ? clean.text : null,
-    messageRejected: clean.ok ? null : clean.reason,
-    addedAt: new Date().toISOString(),
-    issue: issue.number ?? null,
-  }];
-  const wrote = writeIfChanged(file, toJson(store));
-  console.log(`visitors: recorded ${kind} for ${login}${wrote ? '' : ' (unchanged)'}`);
-  return { login, kind, wrote };
+function cmdLint() {
+  const dir = path.join(process.cwd(), 'renderer');
+  let bad = 0;
+  const walk = (d) => fs.readdirSync(d, { withFileTypes: true }).forEach((e) => {
+    const f = path.join(d, e.name);
+    if (e.isDirectory()) return walk(f);
+    if (!f.endsWith('.svg')) return;
+    const p = lintSvg(fs.readFileSync(f, 'utf8'));
+    if (p.length) { bad++; console.error(`${f}: ${p.join(', ')}`); }
+  });
+  walk(dir);
+  if (bad) process.exit(1);
+  log('All pictures passed the safety check.');
 }
 
-/**
- * cleanup: prune visitor entries older than 90 days and verify the data
- * files still parse. Weekly job; never touches engine/, renderer/, README.
- */
-function cmdCleanup(flags, root) {
-  const file = path.join(root, 'data', 'visitors.json');
-  const store = loadJson(file, null);
-  let pruned = 0;
-  if (store?.visitors) {
-    const cutoff = Date.now() - 90 * 86400 * 1000;
-    const kept = store.visitors.filter((v) => {
-      const t = Date.parse(v.addedAt ?? 0);
-      return Number.isNaN(t) || t > cutoff; // keep undated legacy entries
-    });
-    pruned = store.visitors.length - kept.length;
-    if (pruned > 0) { store.visitors = kept; writeIfChanged(file, toJson(store)); }
-  }
-  const problems = [];
-  for (const f of ['data/world.json', 'data/world-state.json', 'data/snapshot.json', 'data/world-lock.json']) {
-    const p = path.join(root, f);
-    if (fs.existsSync(p)) { try { JSON.parse(fs.readFileSync(p, 'utf8')); } catch (e) { problems.push(`${f}: ${e.message}`); } }
-  }
-  if (problems.length) throw new Error(`cleanup: data integrity problems:\n - ${problems.join('\n - ')}`);
-  console.log(`cleanup: pruned ${pruned} stale visitor entr${pruned === 1 ? 'y' : 'ies'}; data files parse`);
-  return { pruned };
-}
-
-/**
- * lint: syntax + determinism guardrails (scripts/lint.mjs) and safety lint
- * over every SVG in renderer/. The per-asset lint already runs inside
- * renderAll; this is the standalone gate for CI.
- */
-function cmdLint(flags, root) {
-  execFileSync(process.execPath, [path.join(root, 'scripts', 'lint.mjs')], { stdio: 'inherit' });
-  const dir = path.resolve(root, flags.dir ?? 'renderer');
-  const svgs = fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => f.endsWith('.svg')) : [];
-  const bad = [];
-  for (const f of svgs) {
-    const problems = lintSvg(fs.readFileSync(path.join(dir, f), 'utf8'));
-    if (problems.length) bad.push(`${f}: ${problems.join(', ')}`);
-  }
-  if (bad.length) throw new Error(`lint: unsafe SVGs:\n - ${bad.join('\n - ')}`);
-  console.log(`lint: ok (${svgs.length} renderer SVGs safety-checked)`);
-  return { svgs: svgs.length };
-}
-
-export function run(argv, root = process.cwd()) {
-  const { command, flags } = parseArgs(argv);
-  if (!command || flags.help || flags.h) {
-    console.log('usage: kingdom-v3 <update|render|demo|visitors|cleanup|lint> [--state FILE] [--world FILE] [--out DIR] [--only a,b] [--now ISO] [--offline] [--event FILE]');
-    return { ok: true };
-  }
-  try {
-    if (command === 'update') return runAsync(cmdUpdate(flags, root));
-    if (command === 'render') return { ok: true, ...cmdRender(flags, root) };
-    if (command === 'demo') return { ok: true, results: cmdDemo(flags, root) };
-    if (command === 'visitors') return { ok: true, ...cmdVisitors(flags, root) };
-    if (command === 'cleanup') return { ok: true, ...cmdCleanup(flags, root) };
-    if (command === 'lint') return { ok: true, ...cmdLint(flags, root) };
-    return { ok: false, error: `unknown command: ${command}` };
-  } catch (e) {
-    console.error(`command '${command}' failed: ${e.message}`);
-    return { ok: false, error: e.message };
+async function cmdLabels() {
+  const cfg = loadConfig(process.cwd());
+  const token = process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
+  if (!token) throw new Error('No token found.');
+  const io = makeIO(token);
+  for (const [name, color, description] of [['flag-request', '1f6f4a', 'Visitor flag request'], ['raid-request', 'b13e53', 'Goblin raid request']]) {
+    const r = await io.rest(`/repos/${cfg.owner}/${cfg.repo}/labels`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, color, description }) });
+    log(`Label ${name}: ${r.status === 201 ? 'created' : r.status === 422 ? 'already there' : 'status ' + r.status}`);
   }
 }
 
-/** run() stays synchronous for sync commands; async commands return a promise. */
-function runAsync(promise) {
-  return promise.then(
-    (r) => ({ ok: true, ...r }),
-    (e) => { console.error(`command failed: ${e.message}`); return { ok: false, error: e.message }; },
-  );
+function cmdInit() {
+  const root = process.cwd();
+  for (const k of Object.keys(EMPTY)) writeIfChanged(path.join(root, 'data', `${k}.json`), toJson(EMPTY[k]()));
+  writeIfChanged(path.join(root, 'data', 'world-state.json'), toJson({ version: 2, note: 'The first update creates the real world state.' }));
+  log('Data files created.');
 }
 
-if (import.meta.url === pathToFileURL(process.argv[1]).href) {
-  Promise.resolve(run(process.argv)).then(
-    (res) => process.exit(res.ok ? 0 : 1),
-    () => process.exit(1),
-  );
+/** Pretty pictures for every kind of weather, season and story (used in docs). */
+async function cmdDemo() {
+  const root = process.cwd();
+  const cfg = loadConfig(root);
+  const out = path.join(root, 'docs', 'preview');
+  fs.mkdirSync(out, { recursive: true });
+  const names = [];
+  for (const [name, sc] of Object.entries(demoScenarios())) {
+    const store = seedDemoStore(sc);
+    const snap = mockSnapshot({ now: sc.now, tz: cfg.timezone, login: cfg.owner || 'SudiptoKumar', scenario: sc.scenario });
+    const state = buildState({ snap, cfg, now: sc.now, store, demo: true });
+    const files = renderAll(state, { cfg, avatars: {} }, ['world', 'hero']);
+    for (const [f, svg] of files) if (svg && ['world.svg', 'hero.svg'].includes(f)) fs.writeFileSync(path.join(out, `${f.replace('.svg', '')}-${name}.svg`), svg);
+    names.push(name);
+  }
+  log(`Wrote ${names.length} preview scenes to docs/preview/: ${names.join(', ')}`);
+}
+
+/** A detailed look at the kingdom: what used to be the big technical status panel. */
+async function cmdStatus() {
+  const root = process.cwd();
+  const store = loadStore(root);
+  const s = store.prev;
+  if (!s || !s.scene) { log('No V2 world state yet. Run "update" first.'); return; }
+  const a = Object.entries(s.status?.assets || {});
+  const lines = [
+    `Updated        ${s.generatedAt}  (${s.meta?.dataStatus || 'fresh'}${s.meta?.demo ? ', DEMO DATA' : ''})`,
+    `World          ${s.time.phase} / ${s.weather} / ${s.time.season}   mode ${s.scene.mode} [${s.scene.modes.join(', ')}]   frame ${s.scene.frame}`,
+    `Hero           ${s.hero.state} at ${s.hero.spot}  -  ${s.hero.status}  -  ${s.hero.title}`,
+    `Power          ${s.power.value}/100  ${JSON.stringify(s.power.parts)}`,
+    `Quests         ${s.quests.rows.map((q) => `${q.state} ${q.title}`).join(' | ') || 'none'}`,
+    `People         ${Object.entries(s.scene.npcs).map(([k, v]) => `${k} ${v}`).join(', ')}`,
+    `Buildings      ${s.repos.map((r) => `${r.name}:L${r.evolution.level}`).join(' ')}`,
+    `Featured       ${s.featured.join(', ')}`,
+    `Pictures       ${a.map(([k, v]) => `${k}=${v}`).join(' ')}`,
+    `Visitors       ${s.visitors.total} flags   raid ${s.raid.active ? 'ACTIVE ' + s.raid.phase : s.raid.done ? 'done ' + s.raid.phase : s.raid.available ? 'available' : 'resting'}`,
+  ];
+  lines.forEach((l) => log(l));
+}
+
+const [cmd, ...rest] = process.argv.slice(2);
+const flags = parseFlags(rest);
+const table = { update: cmdUpdate, render: cmdRender, visitors: cmdVisitors, cleanup: cmdCleanup, lint: cmdLint, init: cmdInit, demo: cmdDemo, labels: cmdLabels, status: cmdStatus };
+if (import.meta.url === `file://${process.argv[1]}`) {
+  if (!table[cmd]) { console.error(`Unknown command "${cmd || ''}". Use: ${Object.keys(table).join(' | ')}`); process.exit(2); }
+  Promise.resolve(table[cmd](flags)).catch((e) => { console.error(`FAILED: ${e.stack || e.message}`); process.exit(1); });
 }

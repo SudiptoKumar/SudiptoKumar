@@ -1,240 +1,162 @@
-// GitHub snapshot collector (live side of `update`). Zero dependencies:
-// uses the global fetch (Node >= 20). Every API section is isolated —
-// one failing section is recorded in snap.failedSections and never
-// poisons the others (spec §06.12). No token => callers use the offline
-// fixture instead; this module is only called when GH_TOKEN is present.
+// Talks to GitHub (GraphQL + REST) and returns one tidy "snapshot". No dependencies.
+import { addDays, diffDays, ymd } from './util.mjs';
+
 const API = 'https://api.github.com';
-const TIMEOUT_MS = 20_000;
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-const headers = (token) => ({
-  'User-Agent': 'kingdom-v3',
-  Accept: 'application/vnd.github+json',
-  ...(token ? { Authorization: `Bearer ${token}` } : {}),
-});
-
-async function getJson(url, token, key, failedSections) {
-  try {
-    const res = await fetch(url, { headers: headers(token), signal: AbortSignal.timeout(TIMEOUT_MS) });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    return await res.json();
-  } catch (e) {
-    failedSections.push(key);
-    return null;
-  }
-}
-
-const daysAgo = (iso, now) => {
-  const t = Date.parse(iso);
-  if (Number.isNaN(t)) return null;
-  return Math.max(0, Math.floor((now - t) / 86_400_000));
-};
-
-function normalizeRepo(r, now) {
-  return {
-    id: String(r.id ?? r.name ?? ''),
-    name: String(r.name ?? ''),
-    fullName: String(r.full_name ?? r.name ?? ''),
-    description: r.description ?? null,
-    language: r.language ?? null,
-    stars: Number(r.stargazers_count) || 0,
-    forks: Number(r.forks_count) || 0,
-    ageDays: daysAgo(r.created_at, now),
-    recentCommits: null, // unknown via REST without per-repo calls; pushedDaysAgo is the honest signal
-    pushedDaysAgo: daysAgo(r.pushed_at, now),
-    archived: !!r.archived,
-    featured: false,
-    url: r.html_url ?? null,
-  };
-}
-
-/** Derive CI status from the latest workflow runs of the profile repo. */
-function ciStatusFromRuns(runs) {
-  if (!runs || !Array.isArray(runs.workflow_runs) || !runs.workflow_runs.length) return 'unknown';
-  const list = runs.workflow_runs.slice(0, 5);
-  const latest = list[0];
-  if (['in_progress', 'queued', 'waiting', 'requested'].includes(latest.status)) return 'warning';
-  const conclusions = list.map((r) => r.conclusion).filter(Boolean);
-  if (latest.conclusion === 'success') {
-    // a success after recent failures reads as recovering (lock: repair state)
-    return conclusions.slice(1).includes('failure') ? 'recovering' : 'healthy';
-  }
-  if (latest.conclusion === 'failure') return 'failing';
-  return 'unknown';
-}
-
-/** Contributions approximated from the last ~90 days of public events. */
-function contributionsFromEvents(events, now) {
-  if (!events || !Array.isArray(events)) return null;
-  const days = new Set();
-  for (const e of events) {
-    if (e.type !== 'PushEvent') continue;
-    const d = daysAgo(e.created_at, now);
-    if (d !== null && d <= 365) days.add(d);
-  }
-  const sorted = [...days].sort((a, b) => a - b);
-  let streak = 0;
-  for (const d of sorted) { if (d === streak) streak++; else if (d > streak) break; }
-  return { activeDays: sorted.length, streak, windowDays: 90, approximate: true };
-}
-
-const CLASS_FROM_LANGUAGE = {
-  typescript: 'warden', javascript: 'warden', python: 'druid', go: 'scout',
-  rust: 'smith', java: 'knight', ruby: 'bard', php: 'merchant', swift: 'ranger',
-  kotlin: 'ranger', 'c++': 'siege-engineer', c: 'siege-engineer', shell: 'pathfinder',
-};
-
-// ------------------------------------------------------------------
-// Pull requests -> courier network (spec §06.2: "Pull requests | courier
-// network"). Bounded and honest: at most PR_REPOS_LIMIT repos (most
-// recently pushed first), PRS_PER_REPO pulls each, PR_TOTAL_LIMIT pulls
-// total. Recent = open, or closed-but-merged within PR_MERGED_WINDOW_DAYS.
-// Per-repo failure isolation: a single repo failing never breaks the
-// others (the failing repo is recorded as pullRequests:<repo> while the
-// section itself stays healthy); only total failure marks the section
-// 'pullRequests' failed (=> unknown => neutral couriers downstream).
-// Returns null on total failure; {list, open, recentlyMerged, ...} else.
-// ------------------------------------------------------------------
-const PR_REPOS_LIMIT = 5;
-const PRS_PER_REPO = 10;
-const PR_TOTAL_LIMIT = 20;
-const PR_MERGED_WINDOW_DAYS = 30;
-
-export async function fetchPullRequests({ token, owner, repos = [], now = Date.now(), failedSections = [] } = {}) {
-  const top = [...repos]
-    .sort((a, b) => (a.pushedDaysAgo ?? 9999) - (b.pushedDaysAgo ?? 9999))
-    .slice(0, PR_REPOS_LIMIT);
-  if (!top.length) {
-    // an account with no repos honestly has no PRs — not a failure
-    return { list: [], open: 0, recentlyMerged: 0, status: 'known', reposChecked: 0 };
-  }
-  const out = [];
-  let ok = 0;
-  for (const r of top) {
-    const name = String(r.fullName ?? r.name ?? '').split('/')[1] ?? r.name;
-    if (!name) continue;
-    const data = await getJson(
-      `${API}/repos/${encodeURIComponent(owner)}/${encodeURIComponent(name)}/pulls?state=all&per_page=${PRS_PER_REPO}&sort=updated&direction=desc`,
-      token, `pullRequests:${name}`, failedSections,
-    );
-    if (!Array.isArray(data)) continue; // per-repo isolation: keep going
-    ok++;
-    for (const pr of data) {
-      if (out.length >= PR_TOTAL_LIMIT) break;
-      const mergedDays = daysAgo(pr.merged_at, now);
-      const recentlyMerged = pr.merged_at != null && mergedDays !== null && mergedDays <= PR_MERGED_WINDOW_DAYS;
-      if (pr.state === 'open' || recentlyMerged) {
-        out.push({
-          number: Number(pr.number) || 0,
-          title: String(pr.title ?? ''),
-          state: pr.state === 'open' ? 'open' : 'merged',
-          repo: name,
-        });
+export function makeIO(token) {
+  let calls = 0;
+  const headers = { Authorization: `Bearer ${token}`, 'User-Agent': 'kingdom-engine', Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' };
+  async function send(url, init, tries = 3) {
+    for (let i = 0; i < tries; i++) {
+      calls++;
+      let res;
+      try { res = await fetch(url, { ...init, headers: { ...headers, ...(init?.headers || {}) } }); } catch (e) { if (i === tries - 1) throw e; await sleep(800 * (i + 1)); continue; }
+      if (res.status >= 500 || (res.status === 403 && res.headers.get('retry-after'))) {
+        if (i === tries - 1) return res;
+        await sleep(Math.min(8000, 1000 * (+res.headers.get('retry-after') || 2 ** i)));
+        continue;
       }
-    }
-    if (out.length >= PR_TOTAL_LIMIT) break;
-  }
-  if (!ok) {
-    failedSections.push('pullRequests');
-    return null;
-  }
-  return {
-    list: out,
-    open: out.filter((p) => p.state === 'open').length,
-    recentlyMerged: out.filter((p) => p.state === 'merged').length,
-    status: 'known',
-    reposChecked: ok,
-  };
-}
-
-function heroFrom(user, repos) {
-  const langs = {};
-  for (const r of repos) {
-    const l = String(r.language ?? '').toLowerCase();
-    if (l) langs[l] = (langs[l] ?? 0) + (r.stars ?? 0) + 1;
-  }
-  const top = Object.entries(langs).sort((a, b) => b[1] - a[1])[0]?.[0] ?? '';
-  return {
-    name: String(user?.name ?? user?.login ?? 'Hero').slice(0, 40),
-    class: CLASS_FROM_LANGUAGE[top] ?? 'wanderer',
-    gearTier: Math.max(1, Math.min(7, 1 + Math.floor(Math.log10(1 + repos.reduce((a, r) => a + (r.stars ?? 0), 0))))),
-    present: true,
-  };
-}
-
-/**
- * Collect a raw GitHub snapshot for `owner`. Never throws for a single
- * section: failures land in snap.failedSections.
- * @returns {Promise<object>} snap ready for buildNormalizedState
- */
-export async function fetchSnapshot({ token, owner, config = {} }) {
-  const now = Date.now();
-  const failedSections = [];
-  const snap = {
-    seed: `github-${owner}`,
-    kingdomName: String(config.displayName ?? 'Kingdom'),
-    owner,
-    powerTier: String(config.powerTier ?? 'town'),
-    failedSections,
-    fetchedAt: new Date(now).toISOString(),
-    provenance: 'github-api',
-  };
-
-  const user = await getJson(`${API}/users/${encodeURIComponent(owner)}`, token, 'user', failedSections);
-  const reposRaw = await getJson(`${API}/users/${encodeURIComponent(owner)}/repos?per_page=100&type=owner&sort=pushed`, token, 'repos', failedSections);
-  const repos = Array.isArray(reposRaw) ? reposRaw.map((r) => normalizeRepo(r, now)) : [];
-
-  // open issue count across the account (search API returns total_count)
-  const issueSearch = await getJson(
-    `${API}/search/issues?q=${encodeURIComponent(`user:${owner} type:issue state:open`)}&per_page=1`,
-    token, 'issues', failedSections);
-
-  // CI: workflow runs on the profile repo (owner/owner) when it exists
-  const runs = await getJson(`${API}/repos/${encodeURIComponent(owner)}/${encodeURIComponent(owner)}/actions/runs?per_page=5`, token, 'ci', failedSections);
-
-  // latest release across the 5 most-starred repos
-  const topRepos = [...repos].sort((a, b) => b.stars - a.stars).slice(0, 5);
-  const releases = [];
-  for (const r of topRepos) {
-    const name = r.fullName.split('/')[1] ?? r.name;
-    const rel = await getJson(`${API}/repos/${encodeURIComponent(owner)}/${encodeURIComponent(name)}/releases?per_page=1`, token, 'releases', failedSections);
-    if (Array.isArray(rel) && rel[0]) {
-      releases.push({ tag: String(rel[0].tag_name ?? ''), name: String(rel[0].name ?? rel[0].tag_name ?? '') });
+      return res;
     }
   }
-  releases.sort();
-
-  const events = await getJson(`${API}/users/${encodeURIComponent(owner)}/events/public?per_page=100`, token, 'contributions', failedSections);
-
-  // PR activity -> courier network intensity (spec §06.2). Bounded, with
-  // per-repo failure isolation; a failed section degrades to neutral.
-  const pullRequests = await fetchPullRequests({ token, owner, repos, now, failedSections });
-
-  snap.repos = repos;
-  snap.issues = { open: issueSearch?.total_count ?? null, closed: null };
-  snap.ci = { status: ciStatusFromRuns(runs) };
-  snap.releases = releases.slice(0, 5);
-  if (pullRequests) snap.pullRequests = pullRequests;
-  snap.contributions = contributionsFromEvents(events, now) ?? { activeDays: null, streak: null };
-  snap.achievements = []; // derived by the caller via deriveAchievements
-  snap.visitors = [];     // merged from data/visitors.json by the caller
-  snap.hero = heroFrom(user, repos);
-  snap.time = timeNow(config);
-  snap.war = { phase: 'PEACE' };
-  return snap;
+  return {
+    get calls() { return calls; },
+    async gql(query, variables = {}) {
+      const res = await send(`${API}/graphql`, { method: 'POST', body: JSON.stringify({ query, variables }), headers: { 'Content-Type': 'application/json' } });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(`GraphQL HTTP ${res.status}: ${json.message || ''}`);
+      if (json.errors && !json.data) throw new Error(`GraphQL: ${json.errors.map((e) => e.message).join('; ')}`);
+      return json;
+    },
+    async rest(path, init) {
+      const res = await send(path.startsWith('http') ? path : API + path, init);
+      let json = null;
+      try { json = await res.json(); } catch { /* empty */ }
+      return { status: res.status, ok: res.ok, json };
+    },
+    async bytes(url) {
+      const res = await send(url, { headers: { Accept: 'image/*' } });
+      if (!res.ok) return null;
+      return { buf: Buffer.from(await res.arrayBuffer()), type: res.headers.get('content-type') || '' };
+    },
+  };
 }
 
-/** Current day band / season from the wall clock (stamping only, never RNG). */
-export function timeNow(config = {}) {
-  const d = new Date();
-  const hour = d.getHours();
-  const phase = hour < 5 ? 'night' : hour < 7 ? 'dawn' : hour < 11 ? 'morning'
-    : hour < 15 ? 'noon' : hour < 18 ? 'afternoon' : hour < 20 ? 'sunset'
-    : hour < 22 ? 'evening' : 'night';
-  const month = d.getMonth();
-  const northern = (config.hemisphere ?? 'northern') === 'northern';
-  const season = month < 2 || month === 11 ? (northern ? 'winter' : 'summer')
-    : month < 5 ? (northern ? 'spring' : 'autumn')
-    : month < 8 ? (northern ? 'summer' : 'winter')
-    : (northern ? 'autumn' : 'spring');
-  return { phase, season, weather: 'clear' };
+const Q_REPOS = `query($login:String!,$cursor:String,$since:GitTimestamp!){user(login:$login){
+ login name avatarUrl createdAt followers{totalCount} following{totalCount}
+ pullRequests(states:MERGED){totalCount}
+ repositories(first:50,after:$cursor,ownerAffiliations:OWNER,privacy:PUBLIC,isFork:false,orderBy:{field:PUSHED_AT,direction:DESC}){
+  pageInfo{hasNextPage endCursor}
+  nodes{name url description stargazerCount forkCount isArchived isFork isEmpty createdAt pushedAt diskUsage
+   primaryLanguage{name color}
+   languages(first:8,orderBy:{field:SIZE,direction:DESC}){edges{size node{name color}}}
+   openIssues:issues(states:OPEN){totalCount} closedIssues:issues(states:CLOSED){totalCount}
+   openPRs:pullRequests(states:OPEN){totalCount} mergedPRs:pullRequests(states:MERGED){totalCount}
+   repositoryTopics(first:8){nodes{topic{name}}}
+   releases(first:3,orderBy:{field:CREATED_AT,direction:DESC}){totalCount nodes{tagName publishedAt isPrerelease isDraft}}
+   defaultBranchRef{name target{... on Commit{history(since:$since){totalCount} all:history{totalCount}}}}
+  }}}}`;
+const Q_YEARS = 'query($login:String!){user(login:$login){contributionsCollection{contributionYears}}}';
+const Q_SEARCH = 'query($a:String!,$b:String!){a:search(query:$a,type:ISSUE,first:1){issueCount} b:search(query:$b,type:ISSUE,first:1){issueCount}}';
+const yearBlock = (y, from, to) => `y${y}:contributionsCollection(from:"${from}",to:"${to}"){totalCommitContributions totalPullRequestContributions totalIssueContributions totalPullRequestReviewContributions contributionCalendar{weeks{contributionDays{date contributionCount}}}}`;
+
+export function normalizeRepo(n) {
+  const languages = {}, langColors = {};
+  for (const e of n.languages?.edges || []) { languages[e.node.name] = e.size; langColors[e.node.name] = e.node.color; }
+  const pl = n.primaryLanguage;
+  if (pl) langColors[pl.name] = pl.color;
+  const rel = (n.releases?.nodes || []).filter((r) => !r.isDraft && r.publishedAt).map((r) => ({ tag: r.tagName, at: r.publishedAt, prerelease: !!r.isPrerelease }));
+  return {
+    name: n.name, url: n.url, description: n.description || '', stars: n.stargazerCount, forks: n.forkCount, archived: n.isArchived, isFork: n.isFork,
+    createdAt: n.createdAt, pushedAt: n.pushedAt || n.createdAt, size: n.isEmpty ? 0 : n.diskUsage || 1, language: pl?.name || Object.keys(languages)[0] || null,
+    languages, langColors, openIssues: n.openIssues.totalCount, closedIssues: n.closedIssues.totalCount, openPRs: n.openPRs.totalCount, mergedPRs: n.mergedPRs.totalCount,
+    recentCommits: n.defaultBranchRef?.target?.history?.totalCount || 0, totalCommits: n.defaultBranchRef?.target?.all?.totalCount ?? null, topics: (n.repositoryTopics?.nodes || []).map((t) => t.topic.name),
+    releases: rel, releaseCount: n.releases?.totalCount || 0, defaultBranch: n.defaultBranchRef?.name || 'main', runs: [],
+  };
 }
+export function normalizeRuns(json, defaultBranch) {
+  return (json?.workflow_runs || [])
+    .filter((r) => !defaultBranch || r.head_branch === defaultBranch)
+    .map((r) => ({ wf: r.workflow_id, name: r.name, conclusion: r.conclusion, at: r.updated_at || r.created_at }));
+}
+/** Join year calendars into one list with no missing days. */
+export function joinCalendars(years) {
+  const map = new Map();
+  for (const y of years) for (const w of y.contributionCalendar?.weeks || []) for (const d of w.contributionDays) map.set(d.date, Math.max(map.get(d.date) || 0, d.contributionCount));
+  const dates = [...map.keys()].sort();
+  if (!dates.length) return [];
+  const out = [];
+  const total = diffDays(dates[0], dates[dates.length - 1]);
+  for (let i = 0; i <= total; i++) { const date = addDays(dates[0], i); out.push({ date, count: map.get(date) || 0 }); }
+  return out;
+}
+
+export async function collect({ io, login, cfg, now = new Date() }) {
+  const errors = [];
+  const since = new Date(now.getTime() - 90 * 86400000).toISOString();
+  // 1. profile + repositories
+  let user = null, nodes = [], cursor = null;
+  for (let page = 0; page < 4; page++) {
+    const { data } = await io.gql(Q_REPOS, { login, cursor, since });
+    const u = data?.user;
+    if (!u) throw new Error(`GitHub user "${login}" was not found`);
+    user = user || u;
+    nodes.push(...u.repositories.nodes.filter(Boolean));
+    if (!u.repositories.pageInfo.hasNextPage) break;
+    cursor = u.repositories.pageInfo.endCursor;
+  }
+  const repos = nodes.filter((n) => !cfg.excludeRepos.includes(n.name)).map(normalizeRepo);
+
+  // 2. contributions per year
+  let years = [], totals = { commits: 0, prs: 0, issues: 0, reviews: 0 };
+  try {
+    const ys = (await io.gql(Q_YEARS, { login })).data.user.contributionsCollection.contributionYears.sort((a, b) => b - a).slice(0, cfg.historyYears);
+    const nowIso = now.toISOString().replace(/\.\d+Z$/, 'Z');
+    const blocks = ys.map((y) => yearBlock(y, `${y}-01-01T00:00:00Z`, y === now.getUTCFullYear() ? nowIso : `${y}-12-31T23:59:59Z`)).join(' ');
+    const { data } = await io.gql(`query($login:String!){user(login:$login){${blocks}}}`, { login });
+    years = ys.map((y) => data.user[`y${y}`]).filter(Boolean);
+    for (const y of years) {
+      totals.commits += y.totalCommitContributions; totals.prs += y.totalPullRequestContributions;
+      totals.issues += y.totalIssueContributions; totals.reviews += y.totalPullRequestReviewContributions;
+    }
+  } catch (e) { errors.push(`contributions: ${e.message}`); }
+  const calendar = joinCalendars(years);
+
+  // 3. a hard issue (5 or more comments) that is closed
+  let hard = false;
+  try {
+    const { data } = await io.gql(Q_SEARCH, { a: `user:${login} is:issue is:closed comments:>=5`, b: `author:${login} is:issue is:closed comments:>=5` });
+    hard = (data.a.issueCount || 0) + (data.b.issueCount || 0) > 0;
+  } catch (e) { errors.push(`search: ${e.message}`); }
+
+  // 4. workflow runs (public repositories only, most recently pushed first)
+  const withRuns = repos.filter((r) => !r.archived && r.size > 0).slice(0, 30);
+  let next = 0;
+  await Promise.all(Array.from({ length: 5 }, async () => {
+    while (next < withRuns.length) {
+      const r = withRuns[next++];
+      try {
+        const res = await io.rest(`/repos/${login}/${encodeURIComponent(r.name)}/actions/runs?per_page=30&status=completed`);
+        if (res.ok) r.runs = normalizeRuns(res.json, r.defaultBranch);
+      } catch (e) { errors.push(`runs ${r.name}: ${e.message}`); }
+    }
+  }));
+
+  // 5. when did the owner push? (for night and sunrise achievements)
+  const pushTimes = [];
+  try {
+    for (let page = 1; page <= 3; page++) {
+      const res = await io.rest(`/users/${login}/events/public?per_page=100&page=${page}`);
+      if (!res.ok || !Array.isArray(res.json) || !res.json.length) break;
+      for (const ev of res.json) if (ev.type === 'PushEvent') pushTimes.push(ev.created_at);
+    }
+  } catch (e) { errors.push(`events: ${e.message}`); }
+
+  return {
+    source: 'github', fetchedAt: now.toISOString(), apiCalls: io.calls, errors,
+    user: { login: user.login, name: user.name || user.login, avatarUrl: user.avatarUrl, createdAt: user.createdAt, followers: user.followers.totalCount, following: user.following.totalCount },
+    repos, calendar, totals: { ...totals, mergedPrs: user.pullRequests.totalCount }, hardIssueClosed: hard, pushTimes,
+  };
+}
+export { ymd };

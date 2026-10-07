@@ -1,9 +1,7 @@
 name: Achievement update
 
-# Once a day this re-derives every achievement from the latest snapshot
-# and redraws the hall, the hero and the map. Unlocked achievements
-# never go away.
-
+# Once a day this checks every achievement again and redraws the hall,
+# the hero card and the map. Unlocked achievements never go away.
 on:
   schedule:
     - cron: "40 0 * * *"
@@ -11,6 +9,7 @@ on:
 
 permissions:
   contents: write
+  actions: read
 
 concurrency:
   group: kingdom-write
@@ -19,7 +18,7 @@ concurrency:
 jobs:
   achievements:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
@@ -28,10 +27,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Check achievements and update the kingdom
+      - name: Check achievements
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: node engine/cli.mjs update
+          GH_TOKEN: ${{ secrets.KINGDOM_TOKEN || secrets.GITHUB_TOKEN }}
+        run: node engine/cli.mjs update --only=trophies,hero,world,quest,status
       - name: Safety check for all pictures
         run: node engine/cli.mjs lint
       - name: Save changes
@@ -41,7 +40,7 @@ jobs:
           BRANCH="${DEFAULT_BRANCH:-$GITHUB_REF_NAME}"
           git config user.name "kingdom-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A data renderer
+          git add -A data renderer README.md
           if git diff --cached --quiet; then
             echo "Nothing changed."
             exit 0

@@ -1,41 +1,26 @@
-<!--
-  Sudipto's Living Kingdom — GitHub profile README (Kingdom V3)
-  This is the special profile repo README: it IS the game board.
-  The game is ALWAYS showing here: every panel below is a committed SVG at
-  raw.githubusercontent.com, redrawn by GitHub Actions from real activity.
-  GitHub cannot run a live game inside a README, so the world is rebuilt
-  again and again — the profile always shows the latest render.
-  Assets: docs/sample-profile/ (showcase) and docs/gallery/ (worlds).
-  Production renders land in renderer/ via `node engine/cli.mjs update`.
--->
-
 <!-- KINGDOM:START (generated: do not edit between these lines) -->
-<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/docs/sample-profile/hero.svg" width="720" alt="Hero: Sudipto, traveling the royal road with companion"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/hero.svg" width="720" alt="Hero: Sudipto Kumar, level 19 PYTHON ALCHEMIST. Title KINGDOM BUILDER. repairing the ci. Quest: hold a 30 day streak."></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/world.svg" width="720" alt="The living kingdom. It is night, the weather is aurora, the season is autumn. The hero is working. 22 repositories stand as buildings, 0 open issues wait as goblins, 0 visitor flags. Power: PROSPEROUS KINGDOM."></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/events.svg" width="720" alt="World event: WORKFLOW RECOVERED — DailyFacts. Phase: START."></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/quest.svg" width="720" alt="Kingdom power 76 of 100 (PROSPEROUS KINGDOM). Quests: active hold a 30 day streak, active earn 25 stars, complete ship a release."></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/districts.svg" width="720" alt="Project districts. Featured: WORKSHOP-, GamingNewsroomBot, TelegramForwarder, DocFlow, Clipboard."></p>
+<p align="center"><sub><a href="https://github.com/SudiptoKumar/WORKSHOP-">WORKSHOP-</a> &nbsp;·&nbsp; <a href="https://github.com/SudiptoKumar/GamingNewsroomBot">GamingNewsroomBot</a> &nbsp;·&nbsp; <a href="https://github.com/SudiptoKumar/TelegramForwarder">TelegramForwarder</a> &nbsp;·&nbsp; <a href="https://github.com/SudiptoKumar/DocFlow">DocFlow</a> &nbsp;·&nbsp; <a href="https://github.com/SudiptoKumar/Clipboard">Clipboard</a></sub></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/castle.svg" width="720" alt="The castle: heart of the prosperous kingdom."></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/dungeon.svg" width="720" alt="The dungeon: where 0 open issues wait as goblins."></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/trophies.svg" width="720" alt="Trophy hall: 11 of 16 trophies unlocked."></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/harvest.svg" width="720" alt="Harvest field: the last 26 weeks of contributions as crops. Streak 20 days."></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/history.svg" width="720" alt="Kingdom history: the castle and the settlement over time. Level 19 today."></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/visitors.svg" width="720" alt="Visitor camp: 0 flags planted."></p>
 <p align="center">
-  <picture>
-    <source media="(max-width: 480px)" srcset="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/docs/sample-profile/grand-mobile.svg"/>
-    <img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/docs/sample-profile/grand.svg" width="960" alt="The living kingdom: castle and capital at the heart, farms to the south, workshops and project halls to the east, the war front to the north"/>
-  </picture>
-</p>
-<p align="center"><sub>🌅 morning · 🍂 autumn · <b>kingdom</b> era · the world below is the game — one canonical kingdom, every view frames the same place</sub></p>
-
-<p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/docs/gallery/release-peak/grand.svg" width="960" alt="Story right now: release celebration in the royal plaza, banners over the castle"></p>
-<p align="center"><sub>📜 <b>The story right now:</b> release celebration in the royal plaza — when CI breaks the fortress beacon burns red, when war comes the bridge becomes a battlefield</sub></p>
-
-<p align="center">
-<img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/docs/sample-profile/capital.svg" width="470" alt="Capital district: castle, royal plaza, hall of heroes">
-<img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/docs/sample-profile/farm.svg" width="470" alt="Farm district: contribution fields, orchard and mill">
-</p>
-<p align="center">
-<img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/docs/sample-profile/harbor.svg" width="470" alt="Harbor district: where visitors land">
-<img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/docs/sample-profile/guild.svg" width="470" alt="Guild district: hero training grounds">
+<a href="https://github.com/SudiptoKumar/SudiptoKumar/issues/new?template=plant-your-flag.yml"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/ui/post-flag.svg" width="300" alt="Plant your flag"></a>&nbsp;
+<a href="https://github.com/SudiptoKumar/SudiptoKumar/issues/new?template=send-goblin-raid.yml"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/ui/post-raid.svg" width="300" alt="Send a goblin raid"></a>
 </p>
 <p align="center">
-<img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/docs/sample-profile/warfront.svg" width="470" alt="War front: walls, watchtowers and the northern frontier">
-<img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/docs/sample-profile/dungeon.svg" width="470" alt="Dungeon: open issues stir below">
+<a href="https://linkedin.com/in/sudipto-kumar"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/ui/guild-linkedin.svg" width="56" alt="LinkedIn"></a>&nbsp;
+<a href="https://twitter.com/sudiptokarn"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/ui/guild-x.svg" width="56" alt="X"></a>&nbsp;
+<a href="https://instagram.com/real.sudipto"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/ui/guild-instagram.svg" width="56" alt="Instagram"></a>&nbsp;
+<a href="https://t.me/NewsroomHQ"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/ui/guild-telegram.svg" width="56" alt="Telegram"></a>&nbsp;
+<a href="mailto:sudipto.karn@gmail.com"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/ui/guild-email.svg" width="56" alt="Email"></a>
 </p>
-
-<p align="center"><sub>🚩 <a href="https://github.com/SudiptoKumar/SudiptoKumar/issues/new?template=plant-your-flag.yml"><b>Plant your flag</b></a> — your banner rises at the harbor camp &nbsp;·&nbsp; 👺 <a href="https://github.com/SudiptoKumar/SudiptoKumar/issues/new?template=send-goblin-raid.yml"><b>Send a goblin raid</b></a> — the war drums sound and the guard mobilizes</sub></p>
-
-<p align="center"><sub>🗺️ one world · deterministic simulation · rendered by Kingdom V3 · GitHub Actions is the game server</sub></p>
+<p align="center"><a href="https://github.com/SudiptoKumar/SudiptoKumar/blob/main/KINGDOM.md"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/status.svg" height="22" alt="Kingdom status"></a></p>
 <!-- KINGDOM:END -->

@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "events": [
+    {
+      "id": "levelup:19",
+      "type": "milestone",
+      "title": "MILESTONE UNLOCKED",
+      "icon": "trophy",
+      "detail": "LEVEL 19",
+      "at": "2026-10-06T23:06:37.538Z",
+      "until": "2026-10-08T23:06:37.538Z"
+    },
+    {
+      "id": "ach:open_gate",
+      "type": "milestone",
+      "title": "MILESTONE UNLOCKED",
+      "icon": "trophy",
+      "detail": "OPEN GATE",
+      "at": "2026-10-02T05:40:01.794Z",
+      "until": "2026-10-04T05:40:01.794Z"
+    },
+    {
+      "id": "ach:ship_it",
+      "type": "milestone",
+      "title": "MILESTONE UNLOCKED",
+      "icon": "trophy",
+      "detail": "SHIP IT",
+      "at": "2026-10-02T05:40:01.794Z",
+      "until": "2026-10-04T05:40:01.794Z"
+    },
+    {
+      "id": "ach:trifecta",
+      "type": "milestone",
+      "title": "MILESTONE UNLOCKED",
+      "icon": "trophy",
+      "detail": "THE TRIFECTA",
+      "at": "2026-10-02T05:40:01.794Z",
+      "until": "2026-10-04T05:40:01.794Z"
+    },
+    {
+      "id": "levelup:17",
+      "type": "milestone",
+      "title": "MILESTONE UNLOCKED",
+      "icon": "trophy",
+      "detail": "LEVEL 17",
+      "at": "2026-10-02T03:33:34.760Z",
+      "until": "2026-10-04T03:33:34.760Z"
+    }
+  ],
+  "raids": [
+    {
+      "id": 1,
+      "by": "SudiptoKumar",
+      "size": "small",
+      "status": "done",
+      "at": "2026-10-02T05:39:59.983Z",
+      "resolvedAt": "2026-10-06T23:06:37.538Z",
+      "defense": 100,
+      "attack": 30,
+      "won": true
+    }
+  ]
+}

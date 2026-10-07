@@ -1,191 +1,168 @@
-// actors.mjs — role-differentiated pixel characters (spec §04.8).
-// Readable at a glance: head + body color + role prop + facing + walk pose.
-// Positions come from the simulation snapshot only; the painter never moves
-// anyone. LOD0 = simplified 2-rect sprites; LOD1+ = full detail.
-import { R, C, E, P, LN } from './svg.mjs';
-import { subRng } from '../util.mjs';
+// People of the kingdom (V2): the hero in seven poses, and role NPCs that walk, work or sleep.
+// Everything is drawn from the same sprites as V1, so the art style stays one style.
+import { makeSprite, drawSprite } from './pixel.mjs';
+import { C } from './palette.mjs';
+import { heroSprite, HERO_STYLE, ITEMS, OFFHAND, NPC, NPC_ROLE, walkB } from './sprites.mjs';
 
-const SKIN = ['#e8b88a', '#d8a06e', '#c08858', '#a06a42'];
+export const POSES = ['idle', 'working', 'walking', 'sleeping', 'celebrating', 'fighting', 'traveling'];
 
-// role -> { tunic, pants, prop, hat }
-const ROLES = {
-  builder:   { tunic: '#8a5a33', pants: '#5a3d24', prop: 'hammer', hat: 'cap' },
-  farmer:    { tunic: '#5f8f3c', pants: '#6b4f2c', prop: 'basket', hat: 'straw' },
-  guard:     { tunic: '#3d5a7a', pants: '#2e343f', prop: 'shield', hat: 'helm' },
-  engineer:  { tunic: '#4a4f5a', pants: '#33363d', prop: 'gear', hat: 'goggles' },
-  messenger: { tunic: '#b53c3c', pants: '#4a3226', prop: 'scroll', hat: 'cap' },
-  merchant:  { tunic: '#7a4a8a', pants: '#3d2e44', prop: 'bag', hat: 'turban' },
-  scholar:   { tunic: '#4a5a8a', pants: '#3a4468', prop: 'book', hat: 'hood' },
-  scout:     { tunic: '#4c6b3c', pants: '#33452a', prop: 'cloak', hat: 'hood' },
-  smith:     { tunic: '#5a5f6a', pants: '#3a3d44', prop: 'tongs', hat: 'band' },
-  visitor:   { tunic: '#c98a4a', pants: '#5a4a3a', prop: 'pack', hat: null },
-  citizen:   { tunic: '#8a7a5e', pants: '#4a4438', prop: null, hat: null },
-  child:     { tunic: '#c9a24b', pants: '#5a4a3a', prop: null, hat: null, small: true },
-  elder:     { tunic: '#6a6f7a', pants: '#4a4d55', prop: 'staff', hat: null },
-  traveler:  { tunic: '#7a6a4a', pants: '#4a4232', prop: 'pack', hat: 'hood' },
-  cart:      { tunic: null, pants: null, prop: 'cart', hat: null },
-  enemy:     { tunic: '#5e2020', pants: '#331414', prop: 'spear', hat: 'hood' },
-};
+// ---------------------------------------------------------------- small sprite tools
+/** Turn a sprite a quarter turn clockwise. */
+export function rot90(spr) {
+  const rows = [];
+  for (let c = 0; c < spr.w; c++) { let r = ''; for (let y = spr.h - 1; y >= 0; y--) r += spr.rows[y][c]; rows.push(r); }
+  return makeSprite(rows, spr.pal);
+}
+const setCh = (row, i, ch) => row.slice(0, i) + ch + row.slice(i + 1);
 
-function hatFor(hat, cx, hy, skin, pal) {
-  switch (hat) {
-    case 'cap': return R(cx - 5, hy - 3, 10, 4, '#6b4222');
-    case 'straw': return E(cx, hy + 1, 8, 3, '#c9a24b') + R(cx - 4, hy - 4, 8, 5, '#b58f3c');
-    case 'helm': return R(cx - 5, hy - 4, 10, 6, '#8b93a0') + R(cx - 5, hy - 4, 10, 2, '#6b7482');
-    case 'goggles': return R(cx - 5, hy - 1, 10, 3, '#3a3f4a');
-    case 'turban': return C(cx, hy - 1, 6, '#e8dcc0') + C(cx + 3, hy - 4, 2, '#c94f4f');
-    case 'hood': return P([[cx - 7, hy + 4], [cx - 6, hy - 6], [cx + 6, hy - 6], [cx + 7, hy + 4]], '#3a3f4a');
-    case 'band': return R(cx - 5, hy - 1, 10, 3, '#8a2f2f');
-    default: return '';
+/** The hero, changed for one pose. Cached by class + pose. */
+const cache = new Map();
+export function heroPoseSprite(arch, pose) {
+  const key = `${arch}:${pose}`;
+  if (cache.has(key)) return cache.get(key);
+  const base = heroSprite(arch);
+  let rows = base.rows.slice();
+  if (pose === 'walkB') {
+    // legs together (the passing step)
+    rows[12] = '...ollllo...'; rows[13] = '...oLLLLo...'; rows[14] = '...oLLLLo...'; rows[15] = '...oooooo...';
+  } else if (pose === 'celebrate') {
+    // both arms up
+    for (const r of [8, 9]) rows[r] = rows[r].replace(/m/g, 'b');
+    for (let r = 3; r <= 7; r++) { rows[r] = setCh(rows[r], 0, 'm'); rows[r] = setCh(rows[r], 11, 'm'); }
+    rows[2] = setCh(setCh(rows[2], 0, 'm'), 11, 'm');
   }
+  const spr = makeSprite(rows, base.pal);
+  cache.set(key, spr);
+  return spr;
 }
 
-function propFor(prop, px, py, dir, pal) {
-  const d = dir === 'w' ? -1 : 1;
-  switch (prop) {
-    case 'hammer': return LN(px, py, px + 8 * d, py - 8, '#6b4222', 3) + R(px + 5 * d, py - 13, 7, 5, '#8b93a0');
-    case 'basket': return R(px - 2, py - 4, 10, 8, '#a9743f') + R(px - 2, py - 4, 10, 2, '#8a5a33');
-    case 'shield': return R(px - 1, py - 12, 7, 14, '#3d5a7a', { stroke: '#c9c2b2', 'stroke-width': 1.5 });
-    case 'gear': return C(px + 4 * d, py - 8, 5, '#8b93a0') + C(px + 4 * d, py - 8, 2, '#4a4f5a');
-    case 'scroll': return R(px, py - 12, 4, 10, '#e8dcc0', { stroke: '#8a7a5e', 'stroke-width': 1 }) + R(px - 3, py - 2, 10, 6, '#b53c3c');
-    case 'bag': return C(px + 4 * d, py - 4, 6, '#8a5a33') + LN(px, py - 6, px + 4 * d, py - 8, '#5a3d24', 2);
-    case 'book': return R(px, py - 10, 8, 6, '#7a3c3c') + R(px + 1, py - 9, 6, 4, '#e8dcc0');
-    case 'cloak': return P([[px - 6, py - 16], [px + 2, py - 16], [px - 2, py + 2]], '#2e4a2e');
-    case 'tongs': return LN(px, py - 4, px + 9 * d, py - 12, '#4a4f5a', 2) + LN(px, py - 4, px + 7 * d, py - 6, '#4a4f5a', 2);
-    case 'staff': return LN(px + 4 * d, py + 2, px + 4 * d, py - 20, '#6b4222', 2) + C(px + 4 * d, py - 22, 3, '#8b93a0');
-    case 'pack': return R(px - 8, py - 14, 8, 12, '#6b4f2c');
-    case 'spear': return LN(px + 4 * d, py + 2, px + 4 * d, py - 22, '#4a3a24', 2) + P([[px + 4 * d - 3, py - 22], [px + 4 * d + 3, py - 22], [px + 4 * d, py - 28]], '#8b93a0');
-    default: return '';
+// ---------------------------------------------------------------- hero
+/**
+ * Draw the hero in a pose. (x, y) = top-left of the 12 x 16 body, s = grid units per art pixel.
+ * Animated parts use classes from ANIM_CSS. `o.lit` adds nothing here: light is a separate layer.
+ */
+export function drawHeroPose(p, x, y, arch, pose = 'idle', o = {}) {
+  const s = o.s ?? 1;
+  const st = HERO_STYLE[arch] || HERO_STYLE.adventurer;
+  const item = ITEMS[st.item];
+  const off = st.off && OFFHAND[st.off];
+  const still = o.still;
+  const wrap = (cls, style, fn) => { if (still || !cls) fn(); else { p.raw(`<g class="${cls}"${style ? ` style="${style}"` : ''}>`); fn(); p.raw('</g>'); } };
+
+  if (pose === 'sleeping') return sleepingHero(p, x, y, arch, s, o);
+
+  if (pose === 'walking' || pose === 'traveling') {
+    const a = heroPoseSprite(arch, 'idle'), b = heroPoseSprite(arch, 'walkB');
+    wrap('bob', 'animation-duration:.8s', () => {
+      p.raw('<g class="f1">'); drawSprite(p, a, x, y, { s }); p.raw('</g><g class="f2">'); drawSprite(p, b, x, y, { s }); p.raw('</g>');
+      if (item) drawSprite(p, item.spr, x + item.dx * s, y + item.dy * s, { s });
+    });
+    if (pose === 'traveling') { drawSprite(p, ITEMS.bag.spr, x - 3 * s, y + 6 * s, { s }); }
+    return;
   }
-}
-
-/** One humanoid. (x, y) = foot point. s = 1 normal, 0.75 child. */
-function humanoid(a, role, ctx, s = 1) {
-  const { pal } = ctx;
-  const r = subRng(ctx.seed, 'actor', a.id);
-  const skin = SKIN[r.int(0, SKIN.length - 1)];
-  const dir = a.facing === 'w' ? 'w' : 'e';
-  const walking = /walking|traveling|patrolling|following/.test(a.state ?? '');
-  const step = walking ? (Math.floor((a.progress ?? 0) * 4) % 2 ? 1 : -1) : 0;
-  const x = a.x, y = a.y;
-  const bw = 9 * s, bh = 11 * s; // body
-  const cx = x, hy = y - bh - 8 * s; // head center-top
-  let g = E(x, y + 1, 7 * s, 2.5 * s, pal.shadow, { opacity: 0.3 });
-  // legs
-  const legC = role.pants;
-  g += R(cx - 4 * s + step * 2 * s, y - 5 * s, 3.5 * s, 5 * s, legC);
-  g += R(cx + 0.5 * s - step * 2 * s, y - 5 * s, 3.5 * s, 5 * s, legC);
-  // body
-  g += R(cx - bw / 2, y - 5 * s - bh, bw, bh, role.tunic);
-  g += R(cx - bw / 2, y - 5 * s - bh, 2.5 * s, bh, '#000000', { opacity: 0.18 });
-  // head
-  g += R(cx - 4 * s, hy, 8 * s, 8 * s, skin);
-  g += hatFor(role.hat, cx, hy, skin, pal);
-  // role prop at the facing side
-  if (role.prop) g += propFor(role.prop, cx + (dir === 'w' ? -bw / 2 : bw / 2), y - 6 * s, dir, pal);
-  return g;
-}
-
-function cartSprite(a, ctx) {
-  const { pal } = ctx;
-  const x = a.x, y = a.y;
-  const cargo = a.cargo ?? 'goods';
-  let g = E(x, y + 1, 16, 4, pal.shadow, { opacity: 0.3 });
-  g += R(x - 14, y - 16, 28, 10, pal.wood) + R(x - 14, y - 16, 28, 3, pal.woodLight);
-  g += C(x - 9, y - 4, 5, '#3a3f4a') + C(x + 9, y - 4, 5, '#3a3f4a');
-  g += C(x - 9, y - 4, 2, '#8b93a0') + C(x + 9, y - 4, 2, '#8b93a0');
-  const cc = cargo === 'stone' ? '#8b93a0' : cargo === 'wood' ? '#8a5a33' : '#c9a24b';
-  g += R(x - 10, y - 24, 20, 8, cc);
-  // puller (small citizen ahead)
-  const d = a.facing === 'w' ? -1 : 1;
-  g += R(x + 18 * d - 4, y - 14, 8, 8, '#e8b88a') + R(x + 18 * d - 4.5, y - 25, 9, 11, '#8a7a5e');
-  return g;
-}
-
-/** Hero: unique silhouette — cape, crested helm, gear-tier trim. */
-function heroSprite(a, ctx) {
-  const { pal } = ctx;
-  const tier = Math.max(1, Math.min(7, a.gearTier ?? 1));
-  const trim = ['#8b93a0', '#8b93a0', '#4fc3e8', '#4fc3e8', '#e8b93c', '#e8b93c', '#f7d774'][tier - 1];
-  const dir = a.facing === 'w' ? 'w' : 'e';
-  const d = dir === 'w' ? -1 : 1;
-  const x = a.x, y = a.y;
-  const celebrating = a.state === 'celebrating';
-  let g = E(x, y + 1, 9, 3, pal.shadow, { opacity: 0.35 });
-  // cape trails behind the facing direction
-  g += P([[x - 6, y - 26], [x - 13 * d, y - 2], [x - 1, y - 2]], tier >= 5 ? '#7a2f3c' : '#3d4a5e');
-  // legs + body (hero plate)
-  g += R(x - 5, y - 7, 4, 7, '#3a3f4a') + R(x + 1, y - 7, 4, 7, '#3a3f4a');
-  g += R(x - 6, y - 20, 12, 14, '#5a6b8a');
-  g += R(x - 6, y - 20, 12, 3, trim); // tier trim
-  if (tier >= 3) g += R(x - 9, y - 19, 3, 8, trim) + R(x + 6, y - 19, 3, 8, trim); // pauldrons
-  // head + crested helm
-  g += R(x - 5, y - 30, 10, 10, '#e8b88a');
-  g += R(x - 6, y - 33, 12, 5, '#8b93a0');
-  g += P([[x - 2, y - 33], [x + 2, y - 33], [x, y - 40]], trim); // crest
-  if (tier >= 7) g += C(x, y - 42, 8, 'url(#k-lampg)');
-  // sword or raised arm
-  if (celebrating || a.state === 'fighting') {
-    g += LN(x + 6 * d, y - 18, x + 14 * d, y - 34, '#c9c2b2', 3);
-  } else {
-    g += LN(x + 6 * d, y - 16, x + 10 * d, y - 2, '#6b4222', 3) + R(x + 7 * d, y - 6, 7, 5, '#8b93a0');
-  }
-  return g;
-}
-
-/** Companion: small hooded beast-friend lagging the hero. */
-function companionSprite(a, ctx) {
-  const { pal } = ctx;
-  const x = a.x, y = a.y;
-  let g = E(x, y + 1, 7, 2.5, pal.shadow, { opacity: 0.3 });
-  g += R(x - 7, y - 10, 14, 8, '#8a5a8a'); // body
-  g += P([[x + 7, y - 8], [x + 13, y - 12], [x + 9, y - 4]], '#8a5a8a'); // tail
-  g += C(x + 3, y - 14, 6, '#9a6a9a'); // head
-  g += P([[x - 1, y - 18], [x + 1, y - 24], [x + 3, y - 18]], '#9a6a9a'); // ear L
-  g += P([[x + 4, y - 18], [x + 6, y - 24], [x + 8, y - 18]], '#9a6a9a'); // ear R
-  g += C(x + 5, y - 14, 1.6, '#241d16'); // eye
-  if (a.state === 'celebrate' || a.state === 'celebrating') g += C(x + 3, y - 20, 9, 'url(#k-lampg)');
-  return g;
-}
-
-/** LOD0 simplified actor: two rects. */
-function simpleSprite(a, role, ctx) {
-  const { pal } = ctx;
-  const c = a.role === 'hero' ? '#5a6b8a' : a.role === 'enemy' ? '#5e2020' : (role?.tunic ?? '#8a7a5e');
-  return E(a.x, a.y + 1, 5, 2, pal.shadow, { opacity: 0.3 })
-    + R(a.x - 4, a.y - 12, 8, 10, c) + R(a.x - 3, a.y - 18, 6, 6, '#e8b88a');
-}
-
-export function actorDrawables(snap, ctx) {
-  const out = [];
-  const actors = [...(snap.actors ?? [])].sort((a, b) => (a.id < b.id ? -1 : 1));
-  for (const a of actors) {
-    let svg;
-    if (a.role === 'hero') svg = ctx.lod === 0 ? simpleSprite(a, null, ctx) : heroSprite(a, ctx);
-    else if (a.role === 'companion') svg = companionSprite(a, ctx);
-    else if (a.role === 'cart') svg = cartSprite(a, ctx);
-    else {
-      const role = ROLES[a.role] ?? ROLES.citizen;
-      svg = ctx.lod === 0 ? simpleSprite(a, role, ctx)
-        : humanoid(a, role, ctx, role.small ? 0.72 : 1);
+  if (pose === 'celebrating') {
+    wrap('bob2', 'animation-duration:.9s', () => {
+      drawSprite(p, heroPoseSprite(arch, 'celebrate'), x, y, { s });
+      if (item) drawSprite(p, item.spr, x + 10 * s, y - 6 * s, { s });
+    });
+    for (const [dx, dy, c, dl] of [[-3, 0, C.yellow, 0], [14, -2, C.cyan, -.6], [3, -6, C.lime, -1.2], [11, -8, '#ff9ecb', -1.8]]) {
+      wrap('tw', `animation-delay:${dl}s`, () => { p.r(x + dx * s, y + dy * s - s, s, 3 * s, c); p.r(x + dx * s - s, y + dy * s, 3 * s, s, c); });
     }
-    const h = a.role === 'cart' ? 26 : 34;
-    out.push({
-      id: `actor-${a.id}`, layer: 6, footY: a.y, x: a.x,
-      bounds: { x: a.x - 18, y: a.y - h, w: 36, h: h + 4 }, svg,
-      meta: { actorId: a.id, role: a.role, x: a.x, y: a.y },
-    });
+    return;
   }
-  // War enemy cohort (snapshot war) — drawn as actors too.
-  const foes = [...(snap.war?.enemyCohort ?? [])].sort((a, b) => (a.id < b.id ? -1 : 1));
-  for (const e of foes) {
-    const svg = ctx.lod === 0 ? simpleSprite(e, ROLES.enemy, ctx)
-      : humanoid({ ...e, state: 'fighting' }, ROLES.enemy, ctx);
-    out.push({
-      id: `foe-${e.id}`, layer: 6, footY: e.y, x: e.x,
-      bounds: { x: e.x - 18, y: e.y - 34, w: 36, h: 38 }, svg,
-      meta: { actorId: e.id, role: 'enemy', x: e.x, y: e.y },
+  if (pose === 'fighting') {
+    if (off) drawSprite(p, off.spr, x - 3 * s, y + 5 * s, { s });
+    wrap('bob', 'animation-duration:.6s', () => {
+      drawSprite(p, heroSprite(arch), x, y, { s });
+      const sw = rot90(ITEMS.sword.spr);                 // sword held out to the side
+      drawSprite(p, sw, x + 11 * s, y + 7 * s, { s });
     });
+    wrap('f1', '', () => { p.r(x + 17 * s, y + 3 * s, 2 * s, s, C.white); p.r(x + 19 * s, y + 4 * s, s, 2 * s, C.white); p.r(x + 20 * s, y + 6 * s, s, 2 * s, '#fff6a0'); p.r(x + 19 * s, y + 8 * s, s, s, C.white); });
+    return;
   }
-  return out;
+  if (pose === 'working') {
+    drawSprite(p, heroSprite(arch), x, y, { s });
+    wrap('sw', 'animation-duration:.9s', () => drawSprite(p, ITEMS.hammer.spr, x + 9 * s, y + 3 * s, { s }));
+    wrap('f1', '', () => { p.r(x + 15 * s, y + 8 * s, s, s, C.yellow); p.r(x + 16 * s, y + 7 * s, s, s, C.white); p.r(x + 14 * s, y + 9 * s, s, s, C.orange); });
+    return;
+  }
+  // idle
+  wrap('bob2', 'animation-duration:2.4s', () => drawHeroPlain(p, x, y, arch, s, o));
+}
+function drawHeroPlain(p, x, y, arch, s, o) {
+  const st = HERO_STYLE[arch] || HERO_STYLE.adventurer;
+  const off = st.off && OFFHAND[st.off];
+  if (off) drawSprite(p, off.spr, x + off.dx * s, y + off.dy * s, { s });
+  drawSprite(p, heroSprite(arch), x, y, { s });
+  const it = ITEMS[st.item];
+  if (it) drawSprite(p, it.spr, x + it.dx * s, y + it.dy * s, { s });
+}
+
+/**
+ * Lying on a bed under a blanket, head on a pillow, with z letters. (x, y) = top-left of a 14 x 9 bed (units of s).
+ * The hero sprite is turned a quarter turn and drawn at half size: pixel (col, row) -> (X = row, Y = 11 - col).
+ */
+function sleepingHero(p, x, y, arch, s, o) {
+  const spr = heroSprite(arch), k = s / 2;
+  p.r(x, y + 7 * s, 14 * s, 2 * s, '#4e2f1c').r(x, y + 6 * s, 14 * s, s, '#7a4a2b');       // bed frame
+  p.r(x, y + 9 * s, 2 * s, s, '#4e2f1c').r(x + 12 * s, y + 9 * s, 2 * s, s, '#4e2f1c');     // legs
+  p.r(x + s, y + 5 * s, 12 * s, s, '#e8d5a8');                                              // mattress
+  p.r(x + s, y + 2 * s, 5 * s, 3 * s, '#f4f4f4').r(x + s, y + 2 * s, 5 * s, k, '#ffffff');   // pillow
+  const x0 = x + 3 * s, y0 = y + 5 * s - spr.w * k;
+  for (let c = 0; c < spr.w; c++) for (let r = 0; r < spr.h; r++) {
+    const ch = spr.rows[r][c]; const col = ch !== '.' && spr.pal[ch];
+    if (col) p.r(x0 + r * k, y0 + (spr.w - 1 - c) * k, k, k, col);
+  }
+  p.r(x + 6 * s, y + 1.5 * s, 7 * s, 3.5 * s, '#b13e53').r(x + 6 * s, y + 1.5 * s, 7 * s, k, '#d65b70'); // blanket over the body
+  p.r(x + 8 * s, y + 3 * s, s, 2 * s, '#8c2f43').r(x + 10 * s, y + 3 * s, s, 2 * s, '#8c2f43');         // folds
+  if (!o.still) for (let i = 0; i < 2; i++) {
+    p.raw(`<g class="zz" style="animation-delay:${-i * 1.5}s">`);
+    p.r(x + 3 * s, y - 2 * s, 3 * s, s, C.white).r(x + 4 * s, y - s, s, s, C.white).r(x + 3 * s, y, 3 * s, s, C.white);
+    p.raw('</g>');
+  }
+}
+
+// ---------------------------------------------------------------- NPC roles
+export const ROLE_SPRITE = {
+  villager: NPC.villager, villager2: NPC.villager2, villager3: NPC.villager3,
+  builder: NPC.builder, farmer: NPC.farmer, guard: NPC.guard, messenger: NPC.courier, traveler: NPC.traveler, visitor: NPC.visitor,
+  miner: NPC_ROLE.miner, merchant: NPC_ROLE.merchant, librarian: NPC_ROLE.librarian, researcher: NPC_ROLE.researcher, firefighter: NPC_ROLE.firefighter,
+};
+/** Register both walking frames of a role as symbols (cheap to place many times). */
+export function npcSymbols(p, role, s = 0.5) {
+  const spr = ROLE_SPRITE[role] || NPC.villager;
+  p.symbol(`n-${role}-a`, (q) => drawSprite(q, spr, 0, 0, { s }));
+  p.symbol(`n-${role}-b`, (q) => drawSprite(q, walkB(spr), 0, 0, { s }));
+  return { w: spr.w * s, h: spr.h * s };
+}
+/** Stand (a frame of a role), optionally with a small bob. */
+export function npcStand(p, role, x, y, { s = 0.5, bob = false, flip = false, still = false } = {}) {
+  const { h } = npcSymbols(p, role, s);
+  if (bob && !still) p.raw('<g class="bob" style="animation-duration:1.1s">');
+  p.use(`n-${role}-a`, x, y - h, flip ? `transform="translate(${(x * 2 + 6 * s) * p.u} 0) scale(-1 1)"` : '');
+  if (bob && !still) p.raw('</g>');
+}
+/** Walk back and forth over dx grid units (use dy for vertical). Legs alternate; the walker turns around. */
+export function npcWalk(p, role, x, y, { dx = 0, dy = 0, s = 0.5, t = 14, delay = 0, still = false, top = null } = {}) {
+  const { w, h } = npcSymbols(p, role, s);
+  const u = p.u;
+  if (still) { p.use(`n-${role}-a`, x, y - h); return; }
+  const cls = dx ? 'wk' : 'wy';
+  const vars = dx ? `--dx:${dx * u}px` : `--dy:${dy * u}px`;
+  p.raw(`<g class="${cls}" style="--t:${t}s;${vars};animation-delay:${-delay}s">`);
+  if (dx) p.raw(`<g class="fc" style="--t:${t}s;animation-delay:${-delay}s">`);
+  p.raw(`<g class="f1" style="animation-duration:.7s">`); p.use(`n-${role}-a`, x, y - h); p.raw('</g>');
+  p.raw(`<g class="f2" style="animation-duration:.7s">`); p.use(`n-${role}-b`, x, y - h); p.raw('</g>');
+  if (top) top(x, y - h);                                    // extra that travels with the walker (an umbrella, a flag, a torch)
+  if (dx) p.raw('</g>');
+  p.raw('</g>');
+}
+/** A sleeper next to a house (night, or a quiet kingdom). */
+export function npcSleep(p, x, y, { s = 0.5 } = {}) {
+  drawSprite(p, NPC.sleeper, x, y - NPC.sleeper.h * s, { s });
+  for (let i = 0; i < 2; i++) { p.raw(`<g class="zz" style="animation-delay:${-i * 1.5}s">`); p.r(x + 2 * s, y - 6 * s, 2 * s, s, C.white).r(x + 3 * s, y - 5 * s, s, s, C.white).r(x + 2 * s, y - 4 * s, 2 * s, s, C.white); p.raw('</g>'); }
+}
+/** Small umbrella over a walker (rain). */
+export function umbrella(p, x, y, c = '#3b5dc9') {
+  p.r(x - 2, y - 2, 6, 1, c).r(x - 1, y - 3, 4, 1, c).r(x, y - 4, 2, 1, c).r(x + 1, y - 1, 1, 3, '#4e2f1c');
 }

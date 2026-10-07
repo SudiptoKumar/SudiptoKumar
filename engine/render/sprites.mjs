@@ -1,148 +1,189 @@
-// sprites.mjs — reusable <defs> sprite library (spec §09.4, §15).
-// Original rect-based pixel art, 3/4 billboard convention: every sprite is
-// anchored at its foot point (bottom-center); callers place with <use x y>
-// where (x, y) is the foot. Native sizes documented per sprite.
-// Colors come from the resolved palette so seasons/weather re-skin the set.
-import { R, C, P, E } from './svg.mjs';
+// All pixel art lives here as text pictures. "." means empty.
+import { makeSprite, drawSprite, withRows } from './pixel.mjs';
+import { C } from './palette.mjs';
 
-// --- trees ---------------------------------------------------------------
-function pine(pal, snow) {
-  const leaf = pal.leaf, dark = pal.grassDark, trunk = '#5a3d24';
-  const cap = snow ? `<rect x="6" y="6" width="12" height="4" fill="${pal.snow}"/>` : '';
-  return `<g id="k-pine" aria-hidden="true">`
-    + `<rect x="10" y="26" width="4" height="8" fill="${trunk}"/>`
-    + `<rect x="4" y="18" width="16" height="10" fill="${dark}"/>`
-    + `<rect x="6" y="10" width="12" height="10" fill="${leaf}"/>`
-    + `<rect x="8" y="2" width="8" height="10" fill="${leaf}"/>`
-    + `<rect x="8" y="2" width="3" height="18" fill="${dark}" opacity="0.45"/>`
-    + cap + `</g>`;
-}
-function oak(pal, snow) {
-  const leaf = pal.leaf, alt = pal.leafAlt, trunk = '#5a3d24';
-  return `<g id="k-oak" aria-hidden="true">`
-    + `<rect x="10" y="22" width="5" height="12" fill="${trunk}"/>`
-    + `<rect x="2" y="10" width="20" height="14" fill="${leaf}"/>`
-    + `<rect x="6" y="4" width="12" height="10" fill="${alt}"/>`
-    + `<rect x="2" y="10" width="6" height="14" fill="${pal.grassDark}" opacity="0.5"/>`
-    + (snow ? `<rect x="6" y="4" width="12" height="4" fill="${pal.snow}"/>` : '')
-    + `<rect x="11" y="6" width="3" height="6" fill="${alt}"/>`
-    + `</g>`;
-}
-function bare(pal) {
-  const b = '#4c3826';
-  return `<g id="k-bare" aria-hidden="true">`
-    + `<rect x="11" y="14" width="3" height="20" fill="${b}"/>`
-    + `<rect x="4" y="8" width="8" height="3" fill="${b}"/>`
-    + `<rect x="13" y="4" width="8" height="3" fill="${b}"/>`
-    + `<rect x="9" y="18" width="6" height="3" fill="${b}"/>`
-    + `</g>`;
-}
+const S = (rows, pal) => makeSprite(rows, pal);
 
-// --- small props ----------------------------------------------------------
-function bush(pal) {
-  return `<g id="k-bush" aria-hidden="true">`
-    + `<rect x="0" y="4" width="14" height="8" fill="${pal.leaf}"/>`
-    + `<rect x="3" y="1" width="8" height="6" fill="${pal.leafAlt}"/>`
-    + `<rect x="0" y="4" width="4" height="8" fill="${pal.grassDark}" opacity="0.5"/></g>`;
-}
-function rock(pal) {
-  return `<g id="k-rock" aria-hidden="true">`
-    + `<polygon points="0,10 4,2 12,0 16,8 12,12 2,12" fill="${pal.stone}"/>`
-    + `<polygon points="4,2 12,0 10,5 5,6" fill="${pal.stoneLight}"/></g>`;
-}
-function tuft(pal) {
-  const g = pal.grassDark;
-  return `<g id="k-tuft" aria-hidden="true">`
-    + `<rect x="0" y="2" width="2" height="5" fill="${g}"/>`
-    + `<rect x="3" y="0" width="2" height="7" fill="${g}"/>`
-    + `<rect x="6" y="3" width="2" height="4" fill="${g}"/></g>`;
-}
-function flower(pal) {
-  const c = pal.seasonAccent ?? '#f2a4c0';
-  return `<g id="k-flower" aria-hidden="true">`
-    + `<rect x="3" y="4" width="2" height="7" fill="${pal.grassDark}"/>`
-    + `<rect x="1" y="0" width="3" height="3" fill="${c}"/>`
-    + `<rect x="4" y="1" width="3" height="3" fill="${c}"/>`
-    + `<rect x="2" y="3" width="4" height="2" fill="#ffffff" opacity="0.7"/></g>`;
-}
-function fence(pal) {
-  const w = pal.wood, d = pal.woodDark;
-  return `<g id="k-fence" aria-hidden="true">`
-    + `<rect x="0" y="0" width="4" height="12" fill="${d}"/>`
-    + `<rect x="28" y="0" width="4" height="12" fill="${d}"/>`
-    + `<rect x="0" y="2" width="32" height="3" fill="${w}"/>`
-    + `<rect x="0" y="7" width="32" height="3" fill="${w}"/></g>`;
-}
-function lampPost(pal) {
-  return `<g id="k-lamp" aria-hidden="true">`
-    + `<rect x="4" y="8" width="3" height="20" fill="#3a3f4a"/>`
-    + `<rect x="1" y="0" width="9" height="9" fill="#20242e"/>`
-    + `<rect x="3" y="2" width="5" height="5" fill="#f7d774" class="k-lampglass"/>`
-    + `<rect x="0" y="8" width="11" height="2" fill="#3a3f4a"/></g>`;
-}
-function pennant() {
-  // pennant string segment: 32u wide, caller tints via CSS vars — no, plain fill param impossible on use.
-  // Instead three color variants are defined; caller picks.
-  return '';
+// ---------------------------------------------------------------- hero
+// Body (rows 6-15) is shared. The head (rows 0-5) changes for each class.
+const BODY = [
+  '...obbbbo...',
+  '..obbaabbo..',
+  '.ombbbbbbmo.',
+  '.ombbbbbbmo.',
+  '..obBBBBbo..',
+  '..olloollo..',
+  '..olloollo..',
+  '..oLLooLLo..',
+  '.oLLLooLLLo.',
+  '.oooo..oooo.',
+];
+const FACE = ['..osossoso..', '...osssso...'];
+const HEADS = {
+  adventurer: ['....oooo....', '...ohhhho...', '..ohhhhhho..', '..ohssssho..', ...FACE],
+  paladin: ['....oRRo....', '...oAAAAo...', '..oAAAAAAo..', '..oAssssAo..', ...FACE],
+  rogue: ['....oooo....', '...ohhhho...', '..ohhhhhho..', '..ohHssHho..', ...FACE],
+  mage: ['.....oo.....', '....ohho....', '...ohYYho...', '.ohhhhhhhho.', ...FACE],
+  ranger: ['....oooo..w.', '...ohhhho.w.', '..ohhhhhhow.', '..ohssssho..', ...FACE],
+  berserker: ['.w..oooo..w.', '.ww.oAAo.ww.', '..oAAAAAAo..', '..oAssssAo..', '..osossoso..', '...oHHHHo...'],
+  alchemist: ['....oooo....', '...ohhhho...', '..oGccGccGo.', '..ohssssho..', ...FACE],
+  smith: ['....oooo....', '...ohhhho...', '..ohhhhhho..', '..ohssssho..', '..osossoso..', '...oHssHo...'],
+  merchant: ['....oooo....', '...ohhhho...', '.ohhhhhhhho.', '..ohssssho..', ...FACE],
+};
+const BASEPAL = {
+  o: C.ink, s: C.skin, S: C.skinD, h: '#7a4a2b', H: '#4e2f1c', b: '#3b5dc9', B: '#29366f', a: C.yellow,
+  m: C.skin, l: '#4e2f1c', L: '#2b1a10', A: C.silver, R: C.red, Y: C.yellow, w: C.white, G: C.slate, c: C.cyan,
+};
+// colour changes for each class
+export const HERO_STYLE = {
+  adventurer: { pal: {}, item: 'sword' },
+  paladin: { pal: { b: '#94b0c2', B: '#566c86', a: C.yellow, m: '#94b0c2', h: '#4e2f1c', l: '#3b5dc9', L: '#29366f' }, item: 'sword', off: 'shield' },
+  rogue: { pal: { h: '#2f3b3f', H: '#566c86', b: '#2b2e4d', B: '#1a1c2c', a: C.red, m: '#2b2e4d', l: '#1a1c2c', L: '#1a1c2c' }, item: 'dagger' },
+  mage: { pal: { h: '#5d275d', b: '#3b5dc9', B: '#29366f', a: C.cyan, m: '#3b5dc9', l: '#29366f', L: '#1a1c2c' }, item: 'staff' },
+  ranger: { pal: { h: '#257179', b: '#38b764', B: '#257179', a: C.yellow, m: '#38b764', l: '#7a4a2b', L: '#4e2f1c' }, item: 'bow' },
+  berserker: { pal: { b: '#b13e53', B: '#5d275d', a: C.yellow, m: C.skin, H: '#ef7d57', l: '#4e2f1c', L: '#2b1a10' }, item: 'axe' },
+  alchemist: { pal: { h: '#a7f070', b: '#73eff7', B: '#3b5dc9', a: C.white, m: C.skin, l: '#566c86', L: '#333c57' }, item: 'flask' },
+  smith: { pal: { h: '#94b0c2', H: '#333c57', b: '#ef7d57', B: '#b13e53', a: '#7a4a2b', m: C.skin, l: '#333c57', L: '#1a1c2c' }, item: 'hammer' },
+  merchant: { pal: { h: '#a86b3c', b: '#ffcd75', B: '#e0a030', a: '#b13e53', m: C.skin, l: '#7a4a2b', L: '#4e2f1c' }, item: 'bag' },
+};
+export const ITEMS = {
+  sword: { spr: S(['.A.', '.A.', '.A.', '.A.', '.A.', '.A.', 'YYY', '.n.', '.n.'], { A: C.stoneL, Y: C.yellow, n: '#7a4a2b' }), dx: 10, dy: 2 },
+  dagger: { spr: S(['.A.', '.A.', '.A.', 'YYY', '.n.'], { A: C.stoneL, Y: C.red, n: '#4e2f1c' }), dx: 10, dy: 5 },
+  staff: { spr: S(['.c.', 'ccc', '.c.', '.n.', '.n.', '.n.', '.n.', '.n.', '.n.', '.n.', '.n.', '.n.', '.n.', '.n.'], { c: C.cyan, n: '#7a4a2b' }), dx: 10, dy: -3 },
+  bow: { spr: S(['nn.', '.nw', '.nw', 'n.w', 'n.w', 'n.w', '.nw', '.nw', 'nn.'], { n: '#7a4a2b', w: C.white }), dx: 10, dy: 2 },
+  axe: { spr: S(['..nAA', '..nAA', '..nAA', '..nA.', '..n..', '..n..', '..n..', '..n..'], { n: '#7a4a2b', A: C.stoneL }), dx: 9, dy: 3 },
+  flask: { spr: S(['.ww.', '.cc.', 'cGGc', 'cGGc', '.cc.'], { w: C.white, c: C.cyan, G: C.lime }), dx: 10, dy: 6 },
+  hammer: { spr: S(['AAAAA', 'AAAAA', 'DDDDD', '..n..', '..n..', '..n..', '..n..'], { A: C.stoneL, D: C.stoneD, n: '#7a4a2b' }), dx: 9, dy: 4 },
+  bag: { spr: S(['.nn.', 'nnnn', 'nYYn', 'nnnn', '.nn.'], { n: '#a86b3c', Y: C.yellow }), dx: 10, dy: 7 },
+};
+export const OFFHAND = {
+  shield: { spr: S(['AAAA', 'ARRA', 'ARRA', 'ARRA', '.AA.'], { A: C.stoneL, R: C.red }), dx: -3, dy: 6 },
+};
+/** Draw the hero. (x, y) = top-left of the 12x16 body. s = grid units per pixel. */
+export function drawHero(p, x, y, archetype = 'adventurer', o = {}) {
+  const st = HERO_STYLE[archetype] || HERO_STYLE.adventurer;
+  const head = HEADS[archetype] || HEADS.adventurer;
+  const spr = S(withRows([...head, ...BODY], head), { ...BASEPAL, ...st.pal });
+  const s = o.s ?? 1;
+  if (o.items !== false) {
+    const off = st.off && OFFHAND[st.off];
+    if (off) drawSprite(p, off.spr, x + off.dx * s, y + off.dy * s, { s });
+  }
+  drawSprite(p, spr, x, y, { s });
+  if (o.items !== false) {
+    const it = ITEMS[st.item];
+    if (it) drawSprite(p, it.spr, x + it.dx * s, y + it.dy * s, { s });
+  }
 }
 
-// --- patterns --------------------------------------------------------------
-function patterns(pal) {
-  return `<pattern id="k-grass" width="16" height="16" patternUnits="userSpaceOnUse">`
-    + `<rect width="16" height="16" fill="${pal.grass}"/>`
-    + `<rect x="3" y="4" width="2" height="2" fill="${pal.grassDark}"/>`
-    + `<rect x="11" y="9" width="2" height="2" fill="${pal.grassDark}"/>`
-    + `<rect x="7" y="12" width="2" height="2" fill="${pal.grassLight}"/>`
-    + `<rect x="13" y="2" width="2" height="2" fill="${pal.grassLight}"/></pattern>`
-    + `<pattern id="k-cobble" width="24" height="24" patternUnits="userSpaceOnUse">`
-    + `<rect width="24" height="24" fill="#a89a7e"/>`
-    + `<rect x="1" y="1" width="10" height="10" fill="#bcad8b"/>`
-    + `<rect x="13" y="1" width="10" height="10" fill="#b3a482"/>`
-    + `<rect x="1" y="13" width="10" height="10" fill="#b7a986"/>`
-    + `<rect x="13" y="13" width="10" height="10" fill="#bcad8b"/>`
-    + `<rect x="1" y="1" width="10" height="2" fill="#cbbd97"/></pattern>`
-    + `<pattern id="k-water" width="32" height="16" patternUnits="userSpaceOnUse">`
-    + `<rect width="32" height="16" fill="${pal.water}"/>`
-    + `<rect x="4" y="4" width="8" height="2" fill="${pal.waterFoam}" opacity="0.6"/>`
-    + `<rect x="20" y="10" width="8" height="2" fill="${pal.waterFoam}" opacity="0.6"/></pattern>`
-    + `<pattern id="k-till" width="16" height="16" patternUnits="userSpaceOnUse">`
-    + `<rect width="16" height="16" fill="${pal.dirt}"/>`
-    + `<rect x="0" y="6" width="16" height="3" fill="${pal.dirtDark}"/>`
-    + `<rect x="0" y="14" width="16" height="2" fill="${pal.dirtDark}" opacity="0.7"/></pattern>`;
+/** The full 12 x 16 hero as a sprite (poses are built from it in actors.mjs). */
+export function heroSprite(archetype = 'adventurer') {
+  const st = HERO_STYLE[archetype] || HERO_STYLE.adventurer;
+  const head = HEADS[archetype] || HEADS.adventurer;
+  return S([...head, ...BODY], { ...BASEPAL, ...st.pal });
 }
 
-// --- gradients (per-render; colors come from lighting) ----------------------
-export function gradientDefs(light) {
-  const [s0, s1, s2] = light.sky;
-  return `<linearGradient id="k-sky" x1="0" y1="0" x2="0" y2="1">`
-    + `<stop offset="0" stop-color="${s0}"/><stop offset="0.55" stop-color="${s1}"/>`
-    + `<stop offset="1" stop-color="${s2}"/></linearGradient>`
-    + `<linearGradient id="k-waterg" x1="0" y1="0" x2="0" y2="1">`
-    + `<stop offset="0" stop-color="${light.waterTop}"/><stop offset="1" stop-color="${light.waterDeep}"/></linearGradient>`
-    + `<radialGradient id="k-lampg">`
-    + `<stop offset="0" stop-color="#ffd98a" stop-opacity="0.55"/>`
-    + `<stop offset="1" stop-color="#ffd98a" stop-opacity="0"/></radialGradient>`
-    + `<radialGradient id="k-fireg">`
-    + `<stop offset="0" stop-color="#ffe9a0"/><stop offset="0.5" stop-color="#ff9e3c"/>`
-    + `<stop offset="1" stop-color="#e0523c" stop-opacity="0"/></radialGradient>`
-    + `<radialGradient id="k-smokeg">`
-    + `<stop offset="0" stop-color="#5a5f6a" stop-opacity="0.75"/>`
-    + `<stop offset="1" stop-color="#5a5f6a" stop-opacity="0"/></radialGradient>`
-    + `<linearGradient id="k-aurora" x1="0" y1="0" x2="0" y2="1">`
-    + `<stop offset="0" stop-color="#4fe0c0" stop-opacity="0.0"/>`
-    + `<stop offset="0.5" stop-color="#4fe0c0" stop-opacity="0.5"/>`
-    + `<stop offset="1" stop-color="#9a6ff0" stop-opacity="0.0"/></linearGradient>`;
-}
+// ---------------------------------------------------------------- small people
+const NPC_ROWS = ['..hh..', '.hhhh.', '.hssh.', '..ss..', '.bbbb.', 'sbbbbs', '.bbbb.', '.l..l.', '.k..k.'];
+export const NPC = {
+  villager: S(NPC_ROWS, { h: '#7a4a2b', s: C.skin, b: '#ef7d57', l: '#4e2f1c', k: '#2b1a10' }),
+  villager2: S(NPC_ROWS, { h: '#1a1c2c', s: C.skinD, b: '#3b5dc9', l: '#333c57', k: '#1a1c2c' }),
+  villager3: S(NPC_ROWS, { h: '#ffcd75', s: C.skin, b: '#a7f070', l: '#566c86', k: '#333c57' }),
+  builder: S(['.yyyy.', 'yyyyyy', '.hssh.', '..ss..', '.bbbb.', 'sbbbbs', '.bbbb.', '.l..l.', '.k..k.'], { y: C.yellow, h: '#7a4a2b', s: C.skin, b: '#ef7d57', l: '#4e2f1c', k: '#2b1a10' }),
+  farmer: S(['.tttt.', 'tttttt', '.hssh.', '..ss..', '.bbbb.', 'sbbbbs', '.bbbb.', '.l..l.', '.k..k.'], { t: C.thatch, h: '#7a4a2b', s: C.skin, b: '#38b764', l: '#3b5dc9', k: '#2b1a10' }),
+  guard: S(['.AAAA.', 'AAAAAA', '.hssh.', '..ss..', '.bbbb.', 'sbbbbs', '.bbbb.', '.l..l.', '.k..k.'], { A: C.stoneL, h: '#4e2f1c', s: C.skin, b: '#b13e53', l: '#333c57', k: '#1a1c2c' }),
+  traveler: S(['..hh..', '.hhhh.', '.hssh.', '..ss..', 'nbbbb.', 'nbbbbs', 'nbbbb.', '.l..l.', '.k..k.'], { h: '#5d275d', s: C.skin, b: '#41a6f6', n: '#a86b3c', l: '#4e2f1c', k: '#2b1a10' }),
+  courier: S(['..hh..', '.hhhh.', '.hssh.', '..ss..', '.bbbb.', 'sbbbbw', '.bbbbw', '.l..l.', '.k..k.'], { h: '#2f3b3f', s: C.skin, b: '#73eff7', w: C.white, l: '#333c57', k: '#1a1c2c' }),
+  visitor: S(['..hh..', '.hhhh.', '.hssh.', '..ss..', '.bbbb.', 'sbbbbs', '.bbbb.', '.l..l.', '.k..k.'], { h: '#a86b3c', s: C.skin, b: '#ffcd75', l: '#4e2f1c', k: '#2b1a10' }),
+  sleeper: S(['......', '......', '......', '......', 'hhsbbb', 'hssbbb', 'hhsbbb', '......', '......'], { h: '#7a4a2b', s: C.skin, b: '#ef7d57' }),
+};
+// V2 roles. Same 6 x 9 frame as the villagers, so they share the walking code.
+export const NPC_ROLE = {
+  miner: S(['..yy..', '.AAAA.', '.hssh.', '..ss..', '.bbbb.', 'sbbbbs', '.bbbb.', '.l..l.', '.k..k.'], { y: C.yellow, A: C.slate, h: '#7a4a2b', s: C.skin, b: '#7a4a2b', l: '#333c57', k: '#1a1c2c' }),
+  merchant: S(['.pppp.', 'pppppp', '.hssh.', '..ss..', '.bbbb.', 'sbYYbs', '.bbbb.', '.l..l.', '.k..k.'], { p: '#5d275d', Y: C.yellow, h: '#4e2f1c', s: C.skin, b: '#b13e53', l: '#4e2f1c', k: '#2b1a10' }),
+  librarian: S(['..hh..', '.hhhh.', '.cscs.', '..ss..', '.bbbb.', 'sbRRbs', '.bbbb.', '.l..l.', '.k..k.'], { h: '#a86b3c', c: C.cyan, s: C.skin, b: '#257179', R: C.red, l: '#1b5560', k: '#1a1c2c' }),
+  researcher: S(['..hh..', '.hhhh.', '.gssg.', '..ss..', '.wwww.', 'swwwws', '.wwww.', '.l..l.', '.k..k.'], { h: '#a7f070', g: C.cyan, s: C.skin, w: '#f4f4f4', l: '#566c86', k: '#333c57' }),
+  firefighter: S(['.RRRR.', 'RRRRRR', '.hssh.', '..ss..', '.bbbb.', 'sbYYbs', '.bbbb.', '.l..l.', '.k..k.'], { R: C.red, Y: C.yellow, h: '#4e2f1c', s: C.skin, b: '#3b5dc9', l: '#29366f', k: '#1a1c2c' }),
+};
+/** Second walking frame: legs together. Toggled with the first one it looks like steps. */
+export const walkB = (spr) => S([...spr.rows.slice(0, -2), '..ll..', '..kk..'], spr.pal);
 
-/** Full <defs> block for one render. `light` from lighting.mjs, `pal` resolved palette. */
-export function buildDefs(pal, light) {
-  const snow = pal.season === 'winter';
-  return `<defs>${patterns(pal)}${gradientDefs(light)}`
-    + pine(pal, snow) + oak(pal, snow) + bare(pal)
-    + bush(pal) + rock(pal) + tuft(pal) + flower(pal) + fence(pal) + lampPost(pal)
-    + `</defs>`;
-}
+export const GOBLIN = S(['g.gggg.g', 'gggggggg', '.grggrg.', '.gggggg.', '.gwggwg.', '..nnnn..', '.gnnnng.', '.gg..gg.'], { g: '#4cae3a', r: C.red, w: C.white, n: '#7a4a2b' });
+export const GOBLIN2 = S(['g.gggg.g', 'gggggggg', '.grggrg.', '.gggggg.', '.gwggwg.', '..nnnn..', '.gnnnng.', '.gg..gg.'], { g: '#7bc34a', r: C.red, w: C.white, n: '#566c86' });
 
-// Sprite foot offsets (height above the <use> foot point) for culling bounds.
-export const SPRITE_H = { 'k-pine': 34, 'k-oak': 34, 'k-bare': 34, 'k-bush': 12, 'k-rock': 12, 'k-tuft': 7, 'k-flower': 11, 'k-fence': 12, 'k-lamp': 28 };
-export { R, C, P, E };
+// ---------------------------------------------------------------- nature
+export const TREE_OAK = S([
+  '...LLLLL...', '..LLlLLLL..', '.LLlLLLLLL.', '.LlLLLLLLD.', 'LLLLLLLLLDD', 'LLLLLLLLDDD', '.LLLLLLDDD.', '..LLLDDDD..', '....ttt....', '....ttt....',
+], { L: '#2f9e5b', l: '#4fd070', D: '#257179', t: '#7a4a2b' });
+export const TREE_PINE = S([
+  '....L....', '...LLL...', '..LLlLL..', '...LLLD..', '..LLLLLD.', '.LLlLLLDD', 'LLLLLLLDD', '....t....', '....t....',
+], { L: '#2f9e5b', l: '#4fd070', D: '#257179', t: '#7a4a2b' });
+export const BUSH = S(['.LLL.', 'LLlLL', 'LLLLD'], { L: '#2f9e5b', l: '#4fd070', D: '#257179' });
+export const ROCK = S(['.AAA.', 'AAwAA', 'ADDDD'], { A: '#8a94a6', w: '#b8c2d0', D: '#5e687c' });
+
+// crops: one picture for each growth step
+const SOIL_D = '#4e2f1c';
+const CP = { l: '#a7f070', L: '#38b764', D: SOIL_D, O: '#ef7d57', R: '#b13e53', Y: '#ffcd75', y: '#fff0a0', g: '#6aa84f', G: '#e0a030' };
+export const CROP = [
+  null,
+  S(['..........', '..........', '..........', '..........', '..........', '..........', '....l.l...', '.....L....', '.....L....', '..........'], CP),
+  S(['..........', '..........', '..........', '..........', '...l...l..', '..lLl.lLl.', '...LlLL...', '.....L....', '.....L....', '..........'], CP),
+  S(['..........', '.....l....', '...l.L.l..', '..lLlLlLl.', '...LLLLL..', '..l.LL.l..', '....LL....', '.....L....', '.....L....', '..........'], CP),
+  S(['...l.l....', '..lLLLl...', '.lLLOLLl..', '.LLOOOLL..', '..LLOLL...', '..l.LL.l..', '....LL....', '.....L....', '.....L....', '..........'], CP),
+  S(['..y.l.y...', '.lLLLLLl..', 'lLOLLLOLl.', 'LLOOLOOLL.', '.LOOLLOOL.', '..LLOLLl..', '...LLLL...', '.....L....', '.....L....', '..........'], CP),
+];
+export const WHEAT = S(['..y..y..y.', '.yY.yY.yY.', '.yY.yY.yY.', '..Y..Y..Y.', '..g..g..g.', '..g..g..g.', '..g..g..g.', '..g..g..g.', '..g..g..g.', '..........'], CP);
+
+// ---------------------------------------------------------------- icons (8 wide)
+export const ICON = {
+  star: S(['...YY...', '...YY...', 'YYYYYYYY', '.YYYYYY.', '..YYYY..', '..YYYY..', '.YY..YY.', '.Y....Y.'], { Y: C.yellow }),
+  coin: S(['..YYYY..', '.YYGGYY.', 'YYGYYGYY', 'YYGYYGYY', 'YYGYYGYY', 'YYGGGGYY', '.YYYYYY.', '..YYYY..'], { Y: C.yellow, G: C.goldD }),
+  flame: S(['...RR...', '..RRR.R.', '.RRORRR.', '.RROORR.', 'RROOYORR', 'RROYYORR', '.ROYYOR.', '..ROOR..'], { R: C.red, O: C.orange, Y: C.yellow }),
+  shield: S(['AAAAAAAA', 'ABBBBBBA', 'ABBAABBA', 'ABBAABBA', 'ABBBBBBA', '.ABBBBA.', '..ABBA..', '...AA...'], { A: C.stoneL, B: C.blue }),
+  sword: S(['...AA...', '...AA...', '...AA...', '...AA...', '...AA...', '.YYYYYY.', '...nn...', '...nn...'], { A: C.stoneL, Y: C.yellow, n: '#7a4a2b' }),
+  crown: S(['Y..YY..Y', 'YY.YY.YY', 'YYYYYYYY', 'YRYYYYRY', 'YYYYYYYY', 'GGGGGGGG'], { Y: C.yellow, R: C.red, G: C.goldD }),
+  trophy: S(['YYYYYYYY', 'Y.YYYY.Y', 'Y.YYYY.Y', '.YYYYYY.', '..YYYY..', '...YY...', '...YY...', '..GGGG..'], { Y: C.yellow, G: C.goldD }),
+  rocket: S(['...AA...', '..AAAA..', '..AcAA..', '..AAAA..', '.RAAAAR.', '.R.AA.R.', '...OO...', '...RR...'], { A: C.white, c: C.sky, R: C.red, O: C.orange }),
+  flag: S(['nRRRR...', 'nRRRRR..', 'nRRRR...', 'n.......', 'n.......', 'n.......', 'n.......', 'nn......'], { n: '#a86b3c', R: C.red }),
+  gear: S(['...YY...', '.Y.YY.Y.', '..YYYY..', 'YYY..YYY', 'YYY..YYY', '..YYYY..', '.Y.YY.Y.', '...YY...'], { Y: C.silver }),
+  house: S(['...RR...', '..RRRR..', '.RRRRRR.', 'RRRRRRRR', '.WWWWWW.', '.WWBBWW.', '.WWBBWW.', '.WWWWWW.'], { R: C.red, W: C.stoneL, B: '#7a4a2b' }),
+  bolt: S(['....YY..', '...YY...', '..YY....', '.YYYYYY.', '...YY...', '..YY....', '.YY.....', 'YY......'], { Y: C.yellow }),
+  sun: S(['Y..YY..Y', '.Y.YY.Y.', '..YYYY..', 'YYYYYYYY', 'YYYYYYYY', '..YYYY..', '.Y.YY.Y.', 'Y..YY..Y'], { Y: C.yellow }),
+  moon: S(['..WWWW..', '.WWW....', 'WWW.....', 'WWW.....', 'WWW.....', 'WWWW....', '.WWWWWW.', '..WWWW..'], { W: C.white }),
+  cloud: S(['........', '..AAA...', '.AAAAAA.', 'AAAAAAAA', 'AAAAAAAA', '.AAAAAA.'], { A: C.stoneL }),
+  rain: S(['..AAA...', '.AAAAAA.', 'AAAAAAAA', '.AAAAAA.', '.c..c..c', 'c..c..c.'], { A: C.silver, c: C.sky }),
+  lock: S(['..AAAA..', '.A....A.', '.A....A.', 'AAAAAAAA', 'AAAddAAA', 'AAAddAAA', 'AAAAAAAA', 'AAAAAAAA'], { A: C.slate, d: C.dark }),
+  check: S(['......GG', '.....GG.', 'GG..GG..', '.GGGG...', '..GG....'], { G: C.lime }),
+  castle: S(['A.A..A.A', 'AAAAAAAA', 'AAAAAAAA', 'AAA..AAA', 'AAA..AAA', 'AAA..AAA'], { A: C.stoneL }),
+  book: S(['.RRRRRR.', 'RWWWWWWR', 'RWRRRRWR', 'RWWWWWWR', 'RWRRRRWR', 'RWWWWWWR', '.RRRRRR.'], { R: C.red, W: C.white }),
+  wheat: S(['..Y..Y..', '.YY.YY.Y', '.YY.YY.Y', '..Y..Y..', '..g..g..', '..g..g..', '..g..g..', '..g..g..'], { Y: C.yellow, g: '#6aa84f' }),
+  skull: S(['.WWWWWW.', 'WWWWWWWW', 'WKKWWKKW', 'WKKWWKKW', 'WWWKKWWW', '.WWWWWW.', '.WKWKWK.', '..WWWW..'], { W: C.white, K: C.ink }),
+  moneybag: S(['..nnn...', '...n....', '.nnnnn..', 'nnYYYnn.', 'nnYnYnn.', 'nnYYYnn.', '.nnnnn..'], { n: '#a86b3c', Y: C.yellow }),
+  users: S(['.AA..AA.', '.AA..AA.', 'AAAAAAAA', 'AAAAAAAA', 'AA.AA.AA', 'AA.AA.AA'], { A: C.cyan }),
+  arrow: S(['YYYYYYY', '.YYYYY.', '..YYY..', '...Y...'], { Y: C.yellow }),
+  hammer: S(['.AAAA...', '.AAAA...', '..nn....', '..nn....', '..nn....', '..nn....'], { A: C.stoneL, n: '#7a4a2b' }),
+  potion: S(['..WW....', '..cc....', '.cGGc...', 'cGGGGc..', 'cGGGGc..', '.cccc...'], { W: C.white, c: C.cyan, G: C.lime }),
+  fork: S(['A.A.A...', 'A.A.A...', 'AAAAA...', '..A.....', '..A.....', '..A.....'], { A: C.silver }),
+  flower: S(['..PPP...', '.PPYPP..', '.PPPPP..', '..PPP...', '...g....', '..gg.g..', '...ggg..', '...g....'], { P: '#ff9ecb', Y: C.yellow, g: '#38b764' }),
+  sprout: S(['........', '..l..l..', '.lLl.Ll.', '..LlLL..', '...LL...', '...L....', '...L....', '..DDD...'], { l: '#a7f070', L: '#38b764', D: '#7a4a2b' }),
+  leaf: S(['......OO', '....OOOO', '..OOROOO', '.OOROOO.', 'OOROOO..', 'OROOO...', 'RO......', 'R.......'], { O: '#ef7d57', R: '#b13e53' }),
+  snow: S(['...WW...', '.W.WW.W.', '..WWWW..', 'WWWWWWWW', 'WWWWWWWW', '..WWWW..', '.W.WW.W.', '...WW...'], { W: '#dff4ff' }),
+  wave: S(['........', '..GG....', '.GGPP...', 'GG..PP.G', '.....PPG', '........', '.cc.....', 'c..cc...'], { G: '#5dffb0', P: '#b48cf0', c: '#73eff7' }),
+  exclaim: S(['...RR...', '..RRRR..', '..RWWR..', '.RRWWRR.', '.RRWWRR.', 'RRRRRRRR', 'RRRWWRRR', 'RRRRRRRR'], { R: C.red, W: C.white }),
+  bell: S(['...YY...', '..YYYY..', '.YYYYYY.', '.YYYYYY.', '.YYYYYY.', 'YYYYYYYY', 'GGGGGGGG', '...GG...'], { Y: C.yellow, G: C.goldD }),
+  horn: S(['.....AA.', '....AAAA', '...AAAAA', 'YYAAAAA.', 'YYYAAA..', '.YY.....', '........', '........'], { A: C.stoneL, Y: C.goldD }),
+  chest: S(['..YYYY..', '.YYYYYY.', 'nnnnnnnn', 'nYnnnnYn', 'nnnYYnnn', 'nnnYYnnn', 'nnnnnnnn', 'DDDDDDDD'], { n: '#a86b3c', Y: C.yellow, D: '#4e2f1c' }),
+  envelope: S(['........', 'WWWWWWWW', 'WRWWWWRW', 'WWRWWRWW', 'WWWRRWWW', 'WWWWWWWW', 'WWWWWWWW', '........'], { W: C.white, R: C.slate }),
+  plane: S(['......AA', '....AAAA', '..AAAAAc', 'AAAAAccc', '..AAcccc', '...Acc..', '....c...', '........'], { A: C.white, c: C.cyan }),
+  camera: S(['........', '..WW....', 'AAAAAAAA', 'AWWWWWWA', 'AWccccWA', 'AWccccWA', 'AWWWWWWA', 'AAAAAAAA'], { A: C.silver, W: C.dark, c: C.cyan }),
+  flaskg: S(['..WW....', '..cc....', '.cGGc...', 'cGGGGc..', 'cGGGGc..', '.cccc...'], { W: C.white, c: C.cyan, G: C.lime }),
+  tent: S(['...RR...', '..RRRR..', '.RRWWRR.', 'RRRWWRRR', 'RRWWWWRR', 'RWWWWWWR'], { R: C.red, W: C.white }),
+};
+
+export function drawIcon(p, name, x, y, s = 1, pal) {
+  const spr = ICON[name];
+  if (!spr) return 0;
+  drawSprite(p, spr, x, y, { s, pal });
+  return spr.w * s;
+}
+export { drawSprite, makeSprite };
