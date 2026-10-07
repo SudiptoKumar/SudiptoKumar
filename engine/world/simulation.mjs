@@ -3,6 +3,11 @@
 // World is geography; Simulation is what happens in it over time.
 import { rng, sha, canonical } from '../util.mjs';
 import { SIM_VERSION } from './constants.mjs';
+import { assignBuilders, pointAlongPath } from './construction.mjs';
+import { warStateFor } from './war.mjs';
+import { defensesFor } from './defense.mjs';
+import { resourcesFor } from './economy.mjs';
+import { WAYPOINTS } from './layout.mjs';
 
 /** Time-of-day bands for actor schedules (V3 §7/§12). */
 export const TIME_BANDS = ['predawn', 'dawn', 'morning', 'noon', 'afternoon', 'sunset', 'evening', 'night', 'deepnight'];
@@ -76,10 +81,19 @@ export function buildSimulation(world, ctx = {}) {
     const state = scheduleFor(npc, band);
     // Deterministic position offset for walking actors (not teleporting)
     const walking = state === 'walking' || state === 'patrolling' || state === 'returning';
+    let x = npc.x, y = npc.y;
+    if (walking && npc.home && npc.work) {
+      // Interpolate along home->work path based on tick
+      const hx = WAYPOINTS[npc.home]?.[0] ?? npc.x, hy = WAYPOINTS[npc.home]?.[1] ?? npc.y;
+      const wx = WAYPOINTS[npc.work]?.[0] ?? npc.x, wy = WAYPOINTS[npc.work]?.[1] ?? npc.y;
+      const t = state === 'returning' ? 1 - ((tick % 12) / 12) : (tick % 12) / 12;
+      const [px, py] = pointAlongPath([[hx, hy], [wx, wy]], t);
+      x = Math.round(px); y = Math.round(py);
+    }
     return {
       id: npc.id || `npc-${i}`,
       role: npc.role || 'citizen',
-      x: npc.x, y: npc.y,
+      x, y,
       home: npc.home || null,
       work: npc.work || null,
       state,
@@ -100,6 +114,9 @@ export function buildSimulation(world, ctx = {}) {
     construction: constructionFor(repo, band, r),
   }));
 
+  // V3: war state (computed once, reused)
+  const war = warStateFor(world, tick);
+
   const sim = {
     version: SIM_VERSION,
     tick,
@@ -107,6 +124,14 @@ export function buildSimulation(world, ctx = {}) {
     seed,
     actors,
     buildings,
+    // V3: construction assignments (builders with tasks, paths, progress)
+    construction: assignBuilders(world, tick),
+    // V3: war state (phases, threat, defenders, damage)
+    war,
+    // V3: defense states (towers, gates)
+    defenses: defensesFor(world, war.threat, tick),
+    // V3: economy resources (derived from real GitHub signals)
+    economy: resourcesFor(world.totals),
   };
   sim.signature = simSignature(sim);
   return sim;
@@ -130,6 +155,10 @@ export function simSignature(sim) {
     band: sim.band,
     actors: sim.actors.map((a) => [a.id, a.state, a.facing]),
     buildings: sim.buildings.map((b) => [b.name, b.lifecycle, b.construction]),
+    construction: (sim.construction || []).map((c) => [c.builderId, c.task, c.progress]),
+    war: [sim.war?.phase, sim.war?.threat],
+    defenses: (sim.defenses || []).map((d) => [d.id, d.state]),
+    economy: sim.economy ? Object.values(sim.economy) : [],
   };
   return sha(canonical(facts), 16);
 }

@@ -9,6 +9,7 @@
 export const WORLD_VERSION = 1;
 export const RENDER_VERSION = 2;   // Phase 3: renderers became world cameras (hero/event/camp/castle/dungeon), quest strip slimmed
 export const SIM_VERSION = 1;      // V3: simulation layer (tick, actor schedules, building states)
+export const ANIM_VERSION = 1;     // V3: animation plan layer
 
 /** Kingdom power tiers (TRUE V2 §7/§12). The tier must change the visible world, not just a number. */
 export const POWER_TIERS = [

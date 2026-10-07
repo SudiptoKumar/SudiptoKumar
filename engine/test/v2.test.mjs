@@ -496,3 +496,47 @@ test('V3: new cameras are valid world views', () => {
   // All share the same world signature (cameras, not separate drawings)
   assert.ok(wf.includes('War Front') && by.includes("Builder") && hg.includes('Hero Guild'));
 });
+
+test('V3: construction assigns builders deterministically', () => {
+  const mk = () => {
+    const s = world('day').state;
+    finalizeV2(s, { cfg, store: freshStore(), now: new Date(s.generatedAt) });
+    return s;
+  };
+  const a = mk(), b = mk();
+  assert.deepEqual(a.simulation.construction, b.simulation.construction, 'same tick = same assignments');
+  // Builder tasks are valid
+  for (const c of a.simulation.construction) {
+    assert.ok(['IDLE', 'WALKING', 'CARRYING', 'WORKING', 'RETURNING', 'BREAK'].includes(c.task), c.task);
+    assert.ok(c.progress >= 0 && c.progress <= 1, 'progress in range');
+  }
+});
+
+test('V3: war phases are deterministic', () => {
+  const s = world('raid').state;
+  finalizeV2(s, { cfg, store: freshStore(), now: new Date(s.generatedAt) });
+  const war = s.simulation.war;
+  assert.ok(war.phase, 'war phase assigned');
+  assert.ok(war.threat >= 0 && war.threat <= 5, 'threat in range');
+  assert.ok(Array.isArray(war.defenders), 'defenders array');
+});
+
+test('V3: economy derived from real signals', () => {
+  const s = world('day').state;
+  finalizeV2(s, { cfg, store: freshStore(), now: new Date(s.generatedAt) });
+  const eco = s.simulation.economy;
+  assert.ok(eco.gold >= 0 && eco.gold <= 100, 'gold in range');
+  assert.ok(eco.materials >= 0 && eco.materials <= 100, 'materials in range');
+  // Deterministic
+  const s2 = world('day').state;
+  finalizeV2(s2, { cfg, store: freshStore(), now: new Date(s2.generatedAt) });
+  assert.deepEqual(eco, s2.simulation.economy, 'same state = same economy');
+});
+
+test('V3: animation plan is deterministic', () => {
+  const s = world('day').state;
+  finalizeV2(s, { cfg, store: freshStore(), now: new Date(s.generatedAt) });
+  assert.ok(s.animation, 'animation plan exists');
+  assert.ok(s.animation.version === 1, 'version stamped');
+  assert.ok(Array.isArray(s.animation.elements), 'elements array');
+});

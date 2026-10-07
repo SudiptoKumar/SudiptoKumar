@@ -2,13 +2,13 @@
   "version": 1,
   "events": [
     {
-      "id": "levelup:19",
+      "id": "ach:trifecta",
       "type": "milestone",
       "title": "MILESTONE UNLOCKED",
       "icon": "trophy",
-      "detail": "LEVEL 19",
-      "at": "2026-10-06T23:50:19.293Z",
-      "until": "2026-10-08T23:50:19.293Z"
+      "detail": "THE TRIFECTA",
+      "at": "2026-10-02T05:40:01.794Z",
+      "until": "2026-10-04T05:40:01.794Z"
     },
     {
       "id": "ach:open_gate",
@@ -29,15 +29,6 @@
       "until": "2026-10-04T05:40:01.794Z"
     },
     {
-      "id": "ach:trifecta",
-      "type": "milestone",
-      "title": "MILESTONE UNLOCKED",
-      "icon": "trophy",
-      "detail": "THE TRIFECTA",
-      "at": "2026-10-02T05:40:01.794Z",
-      "until": "2026-10-04T05:40:01.794Z"
-    },
-    {
       "id": "levelup:17",
       "type": "milestone",
       "title": "MILESTONE UNLOCKED",
@@ -52,12 +43,8 @@
       "id": 1,
       "by": "SudiptoKumar",
       "size": "small",
-      "status": "done",
-      "at": "2026-10-02T05:39:59.983Z",
-      "resolvedAt": "2026-10-06T23:50:19.293Z",
-      "defense": 100,
-      "attack": 30,
-      "won": true
+      "status": "active",
+      "at": "2026-10-02T05:39:59.983Z"
     }
   ]
 }
