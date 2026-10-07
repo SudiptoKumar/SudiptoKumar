@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "init": true,
+  "done": {
+    "streak:3": {
+      "at": "2026-10-07T00:01:21.756Z",
+      "baseline": true
+    },
+    "streak:7": {
+      "at": "2026-10-07T00:01:21.756Z",
+      "baseline": true
+    },
+    "streak:14": {
+      "at": "2026-10-07T00:01:21.756Z",
+      "baseline": true
+    },
+    "stars:1": {
+      "at": "2026-10-07T00:01:21.756Z",
+      "baseline": true
+    },
+    "stars:5": {
+      "at": "2026-10-07T00:01:21.756Z",
+      "baseline": true
+    },
+    "stars:10": {
+      "at": "2026-10-07T00:01:21.756Z",
+      "baseline": true
+    }
+  },
+  "active": []
+}
