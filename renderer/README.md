@@ -1,7 +1,7 @@
 <!-- KINGDOM:START -->
-# Kingdom
+# Sudipto&#39;s Living Kingdom
 
-**Sample Hero** · warden · morning summer · city
+**Sudipto Kumar ** · druid · night autumn · town
 
 <sub><a href="#kingdom">Kingdom</a> · <a href="#story">Story</a> · <a href="#capital">Capital</a> · <a href="#projects">Projects</a> · <a href="#farm">Farm</a> · <a href="#war">War</a> · <a href="#history">History</a> · <a href="#guild">Guild</a></sub>
 
@@ -10,16 +10,16 @@
 
 <picture>
   <source media="(max-width: 480px)" srcset="grand-mobile.svg"/>
-  <img src="grand.svg" width="960" alt="The living kingdom of Kingdom at morning: castle and capital at the heart, farms to the south, workshops and project halls to the east, the war front to the north."/>
+  <img src="grand.svg" width="960" alt="The living kingdom of Sudipto&#39;s Living Kingdom at night: castle and capital at the heart, farms to the south, workshops and project halls to the east, the war front to the north."/>
 </picture>
 
 
 
 ## Hero Journey
 
-**Sample Hero** is traveling — heading to the royal plaza.
+**Sudipto Kumar ** is idle — evening at the guild.
 
-<img src="hero.svg" width="480" alt="Sample Hero close view: traveling"/>
+<img src="hero.svg" width="480" alt="Sudipto Kumar  close view: idle"/>
 
 
 ## World Districts
@@ -45,22 +45,22 @@ Contribution fields, orchard and mill.
 
 ## <a id="history"></a>History
 
-From a lone outpost to a **city**. The oldest halls have stood 900 days. 7 trophies stand in the Hall of Heroes. 
+From a lone outpost to a **town**. The oldest halls have stood 40 days. 3 trophies stand in the Hall of Heroes. 
 
 <img src="capital.svg" width="640" alt="The capital today, seat of the evolving kingdom"/>
 
 
 ## <a id="guild"></a>Guild & Visitors
 
-Travelers at the harbor:
-
-- **traveler-jo** planted a flag — “greetings from the north road”
+No travelers at the harbor today. The roads are quiet.
 
 
+
+---
+
+<sub><a href="https://linkedin.com/in/sudipto-kumar">LinkedIn</a> · <a href="https://twitter.com/sudiptokarn">X</a> · <a href="https://instagram.com/real.sudipto">Instagram</a> · <a href="https://t.me/NewsroomHQ">Telegram</a> · <a href="mailto:sudipto.karn@gmail.com">Email</a> · <a href="https://github.com/SudiptoKumar/SudiptoKumar/issues/new?title=Plant%20a%20flag">Plant a Flag</a> · <a href="https://github.com/SudiptoKumar/SudiptoKumar/issues/new?title=Send%20a%20raid">Send a Raid</a></sub>
 
 
 <sub>Scenario: live · rendered deterministically by Kingdom V3</sub>
-
-<sub>Offline demo snapshot — set <code>GH_TOKEN</code> and re-run <code>update</code> for live GitHub data.</sub>
 
 <!-- KINGDOM:END -->
