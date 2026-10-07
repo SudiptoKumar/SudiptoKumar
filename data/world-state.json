@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-07T00:03:52.044Z",
+  "generatedAt": "2026-10-07T00:47:16.864Z",
   "level": 19,
-  "xp": 10052,
+  "xp": 10081,
   "stars": 19,
   "commits": 720,
   "issues": 0,
@@ -31,9 +31,9 @@
     "kingdomDay": 1173
   },
   "time": {
-    "iso": "2026-10-07T00:03:52.044Z",
+    "iso": "2026-10-07T00:47:16.864Z",
     "tz": "Asia/Dhaka",
-    "hour": 6.05,
+    "hour": 6.78,
     "phase": "dawn",
     "season": "autumn",
     "date": "2026-10-07"
@@ -45,9 +45,9 @@
       "archetype": "alchemist",
       "name": "ALCHEMIST"
     },
-    "xpInto": 602,
+    "xpInto": 631,
     "xpNeed": 1000,
-    "xpPct": 60,
+    "xpPct": 63,
     "xpNext": 10450,
     "activity": "high",
     "position": "plaza",
@@ -62,7 +62,7 @@
       "current": 21,
       "longest": 21,
       "idleDays": 0,
-      "today": 10,
+      "today": 11,
       "yesterday": 2
     },
     "title": "KINGDOM BUILDER",
@@ -84,9 +84,9 @@
         "icon": "coin"
       }
     ],
-    "state": "working",
-    "spot": "ci",
-    "status": "REPAIRING THE CI"
+    "state": "fighting",
+    "spot": "gate",
+    "status": "DEFENDING THE GATE"
   },
   "totals": {
     "stars": 19,
@@ -96,25 +96,25 @@
     "mergedPrs": 1,
     "reviews": 0,
     "issuesOpen": 0,
-    "issuesClosed": 2,
+    "issuesClosed": 3,
     "releases": 7,
     "repos": 22,
     "activeRepos": 22,
     "archivedRepos": 0,
     "followers": 0,
-    "yearContrib": 743,
+    "yearContrib": 744,
     "workflowHealth": 100,
     "failingRepos": [],
     "openPRs": 0,
     "codeKb": 179870
   },
   "xpBreakdown": {
-    "base": 2620,
+    "base": 2624,
     "streakBonus": 282,
     "bonus": {
       "pullRequests": 50,
       "mergedPullRequests": 100,
-      "issuesClosed": 50,
+      "issuesClosed": 75,
       "releases": 1750,
       "repositories": 5200
     },
@@ -256,7 +256,7 @@
     "xp": 0
   },
   "population": {
-    "total": 1090,
+    "total": 1091,
     "npcs": 10,
     "houses": 12
   },
@@ -640,12 +640,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-06T20:13:56Z",
+      "pushedAt": "2026-10-07T00:27:20Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T10:49:10Z",
-      "importance": 170.5,
-      "commits": 101,
-      "commits90": 101,
+      "importance": 172,
+      "commits": 102,
+      "commits90": 102,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 16,
@@ -680,12 +680,12 @@
       "workflow": "recovered",
       "recovered": true,
       "lastFailAt": null,
-      "pushedAt": "2026-10-07T00:03:28Z",
+      "pushedAt": "2026-10-07T00:04:01Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 123.3,
-      "commits": 73,
-      "commits90": 73,
+      "importance": 124.8,
+      "commits": 74,
+      "commits90": 74,
       "releases": 0,
       "recoveredAt": "2026-10-07T00:01:23Z",
       "ageDays": 5,
@@ -1970,7 +1970,7 @@
     },
     {
       "date": "2026-10-07",
-      "count": 10,
+      "count": 11,
       "gold": 1
     }
   ],
@@ -2164,6 +2164,15 @@
   "events": {
     "active": [
       {
+        "id": "raid:visitor:3",
+        "type": "raid",
+        "title": "BOSS RAID",
+        "icon": "skull",
+        "detail": "SENT BY @SudiptoKumar",
+        "at": "2026-10-07T00:47:14.985Z",
+        "until": "2026-10-07T06:47:14.985Z"
+      },
+      {
         "id": "recovery:SudiptoKumar",
         "type": "recovery",
         "title": "WORKFLOW RECOVERED",
@@ -2238,6 +2247,15 @@
     ],
     "recent": [
       {
+        "id": "raid:visitor:3",
+        "type": "raid",
+        "title": "BOSS RAID",
+        "icon": "skull",
+        "detail": "SENT BY @SudiptoKumar",
+        "at": "2026-10-07T00:47:14.985Z",
+        "until": "2026-10-07T06:47:14.985Z"
+      },
+      {
         "id": "recovery:SudiptoKumar",
         "type": "recovery",
         "title": "WORKFLOW RECOVERED",
@@ -2281,32 +2299,20 @@
         "detail": "Clipboard",
         "at": "2026-10-04T19:12:38Z",
         "until": "2026-10-11T19:12:38.000Z"
-      },
-      {
-        "id": "expansion:Workshop-Certificate-Verify",
-        "type": "expansion",
-        "title": "KINGDOM EXPANSION",
-        "icon": "crown",
-        "detail": "Workshop-Certificate-Verify",
-        "at": "2026-10-02T21:18:15Z",
-        "until": "2026-10-09T21:18:15.000Z"
       }
     ]
   },
   "raid": {
-    "active": false,
-    "done": true,
-    "id": 1,
+    "active": true,
+    "id": 3,
     "by": "SudiptoKumar",
-    "at": "2026-10-02T05:39:59.983Z",
+    "at": "2026-10-07T00:47:14.985Z",
     "size": "small",
-    "goblins": 0,
+    "goblins": 3,
     "defense": 100,
     "attack": 30,
-    "won": true,
-    "phase": "won",
-    "available": true,
-    "cooldownLeftH": 0
+    "phase": "enter",
+    "available": false
   },
   "visitors": {
     "total": 0,
@@ -2535,10 +2541,10 @@
       {
         "d": "2026-10-07",
         "l": 19,
-        "x": 10052,
+        "x": 10081,
         "s": 19,
         "c": 720,
-        "p": 1090
+        "p": 1091
       }
     ]
   },
@@ -2551,7 +2557,7 @@
       "districts": "ok",
       "trophies": "ok",
       "harvest": "ok",
-      "history": "skipped",
+      "history": "ok",
       "camp": "ok",
       "castle": "ok",
       "dungeon": "ok",
@@ -2560,7 +2566,7 @@
       "heroguild": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-07T00:03:52.044Z"
+    "checkedAt": "2026-10-07T00:47:16.864Z"
   },
   "v": 2,
   "featured": [
@@ -2582,26 +2588,27 @@
     }
   },
   "scene": {
-    "mode": "RECOVERY",
+    "mode": "RAID",
     "modes": [
+      "RAID",
       "RECOVERY",
       "CELEBRATION",
       "WORKING",
       "ACTIVE"
     ],
-    "frame": 4,
+    "frame": 3,
     "hero": {
-      "state": "working",
-      "spot": "ci",
-      "why": "recovery",
-      "label": "REPAIRING THE CI",
+      "state": "fighting",
+      "spot": "gate",
+      "why": "raid",
+      "label": "DEFENDING THE GATE",
       "umbrella": false
     },
     "npcs": {
       "builder": 6,
       "farmer": 5,
       "miner": 1,
-      "guard": 2,
+      "guard": 4,
       "merchant": 3,
       "librarian": 2,
       "researcher": 2,
@@ -2613,9 +2620,9 @@
       "windows": true,
       "torches": true,
       "moon": false,
-      "accent": "repair",
+      "accent": "danger",
       "danger": [],
-      "gate": false,
+      "gate": true,
       "repair": [
         "SudiptoKumar",
         "DailyFacts"
@@ -2637,7 +2644,7 @@
       "home": false,
       "returning": false,
       "shelter": false,
-      "patrol": false,
+      "patrol": true,
       "farmersIn": false
     },
     "stages": {
@@ -2653,9 +2660,12 @@
         "Clipboard": "builders"
       },
       "visitor": null,
-      "raid": "won"
+      "raid": "enter"
     },
     "fx": [
+      "goblins",
+      "battle",
+      "guards",
       "firefighter",
       "repair",
       "sparkles",
@@ -2669,15 +2679,15 @@
     "labels": {
       "ci": false,
       "issues": 0,
-      "raid": false,
+      "raid": true,
       "event": null
     },
     "hud": [
       {
         "kind": "RAID",
-        "text": "DEFEATED",
+        "text": "GOBLINS MARCH",
         "icon": "skull",
-        "tone": "good"
+        "tone": "danger"
       },
       {
         "kind": "REPAIR",
@@ -2700,7 +2710,7 @@
     "version": 1,
     "tick": 0,
     "band": "predawn",
-    "seed": "sim:446fcdd411c58b57:0",
+    "seed": "sim:c0ad9fea2807df26:0",
     "actors": [
       {
         "id": "builder:0",
@@ -2711,7 +2721,7 @@
         "work": null,
         "state": "walking",
         "walking": true,
-        "facing": "right",
+        "facing": "left",
         "band": "predawn"
       },
       {
@@ -2747,7 +2757,7 @@
         "work": null,
         "state": "walking",
         "walking": true,
-        "facing": "left",
+        "facing": "right",
         "band": "predawn"
       },
       {
@@ -2771,7 +2781,7 @@
         "work": null,
         "state": "walking",
         "walking": true,
-        "facing": "left",
+        "facing": "right",
         "band": "predawn"
       },
       {
@@ -2795,7 +2805,7 @@
         "work": null,
         "state": "walking",
         "walking": true,
-        "facing": "left",
+        "facing": "right",
         "band": "predawn"
       },
       {
@@ -2819,7 +2829,7 @@
         "work": null,
         "state": "walking",
         "walking": true,
-        "facing": "left",
+        "facing": "right",
         "band": "predawn"
       },
       {
@@ -2850,7 +2860,7 @@
         "id": "guard:0",
         "role": "guard",
         "x": 74,
-        "y": 207,
+        "y": 200,
         "home": "gate",
         "work": null,
         "state": "patrolling",
@@ -2862,7 +2872,31 @@
         "id": "guard:1",
         "role": "guard",
         "x": 102,
-        "y": 207,
+        "y": 200,
+        "home": "gate",
+        "work": null,
+        "state": "patrolling",
+        "walking": true,
+        "facing": "right",
+        "band": "predawn"
+      },
+      {
+        "id": "guard:2",
+        "role": "guard",
+        "x": 66,
+        "y": 200,
+        "home": "gate",
+        "work": null,
+        "state": "patrolling",
+        "walking": true,
+        "facing": "left",
+        "band": "predawn"
+      },
+      {
+        "id": "guard:3",
+        "role": "guard",
+        "x": 110,
+        "y": 200,
         "home": "gate",
         "work": null,
         "state": "patrolling",
@@ -2879,7 +2913,7 @@
         "work": null,
         "state": "waking",
         "walking": false,
-        "facing": "right",
+        "facing": "left",
         "band": "predawn"
       },
       {
@@ -2891,7 +2925,7 @@
         "work": null,
         "state": "waking",
         "walking": false,
-        "facing": "left",
+        "facing": "right",
         "band": "predawn"
       },
       {
@@ -2903,7 +2937,7 @@
         "work": null,
         "state": "waking",
         "walking": false,
-        "facing": "left",
+        "facing": "right",
         "band": "predawn"
       },
       {
@@ -2939,7 +2973,7 @@
         "work": null,
         "state": "waking",
         "walking": false,
-        "facing": "left",
+        "facing": "right",
         "band": "predawn"
       },
       {
@@ -2951,7 +2985,7 @@
         "work": null,
         "state": "waking",
         "walking": false,
-        "facing": "right",
+        "facing": "left",
         "band": "predawn"
       },
       {
@@ -2975,7 +3009,7 @@
         "work": null,
         "state": "waking",
         "walking": false,
-        "facing": "left",
+        "facing": "right",
         "band": "predawn"
       },
       {
@@ -3042,7 +3076,7 @@
         "y": 126,
         "level": 4,
         "lifecycle": "building",
-        "construction": 0.02
+        "construction": 0.85
       },
       {
         "name": "GamingNewsroomBot",
@@ -3050,7 +3084,7 @@
         "y": 126,
         "level": 4,
         "lifecycle": "building",
-        "construction": 0.11
+        "construction": 0.33
       },
       {
         "name": "TelegramForwarder",
@@ -3058,7 +3092,7 @@
         "y": 124,
         "level": 4,
         "lifecycle": "building",
-        "construction": 0.41
+        "construction": 0.31
       },
       {
         "name": "BusinessNewsBot",
@@ -3066,7 +3100,7 @@
         "y": 126,
         "level": 4,
         "lifecycle": "building",
-        "construction": 0.59
+        "construction": 0.24
       },
       {
         "name": "EntertainmentNewsBot",
@@ -3074,7 +3108,7 @@
         "y": 126,
         "level": 4,
         "lifecycle": "building",
-        "construction": 0.65
+        "construction": 0.72
       },
       {
         "name": "TheTechNewsroomBot",
@@ -3082,7 +3116,7 @@
         "y": 141,
         "level": 4,
         "lifecycle": "building",
-        "construction": 0.18
+        "construction": 0.96
       },
       {
         "name": "ScienceNewsroomBot",
@@ -3090,7 +3124,7 @@
         "y": 141,
         "level": 4,
         "lifecycle": "building",
-        "construction": 0.48
+        "construction": 0.44
       },
       {
         "name": "TheSportsNewsroom",
@@ -3098,7 +3132,7 @@
         "y": 141,
         "level": 4,
         "lifecycle": "building",
-        "construction": 0.87
+        "construction": 0.64
       },
       {
         "name": "ComicsNewsroom",
@@ -3106,7 +3140,7 @@
         "y": 141,
         "level": 4,
         "lifecycle": "building",
-        "construction": 0.98
+        "construction": 0.53
       },
       {
         "name": "History-Newsroom",
@@ -3114,7 +3148,7 @@
         "y": 156,
         "level": 4,
         "lifecycle": "building",
-        "construction": 0.84
+        "construction": 0.21
       },
       {
         "name": "DailyFacts",
@@ -3138,7 +3172,7 @@
         "y": 156,
         "level": 4,
         "lifecycle": "building",
-        "construction": 0.39
+        "construction": 1
       },
       {
         "name": "DocFlow",
@@ -3170,7 +3204,7 @@
         "y": 140,
         "level": 3,
         "lifecycle": "building",
-        "construction": 0.97
+        "construction": 0.83
       },
       {
         "name": "WORKSHOP-",
@@ -3178,7 +3212,7 @@
         "y": 156,
         "level": 3,
         "lifecycle": "building",
-        "construction": 0.95
+        "construction": 0.28
       },
       {
         "name": "CampusDuty",
@@ -3202,7 +3236,7 @@
         "y": 140,
         "level": 2,
         "lifecycle": "building",
-        "construction": 0.36
+        "construction": 0.69
       }
     ],
     "construction": [
@@ -3274,11 +3308,30 @@
       }
     ],
     "war": {
-      "phase": "NORMAL",
-      "threat": 0,
-      "defenders": [],
+      "phase": "INCOMING",
+      "threat": 3,
+      "defenders": [
+        {
+          "id": "guard-0",
+          "x": 80,
+          "y": 202,
+          "state": "alert"
+        },
+        {
+          "id": "guard-1",
+          "x": 91,
+          "y": 202,
+          "state": "alert"
+        },
+        {
+          "id": "guard-2",
+          "x": 97,
+          "y": 204,
+          "state": "alert"
+        }
+      ],
       "damage": [],
-      "alarm": false,
+      "alarm": true,
       "repairCrews": 0
     },
     "defenses": [
@@ -3287,32 +3340,32 @@
         "kind": "watchtower",
         "x": 64,
         "y": 198,
-        "state": "CALM",
-        "threat": 0
+        "state": "TARGETING",
+        "threat": 3
       },
       {
         "id": "tower-east",
         "kind": "watchtower",
         "x": 112,
         "y": 198,
-        "state": "CALM",
-        "threat": 0
+        "state": "TARGETING",
+        "threat": 3
       },
       {
         "id": "gatehouse",
         "kind": "gatehouse",
         "x": 88,
         "y": 208,
-        "state": "CALM",
-        "threat": 0
+        "state": "TARGETING",
+        "threat": 3
       },
       {
         "id": "signal",
         "kind": "signal",
         "x": 88,
         "y": 190,
-        "state": "CALM",
-        "threat": 0
+        "state": "TARGETING",
+        "threat": 3
       }
     ],
     "economy": {
@@ -3322,7 +3375,7 @@
       "reputation": 0,
       "warSupplies": 0
     },
-    "signature": "272c10be534970da"
+    "signature": "98ef2bb1c99f9691"
   },
   "animVersion": 1,
   "animation": {
@@ -3362,5 +3415,5 @@
     ],
     "count": 4
   },
-  "contentHash": "partial:681a4c4478e18037"
+  "contentHash": "744c74e4c8f5989d"
 }
