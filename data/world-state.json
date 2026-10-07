@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-06T23:08:52.912Z",
+  "generatedAt": "2026-10-07T05:12:49.350Z",
   "level": 19,
-  "xp": 9961,
+  "xp": 10097,
   "stars": 19,
-  "commits": 710,
+  "commits": 727,
   "issues": 0,
   "pullRequests": 1,
-  "workflowHealth": 100,
-  "streak": 20,
+  "workflowHealth": 99,
+  "streak": 21,
   "activeRepositories": 22,
   "topLanguage": "Python",
-  "weather": "aurora",
+  "weather": "clear",
   "weatherReason": "A release or milestone is being celebrated",
-  "timeOfDay": "night",
+  "timeOfDay": "day",
   "season": "autumn",
   "meta": {
     "demo": false,
@@ -31,10 +31,10 @@
     "kingdomDay": 1173
   },
   "time": {
-    "iso": "2026-10-06T23:08:52.912Z",
+    "iso": "2026-10-07T05:12:49.350Z",
     "tz": "Asia/Dhaka",
-    "hour": 5.13,
-    "phase": "night",
+    "hour": 11.2,
+    "phase": "day",
     "season": "autumn",
     "date": "2026-10-07"
   },
@@ -45,25 +45,25 @@
       "archetype": "alchemist",
       "name": "ALCHEMIST"
     },
-    "xpInto": 511,
+    "xpInto": 647,
     "xpNeed": 1000,
-    "xpPct": 51,
+    "xpPct": 65,
     "xpNext": 10450,
-    "activity": "normal",
+    "activity": "high",
     "position": "plaza",
     "sleeping": false,
     "stats": {
       "codePower": 99,
-      "reliability": 100,
-      "streak": 20,
+      "reliability": 99,
+      "streak": 21,
       "reputation": 19
     },
     "streak": {
-      "current": 20,
-      "longest": 20,
+      "current": 21,
+      "longest": 21,
       "idleDays": 0,
-      "today": 2,
-      "yesterday": 16
+      "today": 18,
+      "yesterday": 2
     },
     "title": "KINGDOM BUILDER",
     "roles": [
@@ -86,35 +86,37 @@
     ],
     "state": "working",
     "spot": "ci",
-    "status": "REPAIRING THE CI"
+    "status": "FIXING THE CI"
   },
   "totals": {
     "stars": 19,
     "forks": 0,
-    "commits": 710,
+    "commits": 727,
     "prs": 1,
     "mergedPrs": 1,
     "reviews": 0,
     "issuesOpen": 0,
-    "issuesClosed": 2,
+    "issuesClosed": 3,
     "releases": 7,
     "repos": 22,
     "activeRepos": 22,
     "archivedRepos": 0,
     "followers": 0,
-    "yearContrib": 733,
-    "workflowHealth": 100,
-    "failingRepos": [],
+    "yearContrib": 751,
+    "workflowHealth": 99,
+    "failingRepos": [
+      "SudiptoKumar"
+    ],
     "openPRs": 0,
-    "codeKb": 177812
+    "codeKb": 182610
   },
   "xpBreakdown": {
-    "base": 2550,
-    "streakBonus": 261,
+    "base": 2640,
+    "streakBonus": 282,
     "bonus": {
       "pullRequests": 50,
       "mergedPullRequests": 100,
-      "issuesClosed": 50,
+      "issuesClosed": 75,
       "releases": 1750,
       "repositories": 5200
     },
@@ -123,14 +125,27 @@
   "quests": {
     "list": [
       {
+        "title": "FIX THE FAILING CI",
+        "progress": 99,
+        "target": 100,
+        "pct": 99,
+        "id": "recover:open",
+        "track": "recover",
+        "icon": "flame",
+        "state": "ACTIVE",
+        "xp": 0,
+        "at": null,
+        "isNew": false
+      },
+      {
         "id": "streak:30",
         "track": "streak",
         "title": "HOLD A 30 DAY STREAK",
         "icon": "wheat",
         "state": "ACTIVE",
-        "progress": 20,
+        "progress": 21,
         "target": 30,
-        "pct": 67,
+        "pct": 70,
         "xp": 80,
         "unit": "DAYS",
         "at": null,
@@ -194,30 +209,29 @@
     ],
     "rows": [
       {
+        "title": "FIX THE FAILING CI",
+        "progress": 99,
+        "target": 100,
+        "pct": 99,
+        "id": "recover:open",
+        "track": "recover",
+        "icon": "flame",
+        "state": "ACTIVE",
+        "xp": 0,
+        "at": null,
+        "isNew": false
+      },
+      {
         "id": "streak:30",
         "track": "streak",
         "title": "HOLD A 30 DAY STREAK",
         "icon": "wheat",
         "state": "ACTIVE",
-        "progress": 20,
+        "progress": 21,
         "target": 30,
-        "pct": 67,
+        "pct": 70,
         "xp": 80,
         "unit": "DAYS",
-        "at": null,
-        "isNew": false
-      },
-      {
-        "id": "stars:25",
-        "track": "stars",
-        "title": "EARN 25 STARS",
-        "icon": "star",
-        "state": "ACTIVE",
-        "progress": 19,
-        "target": 25,
-        "pct": 76,
-        "xp": 80,
-        "unit": "STARS",
         "at": null,
         "isNew": false
       },
@@ -236,27 +250,26 @@
       }
     ],
     "current": {
-      "id": "streak:30",
-      "track": "streak",
-      "title": "HOLD A 30 DAY STREAK",
-      "icon": "wheat",
+      "title": "FIX THE FAILING CI",
+      "progress": 99,
+      "target": 100,
+      "pct": 99,
+      "id": "recover:open",
+      "track": "recover",
+      "icon": "flame",
       "state": "ACTIVE",
-      "progress": 20,
-      "target": 30,
-      "pct": 67,
-      "xp": 80,
-      "unit": "DAYS",
+      "xp": 0,
       "at": null,
       "isNew": false
     },
     "counts": {
-      "active": 2,
+      "active": 3,
       "complete": 6
     },
     "xp": 0
   },
   "population": {
-    "total": 1088,
+    "total": 1092,
     "npcs": 10,
     "houses": 12
   },
@@ -275,7 +288,7 @@
   "languages": [
     {
       "name": "Python",
-      "pct": 38,
+      "pct": 37,
       "color": "#3572A5"
     },
     {
@@ -285,7 +298,7 @@
     },
     {
       "name": "JavaScript",
-      "pct": 19,
+      "pct": 20,
       "color": "#f1e05a"
     },
     {
@@ -320,12 +333,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-06T22:00:39Z",
+      "pushedAt": "2026-10-07T02:57:07Z",
       "pushedDays": 0,
       "createdAt": "2026-09-17T18:58:59Z",
-      "importance": 501.4,
-      "commits": 322,
-      "commits90": 322,
+      "importance": 503.1,
+      "commits": 323,
+      "commits90": 323,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 19,
@@ -488,7 +501,7 @@
       "commits90": 201,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 38,
+      "ageDays": 39,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -640,12 +653,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-06T20:13:56Z",
+      "pushedAt": "2026-10-07T00:27:20Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T10:49:10Z",
-      "importance": 170.5,
-      "commits": 101,
-      "commits90": 101,
+      "importance": 172,
+      "commits": 102,
+      "commits90": 102,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 16,
@@ -660,6 +673,46 @@
           "recency": 20,
           "maturity": 1,
           "depth": 15,
+          "release": 0,
+          "reputation": 2
+        }
+      }
+    },
+    {
+      "name": "SudiptoKumar",
+      "url": "https://github.com/SudiptoKumar/SudiptoKumar",
+      "description": "Hello, Dev!",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "JavaScript",
+      "color": "#f1e05a",
+      "archetype": "house",
+      "state": "failing",
+      "workflow": "failing",
+      "recovered": true,
+      "lastFailAt": "2026-10-07T05:12:51Z",
+      "pushedAt": "2026-10-07T05:12:36Z",
+      "pushedDays": 0,
+      "createdAt": "2026-10-01T15:17:58Z",
+      "importance": 144.6,
+      "commits": 86,
+      "commits90": 86,
+      "releases": 0,
+      "recoveredAt": "2026-10-07T05:12:39Z",
+      "ageDays": 5,
+      "evolution": {
+        "level": 3,
+        "name": "BUILDING",
+        "score": 51,
+        "toNext": 0,
+        "capped": "age",
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 0,
+          "depth": 14,
           "release": 0,
           "reputation": 2
         }
@@ -700,46 +753,6 @@
           "recency": 20,
           "maturity": 1,
           "depth": 14,
-          "release": 0,
-          "reputation": 2
-        }
-      }
-    },
-    {
-      "name": "SudiptoKumar",
-      "url": "https://github.com/SudiptoKumar/SudiptoKumar",
-      "description": "Hello, Dev!",
-      "stars": 1,
-      "forks": 0,
-      "issues": 0,
-      "prs": 0,
-      "language": "JavaScript",
-      "color": "#f1e05a",
-      "archetype": "house",
-      "state": "building",
-      "workflow": "passing",
-      "recovered": false,
-      "lastFailAt": null,
-      "pushedAt": "2026-10-06T23:08:32Z",
-      "pushedDays": 0,
-      "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 100.3,
-      "commits": 59,
-      "commits90": 59,
-      "releases": 0,
-      "recoveredAt": null,
-      "ageDays": 5,
-      "evolution": {
-        "level": 3,
-        "name": "BUILDING",
-        "score": 65,
-        "toNext": 0,
-        "capped": "age",
-        "parts": {
-          "activity": 30,
-          "recency": 20,
-          "maturity": 0,
-          "depth": 13,
           "release": 0,
           "reputation": 2
         }
@@ -1187,10 +1200,6 @@
     }
   ],
   "calendar": [
-    {
-      "date": "2026-04-01",
-      "count": 0
-    },
     {
       "date": "2026-04-02",
       "count": 0
@@ -1971,6 +1980,11 @@
       "date": "2026-10-06",
       "count": 2,
       "gold": 1
+    },
+    {
+      "date": "2026-10-07",
+      "count": 18,
+      "gold": 1
     }
   ],
   "achievements": {
@@ -2163,6 +2177,15 @@
   "events": {
     "active": [
       {
+        "id": "emergency:SudiptoKumar",
+        "type": "emergency",
+        "title": "WORKFLOW EMERGENCY",
+        "icon": "flame",
+        "detail": "SudiptoKumar",
+        "at": "2026-10-07T05:12:51Z",
+        "until": "2026-10-07T06:12:49.350Z"
+      },
+      {
         "id": "recovery:DailyFacts",
         "type": "recovery",
         "title": "WORKFLOW RECOVERED",
@@ -2226,33 +2249,33 @@
         "until": "2026-10-08T13:12:44.000Z"
       },
       {
-        "id": "harvest:2026-10-06",
+        "id": "harvest:2026-10-07",
         "type": "harvest",
         "title": "HARVEST FESTIVAL",
         "icon": "wheat",
-        "detail": "16 CONTRIBUTIONS",
-        "at": "2026-10-06T12:00:00.000Z",
-        "until": "2026-10-08T04:00:00.000Z"
-      },
-      {
-        "id": "nightstars:2026-10-07",
-        "type": "nightstars",
-        "title": "NIGHT OF THE STARS",
-        "icon": "star",
-        "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-06T23:08:52.912Z",
-        "until": "2026-10-07T00:08:52.912Z"
+        "detail": "18 CONTRIBUTIONS",
+        "at": "2026-10-07T12:00:00.000Z",
+        "until": "2026-10-09T04:00:00.000Z"
       }
     ],
     "recent": [
       {
-        "id": "nightstars:2026-10-07",
-        "type": "nightstars",
-        "title": "NIGHT OF THE STARS",
-        "icon": "star",
-        "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-06T23:08:52.912Z",
-        "until": "2026-10-07T00:08:52.912Z"
+        "id": "harvest:2026-10-07",
+        "type": "harvest",
+        "title": "HARVEST FESTIVAL",
+        "icon": "wheat",
+        "detail": "18 CONTRIBUTIONS",
+        "at": "2026-10-07T12:00:00.000Z",
+        "until": "2026-10-09T04:00:00.000Z"
+      },
+      {
+        "id": "emergency:SudiptoKumar",
+        "type": "emergency",
+        "title": "WORKFLOW EMERGENCY",
+        "icon": "flame",
+        "detail": "SudiptoKumar",
+        "at": "2026-10-07T05:12:51Z",
+        "until": "2026-10-07T06:12:49.350Z"
       },
       {
         "id": "levelup:19",
@@ -2271,15 +2294,6 @@
         "detail": "DailyFacts",
         "at": "2026-10-06T17:06:40Z",
         "until": "2026-10-08T17:06:40.000Z"
-      },
-      {
-        "id": "harvest:2026-10-06",
-        "type": "harvest",
-        "title": "HARVEST FESTIVAL",
-        "icon": "wheat",
-        "detail": "16 CONTRIBUTIONS",
-        "at": "2026-10-06T12:00:00.000Z",
-        "until": "2026-10-08T04:00:00.000Z"
       },
       {
         "id": "release:WORKSHOP-:v1.0.1",
@@ -2543,10 +2557,10 @@
       {
         "d": "2026-10-07",
         "l": 19,
-        "x": 9961,
+        "x": 10097,
         "s": 19,
-        "c": 710,
-        "p": 1088
+        "c": 727,
+        "p": 1092
       }
     ]
   },
@@ -2565,7 +2579,7 @@
       "dungeon": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-06T23:08:52.912Z"
+    "checkedAt": "2026-10-07T05:12:49.350Z"
   },
   "v": 2,
   "featured": [
@@ -2576,32 +2590,31 @@
     "Clipboard"
   ],
   "power": {
-    "value": 76,
+    "value": 77,
     "parts": {
       "progress": 22.3,
-      "consistency": 13.3,
-      "reliability": 20,
+      "consistency": 14,
+      "reliability": 19.8,
       "reach": 5.7,
       "vitality": 15,
       "gate": 0
     }
   },
   "scene": {
-    "mode": "RECOVERY",
+    "mode": "DANGER",
     "modes": [
-      "RECOVERY",
+      "DANGER",
       "CELEBRATION",
       "HARVEST",
-      "NIGHT",
       "WORKING",
       "ACTIVE"
     ],
-    "frame": 0,
+    "frame": 3,
     "hero": {
       "state": "working",
       "spot": "ci",
-      "why": "recovery",
-      "label": "REPAIRING THE CI",
+      "why": "emergency",
+      "label": "FIXING THE CI",
       "umbrella": false
     },
     "npcs": {
@@ -2616,12 +2629,14 @@
       "villager": 5
     },
     "light": {
-      "phase": "night",
-      "windows": true,
-      "torches": true,
-      "moon": true,
-      "accent": "repair",
-      "danger": [],
+      "phase": "day",
+      "windows": false,
+      "torches": false,
+      "moon": false,
+      "accent": "danger",
+      "danger": [
+        "SudiptoKumar"
+      ],
       "gate": false,
       "repair": [
         "DailyFacts"
@@ -2629,25 +2644,27 @@
       "gold": true
     },
     "weather": {
-      "kind": "aurora",
+      "kind": "clear",
       "rain": 0,
       "lightning": false,
       "snow": false,
-      "aurora": 1,
+      "aurora": 0,
       "sunrise": false,
       "wet": false,
       "frozen": false,
       "season": "autumn"
     },
     "behavior": {
-      "home": true,
+      "home": false,
       "returning": false,
       "shelter": false,
-      "patrol": true,
-      "farmersIn": true
+      "patrol": false,
+      "farmersIn": false
     },
     "stages": {
-      "fail": {},
+      "fail": {
+        "SudiptoKumar": "warning"
+      },
       "repair": {
         "DailyFacts": "repair"
       },
@@ -2661,6 +2678,9 @@
       "raid": "won"
     },
     "fx": [
+      "alarm",
+      "smoke",
+      "fire",
       "firefighter",
       "repair",
       "sparkles",
@@ -2670,14 +2690,13 @@
       "fireworks",
       "shrineGlow",
       "construction",
-      "harvestFestival",
-      "shootingStars"
+      "harvestFestival"
     ],
     "labels": {
-      "ci": false,
+      "ci": true,
       "issues": 0,
       "raid": false,
-      "event": null
+      "event": "emergency"
     },
     "hud": [
       {
@@ -2687,20 +2706,20 @@
         "tone": "good"
       },
       {
+        "kind": "ALERT",
+        "text": "SUDIPTOKUMAR CI DOWN",
+        "icon": "flame",
+        "tone": "danger"
+      },
+      {
         "kind": "REPAIR",
         "text": "CI IS FIXED",
         "icon": "check",
         "tone": "good"
-      },
-      {
-        "kind": "RELEASE",
-        "text": "WORKSHOP- V1.0.1",
-        "icon": "rocket",
-        "tone": "gold"
       }
     ]
   },
   "worldVersion": 1,
   "renderVersion": 2,
-  "contentHash": "92ecebc448924164"
+  "contentHash": "e5f84bf2359216d0"
 }

@@ -27,5 +27,7 @@
       "baseline": true
     }
   },
-  "active": []
+  "active": [
+    "recover:open"
+  ]
 }
