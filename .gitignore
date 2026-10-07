@@ -1,6 +1,0 @@
-node_modules/
-data/*.json
-!data/world-lock.json
-demo/
-*.log
-.DS_Store
