@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-07T23:04:59.901Z",
+  "generatedAt": "2026-10-08T06:03:26.879Z",
   "level": 19,
-  "xp": 10347,
+  "xp": 9959,
   "stars": 19,
-  "commits": 733,
+  "commits": 749,
   "issues": 0,
   "pullRequests": 1,
   "workflowHealth": 99,
-  "streak": 21,
+  "streak": 22,
   "activeRepositories": 22,
   "topLanguage": "Python",
-  "weather": "aurora",
+  "weather": "clear",
   "weatherReason": "A release or milestone is being celebrated",
-  "timeOfDay": "night",
+  "timeOfDay": "day",
   "season": "autumn",
   "meta": {
     "demo": false,
@@ -31,10 +31,10 @@
     "kingdomDay": 1174
   },
   "time": {
-    "iso": "2026-10-07T23:04:59.901Z",
+    "iso": "2026-10-08T06:03:26.879Z",
     "tz": "Asia/Dhaka",
-    "hour": 5.07,
-    "phase": "night",
+    "hour": 12.05,
+    "phase": "day",
     "season": "autumn",
     "date": "2026-10-08"
   },
@@ -45,9 +45,9 @@
       "archetype": "alchemist",
       "name": "ALCHEMIST"
     },
-    "xpInto": 897,
+    "xpInto": 509,
     "xpNeed": 1000,
-    "xpPct": 90,
+    "xpPct": 51,
     "xpNext": 10450,
     "activity": "high",
     "position": "plaza",
@@ -55,15 +55,15 @@
     "stats": {
       "codePower": 99,
       "reliability": 99,
-      "streak": 21,
+      "streak": 22,
       "reputation": 19
     },
     "streak": {
-      "current": 21,
-      "longest": 21,
+      "current": 22,
+      "longest": 22,
       "idleDays": 0,
-      "today": 24,
-      "yesterday": 2
+      "today": 16,
+      "yesterday": 24
     },
     "title": "KINGDOM BUILDER",
     "roles": [
@@ -91,33 +91,33 @@
   "totals": {
     "stars": 19,
     "forks": 0,
-    "commits": 733,
+    "commits": 749,
     "prs": 1,
     "mergedPrs": 1,
     "reviews": 0,
     "issuesOpen": 0,
     "issuesClosed": 3,
-    "releases": 8,
+    "releases": 6,
     "repos": 22,
     "activeRepos": 22,
     "archivedRepos": 0,
     "followers": 0,
-    "yearContrib": 757,
+    "yearContrib": 773,
     "workflowHealth": 99,
     "failingRepos": [
       "SudiptoKumar"
     ],
     "openPRs": 0,
-    "codeKb": 180543
+    "codeKb": 173997
   },
   "xpBreakdown": {
-    "base": 2640,
-    "streakBonus": 282,
+    "base": 2730,
+    "streakBonus": 304,
     "bonus": {
       "pullRequests": 50,
       "mergedPullRequests": 100,
       "issuesClosed": 75,
-      "releases": 2000,
+      "releases": 1500,
       "repositories": 5200
     },
     "quests": 0
@@ -143,9 +143,9 @@
         "title": "HOLD A 30 DAY STREAK",
         "icon": "wheat",
         "state": "ACTIVE",
-        "progress": 21,
+        "progress": 22,
         "target": 30,
-        "pct": 70,
+        "pct": 73,
         "xp": 80,
         "unit": "DAYS",
         "at": null,
@@ -227,9 +227,9 @@
         "title": "HOLD A 30 DAY STREAK",
         "icon": "wheat",
         "state": "ACTIVE",
-        "progress": 21,
+        "progress": 22,
         "target": 30,
-        "pct": 70,
+        "pct": 73,
         "xp": 80,
         "unit": "DAYS",
         "at": null,
@@ -269,7 +269,7 @@
     "xp": 0
   },
   "population": {
-    "total": 1094,
+    "total": 1098,
     "npcs": 10,
     "houses": 12
   },
@@ -293,12 +293,12 @@
     },
     {
       "name": "TypeScript",
-      "pct": 35,
+      "pct": 34,
       "color": "#3178c6"
     },
     {
       "name": "JavaScript",
-      "pct": 20,
+      "pct": 21,
       "color": "#f1e05a"
     },
     {
@@ -333,12 +333,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-07T18:05:22Z",
+      "pushedAt": "2026-10-08T00:36:45Z",
       "pushedDays": 0,
       "createdAt": "2026-09-17T18:58:59Z",
-      "importance": 505.7,
-      "commits": 325,
-      "commits90": 325,
+      "importance": 507.2,
+      "commits": 326,
+      "commits90": 326,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 20,
@@ -501,7 +501,7 @@
       "commits90": 204,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 39,
+      "ageDays": 40,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -653,12 +653,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-07T18:31:34Z",
+      "pushedAt": "2026-10-08T00:49:23Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T10:49:10Z",
-      "importance": 175,
-      "commits": 104,
-      "commits90": 104,
+      "importance": 176.5,
+      "commits": 105,
+      "commits90": 105,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 17,
@@ -693,14 +693,14 @@
       "workflow": "failing",
       "recovered": true,
       "lastFailAt": "2026-10-07T05:12:51Z",
-      "pushedAt": "2026-10-07T13:22:48Z",
+      "pushedAt": "2026-10-07T23:05:15Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 157.5,
-      "commits": 95,
-      "commits90": 95,
+      "importance": 159,
+      "commits": 96,
+      "commits90": 96,
       "releases": 0,
-      "recoveredAt": "2026-10-07T13:22:52Z",
+      "recoveredAt": "2026-10-07T23:05:19Z",
       "ageDays": 6,
       "evolution": {
         "level": 3,
@@ -712,7 +712,7 @@
           "activity": 30,
           "recency": 20,
           "maturity": 0,
-          "depth": 14,
+          "depth": 15,
           "release": 0,
           "reputation": 2
         }
@@ -839,6 +839,46 @@
       }
     },
     {
+      "name": "Workshop-Certificate-Verify",
+      "url": "https://github.com/SudiptoKumar/Workshop-Certificate-Verify",
+      "description": "Certificate Verify",
+      "stars": 0,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "HTML",
+      "color": "#e34c26",
+      "archetype": "house",
+      "state": "building",
+      "workflow": "none",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-08T02:50:33Z",
+      "pushedDays": 0,
+      "createdAt": "2026-10-02T21:18:15Z",
+      "importance": 75.6,
+      "commits": 47,
+      "commits90": 47,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 5,
+      "evolution": {
+        "level": 3,
+        "name": "BUILDING",
+        "score": 63,
+        "toNext": 0,
+        "capped": "age",
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 0,
+          "depth": 12,
+          "release": 0,
+          "reputation": 0
+        }
+      }
+    },
+    {
       "name": "VocabularyBot",
       "url": "https://github.com/SudiptoKumar/VocabularyBot",
       "description": "Daily Vocabulary",
@@ -879,46 +919,6 @@
       }
     },
     {
-      "name": "Workshop-Certificate-Verify",
-      "url": "https://github.com/SudiptoKumar/Workshop-Certificate-Verify",
-      "description": "Certificate Verify",
-      "stars": 0,
-      "forks": 0,
-      "issues": 0,
-      "prs": 0,
-      "language": "HTML",
-      "color": "#e34c26",
-      "archetype": "house",
-      "state": "building",
-      "workflow": "none",
-      "recovered": false,
-      "lastFailAt": null,
-      "pushedAt": "2026-10-07T22:12:05Z",
-      "pushedDays": 0,
-      "createdAt": "2026-10-02T21:18:15Z",
-      "importance": 74.1,
-      "commits": 46,
-      "commits90": 46,
-      "releases": 0,
-      "recoveredAt": null,
-      "ageDays": 5,
-      "evolution": {
-        "level": 3,
-        "name": "BUILDING",
-        "score": 62,
-        "toNext": 0,
-        "capped": "age",
-        "parts": {
-          "activity": 30,
-          "recency": 20,
-          "maturity": 0,
-          "depth": 12,
-          "release": 0,
-          "reputation": 0
-        }
-      }
-    },
-    {
       "name": "DocFlow",
       "url": "https://github.com/SudiptoKumar/DocFlow",
       "description": "A browser-based Markdown editor and document conversion tool.",
@@ -934,7 +934,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-02T05:34:12Z",
-      "pushedDays": 5,
+      "pushedDays": 6,
       "createdAt": "2026-09-28T22:15:20Z",
       "importance": 67.9,
       "commits": 38,
@@ -973,27 +973,27 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-07T21:59:05Z",
+      "pushedAt": "2026-10-08T04:03:23Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T13:12:44Z",
-      "importance": 37,
-      "commits": 21,
-      "commits90": 21,
-      "releases": 3,
+      "importance": 55.2,
+      "commits": 33,
+      "commits90": 33,
+      "releases": 1,
       "recoveredAt": null,
       "ageDays": 6,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
-        "score": 70,
+        "score": 67,
         "toNext": 0,
         "capped": "age",
         "parts": {
           "activity": 30,
           "recency": 20,
           "maturity": 0,
-          "depth": 10,
-          "release": 10,
+          "depth": 11,
+          "release": 5,
           "reputation": 0
         }
       }
@@ -1200,10 +1200,6 @@
     }
   ],
   "calendar": [
-    {
-      "date": "2026-04-02",
-      "count": 0
-    },
     {
       "date": "2026-04-03",
       "count": 0
@@ -1985,6 +1981,11 @@
       "date": "2026-10-07",
       "count": 24,
       "gold": 1
+    },
+    {
+      "date": "2026-10-08",
+      "count": 16,
+      "gold": 1
     }
   ],
   "achievements": {
@@ -2183,7 +2184,7 @@
         "icon": "flame",
         "detail": "SudiptoKumar",
         "at": "2026-10-07T05:12:51Z",
-        "until": "2026-10-08T00:04:59.901Z"
+        "until": "2026-10-08T07:03:26.879Z"
       },
       {
         "id": "recovery:DailyFacts",
@@ -2195,13 +2196,13 @@
         "until": "2026-10-09T17:44:14.000Z"
       },
       {
-        "id": "release:WORKSHOP-:v1.0.2",
+        "id": "release:WORKSHOP-:v1.2.1",
         "type": "release",
         "title": "RELEASE DAY",
         "icon": "rocket",
-        "detail": "WORKSHOP- v1.0.2",
-        "at": "2026-10-07T21:59:05Z",
-        "until": "2026-10-09T21:59:05.000Z"
+        "detail": "WORKSHOP- v1.2.1",
+        "at": "2026-10-08T04:03:23Z",
+        "until": "2026-10-10T04:03:23.000Z"
       },
       {
         "id": "levelup:19",
@@ -2249,42 +2250,33 @@
         "until": "2026-10-08T13:12:44.000Z"
       },
       {
-        "id": "harvest:2026-10-07",
+        "id": "harvest:2026-10-08",
         "type": "harvest",
         "title": "HARVEST FESTIVAL",
         "icon": "wheat",
         "detail": "24 CONTRIBUTIONS",
-        "at": "2026-10-07T12:00:00.000Z",
-        "until": "2026-10-09T04:00:00.000Z"
-      },
-      {
-        "id": "nightstars:2026-10-08",
-        "type": "nightstars",
-        "title": "NIGHT OF THE STARS",
-        "icon": "star",
-        "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-07T23:04:59.901Z",
-        "until": "2026-10-08T00:04:59.901Z"
+        "at": "2026-10-08T12:00:00.000Z",
+        "until": "2026-10-10T04:00:00.000Z"
       }
     ],
     "recent": [
       {
-        "id": "nightstars:2026-10-08",
-        "type": "nightstars",
-        "title": "NIGHT OF THE STARS",
-        "icon": "star",
-        "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-07T23:04:59.901Z",
-        "until": "2026-10-08T00:04:59.901Z"
+        "id": "harvest:2026-10-08",
+        "type": "harvest",
+        "title": "HARVEST FESTIVAL",
+        "icon": "wheat",
+        "detail": "24 CONTRIBUTIONS",
+        "at": "2026-10-08T12:00:00.000Z",
+        "until": "2026-10-10T04:00:00.000Z"
       },
       {
-        "id": "release:WORKSHOP-:v1.0.2",
+        "id": "release:WORKSHOP-:v1.2.1",
         "type": "release",
         "title": "RELEASE DAY",
         "icon": "rocket",
-        "detail": "WORKSHOP- v1.0.2",
-        "at": "2026-10-07T21:59:05Z",
-        "until": "2026-10-09T21:59:05.000Z"
+        "detail": "WORKSHOP- v1.2.1",
+        "at": "2026-10-08T04:03:23Z",
+        "until": "2026-10-10T04:03:23.000Z"
       },
       {
         "id": "recovery:DailyFacts",
@@ -2296,22 +2288,13 @@
         "until": "2026-10-09T17:44:14.000Z"
       },
       {
-        "id": "harvest:2026-10-07",
-        "type": "harvest",
-        "title": "HARVEST FESTIVAL",
-        "icon": "wheat",
-        "detail": "24 CONTRIBUTIONS",
-        "at": "2026-10-07T12:00:00.000Z",
-        "until": "2026-10-09T04:00:00.000Z"
-      },
-      {
         "id": "emergency:SudiptoKumar",
         "type": "emergency",
         "title": "WORKFLOW EMERGENCY",
         "icon": "flame",
         "detail": "SudiptoKumar",
         "at": "2026-10-07T05:12:51Z",
-        "until": "2026-10-08T00:04:59.901Z"
+        "until": "2026-10-08T07:03:26.879Z"
       },
       {
         "id": "levelup:19",
@@ -2321,6 +2304,15 @@
         "detail": "LEVEL 19",
         "at": "2026-10-06T23:06:37.538Z",
         "until": "2026-10-08T23:06:37.538Z"
+      },
+      {
+        "id": "expansion:Clipboard",
+        "type": "expansion",
+        "title": "KINGDOM EXPANSION",
+        "icon": "crown",
+        "detail": "Clipboard",
+        "at": "2026-10-04T19:12:38Z",
+        "until": "2026-10-11T19:12:38.000Z"
       }
     ]
   },
@@ -2566,10 +2558,10 @@
       {
         "d": "2026-10-08",
         "l": 19,
-        "x": 10347,
+        "x": 9959,
         "s": 19,
-        "c": 733,
-        "p": 1094
+        "c": 749,
+        "p": 1098
       }
     ]
   },
@@ -2588,13 +2580,13 @@
       "dungeon": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-07T23:04:59.901Z"
+    "checkedAt": "2026-10-08T06:03:26.879Z"
   },
   "v": 2,
   "featured": [
-    "WORKSHOP-",
     "GamingNewsroomBot",
     "TelegramForwarder",
+    "BusinessNewsBot",
     "DocFlow",
     "Clipboard"
   ],
@@ -2602,7 +2594,7 @@
     "value": 77,
     "parts": {
       "progress": 22.3,
-      "consistency": 14,
+      "consistency": 14.7,
       "reliability": 19.8,
       "reach": 5.7,
       "vitality": 15,
@@ -2615,11 +2607,10 @@
       "DANGER",
       "CELEBRATION",
       "HARVEST",
-      "NIGHT",
       "WORKING",
       "ACTIVE"
     ],
-    "frame": 7,
+    "frame": 1,
     "hero": {
       "state": "working",
       "spot": "ci",
@@ -2639,10 +2630,10 @@
       "villager": 5
     },
     "light": {
-      "phase": "night",
-      "windows": true,
-      "torches": true,
-      "moon": true,
+      "phase": "day",
+      "windows": false,
+      "torches": false,
+      "moon": false,
       "accent": "danger",
       "danger": [
         "SudiptoKumar"
@@ -2654,29 +2645,29 @@
       "gold": true
     },
     "weather": {
-      "kind": "aurora",
+      "kind": "clear",
       "rain": 0,
       "lightning": false,
       "snow": false,
-      "aurora": 1,
+      "aurora": 0,
       "sunrise": false,
       "wet": false,
       "frozen": false,
       "season": "autumn"
     },
     "behavior": {
-      "home": true,
+      "home": false,
       "returning": false,
       "shelter": false,
-      "patrol": true,
-      "farmersIn": true
+      "patrol": false,
+      "farmersIn": false
     },
     "stages": {
       "fail": {
-        "SudiptoKumar": "smoke"
+        "SudiptoKumar": "fire"
       },
       "repair": {
-        "DailyFacts": "firefighter"
+        "DailyFacts": "repair"
       },
       "build": {
         "SudiptoKumar": "construction",
@@ -2700,8 +2691,7 @@
       "fireworks",
       "shrineGlow",
       "construction",
-      "harvestFestival",
-      "shootingStars"
+      "harvestFestival"
     ],
     "labels": {
       "ci": true,
@@ -2724,7 +2714,7 @@
       },
       {
         "kind": "RELEASE",
-        "text": "WORKSHOP- V1.0.2",
+        "text": "WORKSHOP- V1.2.1",
         "icon": "rocket",
         "tone": "gold"
       }
@@ -2732,5 +2722,5 @@
   },
   "worldVersion": 1,
   "renderVersion": 2,
-  "contentHash": "28535d8223cbda31"
+  "contentHash": "5f9294264d028267"
 }
