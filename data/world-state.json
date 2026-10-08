@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-08T06:03:26.879Z",
+  "generatedAt": "2026-10-08T06:38:57.807Z",
   "level": 19,
   "xp": 9959,
   "stars": 19,
@@ -31,9 +31,9 @@
     "kingdomDay": 1174
   },
   "time": {
-    "iso": "2026-10-08T06:03:26.879Z",
+    "iso": "2026-10-08T06:38:57.807Z",
     "tz": "Asia/Dhaka",
-    "hour": 12.05,
+    "hour": 12.63,
     "phase": "day",
     "season": "autumn",
     "date": "2026-10-08"
@@ -693,14 +693,14 @@
       "workflow": "failing",
       "recovered": true,
       "lastFailAt": "2026-10-07T05:12:51Z",
-      "pushedAt": "2026-10-07T23:05:15Z",
+      "pushedAt": "2026-10-08T06:03:42Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 159,
-      "commits": 96,
-      "commits90": 96,
+      "importance": 160.5,
+      "commits": 97,
+      "commits90": 97,
       "releases": 0,
-      "recoveredAt": "2026-10-07T23:05:19Z",
+      "recoveredAt": "2026-10-08T06:03:45Z",
       "ageDays": 6,
       "evolution": {
         "level": 3,
@@ -2184,7 +2184,7 @@
         "icon": "flame",
         "detail": "SudiptoKumar",
         "at": "2026-10-07T05:12:51Z",
-        "until": "2026-10-08T07:03:26.879Z"
+        "until": "2026-10-08T07:38:57.807Z"
       },
       {
         "id": "recovery:DailyFacts",
@@ -2294,7 +2294,7 @@
         "icon": "flame",
         "detail": "SudiptoKumar",
         "at": "2026-10-07T05:12:51Z",
-        "until": "2026-10-08T07:03:26.879Z"
+        "until": "2026-10-08T07:38:57.807Z"
       },
       {
         "id": "levelup:19",
@@ -2574,13 +2574,13 @@
       "districts": "ok",
       "trophies": "ok",
       "harvest": "ok",
-      "history": "ok",
+      "history": "skipped",
       "camp": "ok",
       "castle": "ok",
       "dungeon": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-08T06:03:26.879Z"
+    "checkedAt": "2026-10-08T06:38:57.807Z"
   },
   "v": 2,
   "featured": [
@@ -2722,5 +2722,5 @@
   },
   "worldVersion": 1,
   "renderVersion": 2,
-  "contentHash": "5f9294264d028267"
+  "contentHash": "partial:1819a0ff679c49c8"
 }
