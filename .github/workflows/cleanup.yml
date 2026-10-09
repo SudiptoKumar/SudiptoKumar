@@ -48,3 +48,23 @@ jobs:
             sleep 5
           done
           exit 1
+      - name: Prune old workflow runs (keep newest 30)
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          page=1
+          while :; do
+            ids=$(gh api "repos/${{ github.repository }}/actions/runs?status=completed&per_page=100&page=$page" --jq '.workflow_runs[].id')
+            count=$(echo "$ids" | grep -c .)
+            [ "$count" -eq 0 ] && break
+            del="$ids"
+            if [ "$page" -eq 1 ]; then del=$(echo "$ids" | tail -n +31); fi
+            for id in $del; do
+              gh api -X DELETE "repos/${{ github.repository }}/actions/runs/$id" --silent || true
+            done
+            [ "$count" -lt 100 ] && break
+            page=$((page+1))
+            [ "$page" -gt 20 ] && break
+          done
+          echo "Run history pruned: newest 30 completed runs kept."
