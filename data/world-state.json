@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-09T20:13:22.074Z",
+  "generatedAt": "2026-10-09T20:13:43.680Z",
   "level": 19,
   "xp": 9959,
   "stars": 19,
@@ -31,7 +31,7 @@
     "kingdomDay": 1176
   },
   "time": {
-    "iso": "2026-10-09T20:13:22.074Z",
+    "iso": "2026-10-09T20:13:43.680Z",
     "tz": "Asia/Dhaka",
     "hour": 2.22,
     "phase": "night",
@@ -653,14 +653,14 @@
       "workflow": "recovered",
       "recovered": true,
       "lastFailAt": null,
-      "pushedAt": "2026-10-09T20:09:53Z",
+      "pushedAt": "2026-10-09T20:13:33Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 190.6,
-      "commits": 117,
-      "commits90": 117,
+      "importance": 192.1,
+      "commits": 118,
+      "commits90": 118,
       "releases": 0,
-      "recoveredAt": "2026-10-09T20:06:42Z",
+      "recoveredAt": "2026-10-09T20:13:39Z",
       "ageDays": 8,
       "evolution": {
         "level": 4,
@@ -2183,8 +2183,8 @@
         "title": "WORKFLOW RECOVERED",
         "icon": "check",
         "detail": "SudiptoKumar",
-        "at": "2026-10-09T20:06:42Z",
-        "until": "2026-10-11T20:06:42.000Z"
+        "at": "2026-10-09T20:13:39Z",
+        "until": "2026-10-11T20:13:39.000Z"
       },
       {
         "id": "recovery:DailyFacts",
@@ -2246,8 +2246,8 @@
         "title": "NIGHT OF THE STARS",
         "icon": "star",
         "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-09T20:13:22.074Z",
-        "until": "2026-10-09T21:13:22.074Z"
+        "at": "2026-10-09T20:13:43.680Z",
+        "until": "2026-10-09T21:13:43.680Z"
       }
     ],
     "recent": [
@@ -2257,8 +2257,8 @@
         "title": "NIGHT OF THE STARS",
         "icon": "star",
         "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-09T20:13:22.074Z",
-        "until": "2026-10-09T21:13:22.074Z"
+        "at": "2026-10-09T20:13:43.680Z",
+        "until": "2026-10-09T21:13:43.680Z"
       },
       {
         "id": "recovery:SudiptoKumar",
@@ -2266,8 +2266,8 @@
         "title": "WORKFLOW RECOVERED",
         "icon": "check",
         "detail": "SudiptoKumar",
-        "at": "2026-10-09T20:06:42Z",
-        "until": "2026-10-11T20:06:42.000Z"
+        "at": "2026-10-09T20:13:39Z",
+        "until": "2026-10-11T20:13:39.000Z"
       },
       {
         "id": "quest:recover:2026-10-10",
@@ -2581,13 +2581,13 @@
       "districts": "ok",
       "trophies": "ok",
       "harvest": "ok",
-      "history": "ok",
+      "history": "skipped",
       "camp": "ok",
       "castle": "ok",
       "dungeon": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-09T20:13:22.074Z"
+    "checkedAt": "2026-10-09T20:13:43.680Z"
   },
   "v": 2,
   "featured": [
@@ -2723,5 +2723,5 @@
   },
   "worldVersion": 1,
   "renderVersion": 2,
-  "contentHash": "bc97db1609b4f902"
+  "contentHash": "partial:b634218b5e430e2f"
 }
