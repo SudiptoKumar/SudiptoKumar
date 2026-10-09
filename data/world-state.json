@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-09T19:50:09.154Z",
+  "generatedAt": "2026-10-09T19:50:28.297Z",
   "level": 19,
   "xp": 9959,
   "stars": 19,
@@ -31,7 +31,7 @@
     "kingdomDay": 1176
   },
   "time": {
-    "iso": "2026-10-09T19:50:09.154Z",
+    "iso": "2026-10-09T19:50:28.297Z",
     "tz": "Asia/Dhaka",
     "hour": 1.83,
     "phase": "night",
@@ -693,14 +693,14 @@
       "workflow": "recovered",
       "recovered": true,
       "lastFailAt": null,
-      "pushedAt": "2026-10-09T19:49:58Z",
+      "pushedAt": "2026-10-09T19:50:19Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 177.1,
-      "commits": 108,
-      "commits90": 108,
+      "importance": 178.6,
+      "commits": 109,
+      "commits90": 109,
       "releases": 0,
-      "recoveredAt": "2026-10-09T19:25:48Z",
+      "recoveredAt": "2026-10-09T19:50:22Z",
       "ageDays": 8,
       "evolution": {
         "level": 4,
@@ -2183,8 +2183,8 @@
         "title": "WORKFLOW RECOVERED",
         "icon": "check",
         "detail": "SudiptoKumar",
-        "at": "2026-10-09T19:25:48Z",
-        "until": "2026-10-11T19:25:48.000Z"
+        "at": "2026-10-09T19:50:22Z",
+        "until": "2026-10-11T19:50:22.000Z"
       },
       {
         "id": "recovery:DailyFacts",
@@ -2246,8 +2246,8 @@
         "title": "NIGHT OF THE STARS",
         "icon": "star",
         "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-09T19:50:09.154Z",
-        "until": "2026-10-09T20:50:09.154Z"
+        "at": "2026-10-09T19:50:28.297Z",
+        "until": "2026-10-09T20:50:28.297Z"
       }
     ],
     "recent": [
@@ -2257,8 +2257,17 @@
         "title": "NIGHT OF THE STARS",
         "icon": "star",
         "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-09T19:50:09.154Z",
-        "until": "2026-10-09T20:50:09.154Z"
+        "at": "2026-10-09T19:50:28.297Z",
+        "until": "2026-10-09T20:50:28.297Z"
+      },
+      {
+        "id": "recovery:SudiptoKumar",
+        "type": "recovery",
+        "title": "WORKFLOW RECOVERED",
+        "icon": "check",
+        "detail": "SudiptoKumar",
+        "at": "2026-10-09T19:50:22Z",
+        "until": "2026-10-11T19:50:22.000Z"
       },
       {
         "id": "quest:recover:2026-10-10",
@@ -2268,15 +2277,6 @@
         "detail": "THE CI IS FIXED",
         "at": "2026-10-09T19:50:09.154Z",
         "until": "2026-10-11T19:50:09.154Z"
-      },
-      {
-        "id": "recovery:SudiptoKumar",
-        "type": "recovery",
-        "title": "WORKFLOW RECOVERED",
-        "icon": "check",
-        "detail": "SudiptoKumar",
-        "at": "2026-10-09T19:25:48Z",
-        "until": "2026-10-11T19:25:48.000Z"
       },
       {
         "id": "recovery:DailyFacts",
@@ -2587,7 +2587,7 @@
       "dungeon": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-09T19:50:09.154Z"
+    "checkedAt": "2026-10-09T19:50:28.297Z"
   },
   "v": 2,
   "featured": [
@@ -2723,5 +2723,5 @@
   },
   "worldVersion": 1,
   "renderVersion": 2,
-  "contentHash": "c947f429f154ac6d"
+  "contentHash": "66a3eda29fa1f944"
 }
