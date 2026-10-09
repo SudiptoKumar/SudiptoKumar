@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-08T23:20:43.034Z",
+  "generatedAt": "2026-10-09T06:08:14.776Z",
   "level": 19,
   "xp": 9959,
   "stars": 19,
@@ -11,9 +11,9 @@
   "streak": 22,
   "activeRepositories": 22,
   "topLanguage": "Python",
-  "weather": "aurora",
+  "weather": "clear",
   "weatherReason": "A release or milestone is being celebrated",
-  "timeOfDay": "night",
+  "timeOfDay": "day",
   "season": "autumn",
   "meta": {
     "demo": false,
@@ -31,10 +31,10 @@
     "kingdomDay": 1175
   },
   "time": {
-    "iso": "2026-10-08T23:20:43.034Z",
+    "iso": "2026-10-09T06:08:14.776Z",
     "tz": "Asia/Dhaka",
-    "hour": 5.33,
-    "phase": "night",
+    "hour": 12.13,
+    "phase": "day",
     "season": "autumn",
     "date": "2026-10-09"
   },
@@ -49,7 +49,7 @@
     "xpNeed": 1000,
     "xpPct": 51,
     "xpNext": 10450,
-    "activity": "high",
+    "activity": "normal",
     "position": "plaza",
     "sleeping": false,
     "stats": {
@@ -61,9 +61,9 @@
     "streak": {
       "current": 22,
       "longest": 22,
-      "idleDays": 0,
-      "today": 16,
-      "yesterday": 24
+      "idleDays": 1,
+      "today": 0,
+      "yesterday": 16
     },
     "title": "KINGDOM BUILDER",
     "roles": [
@@ -108,7 +108,7 @@
       "SudiptoKumar"
     ],
     "openPRs": 0,
-    "codeKb": 179911
+    "codeKb": 180438
   },
   "xpBreakdown": {
     "base": 2730,
@@ -333,12 +333,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-08T18:08:45Z",
+      "pushedAt": "2026-10-09T00:48:13Z",
       "pushedDays": 0,
       "createdAt": "2026-09-17T18:58:59Z",
-      "importance": 510.7,
-      "commits": 328,
-      "commits90": 328,
+      "importance": 512.5,
+      "commits": 329,
+      "commits90": 329,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 21,
@@ -501,7 +501,7 @@
       "commits90": 207,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 40,
+      "ageDays": 41,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -653,12 +653,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-08T18:31:23Z",
+      "pushedAt": "2026-10-09T01:05:00Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T10:49:10Z",
-      "importance": 179.5,
-      "commits": 107,
-      "commits90": 107,
+      "importance": 181,
+      "commits": 108,
+      "commits90": 108,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 18,
@@ -693,14 +693,14 @@
       "workflow": "failing",
       "recovered": true,
       "lastFailAt": "2026-10-07T05:12:51Z",
-      "pushedAt": "2026-10-08T13:29:02Z",
+      "pushedAt": "2026-10-08T23:20:54Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 163.6,
-      "commits": 99,
-      "commits90": 99,
+      "importance": 165.1,
+      "commits": 100,
+      "commits90": 100,
       "releases": 0,
-      "recoveredAt": "2026-10-08T13:29:06Z",
+      "recoveredAt": "2026-10-08T23:20:58Z",
       "ageDays": 7,
       "evolution": {
         "level": 4,
@@ -854,7 +854,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-08T02:50:33Z",
-      "pushedDays": 0,
+      "pushedDays": 1,
       "createdAt": "2026-10-02T21:18:15Z",
       "importance": 75.6,
       "commits": 47,
@@ -934,7 +934,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-02T05:34:12Z",
-      "pushedDays": 6,
+      "pushedDays": 7,
       "createdAt": "2026-09-28T22:15:20Z",
       "importance": 67.9,
       "commits": 38,
@@ -974,7 +974,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-08T04:03:23Z",
-      "pushedDays": 0,
+      "pushedDays": 1,
       "createdAt": "2026-10-01T13:12:44Z",
       "importance": 55.2,
       "commits": 33,
@@ -1025,8 +1025,8 @@
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
-        "score": 50,
-        "toNext": 22,
+        "score": 51,
+        "toNext": 21,
         "capped": null,
         "parts": {
           "activity": 24,
@@ -1200,10 +1200,6 @@
     }
   ],
   "calendar": [
-    {
-      "date": "2026-04-03",
-      "count": 0
-    },
     {
       "date": "2026-04-04",
       "count": 0
@@ -1986,6 +1982,10 @@
       "date": "2026-10-08",
       "count": 16,
       "gold": 1
+    },
+    {
+      "date": "2026-10-09",
+      "count": 0
     }
   ],
   "achievements": {
@@ -2184,7 +2184,7 @@
         "icon": "flame",
         "detail": "SudiptoKumar",
         "at": "2026-10-07T05:12:51Z",
-        "until": "2026-10-09T00:20:43.034Z"
+        "until": "2026-10-09T07:08:14.776Z"
       },
       {
         "id": "recovery:DailyFacts",
@@ -2223,33 +2223,24 @@
         "until": "2026-10-09T21:18:15.000Z"
       },
       {
-        "id": "harvest:2026-10-08",
+        "id": "harvest:2026-10-09",
         "type": "harvest",
         "title": "HARVEST FESTIVAL",
         "icon": "wheat",
-        "detail": "24 CONTRIBUTIONS",
-        "at": "2026-10-08T12:00:00.000Z",
-        "until": "2026-10-10T04:00:00.000Z"
-      },
-      {
-        "id": "nightstars:2026-10-09",
-        "type": "nightstars",
-        "title": "NIGHT OF THE STARS",
-        "icon": "star",
-        "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-08T23:20:43.034Z",
-        "until": "2026-10-09T00:20:43.034Z"
+        "detail": "16 CONTRIBUTIONS",
+        "at": "2026-10-09T12:00:00.000Z",
+        "until": "2026-10-11T04:00:00.000Z"
       }
     ],
     "recent": [
       {
-        "id": "nightstars:2026-10-09",
-        "type": "nightstars",
-        "title": "NIGHT OF THE STARS",
-        "icon": "star",
-        "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-08T23:20:43.034Z",
-        "until": "2026-10-09T00:20:43.034Z"
+        "id": "harvest:2026-10-09",
+        "type": "harvest",
+        "title": "HARVEST FESTIVAL",
+        "icon": "wheat",
+        "detail": "16 CONTRIBUTIONS",
+        "at": "2026-10-09T12:00:00.000Z",
+        "until": "2026-10-11T04:00:00.000Z"
       },
       {
         "id": "recovery:DailyFacts",
@@ -2259,15 +2250,6 @@
         "detail": "DailyFacts",
         "at": "2026-10-08T17:48:55Z",
         "until": "2026-10-10T17:48:55.000Z"
-      },
-      {
-        "id": "harvest:2026-10-08",
-        "type": "harvest",
-        "title": "HARVEST FESTIVAL",
-        "icon": "wheat",
-        "detail": "24 CONTRIBUTIONS",
-        "at": "2026-10-08T12:00:00.000Z",
-        "until": "2026-10-10T04:00:00.000Z"
       },
       {
         "id": "release:WORKSHOP-:v1.2.1",
@@ -2285,7 +2267,7 @@
         "icon": "flame",
         "detail": "SudiptoKumar",
         "at": "2026-10-07T05:12:51Z",
-        "until": "2026-10-09T00:20:43.034Z"
+        "until": "2026-10-09T07:08:14.776Z"
       },
       {
         "id": "levelup:19",
@@ -2295,6 +2277,15 @@
         "detail": "LEVEL 19",
         "at": "2026-10-06T23:06:37.538Z",
         "until": "2026-10-08T23:06:37.538Z"
+      },
+      {
+        "id": "expansion:Clipboard",
+        "type": "expansion",
+        "title": "KINGDOM EXPANSION",
+        "icon": "crown",
+        "detail": "Clipboard",
+        "at": "2026-10-04T19:12:38Z",
+        "until": "2026-10-11T19:12:38.000Z"
       }
     ]
   },
@@ -2570,7 +2561,7 @@
       "dungeon": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-08T23:20:43.034Z"
+    "checkedAt": "2026-10-09T06:08:14.776Z"
   },
   "v": 2,
   "featured": [
@@ -2597,11 +2588,10 @@
       "DANGER",
       "CELEBRATION",
       "HARVEST",
-      "NIGHT",
       "WORKING",
       "ACTIVE"
     ],
-    "frame": 6,
+    "frame": 2,
     "hero": {
       "state": "working",
       "spot": "ci",
@@ -2621,10 +2611,10 @@
       "villager": 5
     },
     "light": {
-      "phase": "night",
-      "windows": true,
-      "torches": true,
-      "moon": true,
+      "phase": "day",
+      "windows": false,
+      "torches": false,
+      "moon": false,
       "accent": "danger",
       "danger": [
         "SudiptoKumar"
@@ -2636,29 +2626,29 @@
       "gold": true
     },
     "weather": {
-      "kind": "aurora",
+      "kind": "clear",
       "rain": 0,
       "lightning": false,
       "snow": false,
-      "aurora": 1,
+      "aurora": 0,
       "sunrise": false,
       "wet": false,
       "frozen": false,
       "season": "autumn"
     },
     "behavior": {
-      "home": true,
+      "home": false,
       "returning": false,
       "shelter": false,
-      "patrol": true,
-      "farmersIn": true
+      "patrol": false,
+      "farmersIn": false
     },
     "stages": {
       "fail": {
         "SudiptoKumar": "fire"
       },
       "repair": {
-        "DailyFacts": "firefighter"
+        "DailyFacts": "repair"
       },
       "build": {
         "Workshop-Certificate-Verify": "construction",
@@ -2676,11 +2666,8 @@
       "sparkles",
       "castleLights",
       "banner",
-      "confetti",
-      "fireworks",
       "construction",
-      "harvestFestival",
-      "shootingStars"
+      "harvestFestival"
     ],
     "labels": {
       "ci": true,
@@ -2711,5 +2698,5 @@
   },
   "worldVersion": 1,
   "renderVersion": 2,
-  "contentHash": "4c8f1601f06fdad7"
+  "contentHash": "45573aef5157c078"
 }
