@@ -25,9 +25,11 @@
     "stars:10": {
       "at": "2026-10-06T23:06:37.538Z",
       "baseline": true
+    },
+    "recover:2026-10-10": {
+      "at": "2026-10-09T19:50:09.154Z",
+      "xp": 0
     }
   },
-  "active": [
-    "recover:open"
-  ]
+  "active": []
 }

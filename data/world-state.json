@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-09T19:42:51.106Z",
+  "generatedAt": "2026-10-09T19:50:09.154Z",
   "level": 19,
   "xp": 9959,
   "stars": 19,
@@ -31,9 +31,9 @@
     "kingdomDay": 1176
   },
   "time": {
-    "iso": "2026-10-09T19:42:51.106Z",
+    "iso": "2026-10-09T19:50:09.154Z",
     "tz": "Asia/Dhaka",
-    "hour": 1.7,
+    "hour": 1.83,
     "phase": "night",
     "season": "autumn",
     "date": "2026-10-10"
@@ -86,7 +86,7 @@
     ],
     "state": "working",
     "spot": "ci",
-    "status": "FIXING THE CI"
+    "status": "REPAIRING THE CI"
   },
   "totals": {
     "stars": 19,
@@ -104,9 +104,7 @@
     "followers": 0,
     "yearContrib": 773,
     "workflowHealth": 99,
-    "failingRepos": [
-      "SudiptoKumar"
-    ],
+    "failingRepos": [],
     "openPRs": 0,
     "codeKb": 176035
   },
@@ -125,17 +123,17 @@
   "quests": {
     "list": [
       {
-        "title": "FIX THE FAILING CI",
-        "progress": 99,
-        "target": 100,
-        "pct": 99,
-        "id": "recover:open",
+        "id": "recover:2026-10-10",
         "track": "recover",
+        "title": "THE CI IS FIXED",
         "icon": "flame",
-        "state": "ACTIVE",
+        "state": "COMPLETE",
+        "progress": 1,
+        "target": 1,
+        "pct": 100,
         "xp": 0,
-        "at": null,
-        "isNew": false
+        "at": "2026-10-09T19:50:09.154Z",
+        "isNew": true
       },
       {
         "id": "streak:30",
@@ -209,19 +207,6 @@
     ],
     "rows": [
       {
-        "title": "FIX THE FAILING CI",
-        "progress": 99,
-        "target": 100,
-        "pct": 99,
-        "id": "recover:open",
-        "track": "recover",
-        "icon": "flame",
-        "state": "ACTIVE",
-        "xp": 0,
-        "at": null,
-        "isNew": false
-      },
-      {
         "id": "streak:30",
         "track": "streak",
         "title": "HOLD A 30 DAY STREAK",
@@ -236,35 +221,50 @@
         "isNew": false
       },
       {
-        "id": "release:month",
-        "track": "release",
-        "title": "SHIP A RELEASE",
-        "icon": "rocket",
+        "id": "stars:25",
+        "track": "stars",
+        "title": "EARN 25 STARS",
+        "icon": "star",
+        "state": "ACTIVE",
+        "progress": 19,
+        "target": 25,
+        "pct": 76,
+        "xp": 80,
+        "unit": "STARS",
+        "at": null,
+        "isNew": false
+      },
+      {
+        "id": "recover:2026-10-10",
+        "track": "recover",
+        "title": "THE CI IS FIXED",
+        "icon": "flame",
         "state": "COMPLETE",
         "progress": 1,
         "target": 1,
         "pct": 100,
         "xp": 0,
-        "at": null,
+        "at": "2026-10-09T19:50:09.154Z",
         "isNew": true
       }
     ],
     "current": {
-      "title": "FIX THE FAILING CI",
-      "progress": 99,
-      "target": 100,
-      "pct": 99,
-      "id": "recover:open",
-      "track": "recover",
-      "icon": "flame",
+      "id": "streak:30",
+      "track": "streak",
+      "title": "HOLD A 30 DAY STREAK",
+      "icon": "wheat",
       "state": "ACTIVE",
-      "xp": 0,
+      "progress": 22,
+      "target": 30,
+      "pct": 73,
+      "xp": 80,
+      "unit": "DAYS",
       "at": null,
       "isNew": false
     },
     "counts": {
-      "active": 3,
-      "complete": 6
+      "active": 2,
+      "complete": 7
     },
     "xp": 0
   },
@@ -613,12 +613,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-09T09:10:01Z",
+      "pushedAt": "2026-10-09T19:44:18Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T16:56:23Z",
-      "importance": 206.9,
-      "commits": 129,
-      "commits90": 129,
+      "importance": 208.4,
+      "commits": 130,
+      "commits90": 130,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 19,
@@ -689,24 +689,24 @@
       "language": "JavaScript",
       "color": "#f1e05a",
       "archetype": "house",
-      "state": "failing",
-      "workflow": "failing",
+      "state": "building",
+      "workflow": "recovered",
       "recovered": true,
-      "lastFailAt": "2026-10-07T05:12:51Z",
-      "pushedAt": "2026-10-09T19:41:30Z",
+      "lastFailAt": null,
+      "pushedAt": "2026-10-09T19:49:58Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 174.1,
-      "commits": 106,
-      "commits90": 106,
+      "importance": 177.1,
+      "commits": 108,
+      "commits90": 108,
       "releases": 0,
       "recoveredAt": "2026-10-09T19:25:48Z",
       "ageDays": 8,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
-        "score": 52,
-        "toNext": 20,
+        "score": 67,
+        "toNext": 5,
         "capped": null,
         "parts": {
           "activity": 30,
@@ -2178,13 +2178,13 @@
   "events": {
     "active": [
       {
-        "id": "emergency:SudiptoKumar",
-        "type": "emergency",
-        "title": "WORKFLOW EMERGENCY",
-        "icon": "flame",
+        "id": "recovery:SudiptoKumar",
+        "type": "recovery",
+        "title": "WORKFLOW RECOVERED",
+        "icon": "check",
         "detail": "SudiptoKumar",
-        "at": "2026-10-07T05:12:51Z",
-        "until": "2026-10-09T20:42:51.106Z"
+        "at": "2026-10-09T19:25:48Z",
+        "until": "2026-10-11T19:25:48.000Z"
       },
       {
         "id": "recovery:DailyFacts",
@@ -2203,6 +2203,15 @@
         "detail": "WORKSHOP- v1.2.1",
         "at": "2026-10-08T04:03:23Z",
         "until": "2026-10-10T04:03:23.000Z"
+      },
+      {
+        "id": "quest:recover:2026-10-10",
+        "type": "milestone",
+        "title": "QUEST COMPLETE",
+        "icon": "trophy",
+        "detail": "THE CI IS FIXED",
+        "at": "2026-10-09T19:50:09.154Z",
+        "until": "2026-10-11T19:50:09.154Z"
       },
       {
         "id": "expansion:Clipboard",
@@ -2237,8 +2246,8 @@
         "title": "NIGHT OF THE STARS",
         "icon": "star",
         "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-09T19:42:51.106Z",
-        "until": "2026-10-09T20:42:51.106Z"
+        "at": "2026-10-09T19:50:09.154Z",
+        "until": "2026-10-09T20:50:09.154Z"
       }
     ],
     "recent": [
@@ -2248,8 +2257,26 @@
         "title": "NIGHT OF THE STARS",
         "icon": "star",
         "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-09T19:42:51.106Z",
-        "until": "2026-10-09T20:42:51.106Z"
+        "at": "2026-10-09T19:50:09.154Z",
+        "until": "2026-10-09T20:50:09.154Z"
+      },
+      {
+        "id": "quest:recover:2026-10-10",
+        "type": "milestone",
+        "title": "QUEST COMPLETE",
+        "icon": "trophy",
+        "detail": "THE CI IS FIXED",
+        "at": "2026-10-09T19:50:09.154Z",
+        "until": "2026-10-11T19:50:09.154Z"
+      },
+      {
+        "id": "recovery:SudiptoKumar",
+        "type": "recovery",
+        "title": "WORKFLOW RECOVERED",
+        "icon": "check",
+        "detail": "SudiptoKumar",
+        "at": "2026-10-09T19:25:48Z",
+        "until": "2026-10-11T19:25:48.000Z"
       },
       {
         "id": "recovery:DailyFacts",
@@ -2277,24 +2304,6 @@
         "detail": "WORKSHOP- v1.2.1",
         "at": "2026-10-08T04:03:23Z",
         "until": "2026-10-10T04:03:23.000Z"
-      },
-      {
-        "id": "emergency:SudiptoKumar",
-        "type": "emergency",
-        "title": "WORKFLOW EMERGENCY",
-        "icon": "flame",
-        "detail": "SudiptoKumar",
-        "at": "2026-10-07T05:12:51Z",
-        "until": "2026-10-09T20:42:51.106Z"
-      },
-      {
-        "id": "levelup:19",
-        "type": "milestone",
-        "title": "MILESTONE UNLOCKED",
-        "icon": "trophy",
-        "detail": "LEVEL 19",
-        "at": "2026-10-06T23:06:37.538Z",
-        "until": "2026-10-08T23:06:37.538Z"
       }
     ]
   },
@@ -2572,13 +2581,13 @@
       "districts": "ok",
       "trophies": "ok",
       "harvest": "ok",
-      "history": "skipped",
+      "history": "ok",
       "camp": "ok",
       "castle": "ok",
       "dungeon": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-09T19:42:51.106Z"
+    "checkedAt": "2026-10-09T19:50:09.154Z"
   },
   "v": 2,
   "featured": [
@@ -2600,21 +2609,21 @@
     }
   },
   "scene": {
-    "mode": "DANGER",
+    "mode": "RECOVERY",
     "modes": [
-      "DANGER",
+      "RECOVERY",
       "CELEBRATION",
       "HARVEST",
       "NIGHT",
       "WORKING",
       "ACTIVE"
     ],
-    "frame": 3,
+    "frame": 5,
     "hero": {
       "state": "working",
       "spot": "ci",
-      "why": "emergency",
-      "label": "FIXING THE CI",
+      "why": "recovery",
+      "label": "REPAIRING THE CI",
       "umbrella": false
     },
     "npcs": {
@@ -2633,12 +2642,11 @@
       "windows": true,
       "torches": true,
       "moon": true,
-      "accent": "danger",
-      "danger": [
-        "SudiptoKumar"
-      ],
+      "accent": "repair",
+      "danger": [],
       "gate": false,
       "repair": [
+        "SudiptoKumar",
         "DailyFacts"
       ],
       "gold": true
@@ -2662,10 +2670,9 @@
       "farmersIn": true
     },
     "stages": {
-      "fail": {
-        "SudiptoKumar": "fire"
-      },
+      "fail": {},
       "repair": {
+        "SudiptoKumar": "firefighter",
         "DailyFacts": "firefighter"
       },
       "build": {
@@ -2676,31 +2683,24 @@
       "raid": "idle"
     },
     "fx": [
-      "alarm",
-      "smoke",
-      "fire",
       "firefighter",
       "repair",
       "sparkles",
       "castleLights",
       "banner",
+      "confetti",
+      "shrineGlow",
       "construction",
       "harvestFestival",
       "shootingStars"
     ],
     "labels": {
-      "ci": true,
+      "ci": false,
       "issues": 0,
       "raid": false,
-      "event": "emergency"
+      "event": null
     },
     "hud": [
-      {
-        "kind": "ALERT",
-        "text": "SUDIPTOKUMAR CI DOWN",
-        "icon": "flame",
-        "tone": "danger"
-      },
       {
         "kind": "REPAIR",
         "text": "CI IS FIXED",
@@ -2712,10 +2712,16 @@
         "text": "WORKSHOP- V1.2.1",
         "icon": "rocket",
         "tone": "gold"
+      },
+      {
+        "kind": "QUEST",
+        "text": "THE CI IS FIXED",
+        "icon": "trophy",
+        "tone": "gold"
       }
     ]
   },
   "worldVersion": 1,
   "renderVersion": 2,
-  "contentHash": "partial:bbe68406f9cdfa16"
+  "contentHash": "c947f429f154ac6d"
 }
