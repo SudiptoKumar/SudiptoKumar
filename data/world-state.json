@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-09T19:27:24.983Z",
+  "generatedAt": "2026-10-09T19:41:19.422Z",
   "level": 19,
   "xp": 9959,
   "stars": 19,
@@ -31,9 +31,9 @@
     "kingdomDay": 1176
   },
   "time": {
-    "iso": "2026-10-09T19:27:24.983Z",
+    "iso": "2026-10-09T19:41:19.422Z",
     "tz": "Asia/Dhaka",
-    "hour": 1.45,
+    "hour": 1.68,
     "phase": "night",
     "season": "autumn",
     "date": "2026-10-10"
@@ -693,12 +693,12 @@
       "workflow": "failing",
       "recovered": true,
       "lastFailAt": "2026-10-07T05:12:51Z",
-      "pushedAt": "2026-10-09T19:25:45Z",
+      "pushedAt": "2026-10-09T19:27:39Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 171.1,
-      "commits": 104,
-      "commits90": 104,
+      "importance": 172.6,
+      "commits": 105,
+      "commits90": 105,
       "releases": 0,
       "recoveredAt": "2026-10-09T19:25:48Z",
       "ageDays": 8,
@@ -2184,7 +2184,7 @@
         "icon": "flame",
         "detail": "SudiptoKumar",
         "at": "2026-10-07T05:12:51Z",
-        "until": "2026-10-09T20:27:24.983Z"
+        "until": "2026-10-09T20:41:19.422Z"
       },
       {
         "id": "recovery:DailyFacts",
@@ -2237,8 +2237,8 @@
         "title": "NIGHT OF THE STARS",
         "icon": "star",
         "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-09T19:27:24.983Z",
-        "until": "2026-10-09T20:27:24.983Z"
+        "at": "2026-10-09T19:41:19.422Z",
+        "until": "2026-10-09T20:41:19.422Z"
       }
     ],
     "recent": [
@@ -2248,8 +2248,8 @@
         "title": "NIGHT OF THE STARS",
         "icon": "star",
         "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-09T19:27:24.983Z",
-        "until": "2026-10-09T20:27:24.983Z"
+        "at": "2026-10-09T19:41:19.422Z",
+        "until": "2026-10-09T20:41:19.422Z"
       },
       {
         "id": "recovery:DailyFacts",
@@ -2285,7 +2285,7 @@
         "icon": "flame",
         "detail": "SudiptoKumar",
         "at": "2026-10-07T05:12:51Z",
-        "until": "2026-10-09T20:27:24.983Z"
+        "until": "2026-10-09T20:41:19.422Z"
       },
       {
         "id": "levelup:19",
@@ -2572,13 +2572,13 @@
       "districts": "ok",
       "trophies": "ok",
       "harvest": "ok",
-      "history": "ok",
+      "history": "skipped",
       "camp": "ok",
       "castle": "ok",
       "dungeon": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-09T19:27:24.983Z"
+    "checkedAt": "2026-10-09T19:41:19.422Z"
   },
   "v": 2,
   "featured": [
@@ -2717,5 +2717,5 @@
   },
   "worldVersion": 1,
   "renderVersion": 2,
-  "contentHash": "da9c8a8b4c39fb9f"
+  "contentHash": "partial:d2827422c7870568"
 }
