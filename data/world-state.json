@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-09T20:14:56.960Z",
+  "generatedAt": "2026-10-09T20:15:33.064Z",
   "level": 19,
   "xp": 9959,
   "stars": 19,
@@ -31,9 +31,9 @@
     "kingdomDay": 1176
   },
   "time": {
-    "iso": "2026-10-09T20:14:56.960Z",
+    "iso": "2026-10-09T20:15:33.064Z",
     "tz": "Asia/Dhaka",
-    "hour": 2.23,
+    "hour": 2.25,
     "phase": "night",
     "season": "autumn",
     "date": "2026-10-10"
@@ -653,12 +653,12 @@
       "workflow": "recovered",
       "recovered": true,
       "lastFailAt": null,
-      "pushedAt": "2026-10-09T20:13:54Z",
+      "pushedAt": "2026-10-09T20:15:07Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 193.6,
-      "commits": 119,
-      "commits90": 119,
+      "importance": 195.1,
+      "commits": 120,
+      "commits90": 120,
       "releases": 0,
       "recoveredAt": "2026-10-09T20:13:39Z",
       "ageDays": 8,
@@ -2246,8 +2246,8 @@
         "title": "NIGHT OF THE STARS",
         "icon": "star",
         "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-09T20:14:56.960Z",
-        "until": "2026-10-09T21:14:56.960Z"
+        "at": "2026-10-09T20:15:33.064Z",
+        "until": "2026-10-09T21:15:33.064Z"
       }
     ],
     "recent": [
@@ -2257,8 +2257,8 @@
         "title": "NIGHT OF THE STARS",
         "icon": "star",
         "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-09T20:14:56.960Z",
-        "until": "2026-10-09T21:14:56.960Z"
+        "at": "2026-10-09T20:15:33.064Z",
+        "until": "2026-10-09T21:15:33.064Z"
       },
       {
         "id": "recovery:SudiptoKumar",
@@ -2581,13 +2581,13 @@
       "districts": "ok",
       "trophies": "ok",
       "harvest": "ok",
-      "history": "skipped",
+      "history": "ok",
       "camp": "ok",
       "castle": "ok",
       "dungeon": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-09T20:14:56.960Z"
+    "checkedAt": "2026-10-09T20:15:33.064Z"
   },
   "v": 2,
   "featured": [
@@ -2723,5 +2723,5 @@
   },
   "worldVersion": 1,
   "renderVersion": 2,
-  "contentHash": "partial:22ddfa5fcf0c5294"
+  "contentHash": "9e47d34d5f99c218"
 }
