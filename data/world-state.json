@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-09T20:05:47.722Z",
+  "generatedAt": "2026-10-09T20:13:22.074Z",
   "level": 19,
   "xp": 9959,
   "stars": 19,
@@ -31,9 +31,9 @@
     "kingdomDay": 1176
   },
   "time": {
-    "iso": "2026-10-09T20:05:47.722Z",
+    "iso": "2026-10-09T20:13:22.074Z",
     "tz": "Asia/Dhaka",
-    "hour": 2.08,
+    "hour": 2.22,
     "phase": "night",
     "season": "autumn",
     "date": "2026-10-10"
@@ -573,12 +573,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-09T15:07:07Z",
+      "pushedAt": "2026-10-09T20:10:19Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T16:33:20Z",
-      "importance": 266.5,
-      "commits": 165,
-      "commits90": 165,
+      "importance": 268,
+      "commits": 166,
+      "commits90": 166,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 41,
@@ -639,6 +639,46 @@
       }
     },
     {
+      "name": "SudiptoKumar",
+      "url": "https://github.com/SudiptoKumar/SudiptoKumar",
+      "description": "Hello, Dev!",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "JavaScript",
+      "color": "#f1e05a",
+      "archetype": "house",
+      "state": "building",
+      "workflow": "recovered",
+      "recovered": true,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-09T20:09:53Z",
+      "pushedDays": 0,
+      "createdAt": "2026-10-01T15:17:58Z",
+      "importance": 190.6,
+      "commits": 117,
+      "commits90": 117,
+      "releases": 0,
+      "recoveredAt": "2026-10-09T20:06:42Z",
+      "ageDays": 8,
+      "evolution": {
+        "level": 4,
+        "name": "SPECIALIZED",
+        "score": 67,
+        "toNext": 5,
+        "capped": null,
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 0,
+          "depth": 15,
+          "release": 0,
+          "reputation": 2
+        }
+      }
+    },
+    {
       "name": "ComicsNewsroom",
       "url": "https://github.com/SudiptoKumar/ComicsNewsroom",
       "description": "Comic and Anime News 🗞️",
@@ -672,46 +712,6 @@
           "activity": 30,
           "recency": 20,
           "maturity": 1,
-          "depth": 15,
-          "release": 0,
-          "reputation": 2
-        }
-      }
-    },
-    {
-      "name": "SudiptoKumar",
-      "url": "https://github.com/SudiptoKumar/SudiptoKumar",
-      "description": "Hello, Dev!",
-      "stars": 1,
-      "forks": 0,
-      "issues": 0,
-      "prs": 0,
-      "language": "JavaScript",
-      "color": "#f1e05a",
-      "archetype": "house",
-      "state": "building",
-      "workflow": "recovered",
-      "recovered": true,
-      "lastFailAt": null,
-      "pushedAt": "2026-10-09T20:05:37Z",
-      "pushedDays": 0,
-      "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 181.6,
-      "commits": 111,
-      "commits90": 111,
-      "releases": 0,
-      "recoveredAt": "2026-10-09T19:50:43Z",
-      "ageDays": 8,
-      "evolution": {
-        "level": 4,
-        "name": "SPECIALIZED",
-        "score": 67,
-        "toNext": 5,
-        "capped": null,
-        "parts": {
-          "activity": 30,
-          "recency": 20,
-          "maturity": 0,
           "depth": 15,
           "release": 0,
           "reputation": 2
@@ -2183,8 +2183,8 @@
         "title": "WORKFLOW RECOVERED",
         "icon": "check",
         "detail": "SudiptoKumar",
-        "at": "2026-10-09T19:50:43Z",
-        "until": "2026-10-11T19:50:43.000Z"
+        "at": "2026-10-09T20:06:42Z",
+        "until": "2026-10-11T20:06:42.000Z"
       },
       {
         "id": "recovery:DailyFacts",
@@ -2246,8 +2246,8 @@
         "title": "NIGHT OF THE STARS",
         "icon": "star",
         "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-09T20:05:47.722Z",
-        "until": "2026-10-09T21:05:47.722Z"
+        "at": "2026-10-09T20:13:22.074Z",
+        "until": "2026-10-09T21:13:22.074Z"
       }
     ],
     "recent": [
@@ -2257,8 +2257,8 @@
         "title": "NIGHT OF THE STARS",
         "icon": "star",
         "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-09T20:05:47.722Z",
-        "until": "2026-10-09T21:05:47.722Z"
+        "at": "2026-10-09T20:13:22.074Z",
+        "until": "2026-10-09T21:13:22.074Z"
       },
       {
         "id": "recovery:SudiptoKumar",
@@ -2266,8 +2266,8 @@
         "title": "WORKFLOW RECOVERED",
         "icon": "check",
         "detail": "SudiptoKumar",
-        "at": "2026-10-09T19:50:43Z",
-        "until": "2026-10-11T19:50:43.000Z"
+        "at": "2026-10-09T20:06:42Z",
+        "until": "2026-10-11T20:06:42.000Z"
       },
       {
         "id": "quest:recover:2026-10-10",
@@ -2587,7 +2587,7 @@
       "dungeon": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-09T20:05:47.722Z"
+    "checkedAt": "2026-10-09T20:13:22.074Z"
   },
   "v": 2,
   "featured": [
@@ -2723,5 +2723,5 @@
   },
   "worldVersion": 1,
   "renderVersion": 2,
-  "contentHash": "7d5a849c90d80b53"
+  "contentHash": "bc97db1609b4f902"
 }
