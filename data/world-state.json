@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-09T20:15:33.064Z",
+  "generatedAt": "2026-10-09T22:38:07.888Z",
   "level": 19,
   "xp": 9959,
   "stars": 19,
@@ -31,9 +31,9 @@
     "kingdomDay": 1176
   },
   "time": {
-    "iso": "2026-10-09T20:15:33.064Z",
+    "iso": "2026-10-09T22:38:07.888Z",
     "tz": "Asia/Dhaka",
-    "hour": 2.25,
+    "hour": 4.63,
     "phase": "night",
     "season": "autumn",
     "date": "2026-10-10"
@@ -106,7 +106,7 @@
     "workflowHealth": 100,
     "failingRepos": [],
     "openPRs": 0,
-    "codeKb": 176035
+    "codeKb": 178429
   },
   "xpBreakdown": {
     "base": 2730,
@@ -333,12 +333,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-09T17:42:16Z",
+      "pushedAt": "2026-10-09T21:59:48Z",
       "pushedDays": 0,
       "createdAt": "2026-09-17T18:58:59Z",
-      "importance": 515.5,
-      "commits": 331,
-      "commits90": 331,
+      "importance": 517,
+      "commits": 332,
+      "commits90": 332,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 22,
@@ -373,12 +373,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-09T15:11:21Z",
+      "pushedAt": "2026-10-09T20:19:57Z",
       "pushedDays": 0,
       "createdAt": "2026-08-28T14:21:15Z",
-      "importance": 428.5,
-      "commits": 273,
-      "commits90": 273,
+      "importance": 430,
+      "commits": 274,
+      "commits90": 274,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 42,
@@ -413,12 +413,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-09T16:30:42Z",
+      "pushedAt": "2026-10-09T21:50:43Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T17:29:46Z",
-      "importance": 361.3,
-      "commits": 229,
-      "commits90": 229,
+      "importance": 362.8,
+      "commits": 230,
+      "commits90": 230,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 41,
@@ -453,12 +453,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-09T15:20:49Z",
+      "pushedAt": "2026-10-09T20:52:37Z",
       "pushedDays": 0,
       "createdAt": "2026-08-27T10:01:41Z",
-      "importance": 338.5,
-      "commits": 213,
-      "commits90": 213,
+      "importance": 340,
+      "commits": 214,
+      "commits90": 214,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 43,
@@ -493,12 +493,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-09T15:24:51Z",
+      "pushedAt": "2026-10-09T20:43:52Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T04:24:35Z",
-      "importance": 332.5,
-      "commits": 209,
-      "commits90": 209,
+      "importance": 334,
+      "commits": 210,
+      "commits90": 210,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 41,
@@ -533,12 +533,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-09T15:19:58Z",
+      "pushedAt": "2026-10-09T20:17:34Z",
       "pushedDays": 0,
       "createdAt": "2026-08-28T19:08:24Z",
-      "importance": 320.5,
-      "commits": 201,
-      "commits90": 201,
+      "importance": 322,
+      "commits": 202,
+      "commits90": 202,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 42,
@@ -616,7 +616,7 @@
       "pushedAt": "2026-10-09T19:44:18Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T16:56:23Z",
-      "importance": 208.4,
+      "importance": 208.5,
       "commits": 130,
       "commits90": 130,
       "releases": 0,
@@ -650,17 +650,17 @@
       "color": "#f1e05a",
       "archetype": "house",
       "state": "building",
-      "workflow": "recovered",
-      "recovered": true,
+      "workflow": "passing",
+      "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-09T20:15:07Z",
+      "pushedAt": "2026-10-09T20:15:45Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 195.1,
-      "commits": 120,
-      "commits90": 120,
+      "importance": 196.8,
+      "commits": 121,
+      "commits90": 121,
       "releases": 0,
-      "recoveredAt": "2026-10-09T20:13:39Z",
+      "recoveredAt": null,
       "ageDays": 8,
       "evolution": {
         "level": 4,
@@ -693,12 +693,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-09T18:03:11Z",
+      "pushedAt": "2026-10-09T22:29:02Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T10:49:10Z",
-      "importance": 184,
-      "commits": 110,
-      "commits90": 110,
+      "importance": 185.5,
+      "commits": 111,
+      "commits90": 111,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 19,
@@ -861,13 +861,13 @@
       "commits90": 47,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 6,
+      "ageDays": 7,
       "evolution": {
-        "level": 3,
-        "name": "BUILDING",
+        "level": 4,
+        "name": "SPECIALIZED",
         "score": 63,
-        "toNext": 0,
-        "capped": "age",
+        "toNext": 9,
+        "capped": null,
         "parts": {
           "activity": 30,
           "recency": 20,
@@ -941,7 +941,7 @@
       "commits90": 38,
       "releases": 2,
       "recoveredAt": null,
-      "ageDays": 10,
+      "ageDays": 11,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -1021,7 +1021,7 @@
       "commits90": 16,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 10,
+      "ageDays": 11,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -1054,7 +1054,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-04T21:07:31Z",
-      "pushedDays": 4,
+      "pushedDays": 5,
       "createdAt": "2026-10-04T19:12:38Z",
       "importance": 32.2,
       "commits": 18,
@@ -1101,7 +1101,7 @@
       "commits90": 11,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 10,
+      "ageDays": 11,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1141,7 +1141,7 @@
       "commits90": 6,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 10,
+      "ageDays": 11,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1174,14 +1174,14 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-28T22:13:31Z",
-      "pushedDays": 10,
+      "pushedDays": 11,
       "createdAt": "2026-09-28T22:11:39Z",
       "importance": 15.6,
       "commits": 4,
       "commits90": 4,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 10,
+      "ageDays": 11,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -2178,15 +2178,6 @@
   "events": {
     "active": [
       {
-        "id": "recovery:SudiptoKumar",
-        "type": "recovery",
-        "title": "WORKFLOW RECOVERED",
-        "icon": "check",
-        "detail": "SudiptoKumar",
-        "at": "2026-10-09T20:13:39Z",
-        "until": "2026-10-11T20:13:39.000Z"
-      },
-      {
         "id": "recovery:DailyFacts",
         "type": "recovery",
         "title": "WORKFLOW RECOVERED",
@@ -2223,15 +2214,6 @@
         "until": "2026-10-11T19:12:38.000Z"
       },
       {
-        "id": "expansion:Workshop-Certificate-Verify",
-        "type": "expansion",
-        "title": "KINGDOM EXPANSION",
-        "icon": "crown",
-        "detail": "Workshop-Certificate-Verify",
-        "at": "2026-10-02T21:18:15Z",
-        "until": "2026-10-09T21:18:15.000Z"
-      },
-      {
         "id": "harvest:2026-10-09",
         "type": "harvest",
         "title": "HARVEST FESTIVAL",
@@ -2246,8 +2228,8 @@
         "title": "NIGHT OF THE STARS",
         "icon": "star",
         "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-09T20:15:33.064Z",
-        "until": "2026-10-09T21:15:33.064Z"
+        "at": "2026-10-09T22:38:07.888Z",
+        "until": "2026-10-09T23:38:07.888Z"
       }
     ],
     "recent": [
@@ -2257,17 +2239,8 @@
         "title": "NIGHT OF THE STARS",
         "icon": "star",
         "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-09T20:15:33.064Z",
-        "until": "2026-10-09T21:15:33.064Z"
-      },
-      {
-        "id": "recovery:SudiptoKumar",
-        "type": "recovery",
-        "title": "WORKFLOW RECOVERED",
-        "icon": "check",
-        "detail": "SudiptoKumar",
-        "at": "2026-10-09T20:13:39Z",
-        "until": "2026-10-11T20:13:39.000Z"
+        "at": "2026-10-09T22:38:07.888Z",
+        "until": "2026-10-09T23:38:07.888Z"
       },
       {
         "id": "quest:recover:2026-10-10",
@@ -2304,6 +2277,15 @@
         "detail": "WORKSHOP- v1.2.1",
         "at": "2026-10-08T04:03:23Z",
         "until": "2026-10-10T04:03:23.000Z"
+      },
+      {
+        "id": "levelup:19",
+        "type": "milestone",
+        "title": "MILESTONE UNLOCKED",
+        "icon": "trophy",
+        "detail": "LEVEL 19",
+        "at": "2026-10-06T23:06:37.538Z",
+        "until": "2026-10-08T23:06:37.538Z"
       }
     ]
   },
@@ -2587,7 +2569,7 @@
       "dungeon": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-09T20:15:33.064Z"
+    "checkedAt": "2026-10-09T22:38:07.888Z"
   },
   "v": 2,
   "featured": [
@@ -2618,7 +2600,7 @@
       "WORKING",
       "ACTIVE"
     ],
-    "frame": 5,
+    "frame": 0,
     "hero": {
       "state": "working",
       "spot": "ci",
@@ -2646,7 +2628,6 @@
       "danger": [],
       "gate": false,
       "repair": [
-        "SudiptoKumar",
         "DailyFacts"
       ],
       "gold": true
@@ -2672,11 +2653,9 @@
     "stages": {
       "fail": {},
       "repair": {
-        "SudiptoKumar": "firefighter",
         "DailyFacts": "firefighter"
       },
       "build": {
-        "Workshop-Certificate-Verify": "construction",
         "Clipboard": "construction"
       },
       "visitor": null,
@@ -2723,5 +2702,5 @@
   },
   "worldVersion": 1,
   "renderVersion": 2,
-  "contentHash": "9e47d34d5f99c218"
+  "contentHash": "b97700f9496a13d1"
 }
