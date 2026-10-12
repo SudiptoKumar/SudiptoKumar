@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-11T21:57:59.730Z",
+  "generatedAt": "2026-10-12T05:57:19.543Z",
   "level": 22,
   "xp": 12989,
   "stars": 20,
@@ -11,9 +11,9 @@
   "streak": 2,
   "activeRepositories": 22,
   "topLanguage": "Python",
-  "weather": "aurora",
+  "weather": "clear",
   "weatherReason": "A release or milestone is being celebrated",
-  "timeOfDay": "night",
+  "timeOfDay": "day",
   "season": "autumn",
   "meta": {
     "demo": false,
@@ -31,10 +31,10 @@
     "kingdomDay": 1178
   },
   "time": {
-    "iso": "2026-10-11T21:57:59.730Z",
+    "iso": "2026-10-12T05:57:19.543Z",
     "tz": "Asia/Dhaka",
-    "hour": 3.95,
-    "phase": "night",
+    "hour": 11.95,
+    "phase": "day",
     "season": "autumn",
     "date": "2026-10-12"
   },
@@ -49,8 +49,8 @@
     "xpNeed": 1150,
     "xpPct": 34,
     "xpNext": 13750,
-    "activity": "high",
-    "position": "castle",
+    "activity": "normal",
+    "position": "farm",
     "sleeping": false,
     "stats": {
       "codePower": 99,
@@ -61,9 +61,9 @@
     "streak": {
       "current": 2,
       "longest": 22,
-      "idleDays": 0,
-      "today": 25,
-      "yesterday": 36
+      "idleDays": 1,
+      "today": 0,
+      "yesterday": 25
     },
     "title": "KINGDOM BUILDER",
     "roles": [
@@ -106,7 +106,7 @@
     "workflowHealth": 100,
     "failingRepos": [],
     "openPRs": 0,
-    "codeKb": 193630
+    "codeKb": 194315
   },
   "xpBreakdown": {
     "base": 2910,
@@ -308,12 +308,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-11T21:13:25Z",
+      "pushedAt": "2026-10-12T02:52:18Z",
       "pushedDays": 0,
       "createdAt": "2026-09-17T18:58:59Z",
-      "importance": 530.5,
-      "commits": 341,
-      "commits90": 341,
+      "importance": 532,
+      "commits": 342,
+      "commits90": 342,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 24,
@@ -476,7 +476,7 @@
       "commits90": 216,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 43,
+      "ageDays": 44,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -628,12 +628,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-11T12:49:28Z",
+      "pushedAt": "2026-10-11T21:58:13Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 209.2,
-      "commits": 129,
-      "commits90": 129,
+      "importance": 210.8,
+      "commits": 130,
+      "commits90": 130,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 10,
@@ -668,12 +668,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-11T19:25:46Z",
+      "pushedAt": "2026-10-12T00:19:01Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T10:49:10Z",
-      "importance": 196,
-      "commits": 118,
-      "commits90": 118,
+      "importance": 197.5,
+      "commits": 119,
+      "commits90": 119,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 21,
@@ -909,14 +909,14 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-02T05:34:12Z",
-      "pushedDays": 9,
+      "pushedDays": 10,
       "createdAt": "2026-09-28T22:15:20Z",
       "importance": 67.9,
       "commits": 38,
       "commits90": 38,
       "releases": 2,
       "recoveredAt": null,
-      "ageDays": 12,
+      "ageDays": 13,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -949,7 +949,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-08T04:03:23Z",
-      "pushedDays": 3,
+      "pushedDays": 4,
       "createdAt": "2026-10-01T13:12:44Z",
       "importance": 55.2,
       "commits": 33,
@@ -960,12 +960,12 @@
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
-        "score": 67,
-        "toNext": 5,
+        "score": 62,
+        "toNext": 10,
         "capped": null,
         "parts": {
           "activity": 30,
-          "recency": 20,
+          "recency": 15,
           "maturity": 1,
           "depth": 11,
           "release": 5,
@@ -996,7 +996,7 @@
       "commits90": 16,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 12,
+      "ageDays": 13,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -1076,7 +1076,7 @@
       "commits90": 11,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 12,
+      "ageDays": 13,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1116,7 +1116,7 @@
       "commits90": 6,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 12,
+      "ageDays": 13,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1149,14 +1149,14 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-28T22:13:31Z",
-      "pushedDays": 12,
+      "pushedDays": 13,
       "createdAt": "2026-09-28T22:11:39Z",
       "importance": 15.6,
       "commits": 4,
       "commits90": 4,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 12,
+      "ageDays": 13,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1175,10 +1175,6 @@
     }
   ],
   "calendar": [
-    {
-      "date": "2026-04-06",
-      "count": 0
-    },
     {
       "date": "2026-04-07",
       "count": 0
@@ -1961,6 +1957,10 @@
     {
       "date": "2026-10-11",
       "count": 25
+    },
+    {
+      "date": "2026-10-12",
+      "count": 0
     }
   ],
   "achievements": {
@@ -2180,33 +2180,24 @@
         "until": "2026-10-12T12:31:24.761Z"
       },
       {
-        "id": "harvest:2026-10-11",
+        "id": "harvest:2026-10-12",
         "type": "harvest",
         "title": "HARVEST FESTIVAL",
         "icon": "wheat",
-        "detail": "36 CONTRIBUTIONS",
-        "at": "2026-10-11T12:00:00.000Z",
-        "until": "2026-10-13T04:00:00.000Z"
-      },
-      {
-        "id": "nightstars:2026-10-12",
-        "type": "nightstars",
-        "title": "NIGHT OF THE STARS",
-        "icon": "star",
-        "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-11T21:57:59.730Z",
-        "until": "2026-10-11T22:57:59.730Z"
+        "detail": "25 CONTRIBUTIONS",
+        "at": "2026-10-12T12:00:00.000Z",
+        "until": "2026-10-14T04:00:00.000Z"
       }
     ],
     "recent": [
       {
-        "id": "nightstars:2026-10-12",
-        "type": "nightstars",
-        "title": "NIGHT OF THE STARS",
-        "icon": "star",
-        "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-11T21:57:59.730Z",
-        "until": "2026-10-11T22:57:59.730Z"
+        "id": "harvest:2026-10-12",
+        "type": "harvest",
+        "title": "HARVEST FESTIVAL",
+        "icon": "wheat",
+        "detail": "25 CONTRIBUTIONS",
+        "at": "2026-10-12T12:00:00.000Z",
+        "until": "2026-10-14T04:00:00.000Z"
       },
       {
         "id": "levelup:22",
@@ -2216,15 +2207,6 @@
         "detail": "LEVEL 22",
         "at": "2026-10-11T12:49:17.199Z",
         "until": "2026-10-13T12:49:17.199Z"
-      },
-      {
-        "id": "harvest:2026-10-11",
-        "type": "harvest",
-        "title": "HARVEST FESTIVAL",
-        "icon": "wheat",
-        "detail": "36 CONTRIBUTIONS",
-        "at": "2026-10-11T12:00:00.000Z",
-        "until": "2026-10-13T04:00:00.000Z"
       },
       {
         "id": "levelup:21",
@@ -2252,6 +2234,15 @@
         "detail": "THE CI IS FIXED",
         "at": "2026-10-09T19:50:09.154Z",
         "until": "2026-10-11T19:50:09.154Z"
+      },
+      {
+        "id": "levelup:19",
+        "type": "milestone",
+        "title": "MILESTONE UNLOCKED",
+        "icon": "trophy",
+        "detail": "LEVEL 19",
+        "at": "2026-10-06T23:06:37.538Z",
+        "until": "2026-10-08T23:06:37.538Z"
       }
     ]
   },
@@ -2551,7 +2542,7 @@
       "dungeon": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-11T21:57:59.730Z"
+    "checkedAt": "2026-10-12T05:57:19.543Z"
   },
   "v": 2,
   "featured": [
@@ -2577,7 +2568,6 @@
     "modes": [
       "CELEBRATION",
       "HARVEST",
-      "NIGHT",
       "WORKING",
       "ACTIVE"
     ],
@@ -2601,10 +2591,10 @@
       "villager": 5
     },
     "light": {
-      "phase": "night",
-      "windows": true,
-      "torches": true,
-      "moon": true,
+      "phase": "day",
+      "windows": false,
+      "torches": false,
+      "moon": false,
       "accent": "gold",
       "danger": [],
       "gate": false,
@@ -2612,22 +2602,22 @@
       "gold": true
     },
     "weather": {
-      "kind": "aurora",
+      "kind": "clear",
       "rain": 0,
       "lightning": false,
       "snow": false,
-      "aurora": 1,
+      "aurora": 0,
       "sunrise": false,
       "wet": false,
       "frozen": false,
       "season": "autumn"
     },
     "behavior": {
-      "home": true,
+      "home": false,
       "returning": false,
       "shelter": false,
-      "patrol": true,
-      "farmersIn": true
+      "patrol": false,
+      "farmersIn": false
     },
     "stages": {
       "fail": {},
@@ -2640,8 +2630,7 @@
       "shrineGlow",
       "confetti",
       "harvestFestival",
-      "sparkles",
-      "shootingStars"
+      "sparkles"
     ],
     "labels": {
       "ci": false,
@@ -2658,19 +2647,13 @@
       },
       {
         "kind": "HARVEST",
-        "text": "36 CONTRIBUTIONS",
+        "text": "25 CONTRIBUTIONS",
         "icon": "wheat",
         "tone": "gold"
-      },
-      {
-        "kind": "NIGHT",
-        "text": "A SKY FULL OF STARS",
-        "icon": "star",
-        "tone": "info"
       }
     ]
   },
   "worldVersion": 1,
   "renderVersion": 2,
-  "contentHash": "8b9fcbd99a0a72a2"
+  "contentHash": "5b8439731d0fa835"
 }
