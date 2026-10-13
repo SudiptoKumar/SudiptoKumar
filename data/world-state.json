@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-13T00:39:18.665Z",
+  "generatedAt": "2026-10-13T07:06:01.595Z",
   "level": 22,
   "xp": 12989,
   "stars": 20,
@@ -11,9 +11,9 @@
   "streak": 0,
   "activeRepositories": 22,
   "topLanguage": "Python",
-  "weather": "aurora",
+  "weather": "clear",
   "weatherReason": "A release or milestone is being celebrated",
-  "timeOfDay": "dawn",
+  "timeOfDay": "day",
   "season": "autumn",
   "meta": {
     "demo": false,
@@ -31,10 +31,10 @@
     "kingdomDay": 1179
   },
   "time": {
-    "iso": "2026-10-13T00:39:18.665Z",
+    "iso": "2026-10-13T07:06:01.595Z",
     "tz": "Asia/Dhaka",
-    "hour": 6.65,
-    "phase": "dawn",
+    "hour": 13.1,
+    "phase": "day",
     "season": "autumn",
     "date": "2026-10-13"
   },
@@ -106,7 +106,7 @@
     "workflowHealth": 100,
     "failingRepos": [],
     "openPRs": 0,
-    "codeKb": 199568
+    "codeKb": 200161
   },
   "xpBreakdown": {
     "base": 2910,
@@ -308,12 +308,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-12T20:32:48Z",
+      "pushedAt": "2026-10-13T02:21:21Z",
       "pushedDays": 0,
       "createdAt": "2026-09-17T18:58:59Z",
-      "importance": 535,
-      "commits": 344,
-      "commits90": 344,
+      "importance": 536.5,
+      "commits": 345,
+      "commits90": 345,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 25,
@@ -476,7 +476,7 @@
       "commits90": 218,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 44,
+      "ageDays": 45,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -628,12 +628,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-12T15:24:32Z",
+      "pushedAt": "2026-10-13T00:39:30Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 215.3,
-      "commits": 133,
-      "commits90": 133,
+      "importance": 216.9,
+      "commits": 134,
+      "commits90": 134,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 11,
@@ -668,12 +668,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-12T21:00:16Z",
+      "pushedAt": "2026-10-13T02:31:16Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T10:49:10Z",
-      "importance": 200.5,
-      "commits": 121,
-      "commits90": 121,
+      "importance": 202,
+      "commits": 122,
+      "commits90": 122,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 22,
@@ -800,8 +800,8 @@
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
-        "score": 65,
-        "toNext": 7,
+        "score": 66,
+        "toNext": 6,
         "capped": null,
         "parts": {
           "activity": 30,
@@ -909,7 +909,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-02T05:34:12Z",
-      "pushedDays": 10,
+      "pushedDays": 11,
       "createdAt": "2026-09-28T22:15:20Z",
       "importance": 67.9,
       "commits": 38,
@@ -949,7 +949,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-08T04:03:23Z",
-      "pushedDays": 4,
+      "pushedDays": 5,
       "createdAt": "2026-10-01T13:12:44Z",
       "importance": 55.2,
       "commits": 33,
@@ -1109,7 +1109,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-30T06:49:50Z",
-      "pushedDays": 12,
+      "pushedDays": 13,
       "createdAt": "2026-09-28T22:07:51Z",
       "importance": 21.5,
       "commits": 6,
@@ -2160,15 +2160,6 @@
         "detail": "LEVEL 22",
         "at": "2026-10-11T12:49:17.199Z",
         "until": "2026-10-13T12:49:17.199Z"
-      },
-      {
-        "id": "levelup:21",
-        "type": "milestone",
-        "title": "MILESTONE UNLOCKED",
-        "icon": "trophy",
-        "detail": "LEVEL 21",
-        "at": "2026-10-11T05:45:58.924Z",
-        "until": "2026-10-13T05:45:58.924Z"
       }
     ],
     "recent": [
@@ -2526,13 +2517,13 @@
       "districts": "ok",
       "trophies": "ok",
       "harvest": "ok",
-      "history": "ok",
+      "history": "skipped",
       "camp": "ok",
       "castle": "ok",
       "dungeon": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-13T00:39:18.665Z"
+    "checkedAt": "2026-10-13T07:06:01.595Z"
   },
   "v": 2,
   "featured": [
@@ -2560,7 +2551,7 @@
       "WORKING",
       "ACTIVE"
     ],
-    "frame": 3,
+    "frame": 1,
     "hero": {
       "state": "celebrating",
       "spot": "plaza",
@@ -2580,9 +2571,9 @@
       "villager": 5
     },
     "light": {
-      "phase": "dawn",
-      "windows": true,
-      "torches": true,
+      "phase": "day",
+      "windows": false,
+      "torches": false,
       "moon": false,
       "accent": "gold",
       "danger": [],
@@ -2591,11 +2582,11 @@
       "gold": true
     },
     "weather": {
-      "kind": "aurora",
+      "kind": "clear",
       "rain": 0,
       "lightning": false,
       "snow": false,
-      "aurora": 0.6,
+      "aurora": 0,
       "sunrise": false,
       "wet": false,
       "frozen": false,
@@ -2636,5 +2627,5 @@
   },
   "worldVersion": 1,
   "renderVersion": 2,
-  "contentHash": "4afd72b314f04a7f"
+  "contentHash": "partial:ab6a78396206b1b4"
 }
