@@ -1,3 +1,10 @@
+# Sudipto Kumar
+
+BBA (Finance & Banking) student at PSTU who builds systems that run themselves — Python automation, Telegram bots, and full-stack web products. Co-Director of Marketing & Branding at Finance Club PSTU. Open to fintech, finance & marketing internships.
+
+🔗 [Portfolio](https://sudiptokumar.vercel.app) · [LinkedIn](https://www.linkedin.com/in/sudipto-kumar) · [X](https://x.com/SudiptoKarn) · [Telegram](https://t.me/SudiptoSarkar)
+
+---
 <!-- KINGDOM:START (generated: do not edit between these lines) -->
 <p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/hero.svg" width="720" alt="Hero: Sudipto Kumar, level 22 PYTHON ALCHEMIST. Title KINGDOM BUILDER. resting for the night. Quest: hold a 30 day streak."></p>
 <p align="center"><img src="https://raw.githubusercontent.com/SudiptoKumar/SudiptoKumar/main/renderer/world.svg" width="720" alt="The living kingdom. It is night, the weather is clear, the season is autumn. The hero is sleeping. 22 repositories stand as buildings, 0 open issues wait as goblins, 0 visitor flags. Power: PROSPEROUS KINGDOM."></p>
