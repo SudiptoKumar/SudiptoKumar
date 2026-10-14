@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-14T04:52:57.881Z",
+  "generatedAt": "2026-10-14T05:23:30.272Z",
   "level": 22,
   "xp": 13203,
   "stars": 20,
@@ -31,9 +31,9 @@
     "kingdomDay": 1180
   },
   "time": {
-    "iso": "2026-10-14T04:52:57.881Z",
+    "iso": "2026-10-14T05:23:30.272Z",
     "tz": "Asia/Dhaka",
-    "hour": 10.87,
+    "hour": 11.38,
     "phase": "day",
     "season": "autumn",
     "date": "2026-10-14"
@@ -588,12 +588,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-13T22:44:46Z",
+      "pushedAt": "2026-10-14T04:53:11Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 223.3,
-      "commits": 138,
-      "commits90": 138,
+      "importance": 224.8,
+      "commits": 139,
+      "commits90": 139,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 12,
@@ -2515,13 +2515,13 @@
       "districts": "ok",
       "trophies": "ok",
       "harvest": "ok",
-      "history": "ok",
+      "history": "skipped",
       "camp": "ok",
       "castle": "ok",
       "dungeon": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-14T04:52:57.881Z"
+    "checkedAt": "2026-10-14T05:23:30.272Z"
   },
   "v": 2,
   "featured": [
@@ -2614,5 +2614,5 @@
   },
   "worldVersion": 1,
   "renderVersion": 2,
-  "contentHash": "5121b7c46d0c8fca"
+  "contentHash": "partial:a5058ecb1b48cfa4"
 }
