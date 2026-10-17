@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-16T21:07:14.382Z",
+  "generatedAt": "2026-10-17T04:25:00.864Z",
   "level": 22,
   "xp": 13298,
   "stars": 20,
@@ -13,7 +13,7 @@
   "topLanguage": "Python",
   "weather": "clear",
   "weatherReason": "Healthy activity",
-  "timeOfDay": "night",
+  "timeOfDay": "day",
   "season": "autumn",
   "meta": {
     "demo": false,
@@ -31,10 +31,10 @@
     "kingdomDay": 1183
   },
   "time": {
-    "iso": "2026-10-16T21:07:14.382Z",
+    "iso": "2026-10-17T04:25:00.864Z",
     "tz": "Asia/Dhaka",
-    "hour": 3.12,
-    "phase": "night",
+    "hour": 10.42,
+    "phase": "day",
     "season": "autumn",
     "date": "2026-10-17"
   },
@@ -51,7 +51,7 @@
     "xpNext": 13750,
     "activity": "low",
     "position": "home",
-    "sleeping": false,
+    "sleeping": true,
     "stats": {
       "codePower": 99,
       "reliability": 100,
@@ -61,7 +61,7 @@
     "streak": {
       "current": 0,
       "longest": 22,
-      "idleDays": 2,
+      "idleDays": 3,
       "today": 0,
       "yesterday": 0
     },
@@ -86,7 +86,7 @@
     ],
     "state": "sleeping",
     "spot": "home",
-    "status": "RESTING FOR THE NIGHT"
+    "status": "SLEEPING IN"
   },
   "totals": {
     "stars": 20,
@@ -106,7 +106,7 @@
     "workflowHealth": 100,
     "failingRepos": [],
     "openPRs": 0,
-    "codeKb": 242938
+    "codeKb": 244721
   },
   "xpBreakdown": {
     "base": 2994,
@@ -308,12 +308,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-16T18:33:45Z",
+      "pushedAt": "2026-10-17T01:50:33Z",
       "pushedDays": 0,
       "createdAt": "2026-09-17T18:58:59Z",
-      "importance": 560.5,
-      "commits": 361,
-      "commits90": 361,
+      "importance": 563.5,
+      "commits": 363,
+      "commits90": 363,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 29,
@@ -388,12 +388,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-16T17:38:20Z",
+      "pushedAt": "2026-10-16T21:35:13Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T17:29:46Z",
-      "importance": 396,
-      "commits": 252,
-      "commits90": 252,
+      "importance": 397.5,
+      "commits": 253,
+      "commits90": 253,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 48,
@@ -476,7 +476,7 @@
       "commits90": 233,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 48,
+      "ageDays": 49,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -588,12 +588,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-16T16:39:15Z",
+      "pushedAt": "2026-10-16T21:07:27Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 243.7,
-      "commits": 152,
-      "commits90": 152,
+      "importance": 245.2,
+      "commits": 153,
+      "commits90": 153,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 15,
@@ -668,12 +668,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-16T20:35:17Z",
+      "pushedAt": "2026-10-17T03:01:38Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T10:49:10Z",
-      "importance": 226,
-      "commits": 138,
-      "commits90": 138,
+      "importance": 229,
+      "commits": 140,
+      "commits90": 140,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 26,
@@ -756,7 +756,7 @@
       "commits90": 73,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 13,
+      "ageDays": 14,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -916,7 +916,7 @@
       "commits90": 38,
       "releases": 2,
       "recoveredAt": null,
-      "ageDays": 17,
+      "ageDays": 18,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -949,7 +949,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-08T04:03:23Z",
-      "pushedDays": 8,
+      "pushedDays": 9,
       "createdAt": "2026-10-01T13:12:44Z",
       "importance": 55.2,
       "commits": 33,
@@ -996,7 +996,7 @@
       "commits90": 16,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 17,
+      "ageDays": 18,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1029,7 +1029,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-04T21:07:31Z",
-      "pushedDays": 11,
+      "pushedDays": 12,
       "createdAt": "2026-10-04T19:12:38Z",
       "importance": 32.2,
       "commits": 18,
@@ -1076,7 +1076,7 @@
       "commits90": 11,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 17,
+      "ageDays": 18,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1116,7 +1116,7 @@
       "commits90": 6,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 17,
+      "ageDays": 18,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1149,14 +1149,14 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-28T22:13:31Z",
-      "pushedDays": 17,
+      "pushedDays": 18,
       "createdAt": "2026-09-28T22:11:39Z",
       "importance": 15.6,
       "commits": 4,
       "commits90": 4,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 17,
+      "ageDays": 18,
       "evolution": {
         "level": 2,
         "name": "FRAME",
@@ -1175,10 +1175,6 @@
     }
   ],
   "calendar": [
-    {
-      "date": "2026-04-11",
-      "count": 0
-    },
     {
       "date": "2026-04-12",
       "count": 0
@@ -1961,6 +1957,10 @@
     {
       "date": "2026-10-16",
       "count": 0
+    },
+    {
+      "date": "2026-10-17",
+      "count": 0
     }
   ],
   "achievements": {
@@ -2545,7 +2545,7 @@
       "dungeon": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-16T21:07:14.382Z"
+    "checkedAt": "2026-10-17T04:25:00.864Z"
   },
   "v": 2,
   "featured": [
@@ -2567,23 +2567,23 @@
     }
   },
   "scene": {
-    "mode": "NIGHT",
+    "mode": "SLEEP",
     "modes": [
-      "NIGHT",
+      "SLEEP",
       "WORKING",
       "ACTIVE"
     ],
-    "frame": 1,
+    "frame": 0,
     "hero": {
       "state": "sleeping",
       "spot": "home",
-      "why": "night",
-      "label": "RESTING FOR THE NIGHT",
+      "why": "quiet",
+      "label": "SLEEPING IN",
       "umbrella": false
     },
     "npcs": {
       "builder": 6,
-      "farmer": 3,
+      "farmer": 0,
       "miner": 1,
       "guard": 2,
       "merchant": 3,
@@ -2593,10 +2593,10 @@
       "villager": 5
     },
     "light": {
-      "phase": "night",
-      "windows": true,
-      "torches": true,
-      "moon": true,
+      "phase": "day",
+      "windows": false,
+      "torches": false,
+      "moon": false,
       "accent": null,
       "danger": [],
       "gate": false,
@@ -2618,7 +2618,7 @@
       "home": true,
       "returning": false,
       "shelter": false,
-      "patrol": true,
+      "patrol": false,
       "farmersIn": true
     },
     "stages": {
@@ -2639,5 +2639,5 @@
   },
   "worldVersion": 1,
   "renderVersion": 2,
-  "contentHash": "4d389fb751abb9c4"
+  "contentHash": "f29b249f9a560782"
 }
