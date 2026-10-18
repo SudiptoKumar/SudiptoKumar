@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-18T05:08:03.766Z",
+  "generatedAt": "2026-10-18T11:03:58.111Z",
   "level": 22,
   "xp": 13589,
   "stars": 20,
@@ -12,7 +12,7 @@
   "activeRepositories": 22,
   "topLanguage": "Python",
   "weather": "clear",
-  "weatherReason": "Healthy activity",
+  "weatherReason": "A release or milestone is being celebrated",
   "timeOfDay": "day",
   "season": "autumn",
   "meta": {
@@ -31,9 +31,9 @@
     "kingdomDay": 1184
   },
   "time": {
-    "iso": "2026-10-18T05:08:03.766Z",
+    "iso": "2026-10-18T11:03:58.111Z",
     "tz": "Asia/Dhaka",
-    "hour": 11.13,
+    "hour": 17.05,
     "phase": "day",
     "season": "autumn",
     "date": "2026-10-18"
@@ -86,7 +86,7 @@
     ],
     "state": "working",
     "spot": "ci",
-    "status": "FIXING THE CI"
+    "status": "REPAIRING THE CI"
   },
   "totals": {
     "stars": 20,
@@ -104,11 +104,9 @@
     "followers": 0,
     "yearContrib": 852,
     "workflowHealth": 100,
-    "failingRepos": [
-      "VocabularyBot"
-    ],
+    "failingRepos": [],
     "openPRs": 0,
-    "codeKb": 258837
+    "codeKb": 260452
   },
   "xpBreakdown": {
     "base": 3060,
@@ -125,17 +123,17 @@
   "quests": {
     "list": [
       {
-        "title": "FIX THE FAILING CI",
-        "progress": 100,
-        "target": 100,
-        "pct": 100,
-        "id": "recover:open",
+        "id": "recover:2026-10-18",
         "track": "recover",
+        "title": "THE CI IS FIXED",
         "icon": "flame",
-        "state": "ACTIVE",
+        "state": "COMPLETE",
+        "progress": 1,
+        "target": 1,
+        "pct": 100,
         "xp": 0,
-        "at": null,
-        "isNew": false
+        "at": "2026-10-18T11:03:58.111Z",
+        "isNew": true
       },
       {
         "id": "streak:30",
@@ -196,19 +194,6 @@
     ],
     "rows": [
       {
-        "title": "FIX THE FAILING CI",
-        "progress": 100,
-        "target": 100,
-        "pct": 100,
-        "id": "recover:open",
-        "track": "recover",
-        "icon": "flame",
-        "state": "ACTIVE",
-        "xp": 0,
-        "at": null,
-        "isNew": false
-      },
-      {
         "id": "streak:30",
         "track": "streak",
         "title": "HOLD A 30 DAY STREAK",
@@ -223,36 +208,50 @@
         "isNew": false
       },
       {
-        "id": "streak:60",
-        "track": "streak",
-        "title": "HOLD A 60 DAY STREAK",
-        "icon": "wheat",
-        "state": "LOCKED",
-        "progress": 0,
-        "target": 60,
-        "pct": 0,
-        "xp": 100,
-        "unit": "DAYS",
+        "id": "stars:25",
+        "track": "stars",
+        "title": "EARN 25 STARS",
+        "icon": "star",
+        "state": "ACTIVE",
+        "progress": 20,
+        "target": 25,
+        "pct": 80,
+        "xp": 80,
+        "unit": "STARS",
         "at": null,
         "isNew": false
+      },
+      {
+        "id": "recover:2026-10-18",
+        "track": "recover",
+        "title": "THE CI IS FIXED",
+        "icon": "flame",
+        "state": "COMPLETE",
+        "progress": 1,
+        "target": 1,
+        "pct": 100,
+        "xp": 0,
+        "at": "2026-10-18T11:03:58.111Z",
+        "isNew": true
       }
     ],
     "current": {
-      "title": "FIX THE FAILING CI",
-      "progress": 100,
-      "target": 100,
-      "pct": 100,
-      "id": "recover:open",
-      "track": "recover",
-      "icon": "flame",
+      "id": "streak:30",
+      "track": "streak",
+      "title": "HOLD A 30 DAY STREAK",
+      "icon": "wheat",
       "state": "ACTIVE",
-      "xp": 0,
+      "progress": 1,
+      "target": 30,
+      "pct": 3,
+      "xp": 80,
+      "unit": "DAYS",
       "at": null,
       "isNew": false
     },
     "counts": {
-      "active": 3,
-      "complete": 7
+      "active": 2,
+      "complete": 8
     },
     "xp": 0
   },
@@ -321,12 +320,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-18T01:47:20Z",
+      "pushedAt": "2026-10-18T07:30:57Z",
       "pushedDays": 0,
       "createdAt": "2026-09-17T18:58:59Z",
-      "importance": 572.5,
-      "commits": 369,
-      "commits90": 369,
+      "importance": 574,
+      "commits": 370,
+      "commits90": 370,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 30,
@@ -361,12 +360,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-17T18:07:43Z",
+      "pushedAt": "2026-10-18T10:28:10Z",
       "pushedDays": 0,
       "createdAt": "2026-08-28T14:21:15Z",
-      "importance": 472,
-      "commits": 302,
-      "commits90": 302,
+      "importance": 475,
+      "commits": 304,
+      "commits90": 304,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 50,
@@ -401,12 +400,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-17T21:38:06Z",
+      "pushedAt": "2026-10-18T07:23:00Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T17:29:46Z",
-      "importance": 405,
-      "commits": 258,
-      "commits90": 258,
+      "importance": 406.2,
+      "commits": 259,
+      "commits90": 259,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 49,
@@ -441,15 +440,15 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-17T18:06:39Z",
+      "pushedAt": "2026-10-18T10:52:10Z",
       "pushedDays": 0,
       "createdAt": "2026-08-27T10:01:41Z",
-      "importance": 380.5,
-      "commits": 241,
-      "commits90": 241,
+      "importance": 383.5,
+      "commits": 243,
+      "commits90": 243,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 51,
+      "ageDays": 52,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -481,12 +480,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-17T18:09:37Z",
+      "pushedAt": "2026-10-18T10:41:49Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T04:24:35Z",
-      "importance": 374.5,
-      "commits": 237,
-      "commits90": 237,
+      "importance": 377.5,
+      "commits": 239,
+      "commits90": 239,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 50,
@@ -521,12 +520,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-17T18:10:50Z",
+      "pushedAt": "2026-10-18T10:27:09Z",
       "pushedDays": 0,
       "createdAt": "2026-08-28T19:08:24Z",
-      "importance": 364,
-      "commits": 230,
-      "commits90": 230,
+      "importance": 367,
+      "commits": 232,
+      "commits90": 232,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 50,
@@ -561,12 +560,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-17T17:46:42Z",
+      "pushedAt": "2026-10-18T10:18:59Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T16:33:20Z",
-      "importance": 310,
-      "commits": 194,
-      "commits90": 194,
+      "importance": 313,
+      "commits": 196,
+      "commits90": 196,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 49,
@@ -601,12 +600,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-18T04:33:12Z",
+      "pushedAt": "2026-10-18T05:08:14Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 254.7,
-      "commits": 159,
-      "commits90": 159,
+      "importance": 256.2,
+      "commits": 160,
+      "commits90": 160,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 16,
@@ -641,15 +640,15 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-18T03:03:50Z",
+      "pushedAt": "2026-10-18T07:58:13Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T10:49:10Z",
-      "importance": 238,
-      "commits": 146,
-      "commits90": 146,
+      "importance": 239.5,
+      "commits": 147,
+      "commits90": 147,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 27,
+      "ageDays": 28,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -681,12 +680,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-17T17:06:35Z",
+      "pushedAt": "2026-10-18T07:11:57Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T16:56:23Z",
-      "importance": 234.3,
-      "commits": 146,
-      "commits90": 146,
+      "importance": 235.9,
+      "commits": 147,
+      "commits90": 147,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 27,
@@ -721,15 +720,15 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-17T14:04:58Z",
+      "pushedAt": "2026-10-18T06:46:27Z",
       "pushedDays": 0,
       "createdAt": "2026-09-21T10:44:06Z",
-      "importance": 149.5,
-      "commits": 92,
-      "commits90": 92,
+      "importance": 151,
+      "commits": 93,
+      "commits90": 93,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 26,
+      "ageDays": 27,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -841,7 +840,7 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-17T14:07:35Z",
+      "pushedAt": "2026-10-18T06:48:45Z",
       "pushedDays": 0,
       "createdAt": "2026-09-22T15:26:48Z",
       "importance": 93.1,
@@ -877,24 +876,24 @@
       "language": "Python",
       "color": "#3572A5",
       "archetype": "tower",
-      "state": "failing",
-      "workflow": "failing",
-      "recovered": false,
-      "lastFailAt": "2026-10-17T06:38:01Z",
-      "pushedAt": "2026-10-17T06:37:57Z",
+      "state": "building",
+      "workflow": "recovered",
+      "recovered": true,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-18T07:00:11Z",
       "pushedDays": 0,
       "createdAt": "2026-09-25T11:07:52Z",
       "importance": 71.7,
       "commits": 40,
       "commits90": 40,
       "releases": 0,
-      "recoveredAt": null,
+      "recoveredAt": "2026-10-18T07:00:14Z",
       "ageDays": 22,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
-        "score": 50,
-        "toNext": 22,
+        "score": 65,
+        "toNext": 7,
         "capped": null,
         "parts": {
           "activity": 30,
@@ -922,7 +921,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-02T05:34:12Z",
-      "pushedDays": 15,
+      "pushedDays": 16,
       "createdAt": "2026-09-28T22:15:20Z",
       "importance": 67.9,
       "commits": 38,
@@ -1082,7 +1081,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-30T07:31:35Z",
-      "pushedDays": 17,
+      "pushedDays": 18,
       "createdAt": "2026-09-28T22:00:39Z",
       "importance": 29.2,
       "commits": 11,
@@ -1122,7 +1121,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-30T06:49:50Z",
-      "pushedDays": 17,
+      "pushedDays": 18,
       "createdAt": "2026-09-28T22:07:51Z",
       "importance": 21.5,
       "commits": 6,
@@ -2166,24 +2165,42 @@
   "events": {
     "active": [
       {
-        "id": "emergency:VocabularyBot",
-        "type": "emergency",
-        "title": "WORKFLOW EMERGENCY",
-        "icon": "flame",
+        "id": "recovery:VocabularyBot",
+        "type": "recovery",
+        "title": "WORKFLOW RECOVERED",
+        "icon": "check",
         "detail": "VocabularyBot",
-        "at": "2026-10-17T06:38:01Z",
-        "until": "2026-10-18T06:08:03.766Z"
+        "at": "2026-10-18T07:00:14Z",
+        "until": "2026-10-20T07:00:14.000Z"
+      },
+      {
+        "id": "quest:recover:2026-10-18",
+        "type": "milestone",
+        "title": "QUEST COMPLETE",
+        "icon": "trophy",
+        "detail": "THE CI IS FIXED",
+        "at": "2026-10-18T11:03:58.111Z",
+        "until": "2026-10-20T11:03:58.111Z"
       }
     ],
     "recent": [
       {
-        "id": "emergency:VocabularyBot",
-        "type": "emergency",
-        "title": "WORKFLOW EMERGENCY",
-        "icon": "flame",
+        "id": "quest:recover:2026-10-18",
+        "type": "milestone",
+        "title": "QUEST COMPLETE",
+        "icon": "trophy",
+        "detail": "THE CI IS FIXED",
+        "at": "2026-10-18T11:03:58.111Z",
+        "until": "2026-10-20T11:03:58.111Z"
+      },
+      {
+        "id": "recovery:VocabularyBot",
+        "type": "recovery",
+        "title": "WORKFLOW RECOVERED",
+        "icon": "check",
         "detail": "VocabularyBot",
-        "at": "2026-10-17T06:38:01Z",
-        "until": "2026-10-18T06:08:03.766Z"
+        "at": "2026-10-18T07:00:14Z",
+        "until": "2026-10-20T07:00:14.000Z"
       },
       {
         "id": "levelup:22",
@@ -2220,15 +2237,6 @@
         "detail": "THE CI IS FIXED",
         "at": "2026-10-09T19:50:09.154Z",
         "until": "2026-10-11T19:50:09.154Z"
-      },
-      {
-        "id": "levelup:19",
-        "type": "milestone",
-        "title": "MILESTONE UNLOCKED",
-        "icon": "trophy",
-        "detail": "LEVEL 19",
-        "at": "2026-10-06T23:06:37.538Z",
-        "until": "2026-10-08T23:06:37.538Z"
       }
     ]
   },
@@ -2570,13 +2578,13 @@
       "districts": "ok",
       "trophies": "ok",
       "harvest": "ok",
-      "history": "skipped",
+      "history": "ok",
       "camp": "ok",
       "castle": "ok",
       "dungeon": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-18T05:08:03.766Z"
+    "checkedAt": "2026-10-18T11:03:58.111Z"
   },
   "v": 2,
   "featured": [
@@ -2598,18 +2606,19 @@
     }
   },
   "scene": {
-    "mode": "DANGER",
+    "mode": "RECOVERY",
     "modes": [
-      "DANGER",
+      "RECOVERY",
+      "CELEBRATION",
       "WORKING",
       "ACTIVE"
     ],
-    "frame": 5,
+    "frame": 3,
     "hero": {
       "state": "working",
       "spot": "ci",
-      "why": "emergency",
-      "label": "FIXING THE CI",
+      "why": "recovery",
+      "label": "REPAIRING THE CI",
       "umbrella": false
     },
     "npcs": {
@@ -2628,13 +2637,13 @@
       "windows": false,
       "torches": false,
       "moon": false,
-      "accent": "danger",
-      "danger": [
+      "accent": "repair",
+      "danger": [],
+      "gate": false,
+      "repair": [
         "VocabularyBot"
       ],
-      "gate": false,
-      "repair": [],
-      "gold": false
+      "gold": true
     },
     "weather": {
       "kind": "clear",
@@ -2655,35 +2664,43 @@
       "farmersIn": false
     },
     "stages": {
-      "fail": {
-        "VocabularyBot": "smoke"
+      "fail": {},
+      "repair": {
+        "VocabularyBot": "firefighter"
       },
-      "repair": {},
       "build": {},
       "visitor": null,
       "raid": "idle"
     },
     "fx": [
-      "alarm",
-      "smoke",
-      "fire"
+      "firefighter",
+      "repair",
+      "sparkles",
+      "shrineGlow",
+      "confetti"
     ],
     "labels": {
-      "ci": true,
+      "ci": false,
       "issues": 0,
       "raid": false,
-      "event": "emergency"
+      "event": null
     },
     "hud": [
       {
-        "kind": "ALERT",
-        "text": "VOCABULARYB~ CI DOWN",
-        "icon": "flame",
-        "tone": "danger"
+        "kind": "REPAIR",
+        "text": "CI IS FIXED",
+        "icon": "check",
+        "tone": "good"
+      },
+      {
+        "kind": "QUEST",
+        "text": "THE CI IS FIXED",
+        "icon": "trophy",
+        "tone": "gold"
       }
     ]
   },
   "worldVersion": 1,
   "renderVersion": 2,
-  "contentHash": "partial:4565d2c515387dbe"
+  "contentHash": "664a03b50b189332"
 }
