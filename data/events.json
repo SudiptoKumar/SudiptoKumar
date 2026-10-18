@@ -2,6 +2,15 @@
   "version": 1,
   "events": [
     {
+      "id": "levelup:23",
+      "type": "milestone",
+      "title": "MILESTONE UNLOCKED",
+      "icon": "trophy",
+      "detail": "LEVEL 23",
+      "at": "2026-10-18T15:52:06.451Z",
+      "until": "2026-10-20T15:52:06.451Z"
+    },
+    {
       "id": "quest:recover:2026-10-18",
       "type": "milestone",
       "title": "QUEST COMPLETE",
