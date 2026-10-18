@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-18T04:33:00.192Z",
+  "generatedAt": "2026-10-18T05:08:03.766Z",
   "level": 22,
   "xp": 13589,
   "stars": 20,
@@ -31,9 +31,9 @@
     "kingdomDay": 1184
   },
   "time": {
-    "iso": "2026-10-18T04:33:00.192Z",
+    "iso": "2026-10-18T05:08:03.766Z",
     "tz": "Asia/Dhaka",
-    "hour": 10.55,
+    "hour": 11.13,
     "phase": "day",
     "season": "autumn",
     "date": "2026-10-18"
@@ -601,12 +601,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-17T20:36:26Z",
+      "pushedAt": "2026-10-18T04:33:12Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 253.2,
-      "commits": 158,
-      "commits90": 158,
+      "importance": 254.7,
+      "commits": 159,
+      "commits90": 159,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 16,
@@ -2172,7 +2172,7 @@
         "icon": "flame",
         "detail": "VocabularyBot",
         "at": "2026-10-17T06:38:01Z",
-        "until": "2026-10-18T05:33:00.192Z"
+        "until": "2026-10-18T06:08:03.766Z"
       }
     ],
     "recent": [
@@ -2183,7 +2183,7 @@
         "icon": "flame",
         "detail": "VocabularyBot",
         "at": "2026-10-17T06:38:01Z",
-        "until": "2026-10-18T05:33:00.192Z"
+        "until": "2026-10-18T06:08:03.766Z"
       },
       {
         "id": "levelup:22",
@@ -2570,13 +2570,13 @@
       "districts": "ok",
       "trophies": "ok",
       "harvest": "ok",
-      "history": "ok",
+      "history": "skipped",
       "camp": "ok",
       "castle": "ok",
       "dungeon": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-18T04:33:00.192Z"
+    "checkedAt": "2026-10-18T05:08:03.766Z"
   },
   "v": 2,
   "featured": [
@@ -2685,5 +2685,5 @@
   },
   "worldVersion": 1,
   "renderVersion": 2,
-  "contentHash": "a03ccc8414176a74"
+  "contentHash": "partial:4565d2c515387dbe"
 }
