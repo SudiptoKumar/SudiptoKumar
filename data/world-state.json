@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-18T20:42:35.557Z",
+  "generatedAt": "2026-10-19T04:39:56.318Z",
   "level": 23,
   "xp": 13967,
   "stars": 20,
@@ -11,9 +11,9 @@
   "streak": 2,
   "activeRepositories": 22,
   "topLanguage": "Python",
-  "weather": "aurora",
+  "weather": "clear",
   "weatherReason": "A release or milestone is being celebrated",
-  "timeOfDay": "night",
+  "timeOfDay": "day",
   "season": "autumn",
   "meta": {
     "demo": false,
@@ -31,10 +31,10 @@
     "kingdomDay": 1185
   },
   "time": {
-    "iso": "2026-10-18T20:42:35.557Z",
+    "iso": "2026-10-19T04:39:56.318Z",
     "tz": "Asia/Dhaka",
-    "hour": 2.7,
-    "phase": "night",
+    "hour": 10.65,
+    "phase": "day",
     "season": "autumn",
     "date": "2026-10-19"
   },
@@ -49,8 +49,8 @@
     "xpNeed": 1200,
     "xpPct": 18,
     "xpNext": 14950,
-    "activity": "high",
-    "position": "castle",
+    "activity": "normal",
+    "position": "farm",
     "sleeping": false,
     "stats": {
       "codePower": 99,
@@ -61,9 +61,9 @@
     "streak": {
       "current": 2,
       "longest": 22,
-      "idleDays": 0,
-      "today": 12,
-      "yesterday": 9
+      "idleDays": 1,
+      "today": 0,
+      "yesterday": 12
     },
     "title": "KINGDOM BUILDER",
     "roles": [
@@ -106,7 +106,7 @@
     "workflowHealth": 100,
     "failingRepos": [],
     "openPRs": 0,
-    "codeKb": 249936
+    "codeKb": 236155
   },
   "xpBreakdown": {
     "base": 3138,
@@ -320,12 +320,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-18T19:50:45Z",
+      "pushedAt": "2026-10-19T02:04:25Z",
       "pushedDays": 0,
       "createdAt": "2026-09-17T18:58:59Z",
-      "importance": 578.5,
-      "commits": 373,
-      "commits90": 373,
+      "importance": 581.5,
+      "commits": 375,
+      "commits90": 375,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 31,
@@ -400,12 +400,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-18T18:49:20Z",
+      "pushedAt": "2026-10-18T21:43:02Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T17:29:46Z",
-      "importance": 410.7,
-      "commits": 262,
-      "commits90": 262,
+      "importance": 412.2,
+      "commits": 263,
+      "commits90": 263,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 50,
@@ -488,7 +488,7 @@
       "commits90": 241,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 50,
+      "ageDays": 51,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -600,12 +600,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-18T15:52:18Z",
+      "pushedAt": "2026-10-18T20:42:47Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 259.4,
-      "commits": 162,
-      "commits90": 162,
+      "importance": 261.1,
+      "commits": 163,
+      "commits90": 163,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 17,
@@ -640,12 +640,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-18T20:10:02Z",
+      "pushedAt": "2026-10-19T03:15:39Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T10:49:10Z",
-      "importance": 244,
-      "commits": 150,
-      "commits90": 150,
+      "importance": 247,
+      "commits": 152,
+      "commits90": 152,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 28,
@@ -808,7 +808,7 @@
       "commits90": 73,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 15,
+      "ageDays": 16,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -928,7 +928,7 @@
       "commits90": 38,
       "releases": 2,
       "recoveredAt": null,
-      "ageDays": 19,
+      "ageDays": 20,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -961,7 +961,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-08T04:03:23Z",
-      "pushedDays": 10,
+      "pushedDays": 11,
       "createdAt": "2026-10-01T13:12:44Z",
       "importance": 55.2,
       "commits": 33,
@@ -1008,7 +1008,7 @@
       "commits90": 16,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 19,
+      "ageDays": 20,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1041,7 +1041,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-04T21:07:31Z",
-      "pushedDays": 13,
+      "pushedDays": 14,
       "createdAt": "2026-10-04T19:12:38Z",
       "importance": 32.2,
       "commits": 18,
@@ -1088,7 +1088,7 @@
       "commits90": 11,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 19,
+      "ageDays": 20,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1128,7 +1128,7 @@
       "commits90": 6,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 19,
+      "ageDays": 20,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1161,14 +1161,14 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-28T22:13:31Z",
-      "pushedDays": 19,
+      "pushedDays": 20,
       "createdAt": "2026-09-28T22:11:39Z",
       "importance": 15.6,
       "commits": 4,
       "commits90": 4,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 19,
+      "ageDays": 20,
       "evolution": {
         "level": 2,
         "name": "FRAME",
@@ -1187,10 +1187,6 @@
     }
   ],
   "calendar": [
-    {
-      "date": "2026-04-13",
-      "count": 0
-    },
     {
       "date": "2026-04-14",
       "count": 0
@@ -1973,6 +1969,10 @@
     {
       "date": "2026-10-18",
       "count": 12
+    },
+    {
+      "date": "2026-10-19",
+      "count": 0
     }
   ],
   "achievements": {
@@ -2192,33 +2192,24 @@
         "until": "2026-10-20T11:03:58.111Z"
       },
       {
-        "id": "harvest:2026-10-18",
+        "id": "harvest:2026-10-19",
         "type": "harvest",
         "title": "HARVEST FESTIVAL",
         "icon": "wheat",
         "detail": "12 CONTRIBUTIONS",
-        "at": "2026-10-18T12:00:00.000Z",
-        "until": "2026-10-20T04:00:00.000Z"
-      },
-      {
-        "id": "nightstars:2026-10-19",
-        "type": "nightstars",
-        "title": "NIGHT OF THE STARS",
-        "icon": "star",
-        "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-18T20:42:35.557Z",
-        "until": "2026-10-18T21:42:35.557Z"
+        "at": "2026-10-19T12:00:00.000Z",
+        "until": "2026-10-21T04:00:00.000Z"
       }
     ],
     "recent": [
       {
-        "id": "nightstars:2026-10-19",
-        "type": "nightstars",
-        "title": "NIGHT OF THE STARS",
-        "icon": "star",
-        "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-18T20:42:35.557Z",
-        "until": "2026-10-18T21:42:35.557Z"
+        "id": "harvest:2026-10-19",
+        "type": "harvest",
+        "title": "HARVEST FESTIVAL",
+        "icon": "wheat",
+        "detail": "12 CONTRIBUTIONS",
+        "at": "2026-10-19T12:00:00.000Z",
+        "until": "2026-10-21T04:00:00.000Z"
       },
       {
         "id": "levelup:23",
@@ -2228,15 +2219,6 @@
         "detail": "LEVEL 23",
         "at": "2026-10-18T15:52:06.451Z",
         "until": "2026-10-20T15:52:06.451Z"
-      },
-      {
-        "id": "harvest:2026-10-18",
-        "type": "harvest",
-        "title": "HARVEST FESTIVAL",
-        "icon": "wheat",
-        "detail": "12 CONTRIBUTIONS",
-        "at": "2026-10-18T12:00:00.000Z",
-        "until": "2026-10-20T04:00:00.000Z"
       },
       {
         "id": "quest:recover:2026-10-18",
@@ -2264,6 +2246,15 @@
         "detail": "LEVEL 22",
         "at": "2026-10-11T12:49:17.199Z",
         "until": "2026-10-13T12:49:17.199Z"
+      },
+      {
+        "id": "levelup:21",
+        "type": "milestone",
+        "title": "MILESTONE UNLOCKED",
+        "icon": "trophy",
+        "detail": "LEVEL 21",
+        "at": "2026-10-11T05:45:58.924Z",
+        "until": "2026-10-13T05:45:58.924Z"
       }
     ]
   },
@@ -2619,7 +2610,7 @@
       "dungeon": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-18T20:42:35.557Z"
+    "checkedAt": "2026-10-19T04:39:56.318Z"
   },
   "v": 2,
   "featured": [
@@ -2646,11 +2637,10 @@
       "RECOVERY",
       "CELEBRATION",
       "HARVEST",
-      "NIGHT",
       "WORKING",
       "ACTIVE"
     ],
-    "frame": 1,
+    "frame": 2,
     "hero": {
       "state": "working",
       "spot": "ci",
@@ -2670,10 +2660,10 @@
       "villager": 5
     },
     "light": {
-      "phase": "night",
-      "windows": true,
-      "torches": true,
-      "moon": true,
+      "phase": "day",
+      "windows": false,
+      "torches": false,
+      "moon": false,
       "accent": "repair",
       "danger": [],
       "gate": false,
@@ -2683,27 +2673,27 @@
       "gold": true
     },
     "weather": {
-      "kind": "aurora",
+      "kind": "clear",
       "rain": 0,
       "lightning": false,
       "snow": false,
-      "aurora": 1,
+      "aurora": 0,
       "sunrise": false,
       "wet": false,
       "frozen": false,
       "season": "autumn"
     },
     "behavior": {
-      "home": true,
+      "home": false,
       "returning": false,
       "shelter": false,
-      "patrol": true,
-      "farmersIn": true
+      "patrol": false,
+      "farmersIn": false
     },
     "stages": {
       "fail": {},
       "repair": {
-        "VocabularyBot": "repair"
+        "VocabularyBot": "fade"
       },
       "build": {},
       "visitor": null,
@@ -2715,8 +2705,7 @@
       "sparkles",
       "shrineGlow",
       "confetti",
-      "harvestFestival",
-      "shootingStars"
+      "harvestFestival"
     ],
     "labels": {
       "ci": false,
@@ -2747,5 +2736,5 @@
   },
   "worldVersion": 1,
   "renderVersion": 2,
-  "contentHash": "41217a8dfa5ec7c9"
+  "contentHash": "b42b535dae2da286"
 }
