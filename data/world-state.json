@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-23T11:37:04.861Z",
+  "generatedAt": "2026-10-23T11:39:13.103Z",
   "level": 24,
   "xp": 15161,
   "stars": 20,
@@ -31,9 +31,9 @@
     "kingdomDay": 1189
   },
   "time": {
-    "iso": "2026-10-23T11:37:04.861Z",
+    "iso": "2026-10-23T11:39:13.103Z",
     "tz": "Asia/Dhaka",
-    "hour": 17.62,
+    "hour": 17.65,
     "phase": "evening",
     "season": "autumn",
     "date": "2026-10-23"
@@ -86,7 +86,7 @@
     ],
     "state": "working",
     "spot": "ci",
-    "status": "FIXING THE CI"
+    "status": "REPAIRING THE CI"
   },
   "totals": {
     "stars": 20,
@@ -104,9 +104,7 @@
     "followers": 0,
     "yearContrib": 918,
     "workflowHealth": 99,
-    "failingRepos": [
-      "SudiptoKumar"
-    ],
+    "failingRepos": [],
     "openPRs": 0,
     "codeKb": 236055
   },
@@ -125,17 +123,17 @@
   "quests": {
     "list": [
       {
-        "title": "FIX THE FAILING CI",
-        "progress": 99,
-        "target": 100,
-        "pct": 99,
-        "id": "recover:open",
+        "id": "recover:2026-10-23",
         "track": "recover",
+        "title": "THE CI IS FIXED",
         "icon": "flame",
-        "state": "ACTIVE",
+        "state": "COMPLETE",
+        "progress": 1,
+        "target": 1,
+        "pct": 100,
         "xp": 0,
-        "at": null,
-        "isNew": false
+        "at": "2026-10-23T11:39:13.103Z",
+        "isNew": true
       },
       {
         "id": "streak:3",
@@ -196,19 +194,6 @@
     ],
     "rows": [
       {
-        "title": "FIX THE FAILING CI",
-        "progress": 99,
-        "target": 100,
-        "pct": 99,
-        "id": "recover:open",
-        "track": "recover",
-        "icon": "flame",
-        "state": "ACTIVE",
-        "xp": 0,
-        "at": null,
-        "isNew": false
-      },
-      {
         "id": "streak:3",
         "track": "streak",
         "title": "HOLD A 3 DAY STREAK",
@@ -223,36 +208,50 @@
         "isNew": false
       },
       {
-        "id": "streak:7",
-        "track": "streak",
-        "title": "HOLD A 7 DAY STREAK",
-        "icon": "wheat",
-        "state": "LOCKED",
-        "progress": 0,
-        "target": 7,
-        "pct": 0,
-        "xp": 40,
-        "unit": "DAYS",
+        "id": "stars:25",
+        "track": "stars",
+        "title": "EARN 25 STARS",
+        "icon": "star",
+        "state": "ACTIVE",
+        "progress": 20,
+        "target": 25,
+        "pct": 80,
+        "xp": 80,
+        "unit": "STARS",
         "at": null,
         "isNew": false
+      },
+      {
+        "id": "recover:2026-10-23",
+        "track": "recover",
+        "title": "THE CI IS FIXED",
+        "icon": "flame",
+        "state": "COMPLETE",
+        "progress": 1,
+        "target": 1,
+        "pct": 100,
+        "xp": 0,
+        "at": "2026-10-23T11:39:13.103Z",
+        "isNew": true
       }
     ],
     "current": {
-      "title": "FIX THE FAILING CI",
-      "progress": 99,
-      "target": 100,
-      "pct": 99,
-      "id": "recover:open",
-      "track": "recover",
-      "icon": "flame",
+      "id": "streak:3",
+      "track": "streak",
+      "title": "HOLD A 3 DAY STREAK",
+      "icon": "wheat",
       "state": "ACTIVE",
-      "xp": 0,
+      "progress": 1,
+      "target": 3,
+      "pct": 33,
+      "xp": 20,
+      "unit": "DAYS",
       "at": null,
       "isNew": false
     },
     "counts": {
-      "active": 3,
-      "complete": 3
+      "active": 2,
+      "complete": 4
     },
     "xp": 0
   },
@@ -321,12 +320,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-23T11:34:38Z",
+      "pushedAt": "2026-10-23T11:37:15Z",
       "pushedDays": 0,
       "createdAt": "2026-09-17T18:58:59Z",
-      "importance": 614.5,
-      "commits": 397,
-      "commits90": 397,
+      "importance": 616,
+      "commits": 398,
+      "commits90": 398,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 35,
@@ -597,24 +596,24 @@
       "language": "JavaScript",
       "color": "#f1e05a",
       "archetype": "house",
-      "state": "failing",
-      "workflow": "failing",
-      "recovered": false,
-      "lastFailAt": "2026-10-23T11:34:38Z",
-      "pushedAt": "2026-10-23T11:36:55Z",
+      "state": "building",
+      "workflow": "recovered",
+      "recovered": true,
+      "lastFailAt": null,
+      "pushedAt": "2026-10-23T11:37:18Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 301,
-      "commits": 189,
-      "commits90": 189,
+      "importance": 302.5,
+      "commits": 190,
+      "commits90": 190,
       "releases": 0,
-      "recoveredAt": null,
+      "recoveredAt": "2026-10-23T11:37:21Z",
       "ageDays": 21,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
-        "score": 53,
-        "toNext": 19,
+        "score": 68,
+        "toNext": 4,
         "capped": null,
         "parts": {
           "activity": 30,
@@ -2166,13 +2165,13 @@
   "events": {
     "active": [
       {
-        "id": "emergency:SudiptoKumar",
-        "type": "emergency",
-        "title": "WORKFLOW EMERGENCY",
-        "icon": "flame",
+        "id": "recovery:SudiptoKumar",
+        "type": "recovery",
+        "title": "WORKFLOW RECOVERED",
+        "icon": "check",
         "detail": "SudiptoKumar",
-        "at": "2026-10-23T11:34:38Z",
-        "until": "2026-10-23T12:37:04.861Z"
+        "at": "2026-10-23T11:37:21Z",
+        "until": "2026-10-25T11:37:21.000Z"
       },
       {
         "id": "recovery:TheSportsNewsroom",
@@ -2193,6 +2192,15 @@
         "until": "2026-10-25T07:02:16.000Z"
       },
       {
+        "id": "quest:recover:2026-10-23",
+        "type": "milestone",
+        "title": "QUEST COMPLETE",
+        "icon": "trophy",
+        "detail": "THE CI IS FIXED",
+        "at": "2026-10-23T11:39:13.103Z",
+        "until": "2026-10-25T11:39:13.103Z"
+      },
+      {
         "id": "levelup:24",
         "type": "milestone",
         "title": "MILESTONE UNLOCKED",
@@ -2204,6 +2212,24 @@
     ],
     "recent": [
       {
+        "id": "quest:recover:2026-10-23",
+        "type": "milestone",
+        "title": "QUEST COMPLETE",
+        "icon": "trophy",
+        "detail": "THE CI IS FIXED",
+        "at": "2026-10-23T11:39:13.103Z",
+        "until": "2026-10-25T11:39:13.103Z"
+      },
+      {
+        "id": "recovery:SudiptoKumar",
+        "type": "recovery",
+        "title": "WORKFLOW RECOVERED",
+        "icon": "check",
+        "detail": "SudiptoKumar",
+        "at": "2026-10-23T11:37:21Z",
+        "until": "2026-10-25T11:37:21.000Z"
+      },
+      {
         "id": "levelup:24",
         "type": "milestone",
         "title": "MILESTONE UNLOCKED",
@@ -2211,15 +2237,6 @@
         "detail": "LEVEL 24",
         "at": "2026-10-23T11:37:04.861Z",
         "until": "2026-10-25T11:37:04.861Z"
-      },
-      {
-        "id": "emergency:SudiptoKumar",
-        "type": "emergency",
-        "title": "WORKFLOW EMERGENCY",
-        "icon": "flame",
-        "detail": "SudiptoKumar",
-        "at": "2026-10-23T11:34:38Z",
-        "until": "2026-10-23T12:37:04.861Z"
       },
       {
         "id": "recovery:TheSportsNewsroom",
@@ -2245,15 +2262,6 @@
         "title": "MILESTONE UNLOCKED",
         "icon": "trophy",
         "detail": "THE TRIFECTA",
-        "at": "2026-10-02T05:40:01.794Z",
-        "until": "2026-10-04T05:40:01.794Z"
-      },
-      {
-        "id": "ach:ship_it",
-        "type": "milestone",
-        "title": "MILESTONE UNLOCKED",
-        "icon": "trophy",
-        "detail": "SHIP IT",
         "at": "2026-10-02T05:40:01.794Z",
         "until": "2026-10-04T05:40:01.794Z"
       }
@@ -2521,7 +2529,7 @@
       "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-23T11:37:04.861Z"
+    "checkedAt": "2026-10-23T11:39:13.103Z"
   },
   "v": 2,
   "featured": [
@@ -2543,19 +2551,19 @@
     }
   },
   "scene": {
-    "mode": "DANGER",
+    "mode": "RECOVERY",
     "modes": [
-      "DANGER",
+      "RECOVERY",
       "CELEBRATION",
       "WORKING",
       "ACTIVE"
     ],
-    "frame": 6,
+    "frame": 2,
     "hero": {
       "state": "working",
       "spot": "ci",
-      "why": "emergency",
-      "label": "FIXING THE CI",
+      "why": "recovery",
+      "label": "REPAIRING THE CI",
       "umbrella": false
     },
     "npcs": {
@@ -2574,12 +2582,11 @@
       "windows": true,
       "torches": true,
       "moon": false,
-      "accent": "danger",
-      "danger": [
-        "SudiptoKumar"
-      ],
+      "accent": "repair",
+      "danger": [],
       "gate": false,
       "repair": [
+        "SudiptoKumar",
         "TheSportsNewsroom",
         "VocabularyBot"
       ],
@@ -2604,10 +2611,9 @@
       "farmersIn": false
     },
     "stages": {
-      "fail": {
-        "SudiptoKumar": "warning"
-      },
+      "fail": {},
       "repair": {
+        "SudiptoKumar": "firefighter",
         "TheSportsNewsroom": "firefighter",
         "VocabularyBot": "firefighter"
       },
@@ -2621,18 +2627,18 @@
         "id": "raid:1",
         "type": "raid",
         "phase": "aftermath",
-        "ageMinutes": 30597,
+        "ageMinutes": 30599,
         "stage": "won",
         "where": {
           "anchor": "gate"
         }
       },
       {
-        "id": "emergency:SudiptoKumar",
-        "type": "emergency",
+        "id": "recovery:SudiptoKumar",
+        "type": "recovery",
         "phase": "start",
         "ageMinutes": 2,
-        "stage": "warning",
+        "stage": "firefighter",
         "where": {
           "repo": "SudiptoKumar",
           "anchor": "ci"
@@ -2642,7 +2648,7 @@
         "id": "recovery:TheSportsNewsroom",
         "type": "recovery",
         "phase": "start",
-        "ageMinutes": 251,
+        "ageMinutes": 253,
         "stage": "firefighter",
         "where": {
           "repo": "TheSportsNewsroom",
@@ -2653,7 +2659,7 @@
         "id": "recovery:VocabularyBot",
         "type": "recovery",
         "phase": "start",
-        "ageMinutes": 275,
+        "ageMinutes": 277,
         "stage": "firefighter",
         "where": {
           "repo": "VocabularyBot",
@@ -2661,10 +2667,20 @@
         }
       },
       {
-        "id": "levelup:24",
+        "id": "quest:recover:2026-10-23",
         "type": "milestone",
         "phase": "start",
         "ageMinutes": 0,
+        "stage": null,
+        "where": {
+          "anchor": "ci"
+        }
+      },
+      {
+        "id": "levelup:24",
+        "type": "milestone",
+        "phase": "start",
+        "ageMinutes": 2,
         "stage": null,
         "where": {
           "anchor": "castle"
@@ -2672,9 +2688,6 @@
       }
     ],
     "fx": [
-      "alarm",
-      "smoke",
-      "fire",
       "firefighter",
       "repair",
       "sparkles",
@@ -2683,10 +2696,10 @@
       "banner"
     ],
     "labels": {
-      "ci": true,
+      "ci": false,
       "issues": 0,
       "raid": false,
-      "event": "emergency"
+      "event": null
     },
     "hud": [
       {
@@ -2696,18 +2709,18 @@
         "tone": "good"
       },
       {
-        "kind": "ALERT",
-        "text": "SUDIPTOKUMAR CI DOWN",
-        "icon": "flame",
-        "tone": "danger"
-      },
-      {
         "kind": "REPAIR",
         "text": "CI IS FIXED",
         "icon": "check",
         "tone": "good"
+      },
+      {
+        "kind": "QUEST",
+        "text": "THE CI IS FIXED",
+        "icon": "trophy",
+        "tone": "gold"
       }
     ]
   },
-  "contentHash": "17512f2b94a30c93"
+  "contentHash": "9b6bce6aec8300ba"
 }
