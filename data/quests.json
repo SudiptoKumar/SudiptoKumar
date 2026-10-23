@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "init": true,
+  "done": {
+    "stars:1": {
+      "at": "2026-10-23T11:37:04.861Z",
+      "baseline": true
+    },
+    "stars:5": {
+      "at": "2026-10-23T11:37:04.861Z",
+      "baseline": true
+    },
+    "stars:10": {
+      "at": "2026-10-23T11:37:04.861Z",
+      "baseline": true
+    }
+  },
+  "active": [
+    "recover:open"
+  ]
+}
