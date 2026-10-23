@@ -1,0 +1,43 @@
+{
+  "owner": "SudiptoKumar",
+  "repo": "SudiptoKumar",
+  "branch": "main",
+  "displayName": "Sudipto Kumar",
+  "timezone": "Asia/Dhaka",
+  "hemisphere": "north",
+  "excludeRepos": [],
+  "buildings": {
+    "StudyMart": "castle",
+    "News Bots": "tower",
+    "Portfolio": "guild",
+    "Daily Facts": "library"
+  },
+  "links": [
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/sudipto-kumar"
+    },
+    {
+      "id": "x",
+      "label": "X",
+      "url": "https://twitter.com/sudiptokarn"
+    },
+    {
+      "id": "instagram",
+      "label": "Instagram",
+      "url": "https://instagram.com/real.sudipto"
+    },
+    {
+      "id": "telegram",
+      "label": "Telegram",
+      "url": "https://t.me/NewsroomHQ"
+    },
+    {
+      "id": "email",
+      "label": "Email",
+      "url": "mailto:sudipto.karn@gmail.com"
+    }
+  ],
+  "featuredCount": 5
+}
