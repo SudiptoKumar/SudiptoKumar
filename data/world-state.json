@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-24T15:56:29.736Z",
+  "generatedAt": "2026-10-24T20:48:36.339Z",
   "level": 24,
   "xp": 15161,
   "stars": 20,
@@ -28,15 +28,15 @@
     "createdAt": "2023-07-22T03:36:18Z",
     "followers": 0,
     "following": 0,
-    "kingdomDay": 1190
+    "kingdomDay": 1191
   },
   "time": {
-    "iso": "2026-10-24T15:56:29.736Z",
+    "iso": "2026-10-24T20:48:36.339Z",
     "tz": "Asia/Dhaka",
-    "hour": 21.93,
+    "hour": 2.8,
     "phase": "night",
     "season": "autumn",
-    "date": "2026-10-24"
+    "date": "2026-10-25"
   },
   "hero": {
     "class": {
@@ -106,7 +106,7 @@
     "workflowHealth": 99,
     "failingRepos": [],
     "openPRs": 0,
-    "codeKb": 258528
+    "codeKb": 259319
   },
   "xpBreakdown": {
     "base": 3282,
@@ -320,15 +320,15 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-24T12:59:20Z",
+      "pushedAt": "2026-10-24T19:54:23Z",
       "pushedDays": 0,
       "createdAt": "2026-09-17T18:58:59Z",
-      "importance": 625,
-      "commits": 404,
-      "commits90": 404,
+      "importance": 628,
+      "commits": 406,
+      "commits90": 406,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 36,
+      "ageDays": 37,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -360,12 +360,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-24T14:22:00Z",
+      "pushedAt": "2026-10-24T18:05:25Z",
       "pushedDays": 0,
       "createdAt": "2026-08-28T14:21:15Z",
-      "importance": 515.5,
-      "commits": 331,
-      "commits90": 331,
+      "importance": 517,
+      "commits": 332,
+      "commits90": 332,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 57,
@@ -400,15 +400,15 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-24T12:52:32Z",
+      "pushedAt": "2026-10-24T19:41:01Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T17:29:46Z",
-      "importance": 443.9,
-      "commits": 284,
-      "commits90": 284,
+      "importance": 447,
+      "commits": 286,
+      "commits90": 286,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 55,
+      "ageDays": 56,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -440,12 +440,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-24T14:35:04Z",
+      "pushedAt": "2026-10-24T18:10:32Z",
       "pushedDays": 0,
       "createdAt": "2026-08-27T10:01:41Z",
-      "importance": 424,
-      "commits": 270,
-      "commits90": 270,
+      "importance": 425.5,
+      "commits": 271,
+      "commits90": 271,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 58,
@@ -480,12 +480,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-24T14:36:02Z",
+      "pushedAt": "2026-10-24T18:09:05Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T04:24:35Z",
-      "importance": 418,
-      "commits": 266,
-      "commits90": 266,
+      "importance": 419.5,
+      "commits": 267,
+      "commits90": 267,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 56,
@@ -520,15 +520,15 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-24T14:23:36Z",
+      "pushedAt": "2026-10-24T17:57:49Z",
       "pushedDays": 0,
       "createdAt": "2026-08-28T19:08:24Z",
-      "importance": 407.5,
-      "commits": 259,
-      "commits90": 259,
+      "importance": 409,
+      "commits": 260,
+      "commits90": 260,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 56,
+      "ageDays": 57,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -560,15 +560,15 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-24T14:28:07Z",
+      "pushedAt": "2026-10-24T17:52:19Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T16:33:20Z",
-      "importance": 347.5,
-      "commits": 219,
-      "commits90": 219,
+      "importance": 349,
+      "commits": 220,
+      "commits90": 220,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 55,
+      "ageDays": 56,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -600,14 +600,14 @@
       "workflow": "recovered",
       "recovered": true,
       "lastFailAt": null,
-      "pushedAt": "2026-10-24T10:59:19Z",
+      "pushedAt": "2026-10-24T15:56:43Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 316,
-      "commits": 198,
-      "commits90": 198,
+      "importance": 317.5,
+      "commits": 199,
+      "commits90": 199,
       "releases": 0,
-      "recoveredAt": "2026-10-24T10:59:22Z",
+      "recoveredAt": "2026-10-24T15:56:45Z",
       "ageDays": 23,
       "evolution": {
         "level": 4,
@@ -640,15 +640,15 @@
       "workflow": "recovered",
       "recovered": true,
       "lastFailAt": null,
-      "pushedAt": "2026-10-24T07:14:45Z",
+      "pushedAt": "2026-10-24T17:29:56Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T16:56:23Z",
-      "importance": 294.4,
-      "commits": 187,
-      "commits90": 187,
+      "importance": 296,
+      "commits": 188,
+      "commits90": 188,
       "releases": 0,
-      "recoveredAt": "2026-10-24T07:14:48Z",
-      "ageDays": 33,
+      "recoveredAt": "2026-10-24T17:29:59Z",
+      "ageDays": 34,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -680,12 +680,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-24T15:28:23Z",
+      "pushedAt": "2026-10-24T20:17:09Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T10:49:10Z",
-      "importance": 286,
-      "commits": 178,
-      "commits90": 178,
+      "importance": 287.5,
+      "commits": 179,
+      "commits90": 179,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 34,
@@ -732,8 +732,8 @@
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
-        "score": 68,
-        "toNext": 4,
+        "score": 69,
+        "toNext": 3,
         "capped": null,
         "parts": {
           "activity": 30,
@@ -1048,7 +1048,7 @@
       "commits90": 18,
       "releases": 3,
       "recoveredAt": null,
-      "ageDays": 19,
+      "ageDays": 20,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -2165,22 +2165,22 @@
   "events": {
     "active": [
       {
-        "id": "recovery:SudiptoKumar",
-        "type": "recovery",
-        "title": "WORKFLOW RECOVERED",
-        "icon": "check",
-        "detail": "SudiptoKumar",
-        "at": "2026-10-24T10:59:22Z",
-        "until": "2026-10-26T10:59:22.000Z"
-      },
-      {
         "id": "recovery:TheSportsNewsroom",
         "type": "recovery",
         "title": "WORKFLOW RECOVERED",
         "icon": "check",
         "detail": "TheSportsNewsroom",
-        "at": "2026-10-24T07:14:48Z",
-        "until": "2026-10-26T07:14:48.000Z"
+        "at": "2026-10-24T17:29:59Z",
+        "until": "2026-10-26T17:29:59.000Z"
+      },
+      {
+        "id": "recovery:SudiptoKumar",
+        "type": "recovery",
+        "title": "WORKFLOW RECOVERED",
+        "icon": "check",
+        "detail": "SudiptoKumar",
+        "at": "2026-10-24T15:56:45Z",
+        "until": "2026-10-26T15:56:45.000Z"
       },
       {
         "id": "recovery:VocabularyBot",
@@ -2210,33 +2210,24 @@
         "until": "2026-10-25T11:37:04.861Z"
       },
       {
-        "id": "nightstars:2026-10-24",
+        "id": "nightstars:2026-10-25",
         "type": "nightstars",
         "title": "NIGHT OF THE STARS",
         "icon": "star",
         "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-24T15:56:29.736Z",
-        "until": "2026-10-24T16:56:29.736Z"
+        "at": "2026-10-24T20:48:36.339Z",
+        "until": "2026-10-24T21:48:36.339Z"
       }
     ],
     "recent": [
       {
-        "id": "nightstars:2026-10-24",
+        "id": "nightstars:2026-10-25",
         "type": "nightstars",
         "title": "NIGHT OF THE STARS",
         "icon": "star",
         "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-24T15:56:29.736Z",
-        "until": "2026-10-24T16:56:29.736Z"
-      },
-      {
-        "id": "recovery:SudiptoKumar",
-        "type": "recovery",
-        "title": "WORKFLOW RECOVERED",
-        "icon": "check",
-        "detail": "SudiptoKumar",
-        "at": "2026-10-24T10:59:22Z",
-        "until": "2026-10-26T10:59:22.000Z"
+        "at": "2026-10-24T20:48:36.339Z",
+        "until": "2026-10-24T21:48:36.339Z"
       },
       {
         "id": "recovery:TheSportsNewsroom",
@@ -2244,8 +2235,17 @@
         "title": "WORKFLOW RECOVERED",
         "icon": "check",
         "detail": "TheSportsNewsroom",
-        "at": "2026-10-24T07:14:48Z",
-        "until": "2026-10-26T07:14:48.000Z"
+        "at": "2026-10-24T17:29:59Z",
+        "until": "2026-10-26T17:29:59.000Z"
+      },
+      {
+        "id": "recovery:SudiptoKumar",
+        "type": "recovery",
+        "title": "WORKFLOW RECOVERED",
+        "icon": "check",
+        "detail": "SudiptoKumar",
+        "at": "2026-10-24T15:56:45Z",
+        "until": "2026-10-26T15:56:45.000Z"
       },
       {
         "id": "recovery:VocabularyBot",
@@ -2522,6 +2522,14 @@
         "s": 20,
         "c": 851,
         "p": 1193
+      },
+      {
+        "d": "2026-10-25",
+        "l": 24,
+        "x": 15161,
+        "s": 20,
+        "c": 851,
+        "p": 1193
       }
     ]
   },
@@ -2538,7 +2546,7 @@
       "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-24T15:56:29.736Z"
+    "checkedAt": "2026-10-24T20:48:36.339Z"
   },
   "v": 2,
   "featured": [
@@ -2624,7 +2632,7 @@
       "fail": {},
       "repair": {
         "SudiptoKumar": "firefighter",
-        "TheSportsNewsroom": "repair",
+        "TheSportsNewsroom": "firefighter",
         "VocabularyBot": "repair"
       },
       "build": {},
@@ -2634,10 +2642,21 @@
     },
     "phases": [
       {
+        "id": "recovery:TheSportsNewsroom",
+        "type": "recovery",
+        "phase": "start",
+        "ageMinutes": 199,
+        "stage": "firefighter",
+        "where": {
+          "repo": "TheSportsNewsroom",
+          "anchor": "ci"
+        }
+      },
+      {
         "id": "recovery:SudiptoKumar",
         "type": "recovery",
         "phase": "start",
-        "ageMinutes": 297,
+        "ageMinutes": 292,
         "stage": "firefighter",
         "where": {
           "repo": "SudiptoKumar",
@@ -2645,21 +2664,10 @@
         }
       },
       {
-        "id": "recovery:TheSportsNewsroom",
-        "type": "recovery",
-        "phase": "peak",
-        "ageMinutes": 522,
-        "stage": "repair",
-        "where": {
-          "repo": "TheSportsNewsroom",
-          "anchor": "ci"
-        }
-      },
-      {
         "id": "recovery:VocabularyBot",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 542,
+        "ageMinutes": 834,
         "stage": "repair",
         "where": {
           "repo": "VocabularyBot",
@@ -2670,7 +2678,7 @@
         "id": "quest:recover:2026-10-23",
         "type": "milestone",
         "phase": "aftermath",
-        "ageMinutes": 1697,
+        "ageMinutes": 1989,
         "stage": null,
         "where": {
           "anchor": "ci"
@@ -2680,14 +2688,14 @@
         "id": "levelup:24",
         "type": "milestone",
         "phase": "aftermath",
-        "ageMinutes": 1699,
+        "ageMinutes": 1992,
         "stage": null,
         "where": {
           "anchor": "castle"
         }
       },
       {
-        "id": "nightstars:2026-10-24",
+        "id": "nightstars:2026-10-25",
         "type": "nightstars",
         "phase": "start",
         "ageMinutes": 0,
@@ -2730,5 +2738,5 @@
       }
     ]
   },
-  "contentHash": "3e0ffb2a56193a62"
+  "contentHash": "2eccf63b2e9ed715"
 }
