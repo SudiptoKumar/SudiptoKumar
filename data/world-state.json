@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-27T05:03:17.357Z",
+  "generatedAt": "2026-10-27T05:33:35.820Z",
   "level": 24,
   "xp": 15266,
   "stars": 20,
@@ -31,9 +31,9 @@
     "kingdomDay": 1193
   },
   "time": {
-    "iso": "2026-10-27T05:03:17.357Z",
+    "iso": "2026-10-27T05:33:35.820Z",
     "tz": "Asia/Dhaka",
-    "hour": 11.05,
+    "hour": 11.55,
     "phase": "day",
     "season": "autumn",
     "date": "2026-10-27"
@@ -600,14 +600,14 @@
       "workflow": "recovered",
       "recovered": true,
       "lastFailAt": null,
-      "pushedAt": "2026-10-26T22:40:03Z",
+      "pushedAt": "2026-10-27T05:03:31Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 332.5,
-      "commits": 209,
-      "commits90": 209,
+      "importance": 334,
+      "commits": 210,
+      "commits90": 210,
       "releases": 0,
-      "recoveredAt": "2026-10-26T22:40:07Z",
+      "recoveredAt": "2026-10-27T05:03:35Z",
       "ageDays": 25,
       "evolution": {
         "level": 4,
@@ -2165,6 +2165,15 @@
   "events": {
     "active": [
       {
+        "id": "recovery:SudiptoKumar",
+        "type": "recovery",
+        "title": "WORKFLOW RECOVERED",
+        "icon": "check",
+        "detail": "SudiptoKumar",
+        "at": "2026-10-27T05:03:35Z",
+        "until": "2026-10-29T05:03:35.000Z"
+      },
+      {
         "id": "recovery:VocabularyBot",
         "type": "recovery",
         "title": "WORKFLOW RECOVERED",
@@ -2172,15 +2181,6 @@
         "detail": "VocabularyBot",
         "at": "2026-10-27T04:48:45Z",
         "until": "2026-10-29T04:48:45.000Z"
-      },
-      {
-        "id": "recovery:SudiptoKumar",
-        "type": "recovery",
-        "title": "WORKFLOW RECOVERED",
-        "icon": "check",
-        "detail": "SudiptoKumar",
-        "at": "2026-10-26T22:40:07Z",
-        "until": "2026-10-28T22:40:07.000Z"
       },
       {
         "id": "recovery:TheSportsNewsroom",
@@ -2203,6 +2203,15 @@
     ],
     "recent": [
       {
+        "id": "recovery:SudiptoKumar",
+        "type": "recovery",
+        "title": "WORKFLOW RECOVERED",
+        "icon": "check",
+        "detail": "SudiptoKumar",
+        "at": "2026-10-27T05:03:35Z",
+        "until": "2026-10-29T05:03:35.000Z"
+      },
+      {
         "id": "quest:recover:2026-10-27",
         "type": "milestone",
         "title": "QUEST COMPLETE",
@@ -2219,15 +2228,6 @@
         "detail": "VocabularyBot",
         "at": "2026-10-27T04:48:45Z",
         "until": "2026-10-29T04:48:45.000Z"
-      },
-      {
-        "id": "recovery:SudiptoKumar",
-        "type": "recovery",
-        "title": "WORKFLOW RECOVERED",
-        "icon": "check",
-        "detail": "SudiptoKumar",
-        "at": "2026-10-26T22:40:07Z",
-        "until": "2026-10-28T22:40:07.000Z"
       },
       {
         "id": "recovery:TheSportsNewsroom",
@@ -2544,7 +2544,7 @@
       "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-27T05:03:17.357Z"
+    "checkedAt": "2026-10-27T05:33:35.820Z"
   },
   "v": 2,
   "featured": [
@@ -2628,7 +2628,7 @@
     "stages": {
       "fail": {},
       "repair": {
-        "SudiptoKumar": "repair",
+        "SudiptoKumar": "firefighter",
         "TheSportsNewsroom": "repair",
         "VocabularyBot": "firefighter"
       },
@@ -2639,10 +2639,21 @@
     },
     "phases": [
       {
+        "id": "recovery:SudiptoKumar",
+        "type": "recovery",
+        "phase": "start",
+        "ageMinutes": 30,
+        "stage": "firefighter",
+        "where": {
+          "repo": "SudiptoKumar",
+          "anchor": "ci"
+        }
+      },
+      {
         "id": "recovery:VocabularyBot",
         "type": "recovery",
         "phase": "start",
-        "ageMinutes": 15,
+        "ageMinutes": 45,
         "stage": "firefighter",
         "where": {
           "repo": "VocabularyBot",
@@ -2650,21 +2661,10 @@
         }
       },
       {
-        "id": "recovery:SudiptoKumar",
-        "type": "recovery",
-        "phase": "peak",
-        "ageMinutes": 383,
-        "stage": "repair",
-        "where": {
-          "repo": "SudiptoKumar",
-          "anchor": "ci"
-        }
-      },
-      {
         "id": "recovery:TheSportsNewsroom",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 547,
+        "ageMinutes": 578,
         "stage": "repair",
         "where": {
           "repo": "TheSportsNewsroom",
@@ -2674,8 +2674,8 @@
       {
         "id": "quest:recover:2026-10-27",
         "type": "milestone",
-        "phase": "start",
-        "ageMinutes": 0,
+        "phase": "peak",
+        "ageMinutes": 30,
         "stage": null,
         "where": {
           "anchor": "ci"
@@ -2710,5 +2710,5 @@
       }
     ]
   },
-  "contentHash": "edb44e3d446fc6c0"
+  "contentHash": "1bc7bca8de03d338"
 }
