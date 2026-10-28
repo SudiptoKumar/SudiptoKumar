@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-28T05:40:52.648Z",
+  "generatedAt": "2026-10-28T06:14:58.746Z",
   "level": 24,
-  "xp": 15470,
+  "xp": 15575,
   "stars": 20,
-  "commits": 857,
+  "commits": 859,
   "issues": 0,
-  "pullRequests": 47,
+  "pullRequests": 48,
   "workflowHealth": 99,
-  "streak": 1,
+  "streak": 2,
   "activeRepositories": 22,
   "topLanguage": "Python",
   "weather": "aurora",
@@ -31,9 +31,9 @@
     "kingdomDay": 1194
   },
   "time": {
-    "iso": "2026-10-28T05:40:52.648Z",
+    "iso": "2026-10-28T06:14:58.746Z",
     "tz": "Asia/Dhaka",
-    "hour": 11.67,
+    "hour": 12.23,
     "phase": "day",
     "season": "autumn",
     "date": "2026-10-28"
@@ -45,9 +45,9 @@
       "archetype": "alchemist",
       "name": "ALCHEMIST"
     },
-    "xpInto": 520,
+    "xpInto": 625,
     "xpNeed": 1250,
-    "xpPct": 42,
+    "xpPct": 50,
     "xpNext": 16200,
     "activity": "normal",
     "position": "farm",
@@ -55,14 +55,14 @@
     "stats": {
       "codePower": 97,
       "reliability": 99,
-      "streak": 1,
+      "streak": 2,
       "reputation": 20
     },
     "streak": {
-      "current": 1,
+      "current": 2,
       "longest": 22,
-      "idleDays": 1,
-      "today": 0,
+      "idleDays": 0,
+      "today": 3,
       "yesterday": 6
     },
     "title": "KINGDOM BUILDER",
@@ -91,9 +91,9 @@
   "totals": {
     "stars": 20,
     "forks": 0,
-    "commits": 857,
-    "prs": 47,
-    "mergedPrs": 47,
+    "commits": 859,
+    "prs": 48,
+    "mergedPrs": 48,
     "reviews": 0,
     "issuesOpen": 0,
     "issuesClosed": 3,
@@ -102,18 +102,18 @@
     "activeRepos": 22,
     "archivedRepos": 0,
     "followers": 0,
-    "yearContrib": 927,
+    "yearContrib": 930,
     "workflowHealth": 99,
     "failingRepos": [],
     "openPRs": 0,
     "codeKb": 299718
   },
   "xpBreakdown": {
-    "base": 3366,
+    "base": 3396,
     "streakBonus": 304,
     "bonus": {
-      "pullRequests": 1675,
-      "mergedPullRequests": 3350,
+      "pullRequests": 1700,
+      "mergedPullRequests": 3400,
       "issuesClosed": 75,
       "releases": 1500,
       "repositories": 5200
@@ -141,9 +141,9 @@
         "title": "HOLD A 3 DAY STREAK",
         "icon": "wheat",
         "state": "ACTIVE",
-        "progress": 1,
+        "progress": 2,
         "target": 3,
-        "pct": 33,
+        "pct": 67,
         "xp": 20,
         "unit": "DAYS",
         "at": null,
@@ -199,9 +199,9 @@
         "title": "HOLD A 3 DAY STREAK",
         "icon": "wheat",
         "state": "ACTIVE",
-        "progress": 1,
+        "progress": 2,
         "target": 3,
-        "pct": 33,
+        "pct": 67,
         "xp": 20,
         "unit": "DAYS",
         "at": null,
@@ -241,9 +241,9 @@
       "title": "HOLD A 3 DAY STREAK",
       "icon": "wheat",
       "state": "ACTIVE",
-      "progress": 1,
+      "progress": 2,
       "target": 3,
-      "pct": 33,
+      "pct": 67,
       "xp": 20,
       "unit": "DAYS",
       "at": null,
@@ -256,7 +256,7 @@
     "xp": 0
   },
   "population": {
-    "total": 1195,
+    "total": 1196,
     "npcs": 11,
     "houses": 12
   },
@@ -275,7 +275,7 @@
   "languages": [
     {
       "name": "Python",
-      "pct": 37,
+      "pct": 38,
       "color": "#3572A5"
     },
     {
@@ -597,17 +597,17 @@
       "color": "#f1e05a",
       "archetype": "house",
       "state": "building",
-      "workflow": "recovered",
-      "recovered": true,
+      "workflow": "passing",
+      "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-27T22:13:57Z",
+      "pushedAt": "2026-10-28T05:41:06Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 340,
-      "commits": 214,
-      "commits90": 214,
+      "importance": 341.5,
+      "commits": 215,
+      "commits90": 215,
       "releases": 0,
-      "recoveredAt": "2026-10-27T22:14:00Z",
+      "recoveredAt": null,
       "ageDays": 26,
       "evolution": {
         "level": 4,
@@ -640,14 +640,14 @@
       "workflow": "recovered",
       "recovered": true,
       "lastFailAt": null,
-      "pushedAt": "2026-10-27T19:29:31Z",
+      "pushedAt": "2026-10-28T05:49:18Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T16:56:23Z",
-      "importance": 315.3,
-      "commits": 200,
-      "commits90": 200,
+      "importance": 319.8,
+      "commits": 203,
+      "commits90": 203,
       "releases": 0,
-      "recoveredAt": "2026-10-27T19:29:34Z",
+      "recoveredAt": "2026-10-28T05:49:21Z",
       "ageDays": 37,
       "evolution": {
         "level": 4,
@@ -1972,7 +1972,7 @@
     },
     {
       "date": "2026-10-28",
-      "count": 0
+      "count": 3
     }
   ],
   "achievements": {
@@ -2165,22 +2165,13 @@
   "events": {
     "active": [
       {
-        "id": "recovery:SudiptoKumar",
-        "type": "recovery",
-        "title": "WORKFLOW RECOVERED",
-        "icon": "check",
-        "detail": "SudiptoKumar",
-        "at": "2026-10-27T22:14:00Z",
-        "until": "2026-10-29T22:14:00.000Z"
-      },
-      {
         "id": "recovery:TheSportsNewsroom",
         "type": "recovery",
         "title": "WORKFLOW RECOVERED",
         "icon": "check",
         "detail": "TheSportsNewsroom",
-        "at": "2026-10-27T19:29:34Z",
-        "until": "2026-10-29T19:29:34.000Z"
+        "at": "2026-10-28T05:49:21Z",
+        "until": "2026-10-30T05:49:21.000Z"
       },
       {
         "id": "recovery:VocabularyBot",
@@ -2203,22 +2194,13 @@
     ],
     "recent": [
       {
-        "id": "recovery:SudiptoKumar",
-        "type": "recovery",
-        "title": "WORKFLOW RECOVERED",
-        "icon": "check",
-        "detail": "SudiptoKumar",
-        "at": "2026-10-27T22:14:00Z",
-        "until": "2026-10-29T22:14:00.000Z"
-      },
-      {
         "id": "recovery:TheSportsNewsroom",
         "type": "recovery",
         "title": "WORKFLOW RECOVERED",
         "icon": "check",
         "detail": "TheSportsNewsroom",
-        "at": "2026-10-27T19:29:34Z",
-        "until": "2026-10-29T19:29:34.000Z"
+        "at": "2026-10-28T05:49:21Z",
+        "until": "2026-10-30T05:49:21.000Z"
       },
       {
         "id": "recovery:VocabularyBot",
@@ -2255,6 +2237,15 @@
         "detail": "LEVEL 24",
         "at": "2026-10-23T11:37:04.861Z",
         "until": "2026-10-25T11:37:04.861Z"
+      },
+      {
+        "id": "ach:trifecta",
+        "type": "milestone",
+        "title": "MILESTONE UNLOCKED",
+        "icon": "trophy",
+        "detail": "THE TRIFECTA",
+        "at": "2026-10-02T05:40:01.794Z",
+        "until": "2026-10-04T05:40:01.794Z"
       }
     ]
   },
@@ -2532,10 +2523,10 @@
       {
         "d": "2026-10-28",
         "l": 24,
-        "x": 15470,
+        "x": 15575,
         "s": 20,
-        "c": 857,
-        "p": 1195
+        "c": 859,
+        "p": 1196
       }
     ]
   },
@@ -2552,7 +2543,7 @@
       "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-28T05:40:52.648Z"
+    "checkedAt": "2026-10-28T06:14:58.746Z"
   },
   "v": 2,
   "featured": [
@@ -2563,10 +2554,10 @@
     "DocFlow"
   ],
   "power": {
-    "value": 66,
+    "value": 67,
     "parts": {
       "progress": 24.6,
-      "consistency": 0.7,
+      "consistency": 1.3,
       "reliability": 19.8,
       "reach": 5.9,
       "vitality": 15,
@@ -2581,7 +2572,7 @@
       "WORKING",
       "ACTIVE"
     ],
-    "frame": 4,
+    "frame": 7,
     "hero": {
       "state": "working",
       "spot": "ci",
@@ -2609,7 +2600,6 @@
       "danger": [],
       "gate": false,
       "repair": [
-        "SudiptoKumar",
         "TheSportsNewsroom",
         "VocabularyBot"
       ],
@@ -2636,8 +2626,7 @@
     "stages": {
       "fail": {},
       "repair": {
-        "SudiptoKumar": "repair",
-        "TheSportsNewsroom": "repair",
+        "TheSportsNewsroom": "firefighter",
         "VocabularyBot": "fade"
       },
       "build": {},
@@ -2647,22 +2636,11 @@
     },
     "phases": [
       {
-        "id": "recovery:SudiptoKumar",
-        "type": "recovery",
-        "phase": "peak",
-        "ageMinutes": 447,
-        "stage": "repair",
-        "where": {
-          "repo": "SudiptoKumar",
-          "anchor": "ci"
-        }
-      },
-      {
         "id": "recovery:TheSportsNewsroom",
         "type": "recovery",
-        "phase": "peak",
-        "ageMinutes": 611,
-        "stage": "repair",
+        "phase": "start",
+        "ageMinutes": 26,
+        "stage": "firefighter",
         "where": {
           "repo": "TheSportsNewsroom",
           "anchor": "ci"
@@ -2672,7 +2650,7 @@
         "id": "recovery:VocabularyBot",
         "type": "recovery",
         "phase": "aftermath",
-        "ageMinutes": 1338,
+        "ageMinutes": 1372,
         "stage": "fade",
         "where": {
           "repo": "VocabularyBot",
@@ -2683,7 +2661,7 @@
         "id": "quest:recover:2026-10-27",
         "type": "milestone",
         "phase": "aftermath",
-        "ageMinutes": 1478,
+        "ageMinutes": 1512,
         "stage": null,
         "where": {
           "anchor": "ci"
@@ -2718,5 +2696,5 @@
       }
     ]
   },
-  "contentHash": "d661270e8dfc5f6f"
+  "contentHash": "53ca53d841b27dd0"
 }
