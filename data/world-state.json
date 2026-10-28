@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-27T22:13:42.837Z",
+  "generatedAt": "2026-10-28T05:40:52.648Z",
   "level": 24,
   "xp": 15470,
   "stars": 20,
@@ -13,7 +13,7 @@
   "topLanguage": "Python",
   "weather": "aurora",
   "weatherReason": "A release or milestone is being celebrated",
-  "timeOfDay": "night",
+  "timeOfDay": "day",
   "season": "autumn",
   "meta": {
     "demo": false,
@@ -31,10 +31,10 @@
     "kingdomDay": 1194
   },
   "time": {
-    "iso": "2026-10-27T22:13:42.837Z",
+    "iso": "2026-10-28T05:40:52.648Z",
     "tz": "Asia/Dhaka",
-    "hour": 4.22,
-    "phase": "night",
+    "hour": 11.67,
+    "phase": "day",
     "season": "autumn",
     "date": "2026-10-28"
   },
@@ -61,9 +61,9 @@
     "streak": {
       "current": 1,
       "longest": 22,
-      "idleDays": 0,
-      "today": 6,
-      "yesterday": 0
+      "idleDays": 1,
+      "today": 0,
+      "yesterday": 6
     },
     "title": "KINGDOM BUILDER",
     "roles": [
@@ -106,7 +106,7 @@
     "workflowHealth": 99,
     "failingRepos": [],
     "openPRs": 0,
-    "codeKb": 297623
+    "codeKb": 299718
   },
   "xpBreakdown": {
     "base": 3366,
@@ -320,12 +320,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-27T19:49:01Z",
+      "pushedAt": "2026-10-28T00:08:20Z",
       "pushedDays": 0,
       "createdAt": "2026-09-17T18:58:59Z",
-      "importance": 655,
-      "commits": 424,
-      "commits90": 424,
+      "importance": 656.5,
+      "commits": 425,
+      "commits90": 425,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 40,
@@ -488,7 +488,7 @@
       "commits90": 277,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 59,
+      "ageDays": 60,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -600,14 +600,14 @@
       "workflow": "recovered",
       "recovered": true,
       "lastFailAt": null,
-      "pushedAt": "2026-10-27T18:00:37Z",
+      "pushedAt": "2026-10-27T22:13:57Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 338.5,
-      "commits": 213,
-      "commits90": 213,
+      "importance": 340,
+      "commits": 214,
+      "commits90": 214,
       "releases": 0,
-      "recoveredAt": "2026-10-27T18:00:40Z",
+      "recoveredAt": "2026-10-27T22:14:00Z",
       "ageDays": 26,
       "evolution": {
         "level": 4,
@@ -680,12 +680,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-27T21:55:13Z",
+      "pushedAt": "2026-10-28T04:00:08Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T10:49:10Z",
-      "importance": 307,
-      "commits": 192,
-      "commits90": 192,
+      "importance": 308.5,
+      "commits": 193,
+      "commits90": 193,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 37,
@@ -921,14 +921,14 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-02T05:34:12Z",
-      "pushedDays": 25,
+      "pushedDays": 26,
       "createdAt": "2026-09-28T22:15:20Z",
       "importance": 67.9,
       "commits": 38,
       "commits90": 38,
       "releases": 2,
       "recoveredAt": null,
-      "ageDays": 28,
+      "ageDays": 29,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -961,7 +961,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-08T04:03:23Z",
-      "pushedDays": 19,
+      "pushedDays": 20,
       "createdAt": "2026-10-01T13:12:44Z",
       "importance": 55.2,
       "commits": 33,
@@ -1008,7 +1008,7 @@
       "commits90": 16,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 28,
+      "ageDays": 29,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1187,10 +1187,6 @@
     }
   ],
   "calendar": [
-    {
-      "date": "2026-04-22",
-      "count": 0
-    },
     {
       "date": "2026-04-23",
       "count": 0
@@ -1973,6 +1969,10 @@
     {
       "date": "2026-10-27",
       "count": 6
+    },
+    {
+      "date": "2026-10-28",
+      "count": 0
     }
   ],
   "achievements": {
@@ -2165,6 +2165,15 @@
   "events": {
     "active": [
       {
+        "id": "recovery:SudiptoKumar",
+        "type": "recovery",
+        "title": "WORKFLOW RECOVERED",
+        "icon": "check",
+        "detail": "SudiptoKumar",
+        "at": "2026-10-27T22:14:00Z",
+        "until": "2026-10-29T22:14:00.000Z"
+      },
+      {
         "id": "recovery:TheSportsNewsroom",
         "type": "recovery",
         "title": "WORKFLOW RECOVERED",
@@ -2172,15 +2181,6 @@
         "detail": "TheSportsNewsroom",
         "at": "2026-10-27T19:29:34Z",
         "until": "2026-10-29T19:29:34.000Z"
-      },
-      {
-        "id": "recovery:SudiptoKumar",
-        "type": "recovery",
-        "title": "WORKFLOW RECOVERED",
-        "icon": "check",
-        "detail": "SudiptoKumar",
-        "at": "2026-10-27T18:00:40Z",
-        "until": "2026-10-29T18:00:40.000Z"
       },
       {
         "id": "recovery:VocabularyBot",
@@ -2199,26 +2199,17 @@
         "detail": "THE CI IS FIXED",
         "at": "2026-10-27T05:03:17.357Z",
         "until": "2026-10-29T05:03:17.357Z"
-      },
-      {
-        "id": "nightstars:2026-10-28",
-        "type": "nightstars",
-        "title": "NIGHT OF THE STARS",
-        "icon": "star",
-        "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-27T22:13:42.837Z",
-        "until": "2026-10-27T23:13:42.837Z"
       }
     ],
     "recent": [
       {
-        "id": "nightstars:2026-10-28",
-        "type": "nightstars",
-        "title": "NIGHT OF THE STARS",
-        "icon": "star",
-        "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-10-27T22:13:42.837Z",
-        "until": "2026-10-27T23:13:42.837Z"
+        "id": "recovery:SudiptoKumar",
+        "type": "recovery",
+        "title": "WORKFLOW RECOVERED",
+        "icon": "check",
+        "detail": "SudiptoKumar",
+        "at": "2026-10-27T22:14:00Z",
+        "until": "2026-10-29T22:14:00.000Z"
       },
       {
         "id": "recovery:TheSportsNewsroom",
@@ -2228,15 +2219,6 @@
         "detail": "TheSportsNewsroom",
         "at": "2026-10-27T19:29:34Z",
         "until": "2026-10-29T19:29:34.000Z"
-      },
-      {
-        "id": "recovery:SudiptoKumar",
-        "type": "recovery",
-        "title": "WORKFLOW RECOVERED",
-        "icon": "check",
-        "detail": "SudiptoKumar",
-        "at": "2026-10-27T18:00:40Z",
-        "until": "2026-10-29T18:00:40.000Z"
       },
       {
         "id": "recovery:VocabularyBot",
@@ -2264,6 +2246,15 @@
         "detail": "THE CI IS FIXED",
         "at": "2026-10-23T11:39:13.103Z",
         "until": "2026-10-25T11:39:13.103Z"
+      },
+      {
+        "id": "levelup:24",
+        "type": "milestone",
+        "title": "MILESTONE UNLOCKED",
+        "icon": "trophy",
+        "detail": "LEVEL 24",
+        "at": "2026-10-23T11:37:04.861Z",
+        "until": "2026-10-25T11:37:04.861Z"
       }
     ]
   },
@@ -2561,7 +2552,7 @@
       "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-27T22:13:42.837Z"
+    "checkedAt": "2026-10-28T05:40:52.648Z"
   },
   "v": 2,
   "featured": [
@@ -2587,11 +2578,10 @@
     "modes": [
       "RECOVERY",
       "CELEBRATION",
-      "NIGHT",
       "WORKING",
       "ACTIVE"
     ],
-    "frame": 2,
+    "frame": 4,
     "hero": {
       "state": "working",
       "spot": "ci",
@@ -2601,7 +2591,7 @@
     },
     "npcs": {
       "builder": 6,
-      "farmer": 3,
+      "farmer": 1,
       "miner": 1,
       "guard": 2,
       "merchant": 3,
@@ -2611,10 +2601,10 @@
       "villager": 5
     },
     "light": {
-      "phase": "night",
-      "windows": true,
-      "torches": true,
-      "moon": true,
+      "phase": "day",
+      "windows": false,
+      "torches": false,
+      "moon": false,
       "accent": "repair",
       "danger": [],
       "gate": false,
@@ -2630,25 +2620,25 @@
       "rain": 0,
       "lightning": false,
       "snow": false,
-      "aurora": 1,
+      "aurora": 0,
       "sunrise": false,
       "wet": false,
       "frozen": false,
       "season": "autumn"
     },
     "behavior": {
-      "home": true,
+      "home": false,
       "returning": false,
       "shelter": false,
-      "patrol": true,
-      "farmersIn": true
+      "patrol": false,
+      "farmersIn": false
     },
     "stages": {
       "fail": {},
       "repair": {
-        "SudiptoKumar": "firefighter",
-        "TheSportsNewsroom": "firefighter",
-        "VocabularyBot": "repair"
+        "SudiptoKumar": "repair",
+        "TheSportsNewsroom": "repair",
+        "VocabularyBot": "fade"
       },
       "build": {},
       "release": null,
@@ -2657,33 +2647,33 @@
     },
     "phases": [
       {
-        "id": "recovery:TheSportsNewsroom",
-        "type": "recovery",
-        "phase": "start",
-        "ageMinutes": 164,
-        "stage": "firefighter",
-        "where": {
-          "repo": "TheSportsNewsroom",
-          "anchor": "ci"
-        }
-      },
-      {
         "id": "recovery:SudiptoKumar",
         "type": "recovery",
-        "phase": "start",
-        "ageMinutes": 253,
-        "stage": "firefighter",
+        "phase": "peak",
+        "ageMinutes": 447,
+        "stage": "repair",
         "where": {
           "repo": "SudiptoKumar",
           "anchor": "ci"
         }
       },
       {
-        "id": "recovery:VocabularyBot",
+        "id": "recovery:TheSportsNewsroom",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 891,
+        "ageMinutes": 611,
         "stage": "repair",
+        "where": {
+          "repo": "TheSportsNewsroom",
+          "anchor": "ci"
+        }
+      },
+      {
+        "id": "recovery:VocabularyBot",
+        "type": "recovery",
+        "phase": "aftermath",
+        "ageMinutes": 1338,
+        "stage": "fade",
         "where": {
           "repo": "VocabularyBot",
           "anchor": "ci"
@@ -2693,19 +2683,11 @@
         "id": "quest:recover:2026-10-27",
         "type": "milestone",
         "phase": "aftermath",
-        "ageMinutes": 1030,
+        "ageMinutes": 1478,
         "stage": null,
         "where": {
           "anchor": "ci"
         }
-      },
-      {
-        "id": "nightstars:2026-10-28",
-        "type": "nightstars",
-        "phase": "start",
-        "ageMinutes": 0,
-        "stage": null,
-        "where": null
       }
     ],
     "fx": [
@@ -2713,8 +2695,7 @@
       "repair",
       "sparkles",
       "shrineGlow",
-      "confetti",
-      "shootingStars"
+      "confetti"
     ],
     "labels": {
       "ci": false,
@@ -2734,14 +2715,8 @@
         "text": "THE CI IS FIXED",
         "icon": "trophy",
         "tone": "gold"
-      },
-      {
-        "kind": "NIGHT",
-        "text": "A SKY FULL OF STARS",
-        "icon": "star",
-        "tone": "info"
       }
     ]
   },
-  "contentHash": "fde90bce0a995806"
+  "contentHash": "d661270e8dfc5f6f"
 }
