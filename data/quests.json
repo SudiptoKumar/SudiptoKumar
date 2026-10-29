@@ -27,5 +27,7 @@
       "xp": 20
     }
   },
-  "active": []
+  "active": [
+    "recover:open"
+  ]
 }

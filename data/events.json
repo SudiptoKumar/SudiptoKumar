@@ -2,6 +2,15 @@
   "version": 1,
   "events": [
     {
+      "id": "levelup:25",
+      "type": "milestone",
+      "title": "MILESTONE UNLOCKED",
+      "icon": "trophy",
+      "detail": "LEVEL 25",
+      "at": "2026-10-29T22:44:27.397Z",
+      "until": "2026-10-31T22:44:27.397Z"
+    },
+    {
       "id": "quest:streak:3",
       "type": "milestone",
       "title": "QUEST COMPLETE",
