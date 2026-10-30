@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-30T05:47:23.347Z",
+  "generatedAt": "2026-10-30T06:24:30.299Z",
   "level": 25,
   "xp": 17180,
   "stars": 20,
@@ -31,9 +31,9 @@
     "kingdomDay": 1196
   },
   "time": {
-    "iso": "2026-10-30T05:47:23.347Z",
+    "iso": "2026-10-30T06:24:30.299Z",
     "tz": "Asia/Dhaka",
-    "hour": 11.78,
+    "hour": 12.4,
     "phase": "day",
     "season": "autumn",
     "date": "2026-10-30"
@@ -616,12 +616,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-10-29T22:44:39Z",
+      "pushedAt": "2026-10-30T05:47:36Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 352,
-      "commits": 222,
-      "commits90": 222,
+      "importance": 353.5,
+      "commits": 223,
+      "commits90": 223,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 28,
@@ -2187,7 +2187,7 @@
         "icon": "flame",
         "detail": "EntertainmentNewsBot",
         "at": "2026-10-29T20:28:39Z",
-        "until": "2026-10-30T06:47:23.347Z"
+        "until": "2026-10-30T07:24:30.299Z"
       },
       {
         "id": "emergency:ScienceNewsroomBot",
@@ -2196,7 +2196,7 @@
         "icon": "flame",
         "detail": "ScienceNewsroomBot",
         "at": "2026-10-29T20:05:00Z",
-        "until": "2026-10-30T06:47:23.347Z"
+        "until": "2026-10-30T07:24:30.299Z"
       },
       {
         "id": "recovery:TheSportsNewsroom",
@@ -2279,7 +2279,7 @@
         "icon": "flame",
         "detail": "EntertainmentNewsBot",
         "at": "2026-10-29T20:28:39Z",
-        "until": "2026-10-30T06:47:23.347Z"
+        "until": "2026-10-30T07:24:30.299Z"
       },
       {
         "id": "emergency:ScienceNewsroomBot",
@@ -2288,7 +2288,7 @@
         "icon": "flame",
         "detail": "ScienceNewsroomBot",
         "at": "2026-10-29T20:05:00Z",
-        "until": "2026-10-30T06:47:23.347Z"
+        "until": "2026-10-30T07:24:30.299Z"
       },
       {
         "id": "recovery:TheSportsNewsroom",
@@ -2620,7 +2620,7 @@
       "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-10-30T05:47:23.347Z"
+    "checkedAt": "2026-10-30T06:24:30.299Z"
   },
   "v": 2,
   "featured": [
@@ -2726,7 +2726,7 @@
         "id": "emergency:EntertainmentNewsBot",
         "type": "emergency",
         "phase": "peak",
-        "ageMinutes": 559,
+        "ageMinutes": 596,
         "stage": "smoke",
         "where": {
           "repo": "EntertainmentNewsBot",
@@ -2737,7 +2737,7 @@
         "id": "emergency:ScienceNewsroomBot",
         "type": "emergency",
         "phase": "peak",
-        "ageMinutes": 582,
+        "ageMinutes": 620,
         "stage": "smoke",
         "where": {
           "repo": "ScienceNewsroomBot",
@@ -2748,7 +2748,7 @@
         "id": "recovery:TheSportsNewsroom",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 611,
+        "ageMinutes": 648,
         "stage": "repair",
         "where": {
           "repo": "TheSportsNewsroom",
@@ -2759,7 +2759,7 @@
         "id": "recovery:DailyFacts",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 704,
+        "ageMinutes": 741,
         "stage": "repair",
         "where": {
           "repo": "DailyFacts",
@@ -2770,7 +2770,7 @@
         "id": "recovery:VocabularyBot",
         "type": "recovery",
         "phase": "aftermath",
-        "ageMinutes": 1302,
+        "ageMinutes": 1339,
         "stage": "fade",
         "where": {
           "repo": "VocabularyBot",
@@ -2781,7 +2781,7 @@
         "id": "levelup:25",
         "type": "milestone",
         "phase": "peak",
-        "ageMinutes": 423,
+        "ageMinutes": 460,
         "stage": null,
         "where": {
           "anchor": "castle"
@@ -2791,7 +2791,7 @@
         "id": "quest:streak:3",
         "type": "milestone",
         "phase": "aftermath",
-        "ageMinutes": 1008,
+        "ageMinutes": 1045,
         "stage": null,
         "where": {
           "anchor": "farm"
@@ -2846,5 +2846,5 @@
       }
     ]
   },
-  "contentHash": "d98085d1f264dfa5"
+  "contentHash": "0fde757e75c5ddc1"
 }
