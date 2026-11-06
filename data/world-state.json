@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-06T06:42:45.514Z",
+  "generatedAt": "2026-11-06T07:22:13.539Z",
   "level": 27,
   "xp": 19312,
   "stars": 20,
@@ -31,9 +31,9 @@
     "kingdomDay": 1203
   },
   "time": {
-    "iso": "2026-11-06T06:42:45.514Z",
+    "iso": "2026-11-06T07:22:13.539Z",
     "tz": "Asia/Dhaka",
-    "hour": 12.7,
+    "hour": 13.37,
     "phase": "day",
     "season": "autumn",
     "date": "2026-11-06"
@@ -614,12 +614,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-05T19:56:19Z",
+      "pushedAt": "2026-11-06T06:42:59Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 401.5,
-      "commits": 255,
-      "commits90": 255,
+      "importance": 403,
+      "commits": 256,
+      "commits90": 256,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 35,
@@ -1135,7 +1135,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-30T06:49:50Z",
-      "pushedDays": 36,
+      "pushedDays": 37,
       "createdAt": "2026-09-28T22:07:51Z",
       "importance": 16.5,
       "commits": 6,
@@ -2174,9 +2174,7 @@
     "visibleTotal": 12,
     "secretUnlocked": 2,
     "secretTotal": 4,
-    "fresh": [
-      "master_builder"
-    ]
+    "fresh": []
   },
   "events": {
     "active": [
@@ -2187,7 +2185,7 @@
         "icon": "flame",
         "detail": "History-Newsroom",
         "at": "2026-11-05T18:31:32Z",
-        "until": "2026-11-06T07:42:45.514Z"
+        "until": "2026-11-06T08:22:13.539Z"
       },
       {
         "id": "recovery:CareerNewsroomBot",
@@ -2694,7 +2692,7 @@
       "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-11-06T06:42:45.514Z"
+    "checkedAt": "2026-11-06T07:22:13.539Z"
   },
   "v": 2,
   "featured": [
@@ -2805,7 +2803,7 @@
         "id": "emergency:History-Newsroom",
         "type": "emergency",
         "phase": "peak",
-        "ageMinutes": 731,
+        "ageMinutes": 771,
         "stage": "smoke",
         "where": {
           "repo": "History-Newsroom",
@@ -2816,7 +2814,7 @@
         "id": "recovery:CareerNewsroomBot",
         "type": "recovery",
         "phase": "start",
-        "ageMinutes": 312,
+        "ageMinutes": 352,
         "stage": "firefighter",
         "where": {
           "repo": "CareerNewsroomBot",
@@ -2827,7 +2825,7 @@
         "id": "recovery:EntertainmentNewsBot",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 464,
+        "ageMinutes": 503,
         "stage": "repair",
         "where": {
           "repo": "EntertainmentNewsBot",
@@ -2838,7 +2836,7 @@
         "id": "recovery:TheTechNewsroomBot",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 466,
+        "ageMinutes": 505,
         "stage": "repair",
         "where": {
           "repo": "TheTechNewsroomBot",
@@ -2849,7 +2847,7 @@
         "id": "recovery:ScienceNewsroomBot",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 472,
+        "ageMinutes": 511,
         "stage": "repair",
         "where": {
           "repo": "ScienceNewsroomBot",
@@ -2860,7 +2858,7 @@
         "id": "recovery:GamingNewsroomBot",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 479,
+        "ageMinutes": 519,
         "stage": "repair",
         "where": {
           "repo": "GamingNewsroomBot",
@@ -2871,7 +2869,7 @@
         "id": "recovery:TheSportsNewsroom",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 576,
+        "ageMinutes": 616,
         "stage": "repair",
         "where": {
           "repo": "TheSportsNewsroom",
@@ -2882,7 +2880,7 @@
         "id": "recovery:VocabularyBot",
         "type": "recovery",
         "phase": "aftermath",
-        "ageMinutes": 1302,
+        "ageMinutes": 1341,
         "stage": "fade",
         "where": {
           "repo": "VocabularyBot",
@@ -2892,8 +2890,8 @@
       {
         "id": "ach:master_builder",
         "type": "milestone",
-        "phase": "start",
-        "ageMinutes": 0,
+        "phase": "peak",
+        "ageMinutes": 39,
         "stage": null,
         "where": {
           "anchor": "hall"
@@ -2948,5 +2946,5 @@
       }
     ]
   },
-  "contentHash": "456fb66fb5a1ba7f"
+  "contentHash": "834b54ca21b11952"
 }
