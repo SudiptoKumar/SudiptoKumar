@@ -2,6 +2,15 @@
   "version": 1,
   "events": [
     {
+      "id": "quest:recover:2026-11-07",
+      "type": "milestone",
+      "title": "QUEST COMPLETE",
+      "icon": "trophy",
+      "detail": "THE CI IS FIXED",
+      "at": "2026-11-06T19:23:51.113Z",
+      "until": "2026-11-08T19:23:51.113Z"
+    },
+    {
       "id": "ach:master_builder",
       "type": "milestone",
       "title": "MILESTONE UNLOCKED",
