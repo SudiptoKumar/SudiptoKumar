@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-06T19:23:51.113Z",
+  "generatedAt": "2026-11-07T05:57:08.675Z",
   "level": 27,
-  "xp": 19462,
+  "xp": 19497,
   "stars": 20,
   "commits": 1004,
   "issues": 0,
-  "pullRequests": 92,
+  "pullRequests": 93,
   "workflowHealth": 97,
-  "streak": 1,
+  "streak": 2,
   "activeRepositories": 22,
   "topLanguage": "Python",
   "weather": "aurora",
   "weatherReason": "A release or milestone is being celebrated",
-  "timeOfDay": "night",
+  "timeOfDay": "day",
   "season": "autumn",
   "meta": {
     "demo": false,
@@ -31,10 +31,10 @@
     "kingdomDay": 1204
   },
   "time": {
-    "iso": "2026-11-06T19:23:51.113Z",
+    "iso": "2026-11-07T05:57:08.675Z",
     "tz": "Asia/Dhaka",
-    "hour": 1.38,
-    "phase": "night",
+    "hour": 11.95,
+    "phase": "day",
     "season": "autumn",
     "date": "2026-11-07"
   },
@@ -45,25 +45,25 @@
       "archetype": "alchemist",
       "name": "ALCHEMIST"
     },
-    "xpInto": 612,
+    "xpInto": 647,
     "xpNeed": 1400,
-    "xpPct": 44,
+    "xpPct": 46,
     "xpNext": 20250,
-    "activity": "high",
-    "position": "castle",
+    "activity": "normal",
+    "position": "farm",
     "sleeping": false,
     "stats": {
       "codePower": 96,
       "reliability": 97,
-      "streak": 1,
+      "streak": 2,
       "reputation": 20
     },
     "streak": {
-      "current": 1,
+      "current": 2,
       "longest": 22,
       "idleDays": 0,
-      "today": 22,
-      "yesterday": 0
+      "today": 1,
+      "yesterday": 22
     },
     "title": "ARCHITECT",
     "roles": [
@@ -92,7 +92,7 @@
     "stars": 20,
     "forks": 0,
     "commits": 1004,
-    "prs": 92,
+    "prs": 93,
     "mergedPrs": 91,
     "reviews": 0,
     "issuesOpen": 0,
@@ -102,17 +102,17 @@
     "activeRepos": 22,
     "archivedRepos": 0,
     "followers": 0,
-    "yearContrib": 1131,
+    "yearContrib": 1132,
     "workflowHealth": 97,
     "failingRepos": [],
     "openPRs": 0,
-    "codeKb": 344177
+    "codeKb": 350361
   },
   "xpBreakdown": {
-    "base": 3976,
+    "base": 3986,
     "streakBonus": 316,
     "bonus": {
-      "pullRequests": 2800,
+      "pullRequests": 2825,
       "mergedPullRequests": 5550,
       "issuesClosed": 100,
       "releases": 1500,
@@ -141,9 +141,9 @@
         "title": "HOLD A 7 DAY STREAK",
         "icon": "wheat",
         "state": "ACTIVE",
-        "progress": 1,
+        "progress": 2,
         "target": 7,
-        "pct": 14,
+        "pct": 29,
         "xp": 40,
         "unit": "DAYS",
         "at": null,
@@ -160,6 +160,19 @@
         "pct": 0,
         "xp": 60,
         "unit": "DAYS",
+        "at": null,
+        "isNew": false
+      },
+      {
+        "id": "release:month",
+        "track": "release",
+        "title": "SHIP A RELEASE",
+        "icon": "rocket",
+        "state": "ACTIVE",
+        "progress": 0,
+        "target": 1,
+        "pct": 0,
+        "xp": 0,
         "at": null,
         "isNew": false
       },
@@ -212,19 +225,19 @@
         "title": "HOLD A 7 DAY STREAK",
         "icon": "wheat",
         "state": "ACTIVE",
-        "progress": 1,
+        "progress": 2,
         "target": 7,
-        "pct": 14,
+        "pct": 29,
         "xp": 40,
         "unit": "DAYS",
         "at": null,
         "isNew": false
       },
       {
-        "id": "build:month",
-        "track": "build",
-        "title": "START A NEW PROJECT",
-        "icon": "hammer",
+        "id": "release:month",
+        "track": "release",
+        "title": "SHIP A RELEASE",
+        "icon": "rocket",
         "state": "ACTIVE",
         "progress": 0,
         "target": 1,
@@ -253,22 +266,22 @@
       "title": "HOLD A 7 DAY STREAK",
       "icon": "wheat",
       "state": "ACTIVE",
-      "progress": 1,
+      "progress": 2,
       "target": 7,
-      "pct": 14,
+      "pct": 29,
       "xp": 40,
       "unit": "DAYS",
       "at": null,
       "isNew": false
     },
     "counts": {
-      "active": 3,
+      "active": 4,
       "complete": 8
     },
     "xp": 20
   },
   "population": {
-    "total": 1276,
+    "total": 1277,
     "npcs": 12,
     "houses": 12
   },
@@ -332,14 +345,14 @@
       "workflow": "recovered",
       "recovered": true,
       "lastFailAt": null,
-      "pushedAt": "2026-11-06T19:15:00Z",
+      "pushedAt": "2026-11-07T00:50:43Z",
       "pushedDays": 0,
       "createdAt": "2026-09-17T18:58:59Z",
-      "importance": 716.5,
-      "commits": 465,
-      "commits90": 465,
+      "importance": 718,
+      "commits": 466,
+      "commits90": 466,
       "releases": 0,
-      "recoveredAt": "2026-11-06T19:15:03Z",
+      "recoveredAt": "2026-11-07T00:50:48Z",
       "ageDays": 50,
       "evolution": {
         "level": 4,
@@ -372,14 +385,14 @@
       "workflow": "recovered",
       "recovered": true,
       "lastFailAt": null,
-      "pushedAt": "2026-11-06T07:46:24Z",
+      "pushedAt": "2026-11-06T21:41:27Z",
       "pushedDays": 0,
       "createdAt": "2026-08-28T14:21:15Z",
-      "importance": 581.5,
-      "commits": 375,
-      "commits90": 375,
+      "importance": 583,
+      "commits": 376,
+      "commits90": 376,
       "releases": 0,
-      "recoveredAt": "2026-11-06T07:46:27Z",
+      "recoveredAt": "2026-11-06T21:41:30Z",
       "ageDays": 70,
       "evolution": {
         "level": 4,
@@ -412,12 +425,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-06T17:39:14Z",
+      "pushedAt": "2026-11-06T23:25:05Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T17:29:46Z",
-      "importance": 508.4,
-      "commits": 327,
-      "commits90": 327,
+      "importance": 509.9,
+      "commits": 328,
+      "commits90": 328,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 69,
@@ -452,25 +465,25 @@
       "workflow": "recovered",
       "recovered": true,
       "lastFailAt": null,
-      "pushedAt": "2026-11-06T17:27:56Z",
+      "pushedAt": "2026-11-06T21:43:40Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T04:24:35Z",
-      "importance": 494.5,
-      "commits": 317,
-      "commits90": 317,
+      "importance": 496,
+      "commits": 318,
+      "commits90": 318,
       "releases": 0,
-      "recoveredAt": "2026-11-06T17:21:15Z",
-      "ageDays": 69,
+      "recoveredAt": "2026-11-06T21:43:44Z",
+      "ageDays": 70,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
-        "score": 70,
-        "toNext": 2,
+        "score": 71,
+        "toNext": 1,
         "capped": null,
         "parts": {
           "activity": 30,
           "recency": 20,
-          "maturity": 3,
+          "maturity": 4,
           "depth": 15,
           "release": 0,
           "reputation": 2
@@ -492,12 +505,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-06T16:14:45Z",
+      "pushedAt": "2026-11-06T21:40:11Z",
       "pushedDays": 0,
       "createdAt": "2026-08-27T10:01:41Z",
-      "importance": 494.5,
-      "commits": 317,
-      "commits90": 317,
+      "importance": 496,
+      "commits": 318,
+      "commits90": 318,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 71,
@@ -532,14 +545,14 @@
       "workflow": "recovered",
       "recovered": true,
       "lastFailAt": null,
-      "pushedAt": "2026-11-06T15:52:06Z",
+      "pushedAt": "2026-11-06T21:40:07Z",
       "pushedDays": 0,
       "createdAt": "2026-08-28T19:08:24Z",
-      "importance": 475,
-      "commits": 304,
-      "commits90": 304,
+      "importance": 476.5,
+      "commits": 305,
+      "commits90": 305,
       "releases": 0,
-      "recoveredAt": "2026-11-06T15:52:09Z",
+      "recoveredAt": "2026-11-06T21:40:11Z",
       "ageDays": 70,
       "evolution": {
         "level": 4,
@@ -572,14 +585,14 @@
       "workflow": "recovered",
       "recovered": true,
       "lastFailAt": null,
-      "pushedAt": "2026-11-06T16:00:32Z",
+      "pushedAt": "2026-11-06T21:32:03Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T16:33:20Z",
-      "importance": 416.5,
-      "commits": 265,
-      "commits90": 265,
+      "importance": 418,
+      "commits": 266,
+      "commits90": 266,
       "releases": 0,
-      "recoveredAt": "2026-11-06T16:00:36Z",
+      "recoveredAt": "2026-11-06T21:32:06Z",
       "ageDays": 69,
       "evolution": {
         "level": 4,
@@ -612,12 +625,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-06T07:22:25Z",
+      "pushedAt": "2026-11-06T19:24:05Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 404.5,
-      "commits": 257,
-      "commits90": 257,
+      "importance": 406,
+      "commits": 258,
+      "commits90": 258,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 36,
@@ -652,14 +665,14 @@
       "workflow": "recovered",
       "recovered": true,
       "lastFailAt": null,
-      "pushedAt": "2026-11-06T09:21:35Z",
+      "pushedAt": "2026-11-06T20:28:28Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T16:56:23Z",
-      "importance": 371.8,
-      "commits": 237,
-      "commits90": 237,
+      "importance": 373.3,
+      "commits": 238,
+      "commits90": 238,
       "releases": 0,
-      "recoveredAt": "2026-11-06T09:21:39Z",
+      "recoveredAt": "2026-11-06T20:28:31Z",
       "ageDays": 47,
       "evolution": {
         "level": 4,
@@ -692,12 +705,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-06T18:59:14Z",
+      "pushedAt": "2026-11-07T00:43:45Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T10:49:10Z",
-      "importance": 368.5,
-      "commits": 233,
-      "commits90": 233,
+      "importance": 370,
+      "commits": 234,
+      "commits90": 234,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 47,
@@ -860,7 +873,7 @@
       "commits90": 73,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 34,
+      "ageDays": 35,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -933,14 +946,14 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-02T05:34:12Z",
-      "pushedDays": 35,
+      "pushedDays": 36,
       "createdAt": "2026-09-28T22:15:20Z",
       "importance": 62.9,
       "commits": 38,
       "commits90": 38,
       "releases": 2,
       "recoveredAt": null,
-      "ageDays": 38,
+      "ageDays": 39,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -968,25 +981,25 @@
       "language": "JavaScript",
       "color": "#f1e05a",
       "archetype": "tower",
-      "state": "active",
+      "state": "sleepy",
       "workflow": "none",
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-08T04:03:23Z",
-      "pushedDays": 29,
+      "pushedDays": 30,
       "createdAt": "2026-10-01T13:12:44Z",
-      "importance": 55.2,
+      "importance": 50.2,
       "commits": 33,
       "commits90": 33,
       "releases": 1,
       "recoveredAt": null,
       "ageDays": 36,
       "evolution": {
-        "level": 4,
-        "name": "SPECIALIZED",
-        "score": 58,
-        "toNext": 14,
-        "capped": null,
+        "level": 3,
+        "name": "BUILDING",
+        "score": 47,
+        "toNext": 1,
+        "capped": "state",
         "parts": {
           "activity": 30,
           "recency": 10,
@@ -1020,7 +1033,7 @@
       "commits90": 16,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 38,
+      "ageDays": 39,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1053,7 +1066,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-04T21:07:31Z",
-      "pushedDays": 32,
+      "pushedDays": 33,
       "createdAt": "2026-10-04T19:12:38Z",
       "importance": 27.2,
       "commits": 18,
@@ -1100,7 +1113,7 @@
       "commits90": 11,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 38,
+      "ageDays": 39,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1140,7 +1153,7 @@
       "commits90": 6,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 38,
+      "ageDays": 39,
       "evolution": {
         "level": 2,
         "name": "FRAME",
@@ -1173,14 +1186,14 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-28T22:13:31Z",
-      "pushedDays": 38,
+      "pushedDays": 39,
       "createdAt": "2026-09-28T22:11:39Z",
       "importance": 10.6,
       "commits": 4,
       "commits90": 4,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 38,
+      "ageDays": 39,
       "evolution": {
         "level": 2,
         "name": "FRAME",
@@ -1199,10 +1212,6 @@
     }
   ],
   "calendar": [
-    {
-      "date": "2026-05-02",
-      "count": 0
-    },
     {
       "date": "2026-05-03",
       "count": 0
@@ -1985,6 +1994,10 @@
     {
       "date": "2026-11-06",
       "count": 22
+    },
+    {
+      "date": "2026-11-07",
+      "count": 1
     }
   ],
   "achievements": {
@@ -2182,8 +2195,53 @@
         "title": "WORKFLOW RECOVERED",
         "icon": "check",
         "detail": "CareerNewsroomBot",
-        "at": "2026-11-06T19:15:03Z",
-        "until": "2026-11-08T19:15:03.000Z"
+        "at": "2026-11-07T00:50:48Z",
+        "until": "2026-11-09T00:50:48.000Z"
+      },
+      {
+        "id": "recovery:EntertainmentNewsBot",
+        "type": "recovery",
+        "title": "WORKFLOW RECOVERED",
+        "icon": "check",
+        "detail": "EntertainmentNewsBot",
+        "at": "2026-11-06T21:43:44Z",
+        "until": "2026-11-08T21:43:44.000Z"
+      },
+      {
+        "id": "recovery:GamingNewsroomBot",
+        "type": "recovery",
+        "title": "WORKFLOW RECOVERED",
+        "icon": "check",
+        "detail": "GamingNewsroomBot",
+        "at": "2026-11-06T21:41:30Z",
+        "until": "2026-11-08T21:41:30.000Z"
+      },
+      {
+        "id": "recovery:TheTechNewsroomBot",
+        "type": "recovery",
+        "title": "WORKFLOW RECOVERED",
+        "icon": "check",
+        "detail": "TheTechNewsroomBot",
+        "at": "2026-11-06T21:40:11Z",
+        "until": "2026-11-08T21:40:11.000Z"
+      },
+      {
+        "id": "recovery:ScienceNewsroomBot",
+        "type": "recovery",
+        "title": "WORKFLOW RECOVERED",
+        "icon": "check",
+        "detail": "ScienceNewsroomBot",
+        "at": "2026-11-06T21:32:06Z",
+        "until": "2026-11-08T21:32:06.000Z"
+      },
+      {
+        "id": "recovery:TheSportsNewsroom",
+        "type": "recovery",
+        "title": "WORKFLOW RECOVERED",
+        "icon": "check",
+        "detail": "TheSportsNewsroom",
+        "at": "2026-11-06T20:28:31Z",
+        "until": "2026-11-08T20:28:31.000Z"
       },
       {
         "id": "recovery:History-Newsroom",
@@ -2195,42 +2253,6 @@
         "until": "2026-11-08T17:48:54.000Z"
       },
       {
-        "id": "recovery:EntertainmentNewsBot",
-        "type": "recovery",
-        "title": "WORKFLOW RECOVERED",
-        "icon": "check",
-        "detail": "EntertainmentNewsBot",
-        "at": "2026-11-06T17:21:15Z",
-        "until": "2026-11-08T17:21:15.000Z"
-      },
-      {
-        "id": "recovery:ScienceNewsroomBot",
-        "type": "recovery",
-        "title": "WORKFLOW RECOVERED",
-        "icon": "check",
-        "detail": "ScienceNewsroomBot",
-        "at": "2026-11-06T16:00:36Z",
-        "until": "2026-11-08T16:00:36.000Z"
-      },
-      {
-        "id": "recovery:TheTechNewsroomBot",
-        "type": "recovery",
-        "title": "WORKFLOW RECOVERED",
-        "icon": "check",
-        "detail": "TheTechNewsroomBot",
-        "at": "2026-11-06T15:52:09Z",
-        "until": "2026-11-08T15:52:09.000Z"
-      },
-      {
-        "id": "recovery:TheSportsNewsroom",
-        "type": "recovery",
-        "title": "WORKFLOW RECOVERED",
-        "icon": "check",
-        "detail": "TheSportsNewsroom",
-        "at": "2026-11-06T09:21:39Z",
-        "until": "2026-11-08T09:21:39.000Z"
-      },
-      {
         "id": "recovery:VocabularyBot",
         "type": "recovery",
         "title": "WORKFLOW RECOVERED",
@@ -2238,15 +2260,6 @@
         "detail": "VocabularyBot",
         "at": "2026-11-06T08:58:09Z",
         "until": "2026-11-08T08:58:09.000Z"
-      },
-      {
-        "id": "recovery:GamingNewsroomBot",
-        "type": "recovery",
-        "title": "WORKFLOW RECOVERED",
-        "icon": "check",
-        "detail": "GamingNewsroomBot",
-        "at": "2026-11-06T07:46:27Z",
-        "until": "2026-11-08T07:46:27.000Z"
       },
       {
         "id": "quest:recover:2026-11-07",
@@ -2267,42 +2280,24 @@
         "until": "2026-11-08T06:42:45.514Z"
       },
       {
-        "id": "harvest:2026-11-06",
+        "id": "harvest:2026-11-07",
         "type": "harvest",
         "title": "HARVEST FESTIVAL",
         "icon": "wheat",
         "detail": "22 CONTRIBUTIONS",
-        "at": "2026-11-06T12:00:00.000Z",
-        "until": "2026-11-08T04:00:00.000Z"
-      },
-      {
-        "id": "nightstars:2026-11-07",
-        "type": "nightstars",
-        "title": "NIGHT OF THE STARS",
-        "icon": "star",
-        "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-11-06T19:23:51.113Z",
-        "until": "2026-11-06T20:23:51.113Z"
+        "at": "2026-11-07T12:00:00.000Z",
+        "until": "2026-11-09T04:00:00.000Z"
       }
     ],
     "recent": [
       {
-        "id": "nightstars:2026-11-07",
-        "type": "nightstars",
-        "title": "NIGHT OF THE STARS",
-        "icon": "star",
-        "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-11-06T19:23:51.113Z",
-        "until": "2026-11-06T20:23:51.113Z"
-      },
-      {
-        "id": "quest:recover:2026-11-07",
-        "type": "milestone",
-        "title": "QUEST COMPLETE",
-        "icon": "trophy",
-        "detail": "THE CI IS FIXED",
-        "at": "2026-11-06T19:23:51.113Z",
-        "until": "2026-11-08T19:23:51.113Z"
+        "id": "harvest:2026-11-07",
+        "type": "harvest",
+        "title": "HARVEST FESTIVAL",
+        "icon": "wheat",
+        "detail": "22 CONTRIBUTIONS",
+        "at": "2026-11-07T12:00:00.000Z",
+        "until": "2026-11-09T04:00:00.000Z"
       },
       {
         "id": "recovery:CareerNewsroomBot",
@@ -2310,17 +2305,8 @@
         "title": "WORKFLOW RECOVERED",
         "icon": "check",
         "detail": "CareerNewsroomBot",
-        "at": "2026-11-06T19:15:03Z",
-        "until": "2026-11-08T19:15:03.000Z"
-      },
-      {
-        "id": "recovery:History-Newsroom",
-        "type": "recovery",
-        "title": "WORKFLOW RECOVERED",
-        "icon": "check",
-        "detail": "History-Newsroom",
-        "at": "2026-11-06T17:48:54Z",
-        "until": "2026-11-08T17:48:54.000Z"
+        "at": "2026-11-07T00:50:48Z",
+        "until": "2026-11-09T00:50:48.000Z"
       },
       {
         "id": "recovery:EntertainmentNewsBot",
@@ -2328,8 +2314,26 @@
         "title": "WORKFLOW RECOVERED",
         "icon": "check",
         "detail": "EntertainmentNewsBot",
-        "at": "2026-11-06T17:21:15Z",
-        "until": "2026-11-08T17:21:15.000Z"
+        "at": "2026-11-06T21:43:44Z",
+        "until": "2026-11-08T21:43:44.000Z"
+      },
+      {
+        "id": "recovery:GamingNewsroomBot",
+        "type": "recovery",
+        "title": "WORKFLOW RECOVERED",
+        "icon": "check",
+        "detail": "GamingNewsroomBot",
+        "at": "2026-11-06T21:41:30Z",
+        "until": "2026-11-08T21:41:30.000Z"
+      },
+      {
+        "id": "recovery:TheTechNewsroomBot",
+        "type": "recovery",
+        "title": "WORKFLOW RECOVERED",
+        "icon": "check",
+        "detail": "TheTechNewsroomBot",
+        "at": "2026-11-06T21:40:11Z",
+        "until": "2026-11-08T21:40:11.000Z"
       },
       {
         "id": "recovery:ScienceNewsroomBot",
@@ -2337,8 +2341,8 @@
         "title": "WORKFLOW RECOVERED",
         "icon": "check",
         "detail": "ScienceNewsroomBot",
-        "at": "2026-11-06T16:00:36Z",
-        "until": "2026-11-08T16:00:36.000Z"
+        "at": "2026-11-06T21:32:06Z",
+        "until": "2026-11-08T21:32:06.000Z"
       }
     ]
   },
@@ -2696,10 +2700,10 @@
       {
         "d": "2026-11-07",
         "l": 27,
-        "x": 19462,
+        "x": 19497,
         "s": 20,
         "c": 1004,
-        "p": 1276
+        "p": 1277
       }
     ]
   },
@@ -2716,7 +2720,7 @@
       "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-11-06T19:23:51.113Z"
+    "checkedAt": "2026-11-07T05:57:08.675Z"
   },
   "v": 2,
   "featured": [
@@ -2730,7 +2734,7 @@
     "value": 67,
     "parts": {
       "progress": 25.6,
-      "consistency": 0.7,
+      "consistency": 1.3,
       "reliability": 19.4,
       "reach": 5.9,
       "vitality": 15,
@@ -2743,11 +2747,10 @@
       "RECOVERY",
       "CELEBRATION",
       "HARVEST",
-      "NIGHT",
       "WORKING",
       "ACTIVE"
     ],
-    "frame": 6,
+    "frame": 3,
     "hero": {
       "state": "working",
       "spot": "ci",
@@ -2757,7 +2760,7 @@
     },
     "npcs": {
       "builder": 6,
-      "farmer": 5,
+      "farmer": 3,
       "miner": 1,
       "guard": 2,
       "merchant": 3,
@@ -2767,10 +2770,10 @@
       "villager": 6
     },
     "light": {
-      "phase": "night",
-      "windows": true,
-      "torches": true,
-      "moon": true,
+      "phase": "day",
+      "windows": false,
+      "torches": false,
+      "moon": false,
       "accent": "repair",
       "danger": [],
       "gate": false,
@@ -2791,30 +2794,30 @@
       "rain": 0,
       "lightning": false,
       "snow": false,
-      "aurora": 1,
+      "aurora": 0,
       "sunrise": false,
       "wet": false,
       "frozen": false,
       "season": "autumn"
     },
     "behavior": {
-      "home": true,
+      "home": false,
       "returning": false,
       "shelter": false,
-      "patrol": true,
-      "farmersIn": true
+      "patrol": false,
+      "farmersIn": false
     },
     "stages": {
       "fail": {},
       "repair": {
         "CareerNewsroomBot": "firefighter",
         "GamingNewsroomBot": "repair",
-        "EntertainmentNewsBot": "firefighter",
-        "TheTechNewsroomBot": "firefighter",
-        "ScienceNewsroomBot": "firefighter",
+        "EntertainmentNewsBot": "repair",
+        "TheTechNewsroomBot": "repair",
+        "ScienceNewsroomBot": "repair",
         "TheSportsNewsroom": "repair",
-        "History-Newsroom": "firefighter",
-        "VocabularyBot": "repair"
+        "History-Newsroom": "repair",
+        "VocabularyBot": "fade"
       },
       "build": {},
       "release": null,
@@ -2826,7 +2829,7 @@
         "id": "recovery:CareerNewsroomBot",
         "type": "recovery",
         "phase": "start",
-        "ageMinutes": 9,
+        "ageMinutes": 306,
         "stage": "firefighter",
         "where": {
           "repo": "CareerNewsroomBot",
@@ -2834,68 +2837,13 @@
         }
       },
       {
-        "id": "recovery:History-Newsroom",
-        "type": "recovery",
-        "phase": "start",
-        "ageMinutes": 95,
-        "stage": "firefighter",
-        "where": {
-          "repo": "History-Newsroom",
-          "anchor": "ci"
-        }
-      },
-      {
         "id": "recovery:EntertainmentNewsBot",
         "type": "recovery",
-        "phase": "start",
-        "ageMinutes": 123,
-        "stage": "firefighter",
+        "phase": "peak",
+        "ageMinutes": 493,
+        "stage": "repair",
         "where": {
           "repo": "EntertainmentNewsBot",
-          "anchor": "ci"
-        }
-      },
-      {
-        "id": "recovery:ScienceNewsroomBot",
-        "type": "recovery",
-        "phase": "start",
-        "ageMinutes": 203,
-        "stage": "firefighter",
-        "where": {
-          "repo": "ScienceNewsroomBot",
-          "anchor": "ci"
-        }
-      },
-      {
-        "id": "recovery:TheTechNewsroomBot",
-        "type": "recovery",
-        "phase": "start",
-        "ageMinutes": 212,
-        "stage": "firefighter",
-        "where": {
-          "repo": "TheTechNewsroomBot",
-          "anchor": "ci"
-        }
-      },
-      {
-        "id": "recovery:TheSportsNewsroom",
-        "type": "recovery",
-        "phase": "peak",
-        "ageMinutes": 602,
-        "stage": "repair",
-        "where": {
-          "repo": "TheSportsNewsroom",
-          "anchor": "ci"
-        }
-      },
-      {
-        "id": "recovery:VocabularyBot",
-        "type": "recovery",
-        "phase": "peak",
-        "ageMinutes": 626,
-        "stage": "repair",
-        "where": {
-          "repo": "VocabularyBot",
           "anchor": "ci"
         }
       },
@@ -2903,7 +2851,7 @@
         "id": "recovery:GamingNewsroomBot",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 697,
+        "ageMinutes": 496,
         "stage": "repair",
         "where": {
           "repo": "GamingNewsroomBot",
@@ -2911,10 +2859,65 @@
         }
       },
       {
+        "id": "recovery:TheTechNewsroomBot",
+        "type": "recovery",
+        "phase": "peak",
+        "ageMinutes": 497,
+        "stage": "repair",
+        "where": {
+          "repo": "TheTechNewsroomBot",
+          "anchor": "ci"
+        }
+      },
+      {
+        "id": "recovery:ScienceNewsroomBot",
+        "type": "recovery",
+        "phase": "peak",
+        "ageMinutes": 505,
+        "stage": "repair",
+        "where": {
+          "repo": "ScienceNewsroomBot",
+          "anchor": "ci"
+        }
+      },
+      {
+        "id": "recovery:TheSportsNewsroom",
+        "type": "recovery",
+        "phase": "peak",
+        "ageMinutes": 569,
+        "stage": "repair",
+        "where": {
+          "repo": "TheSportsNewsroom",
+          "anchor": "ci"
+        }
+      },
+      {
+        "id": "recovery:History-Newsroom",
+        "type": "recovery",
+        "phase": "peak",
+        "ageMinutes": 728,
+        "stage": "repair",
+        "where": {
+          "repo": "History-Newsroom",
+          "anchor": "ci"
+        }
+      },
+      {
+        "id": "recovery:VocabularyBot",
+        "type": "recovery",
+        "phase": "aftermath",
+        "ageMinutes": 1259,
+        "stage": "fade",
+        "where": {
+          "repo": "VocabularyBot",
+          "anchor": "ci"
+        }
+      },
+      {
         "id": "quest:recover:2026-11-07",
         "type": "milestone",
-        "phase": "start",
-        "ageMinutes": 0,
+        "phase": "peak",
+        "ageMinutes": 633,
         "stage": null,
         "where": {
           "anchor": "ci"
@@ -2924,29 +2927,21 @@
         "id": "ach:master_builder",
         "type": "milestone",
         "phase": "aftermath",
-        "ageMinutes": 761,
+        "ageMinutes": 1394,
         "stage": null,
         "where": {
           "anchor": "hall"
         }
       },
       {
-        "id": "harvest:2026-11-06",
+        "id": "harvest:2026-11-07",
         "type": "harvest",
-        "phase": "peak",
-        "ageMinutes": 444,
+        "phase": "start",
+        "ageMinutes": 0,
         "stage": null,
         "where": {
           "anchor": "farm"
         }
-      },
-      {
-        "id": "nightstars:2026-11-07",
-        "type": "nightstars",
-        "phase": "start",
-        "ageMinutes": 0,
-        "stage": null,
-        "where": null
       }
     ],
     "fx": [
@@ -2955,8 +2950,7 @@
       "sparkles",
       "shrineGlow",
       "confetti",
-      "harvestFestival",
-      "shootingStars"
+      "harvestFestival"
     ],
     "labels": {
       "ci": false,
@@ -2985,5 +2979,5 @@
       }
     ]
   },
-  "contentHash": "983585c6b460680d"
+  "contentHash": "2de1f518d3cf657f"
 }
