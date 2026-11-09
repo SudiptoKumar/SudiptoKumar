@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-08T22:03:50.224Z",
+  "generatedAt": "2026-11-09T06:25:35.152Z",
   "level": 27,
   "xp": 19580,
   "stars": 20,
@@ -13,7 +13,7 @@
   "topLanguage": "Python",
   "weather": "clear",
   "weatherReason": "Healthy activity",
-  "timeOfDay": "night",
+  "timeOfDay": "day",
   "season": "autumn",
   "meta": {
     "demo": false,
@@ -31,10 +31,10 @@
     "kingdomDay": 1206
   },
   "time": {
-    "iso": "2026-11-08T22:03:50.224Z",
+    "iso": "2026-11-09T06:25:35.152Z",
     "tz": "Asia/Dhaka",
-    "hour": 4.05,
-    "phase": "night",
+    "hour": 12.42,
+    "phase": "day",
     "season": "autumn",
     "date": "2026-11-09"
   },
@@ -53,7 +53,7 @@
     "position": "farm",
     "sleeping": false,
     "stats": {
-      "codePower": 96,
+      "codePower": 95,
       "reliability": 97,
       "streak": 3,
       "reputation": 20
@@ -61,8 +61,8 @@
     "streak": {
       "current": 3,
       "longest": 22,
-      "idleDays": 0,
-      "today": 2,
+      "idleDays": 1,
+      "today": 0,
       "yesterday": 2
     },
     "title": "ARCHITECT",
@@ -106,7 +106,7 @@
     "workflowHealth": 97,
     "failingRepos": [],
     "openPRs": 0,
-    "codeKb": 288684
+    "codeKb": 267070
   },
   "xpBreakdown": {
     "base": 4016,
@@ -333,14 +333,14 @@
       "workflow": "recovered",
       "recovered": true,
       "lastFailAt": null,
-      "pushedAt": "2026-11-08T19:36:25Z",
+      "pushedAt": "2026-11-09T00:43:47Z",
       "pushedDays": 0,
       "createdAt": "2026-09-17T18:58:59Z",
-      "importance": 727,
-      "commits": 472,
-      "commits90": 472,
+      "importance": 728.5,
+      "commits": 473,
+      "commits90": 473,
       "releases": 0,
-      "recoveredAt": "2026-11-08T19:36:29Z",
+      "recoveredAt": "2026-11-09T00:43:50Z",
       "ageDays": 52,
       "evolution": {
         "level": 4,
@@ -501,7 +501,7 @@
       "commits90": 324,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 71,
+      "ageDays": 72,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -613,15 +613,55 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-08T13:23:35Z",
+      "pushedAt": "2026-11-08T22:04:02Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 416.5,
-      "commits": 265,
-      "commits90": 265,
+      "importance": 418,
+      "commits": 266,
+      "commits90": 266,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 38,
+      "evolution": {
+        "level": 4,
+        "name": "SPECIALIZED",
+        "score": 69,
+        "toNext": 3,
+        "capped": null,
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 2,
+          "depth": 15,
+          "release": 0,
+          "reputation": 2
+        }
+      }
+    },
+    {
+      "name": "ComicsNewsroom",
+      "url": "https://github.com/SudiptoKumar/ComicsNewsroom",
+      "description": "Comic and Anime News 🗞️",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "Python",
+      "color": "#3572A5",
+      "archetype": "tower",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-11-09T00:37:00Z",
+      "pushedDays": 0,
+      "createdAt": "2026-09-20T10:49:10Z",
+      "importance": 380.5,
+      "commits": 241,
+      "commits90": 241,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 49,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -661,46 +701,6 @@
       "commits90": 242,
       "releases": 0,
       "recoveredAt": "2026-11-08T18:51:11Z",
-      "ageDays": 49,
-      "evolution": {
-        "level": 4,
-        "name": "SPECIALIZED",
-        "score": 69,
-        "toNext": 3,
-        "capped": null,
-        "parts": {
-          "activity": 30,
-          "recency": 20,
-          "maturity": 2,
-          "depth": 15,
-          "release": 0,
-          "reputation": 2
-        }
-      }
-    },
-    {
-      "name": "ComicsNewsroom",
-      "url": "https://github.com/SudiptoKumar/ComicsNewsroom",
-      "description": "Comic and Anime News 🗞️",
-      "stars": 1,
-      "forks": 0,
-      "issues": 0,
-      "prs": 0,
-      "language": "Python",
-      "color": "#3572A5",
-      "archetype": "tower",
-      "state": "building",
-      "workflow": "passing",
-      "recovered": false,
-      "lastFailAt": null,
-      "pushedAt": "2026-11-08T19:31:06Z",
-      "pushedDays": 0,
-      "createdAt": "2026-09-20T10:49:10Z",
-      "importance": 379,
-      "commits": 240,
-      "commits90": 240,
-      "releases": 0,
-      "recoveredAt": null,
       "ageDays": 49,
       "evolution": {
         "level": 4,
@@ -934,14 +934,14 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-02T05:34:12Z",
-      "pushedDays": 37,
+      "pushedDays": 38,
       "createdAt": "2026-09-28T22:15:20Z",
       "importance": 62.9,
       "commits": 38,
       "commits90": 38,
       "releases": 2,
       "recoveredAt": null,
-      "ageDays": 40,
+      "ageDays": 41,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -974,7 +974,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-08T04:03:23Z",
-      "pushedDays": 31,
+      "pushedDays": 32,
       "createdAt": "2026-10-01T13:12:44Z",
       "importance": 50.2,
       "commits": 33,
@@ -1021,7 +1021,7 @@
       "commits90": 16,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 40,
+      "ageDays": 41,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1141,7 +1141,7 @@
       "commits90": 6,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 40,
+      "ageDays": 41,
       "evolution": {
         "level": 2,
         "name": "FRAME",
@@ -1174,14 +1174,14 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-28T22:13:31Z",
-      "pushedDays": 40,
+      "pushedDays": 41,
       "createdAt": "2026-09-28T22:11:39Z",
       "importance": 10.6,
       "commits": 4,
       "commits90": 4,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 40,
+      "ageDays": 41,
       "evolution": {
         "level": 2,
         "name": "FRAME",
@@ -1200,10 +1200,6 @@
     }
   ],
   "calendar": [
-    {
-      "date": "2026-05-04",
-      "count": 0
-    },
     {
       "date": "2026-05-05",
       "count": 0
@@ -1986,6 +1982,10 @@
     {
       "date": "2026-11-08",
       "count": 2
+    },
+    {
+      "date": "2026-11-09",
+      "count": 0
     }
   ],
   "achievements": {
@@ -2183,8 +2183,8 @@
         "title": "WORKFLOW RECOVERED",
         "icon": "check",
         "detail": "CareerNewsroomBot",
-        "at": "2026-11-08T19:36:29Z",
-        "until": "2026-11-10T19:36:29.000Z"
+        "at": "2026-11-09T00:43:50Z",
+        "until": "2026-11-11T00:43:50.000Z"
       },
       {
         "id": "recovery:ScienceNewsroomBot",
@@ -2248,8 +2248,8 @@
         "title": "WORKFLOW RECOVERED",
         "icon": "check",
         "detail": "CareerNewsroomBot",
-        "at": "2026-11-08T19:36:29Z",
-        "until": "2026-11-10T19:36:29.000Z"
+        "at": "2026-11-09T00:43:50Z",
+        "until": "2026-11-11T00:43:50.000Z"
       },
       {
         "id": "recovery:ScienceNewsroomBot",
@@ -2688,7 +2688,7 @@
       "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-11-08T22:03:50.224Z"
+    "checkedAt": "2026-11-09T06:25:35.152Z"
   },
   "v": 2,
   "featured": [
@@ -2713,11 +2713,10 @@
     "mode": "RECOVERY",
     "modes": [
       "RECOVERY",
-      "NIGHT",
       "WORKING",
       "ACTIVE"
     ],
-    "frame": 1,
+    "frame": 5,
     "hero": {
       "state": "working",
       "spot": "ci",
@@ -2737,10 +2736,10 @@
       "villager": 6
     },
     "light": {
-      "phase": "night",
-      "windows": true,
-      "torches": true,
-      "moon": true,
+      "phase": "day",
+      "windows": false,
+      "torches": false,
+      "moon": false,
       "accent": "repair",
       "danger": [],
       "gate": false,
@@ -2767,22 +2766,22 @@
       "season": "autumn"
     },
     "behavior": {
-      "home": true,
+      "home": false,
       "returning": false,
       "shelter": false,
-      "patrol": true,
-      "farmersIn": true
+      "patrol": false,
+      "farmersIn": false
     },
     "stages": {
       "fail": {},
       "repair": {
         "CareerNewsroomBot": "firefighter",
-        "GamingNewsroomBot": "firefighter",
-        "TheTechNewsroomBot": "firefighter",
-        "ScienceNewsroomBot": "firefighter",
-        "TheSportsNewsroom": "firefighter",
-        "History-Newsroom": "firefighter",
-        "VocabularyBot": "repair"
+        "GamingNewsroomBot": "repair",
+        "TheTechNewsroomBot": "repair",
+        "ScienceNewsroomBot": "repair",
+        "TheSportsNewsroom": "repair",
+        "History-Newsroom": "repair",
+        "VocabularyBot": "fade"
       },
       "build": {},
       "release": null,
@@ -2794,7 +2793,7 @@
         "id": "recovery:CareerNewsroomBot",
         "type": "recovery",
         "phase": "start",
-        "ageMinutes": 147,
+        "ageMinutes": 342,
         "stage": "firefighter",
         "where": {
           "repo": "CareerNewsroomBot",
@@ -2804,9 +2803,9 @@
       {
         "id": "recovery:ScienceNewsroomBot",
         "type": "recovery",
-        "phase": "start",
-        "ageMinutes": 148,
-        "stage": "firefighter",
+        "phase": "peak",
+        "ageMinutes": 650,
+        "stage": "repair",
         "where": {
           "repo": "ScienceNewsroomBot",
           "anchor": "ci"
@@ -2815,9 +2814,9 @@
       {
         "id": "recovery:GamingNewsroomBot",
         "type": "recovery",
-        "phase": "start",
-        "ageMinutes": 151,
-        "stage": "firefighter",
+        "phase": "peak",
+        "ageMinutes": 653,
+        "stage": "repair",
         "where": {
           "repo": "GamingNewsroomBot",
           "anchor": "ci"
@@ -2826,9 +2825,9 @@
       {
         "id": "recovery:TheTechNewsroomBot",
         "type": "recovery",
-        "phase": "start",
-        "ageMinutes": 151,
-        "stage": "firefighter",
+        "phase": "peak",
+        "ageMinutes": 653,
+        "stage": "repair",
         "where": {
           "repo": "TheTechNewsroomBot",
           "anchor": "ci"
@@ -2837,9 +2836,9 @@
       {
         "id": "recovery:TheSportsNewsroom",
         "type": "recovery",
-        "phase": "start",
-        "ageMinutes": 193,
-        "stage": "firefighter",
+        "phase": "peak",
+        "ageMinutes": 694,
+        "stage": "repair",
         "where": {
           "repo": "TheSportsNewsroom",
           "anchor": "ci"
@@ -2848,9 +2847,9 @@
       {
         "id": "recovery:History-Newsroom",
         "type": "recovery",
-        "phase": "start",
-        "ageMinutes": 308,
-        "stage": "firefighter",
+        "phase": "peak",
+        "ageMinutes": 809,
+        "stage": "repair",
         "where": {
           "repo": "History-Newsroom",
           "anchor": "ci"
@@ -2859,9 +2858,9 @@
       {
         "id": "recovery:VocabularyBot",
         "type": "recovery",
-        "phase": "peak",
-        "ageMinutes": 804,
-        "stage": "repair",
+        "phase": "aftermath",
+        "ageMinutes": 1306,
+        "stage": "fade",
         "where": {
           "repo": "VocabularyBot",
           "anchor": "ci"
@@ -2888,5 +2887,5 @@
       }
     ]
   },
-  "contentHash": "587c6d9708e1fc1d"
+  "contentHash": "bf69d4d4e4b5deba"
 }
