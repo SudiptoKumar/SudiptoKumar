@@ -2,6 +2,15 @@
   "version": 1,
   "events": [
     {
+      "id": "quest:recover:2026-11-11",
+      "type": "milestone",
+      "title": "QUEST COMPLETE",
+      "icon": "trophy",
+      "detail": "THE CI IS FIXED",
+      "at": "2026-11-10T19:43:16.361Z",
+      "until": "2026-11-12T19:43:16.361Z"
+    },
+    {
       "id": "levelup:28",
       "type": "milestone",
       "title": "MILESTONE UNLOCKED",
