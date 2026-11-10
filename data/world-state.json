@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-10T07:16:20.902Z",
+  "generatedAt": "2026-11-10T07:42:39.974Z",
   "level": 28,
   "xp": 20404,
   "stars": 20,
@@ -31,9 +31,9 @@
     "kingdomDay": 1207
   },
   "time": {
-    "iso": "2026-11-10T07:16:20.902Z",
+    "iso": "2026-11-10T07:42:39.974Z",
     "tz": "Asia/Dhaka",
-    "hour": 13.27,
+    "hour": 13.7,
     "phase": "day",
     "season": "autumn",
     "date": "2026-11-10"
@@ -630,12 +630,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-09T22:20:57Z",
+      "pushedAt": "2026-11-10T07:16:34Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 422.5,
-      "commits": 269,
-      "commits90": 269,
+      "importance": 424,
+      "commits": 270,
+      "commits90": 270,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 39,
@@ -1111,7 +1111,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-30T07:31:35Z",
-      "pushedDays": 40,
+      "pushedDays": 41,
       "createdAt": "2026-09-28T22:00:39Z",
       "importance": 24.2,
       "commits": 11,
@@ -2201,7 +2201,7 @@
         "icon": "flame",
         "detail": "EntertainmentNewsBot",
         "at": "2026-11-09T18:29:12Z",
-        "until": "2026-11-10T08:16:20.902Z"
+        "until": "2026-11-10T08:42:39.974Z"
       },
       {
         "id": "emergency:GamingNewsroomBot",
@@ -2210,7 +2210,7 @@
         "icon": "flame",
         "detail": "GamingNewsroomBot",
         "at": "2026-11-09T18:21:00Z",
-        "until": "2026-11-10T08:16:20.902Z"
+        "until": "2026-11-10T08:42:39.974Z"
       },
       {
         "id": "emergency:TheTechNewsroomBot",
@@ -2219,7 +2219,7 @@
         "icon": "flame",
         "detail": "TheTechNewsroomBot",
         "at": "2026-11-09T18:16:15Z",
-        "until": "2026-11-10T08:16:20.902Z"
+        "until": "2026-11-10T08:42:39.974Z"
       },
       {
         "id": "emergency:ScienceNewsroomBot",
@@ -2228,7 +2228,7 @@
         "icon": "flame",
         "detail": "ScienceNewsroomBot",
         "at": "2026-11-09T18:12:43Z",
-        "until": "2026-11-10T08:16:20.902Z"
+        "until": "2026-11-10T08:42:39.974Z"
       },
       {
         "id": "recovery:CareerNewsroomBot",
@@ -2338,7 +2338,7 @@
         "icon": "flame",
         "detail": "EntertainmentNewsBot",
         "at": "2026-11-09T18:29:12Z",
-        "until": "2026-11-10T08:16:20.902Z"
+        "until": "2026-11-10T08:42:39.974Z"
       }
     ]
   },
@@ -2740,7 +2740,7 @@
       "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-11-10T07:16:20.902Z"
+    "checkedAt": "2026-11-10T07:42:39.974Z"
   },
   "v": 2,
   "featured": [
@@ -2852,7 +2852,7 @@
         "id": "emergency:EntertainmentNewsBot",
         "type": "emergency",
         "phase": "peak",
-        "ageMinutes": 767,
+        "ageMinutes": 793,
         "stage": "smoke",
         "where": {
           "repo": "EntertainmentNewsBot",
@@ -2863,7 +2863,7 @@
         "id": "emergency:GamingNewsroomBot",
         "type": "emergency",
         "phase": "peak",
-        "ageMinutes": 775,
+        "ageMinutes": 802,
         "stage": "smoke",
         "where": {
           "repo": "GamingNewsroomBot",
@@ -2874,7 +2874,7 @@
         "id": "emergency:TheTechNewsroomBot",
         "type": "emergency",
         "phase": "peak",
-        "ageMinutes": 780,
+        "ageMinutes": 806,
         "stage": "smoke",
         "where": {
           "repo": "TheTechNewsroomBot",
@@ -2885,7 +2885,7 @@
         "id": "emergency:ScienceNewsroomBot",
         "type": "emergency",
         "phase": "peak",
-        "ageMinutes": 784,
+        "ageMinutes": 810,
         "stage": "smoke",
         "where": {
           "repo": "ScienceNewsroomBot",
@@ -2896,7 +2896,7 @@
         "id": "recovery:CareerNewsroomBot",
         "type": "recovery",
         "phase": "start",
-        "ageMinutes": 17,
+        "ageMinutes": 44,
         "stage": "firefighter",
         "where": {
           "repo": "CareerNewsroomBot",
@@ -2907,7 +2907,7 @@
         "id": "recovery:TheSportsNewsroom",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 468,
+        "ageMinutes": 495,
         "stage": "repair",
         "where": {
           "repo": "TheSportsNewsroom",
@@ -2918,7 +2918,7 @@
         "id": "recovery:History-Newsroom",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 598,
+        "ageMinutes": 624,
         "stage": "repair",
         "where": {
           "repo": "History-Newsroom",
@@ -2929,7 +2929,7 @@
         "id": "recovery:VocabularyBot",
         "type": "recovery",
         "phase": "aftermath",
-        "ageMinutes": 1322,
+        "ageMinutes": 1349,
         "stage": "fade",
         "where": {
           "repo": "VocabularyBot",
@@ -2940,7 +2940,7 @@
         "id": "levelup:28",
         "type": "milestone",
         "phase": "start",
-        "ageMinutes": 0,
+        "ageMinutes": 26,
         "stage": null,
         "where": {
           "anchor": "castle"
@@ -2995,5 +2995,5 @@
       }
     ]
   },
-  "contentHash": "0e352168f53a7018"
+  "contentHash": "83b60ab5df3a76fa"
 }
