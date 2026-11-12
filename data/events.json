@@ -2,6 +2,24 @@
   "version": 1,
   "events": [
     {
+      "id": "quest:recover:2026-11-12",
+      "type": "milestone",
+      "title": "QUEST COMPLETE",
+      "icon": "trophy",
+      "detail": "THE CI IS FIXED",
+      "at": "2026-11-12T00:43:09.117Z",
+      "until": "2026-11-14T00:43:09.117Z"
+    },
+    {
+      "id": "quest:streak:7",
+      "type": "milestone",
+      "title": "QUEST COMPLETE",
+      "icon": "trophy",
+      "detail": "HOLD A 7 DAY STREAK",
+      "at": "2026-11-12T00:43:09.117Z",
+      "until": "2026-11-14T00:43:09.117Z"
+    },
+    {
       "id": "quest:recover:2026-11-11",
       "type": "milestone",
       "title": "QUEST COMPLETE",
