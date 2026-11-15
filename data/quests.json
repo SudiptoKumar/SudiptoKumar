@@ -51,5 +51,7 @@
       "xp": 0
     }
   },
-  "active": []
+  "active": [
+    "recover:open"
+  ]
 }
