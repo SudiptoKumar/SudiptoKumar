@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-15T23:09:22.329Z",
+  "generatedAt": "2026-11-15T23:09:46.676Z",
   "level": 28,
   "xp": 21344,
   "stars": 20,
@@ -31,7 +31,7 @@
     "kingdomDay": 1213
   },
   "time": {
-    "iso": "2026-11-15T23:09:22.329Z",
+    "iso": "2026-11-15T23:09:46.676Z",
     "tz": "Asia/Dhaka",
     "hour": 5.15,
     "phase": "night",
@@ -619,12 +619,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-15T23:09:10Z",
+      "pushedAt": "2026-11-15T23:09:37Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 454,
-      "commits": 290,
-      "commits90": 290,
+      "importance": 455.5,
+      "commits": 291,
+      "commits90": 291,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 45,
@@ -2240,7 +2240,7 @@
         "icon": "flame",
         "detail": "ScreenPeek",
         "at": "2026-11-15T19:52:54Z",
-        "until": "2026-11-16T00:09:22.329Z"
+        "until": "2026-11-16T00:09:46.676Z"
       },
       {
         "id": "recovery:EntertainmentNewsBot",
@@ -2338,8 +2338,8 @@
         "title": "NIGHT OF THE STARS",
         "icon": "star",
         "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-11-15T23:09:22.329Z",
-        "until": "2026-11-16T00:09:22.329Z"
+        "at": "2026-11-15T23:09:46.676Z",
+        "until": "2026-11-16T00:09:46.676Z"
       }
     ],
     "recent": [
@@ -2349,8 +2349,8 @@
         "title": "NIGHT OF THE STARS",
         "icon": "star",
         "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-11-15T23:09:22.329Z",
-        "until": "2026-11-16T00:09:22.329Z"
+        "at": "2026-11-15T23:09:46.676Z",
+        "until": "2026-11-16T00:09:46.676Z"
       },
       {
         "id": "recovery:EntertainmentNewsBot",
@@ -2395,7 +2395,7 @@
         "icon": "flame",
         "detail": "ScreenPeek",
         "at": "2026-11-15T19:52:54Z",
-        "until": "2026-11-16T00:09:22.329Z"
+        "until": "2026-11-16T00:09:46.676Z"
       }
     ]
   },
@@ -2845,7 +2845,7 @@
       "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-11-15T23:09:22.329Z"
+    "checkedAt": "2026-11-15T23:09:46.676Z"
   },
   "v": 2,
   "featured": [
@@ -2959,7 +2959,7 @@
         "id": "emergency:ScreenPeek",
         "type": "emergency",
         "phase": "peak",
-        "ageMinutes": 196,
+        "ageMinutes": 197,
         "stage": "alarm",
         "where": {
           "repo": "ScreenPeek",
@@ -2970,7 +2970,7 @@
         "id": "recovery:EntertainmentNewsBot",
         "type": "recovery",
         "phase": "start",
-        "ageMinutes": 134,
+        "ageMinutes": 135,
         "stage": "firefighter",
         "where": {
           "repo": "EntertainmentNewsBot",
@@ -3003,7 +3003,7 @@
         "id": "recovery:ScienceNewsroomBot",
         "type": "recovery",
         "phase": "start",
-        "ageMinutes": 141,
+        "ageMinutes": 142,
         "stage": "firefighter",
         "where": {
           "repo": "ScienceNewsroomBot",
@@ -3014,7 +3014,7 @@
         "id": "recovery:CareerNewsroomBot",
         "type": "recovery",
         "phase": "start",
-        "ageMinutes": 262,
+        "ageMinutes": 263,
         "stage": "firefighter",
         "where": {
           "repo": "CareerNewsroomBot",
@@ -3025,7 +3025,7 @@
         "id": "recovery:History-Newsroom",
         "type": "recovery",
         "phase": "start",
-        "ageMinutes": 332,
+        "ageMinutes": 333,
         "stage": "firefighter",
         "where": {
           "repo": "History-Newsroom",
@@ -3036,7 +3036,7 @@
         "id": "recovery:VocabularyBot",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 856,
+        "ageMinutes": 857,
         "stage": "repair",
         "where": {
           "repo": "VocabularyBot",
@@ -3047,7 +3047,7 @@
         "id": "quest:recover:2026-11-15",
         "type": "milestone",
         "phase": "aftermath",
-        "ageMinutes": 999,
+        "ageMinutes": 1000,
         "stage": null,
         "where": {
           "anchor": "ci"
@@ -3067,7 +3067,7 @@
         "id": "harvest:2026-11-15",
         "type": "harvest",
         "phase": "peak",
-        "ageMinutes": 669,
+        "ageMinutes": 670,
         "stage": null,
         "where": {
           "anchor": "farm"
@@ -3122,5 +3122,5 @@
       }
     ]
   },
-  "contentHash": "2f1c2b56be9f9f49"
+  "contentHash": "30aea5435da8cf73"
 }
