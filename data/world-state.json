@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-17T07:53:58.152Z",
+  "generatedAt": "2026-11-17T08:27:11.991Z",
   "level": 28,
   "xp": 21487,
   "stars": 20,
@@ -31,9 +31,9 @@
     "kingdomDay": 1214
   },
   "time": {
-    "iso": "2026-11-17T07:53:58.152Z",
+    "iso": "2026-11-17T08:27:11.991Z",
     "tz": "Asia/Dhaka",
-    "hour": 13.88,
+    "hour": 14.45,
     "phase": "day",
     "season": "autumn",
     "date": "2026-11-17"
@@ -563,6 +563,46 @@
       }
     },
     {
+      "name": "SudiptoKumar",
+      "url": "https://github.com/SudiptoKumar/SudiptoKumar",
+      "description": "Hello, Dev!",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "JavaScript",
+      "color": "#f1e05a",
+      "archetype": "house",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-11-17T07:54:11Z",
+      "pushedDays": 0,
+      "createdAt": "2026-10-01T15:17:58Z",
+      "importance": 463,
+      "commits": 296,
+      "commits90": 296,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 46,
+      "evolution": {
+        "level": 4,
+        "name": "SPECIALIZED",
+        "score": 69,
+        "toNext": 3,
+        "capped": null,
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 2,
+          "depth": 15,
+          "release": 0,
+          "reputation": 2
+        }
+      }
+    },
+    {
       "name": "ScienceNewsroomBot",
       "url": "https://github.com/SudiptoKumar/ScienceNewsroomBot",
       "description": "Science News 🗞️",
@@ -596,46 +636,6 @@
           "activity": 30,
           "recency": 20,
           "maturity": 4,
-          "depth": 15,
-          "release": 0,
-          "reputation": 2
-        }
-      }
-    },
-    {
-      "name": "SudiptoKumar",
-      "url": "https://github.com/SudiptoKumar/SudiptoKumar",
-      "description": "Hello, Dev!",
-      "stars": 1,
-      "forks": 0,
-      "issues": 0,
-      "prs": 0,
-      "language": "JavaScript",
-      "color": "#f1e05a",
-      "archetype": "house",
-      "state": "building",
-      "workflow": "passing",
-      "recovered": false,
-      "lastFailAt": null,
-      "pushedAt": "2026-11-16T22:00:09Z",
-      "pushedDays": 0,
-      "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 461.5,
-      "commits": 295,
-      "commits90": 295,
-      "releases": 0,
-      "recoveredAt": null,
-      "ageDays": 46,
-      "evolution": {
-        "level": 4,
-        "name": "SPECIALIZED",
-        "score": 69,
-        "toNext": 3,
-        "capped": null,
-        "parts": {
-          "activity": 30,
-          "recency": 20,
-          "maturity": 2,
           "depth": 15,
           "release": 0,
           "reputation": 2
@@ -2835,7 +2835,7 @@
       "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-11-17T07:53:58.152Z"
+    "checkedAt": "2026-11-17T08:27:11.991Z"
   },
   "v": 2,
   "featured": [
@@ -2945,7 +2945,7 @@
         "id": "recovery:CareerNewsroomBot",
         "type": "recovery",
         "phase": "start",
-        "ageMinutes": 15,
+        "ageMinutes": 48,
         "stage": "firefighter",
         "where": {
           "repo": "CareerNewsroomBot",
@@ -2956,7 +2956,7 @@
         "id": "recovery:ScreenPeek",
         "type": "recovery",
         "phase": "start",
-        "ageMinutes": 134,
+        "ageMinutes": 167,
         "stage": "firefighter",
         "where": {
           "repo": "ScreenPeek",
@@ -2967,7 +2967,7 @@
         "id": "recovery:History-Newsroom",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 661,
+        "ageMinutes": 695,
         "stage": "repair",
         "where": {
           "repo": "History-Newsroom",
@@ -2978,7 +2978,7 @@
         "id": "recovery:GamingNewsroomBot",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 821,
+        "ageMinutes": 854,
         "stage": "repair",
         "where": {
           "repo": "GamingNewsroomBot",
@@ -2989,7 +2989,7 @@
         "id": "recovery:EntertainmentNewsBot",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 825,
+        "ageMinutes": 859,
         "stage": "repair",
         "where": {
           "repo": "EntertainmentNewsBot",
@@ -3000,7 +3000,7 @@
         "id": "recovery:TheTechNewsroomBot",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 831,
+        "ageMinutes": 864,
         "stage": "repair",
         "where": {
           "repo": "TheTechNewsroomBot",
@@ -3011,7 +3011,7 @@
         "id": "recovery:ScienceNewsroomBot",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 837,
+        "ageMinutes": 870,
         "stage": "repair",
         "where": {
           "repo": "ScienceNewsroomBot",
@@ -3022,7 +3022,7 @@
         "id": "recovery:VocabularyBot",
         "type": "recovery",
         "phase": "aftermath",
-        "ageMinutes": 1370,
+        "ageMinutes": 1403,
         "stage": "fade",
         "where": {
           "repo": "VocabularyBot",
@@ -3033,7 +3033,7 @@
         "id": "quest:recover:2026-11-16",
         "type": "milestone",
         "phase": "aftermath",
-        "ageMinutes": 1527,
+        "ageMinutes": 1560,
         "stage": null,
         "where": {
           "anchor": "ci"
@@ -3043,7 +3043,7 @@
         "id": "expansion:ScreenPeek",
         "type": "expansion",
         "phase": "aftermath",
-        "ageMinutes": 10001,
+        "ageMinutes": 10035,
         "stage": "construction",
         "where": {
           "repo": "ScreenPeek"
@@ -3085,5 +3085,5 @@
       }
     ]
   },
-  "contentHash": "6b17c26811d3a855"
+  "contentHash": "62c2c15241091b7e"
 }
