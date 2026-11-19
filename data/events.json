@@ -2,6 +2,33 @@
   "version": 1,
   "events": [
     {
+      "id": "levelup:29",
+      "type": "milestone",
+      "title": "MILESTONE UNLOCKED",
+      "icon": "trophy",
+      "detail": "LEVEL 29",
+      "at": "2026-11-19T07:23:57.234Z",
+      "until": "2026-11-21T07:23:57.234Z"
+    },
+    {
+      "id": "quest:recover:2026-11-19",
+      "type": "milestone",
+      "title": "QUEST COMPLETE",
+      "icon": "trophy",
+      "detail": "THE CI IS FIXED",
+      "at": "2026-11-19T07:23:57.234Z",
+      "until": "2026-11-21T07:23:57.234Z"
+    },
+    {
+      "id": "quest:streak:14",
+      "type": "milestone",
+      "title": "QUEST COMPLETE",
+      "icon": "trophy",
+      "detail": "HOLD A 14 DAY STREAK",
+      "at": "2026-11-19T07:23:57.234Z",
+      "until": "2026-11-21T07:23:57.234Z"
+    },
+    {
       "id": "quest:recover:2026-11-16",
       "type": "milestone",
       "title": "QUEST COMPLETE",
