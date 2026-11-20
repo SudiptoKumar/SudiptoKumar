@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-20T07:14:15.619Z",
+  "generatedAt": "2026-11-20T07:42:50.053Z",
   "level": 29,
-  "xp": 21766,
+  "xp": 21801,
   "stars": 20,
-  "commits": 1174,
+  "commits": 1176,
   "issues": 0,
   "pullRequests": 128,
   "workflowHealth": 97,
-  "streak": 14,
+  "streak": 15,
   "activeRepositories": 23,
   "topLanguage": "TypeScript",
   "weather": "aurora",
@@ -31,9 +31,9 @@
     "kingdomDay": 1217
   },
   "time": {
-    "iso": "2026-11-20T07:14:15.619Z",
+    "iso": "2026-11-20T07:42:50.053Z",
     "tz": "Asia/Dhaka",
-    "hour": 13.23,
+    "hour": 13.7,
     "phase": "day",
     "season": "autumn",
     "date": "2026-11-20"
@@ -45,9 +45,9 @@
       "archetype": "paladin",
       "name": "PALADIN"
     },
-    "xpInto": 66,
+    "xpInto": 101,
     "xpNeed": 1500,
-    "xpPct": 4,
+    "xpPct": 7,
     "xpNext": 23200,
     "activity": "normal",
     "position": "farm",
@@ -55,14 +55,14 @@
     "stats": {
       "codePower": 97,
       "reliability": 97,
-      "streak": 14,
+      "streak": 15,
       "reputation": 20
     },
     "streak": {
-      "current": 14,
+      "current": 15,
       "longest": 22,
-      "idleDays": 1,
-      "today": 0,
+      "idleDays": 0,
+      "today": 2,
       "yesterday": 7
     },
     "title": "ARCHITECT",
@@ -91,7 +91,7 @@
   "totals": {
     "stars": 20,
     "forks": 0,
-    "commits": 1174,
+    "commits": 1176,
     "prs": 128,
     "mergedPrs": 119,
     "reviews": 0,
@@ -102,7 +102,7 @@
     "activeRepos": 23,
     "archivedRepos": 0,
     "followers": 0,
-    "yearContrib": 1340,
+    "yearContrib": 1342,
     "workflowHealth": 97,
     "failingRepos": [
       "ScreenPeek"
@@ -111,8 +111,8 @@
     "codeKb": 322633
   },
   "xpBreakdown": {
-    "base": 4668,
-    "streakBonus": 418,
+    "base": 4688,
+    "streakBonus": 433,
     "bonus": {
       "pullRequests": 3280,
       "mergedPullRequests": 6380,
@@ -143,9 +143,9 @@
         "title": "HOLD A 30 DAY STREAK",
         "icon": "wheat",
         "state": "ACTIVE",
-        "progress": 14,
+        "progress": 15,
         "target": 30,
-        "pct": 47,
+        "pct": 50,
         "xp": 80,
         "unit": "DAYS",
         "at": null,
@@ -241,9 +241,9 @@
         "title": "HOLD A 30 DAY STREAK",
         "icon": "wheat",
         "state": "ACTIVE",
-        "progress": 14,
+        "progress": 15,
         "target": 30,
-        "pct": 47,
+        "pct": 50,
         "xp": 80,
         "unit": "DAYS",
         "at": null,
@@ -593,12 +593,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-19T20:35:48Z",
+      "pushedAt": "2026-11-20T07:14:31Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 475,
-      "commits": 304,
-      "commits90": 304,
+      "importance": 476.5,
+      "commits": 305,
+      "commits90": 305,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 49,
@@ -792,13 +792,13 @@
       "state": "failing",
       "workflow": "failing",
       "recovered": true,
-      "lastFailAt": "2026-11-20T02:17:20Z",
-      "pushedAt": "2026-11-19T10:45:26Z",
+      "lastFailAt": "2026-11-20T07:41:22Z",
+      "pushedAt": "2026-11-20T07:42:35Z",
       "pushedDays": 0,
       "createdAt": "2026-11-10T09:12:34Z",
-      "importance": 184.6,
-      "commits": 119,
-      "commits90": 119,
+      "importance": 187.6,
+      "commits": 121,
+      "commits90": 121,
       "releases": 0,
       "recoveredAt": "2026-11-20T00:57:58Z",
       "ageDays": 9,
@@ -1154,7 +1154,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-30T07:31:35Z",
-      "pushedDays": 50,
+      "pushedDays": 51,
       "createdAt": "2026-09-28T22:00:39Z",
       "importance": 24.2,
       "commits": 11,
@@ -2059,7 +2059,8 @@
     },
     {
       "date": "2026-11-20",
-      "count": 0
+      "count": 2,
+      "gold": 1
     }
   ],
   "achievements": {
@@ -2257,8 +2258,8 @@
         "title": "WORKFLOW EMERGENCY",
         "icon": "flame",
         "detail": "ScreenPeek",
-        "at": "2026-11-20T02:17:20Z",
-        "until": "2026-11-20T08:14:15.619Z"
+        "at": "2026-11-20T07:41:22Z",
+        "until": "2026-11-20T08:42:50.053Z"
       },
       {
         "id": "recovery:CareerNewsroomBot",
@@ -2358,8 +2359,8 @@
         "title": "WORKFLOW EMERGENCY",
         "icon": "flame",
         "detail": "ScreenPeek",
-        "at": "2026-11-20T02:17:20Z",
-        "until": "2026-11-20T08:14:15.619Z"
+        "at": "2026-11-20T07:41:22Z",
+        "until": "2026-11-20T08:42:50.053Z"
       },
       {
         "id": "recovery:CareerNewsroomBot",
@@ -2866,9 +2867,9 @@
       {
         "d": "2026-11-20",
         "l": 29,
-        "x": 21766,
+        "x": 21801,
         "s": 20,
-        "c": 1174,
+        "c": 1176,
         "p": 1371
       }
     ]
@@ -2886,7 +2887,7 @@
       "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-11-20T07:14:15.619Z"
+    "checkedAt": "2026-11-20T07:42:50.053Z"
   },
   "v": 2,
   "featured": [
@@ -2897,10 +2898,10 @@
     "Sudipto-Portfolio"
   ],
   "power": {
-    "value": 76,
+    "value": 77,
     "parts": {
       "progress": 26.2,
-      "consistency": 9.3,
+      "consistency": 10,
       "reliability": 19.4,
       "reach": 5.9,
       "vitality": 15,
@@ -2925,7 +2926,7 @@
     },
     "npcs": {
       "builder": 6,
-      "farmer": 2,
+      "farmer": 3,
       "miner": 1,
       "guard": 2,
       "merchant": 3,
@@ -2975,7 +2976,7 @@
     },
     "stages": {
       "fail": {
-        "ScreenPeek": "alarm"
+        "ScreenPeek": "warning"
       },
       "repair": {
         "CareerNewsroomBot": "firefighter",
@@ -2995,9 +2996,9 @@
       {
         "id": "emergency:ScreenPeek",
         "type": "emergency",
-        "phase": "peak",
-        "ageMinutes": 297,
-        "stage": "alarm",
+        "phase": "start",
+        "ageMinutes": 1,
+        "stage": "warning",
         "where": {
           "repo": "ScreenPeek",
           "anchor": "ci"
@@ -3007,7 +3008,7 @@
         "id": "recovery:CareerNewsroomBot",
         "type": "recovery",
         "phase": "start",
-        "ageMinutes": 298,
+        "ageMinutes": 327,
         "stage": "firefighter",
         "where": {
           "repo": "CareerNewsroomBot",
@@ -3018,7 +3019,7 @@
         "id": "recovery:History-Newsroom",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 710,
+        "ageMinutes": 739,
         "stage": "repair",
         "where": {
           "repo": "History-Newsroom",
@@ -3029,7 +3030,7 @@
         "id": "recovery:GamingNewsroomBot",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 767,
+        "ageMinutes": 796,
         "stage": "repair",
         "where": {
           "repo": "GamingNewsroomBot",
@@ -3040,7 +3041,7 @@
         "id": "recovery:TheTechNewsroomBot",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 774,
+        "ageMinutes": 803,
         "stage": "repair",
         "where": {
           "repo": "TheTechNewsroomBot",
@@ -3051,7 +3052,7 @@
         "id": "recovery:EntertainmentNewsBot",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 779,
+        "ageMinutes": 808,
         "stage": "repair",
         "where": {
           "repo": "EntertainmentNewsBot",
@@ -3062,7 +3063,7 @@
         "id": "recovery:ScienceNewsroomBot",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 786,
+        "ageMinutes": 814,
         "stage": "repair",
         "where": {
           "repo": "ScienceNewsroomBot",
@@ -3073,7 +3074,7 @@
         "id": "recovery:VocabularyBot",
         "type": "recovery",
         "phase": "aftermath",
-        "ageMinutes": 1278,
+        "ageMinutes": 1306,
         "stage": "fade",
         "where": {
           "repo": "VocabularyBot",
@@ -3084,7 +3085,7 @@
         "id": "levelup:29",
         "type": "milestone",
         "phase": "aftermath",
-        "ageMinutes": 1430,
+        "ageMinutes": 1459,
         "stage": null,
         "where": {
           "anchor": "castle"
@@ -3094,7 +3095,7 @@
         "id": "quest:recover:2026-11-19",
         "type": "milestone",
         "phase": "aftermath",
-        "ageMinutes": 1430,
+        "ageMinutes": 1459,
         "stage": null,
         "where": {
           "anchor": "ci"
@@ -3104,7 +3105,7 @@
         "id": "quest:streak:14",
         "type": "milestone",
         "phase": "aftermath",
-        "ageMinutes": 1430,
+        "ageMinutes": 1459,
         "stage": null,
         "where": {
           "anchor": "farm"
@@ -3148,5 +3149,5 @@
       }
     ]
   },
-  "contentHash": "b432a4a73867c87b"
+  "contentHash": "af1cdff127657d78"
 }
