@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-21T07:05:33.562Z",
+  "generatedAt": "2026-11-21T07:40:10.013Z",
   "level": 29,
   "xp": 21897,
   "stars": 20,
@@ -31,9 +31,9 @@
     "kingdomDay": 1218
   },
   "time": {
-    "iso": "2026-11-21T07:05:33.562Z",
+    "iso": "2026-11-21T07:40:10.013Z",
     "tz": "Asia/Dhaka",
-    "hour": 13.08,
+    "hour": 13.67,
     "phase": "day",
     "season": "autumn",
     "date": "2026-11-21"
@@ -123,7 +123,7 @@
   "quests": {
     "list": [
       {
-        "id": "recover:2026-11-19",
+        "id": "recover:2026-11-21",
         "track": "recover",
         "title": "THE CI IS FIXED",
         "icon": "flame",
@@ -132,7 +132,7 @@
         "target": 1,
         "pct": 100,
         "xp": 0,
-        "at": "2026-11-19T07:23:57.234Z",
+        "at": "2026-11-21T07:05:33.562Z",
         "isNew": true
       },
       {
@@ -148,20 +148,6 @@
         "unit": "DAYS",
         "at": null,
         "isNew": false
-      },
-      {
-        "id": "streak:14",
-        "track": "streak",
-        "title": "HOLD A 14 DAY STREAK",
-        "icon": "wheat",
-        "state": "COMPLETE",
-        "progress": 14,
-        "target": 14,
-        "pct": 100,
-        "xp": 60,
-        "unit": "DAYS",
-        "at": "2026-11-19T07:23:57.234Z",
-        "isNew": true
       },
       {
         "id": "streak:60",
@@ -248,7 +234,7 @@
         "isNew": false
       },
       {
-        "id": "recover:2026-11-19",
+        "id": "recover:2026-11-21",
         "track": "recover",
         "title": "THE CI IS FIXED",
         "icon": "flame",
@@ -257,7 +243,7 @@
         "target": 1,
         "pct": 100,
         "xp": 0,
-        "at": "2026-11-19T07:23:57.234Z",
+        "at": "2026-11-21T07:05:33.562Z",
         "isNew": true
       }
     ],
@@ -591,12 +577,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-20T20:17:32Z",
+      "pushedAt": "2026-11-21T07:05:45Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 479.5,
-      "commits": 307,
-      "commits90": 307,
+      "importance": 481,
+      "commits": 308,
+      "commits90": 308,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 50,
@@ -1152,7 +1138,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-30T07:31:35Z",
-      "pushedDays": 51,
+      "pushedDays": 52,
       "createdAt": "2026-09-28T22:00:39Z",
       "importance": 24.2,
       "commits": 11,
@@ -2322,33 +2308,6 @@
         "detail": "THE CI IS FIXED",
         "at": "2026-11-21T07:05:33.562Z",
         "until": "2026-11-23T07:05:33.562Z"
-      },
-      {
-        "id": "levelup:29",
-        "type": "milestone",
-        "title": "MILESTONE UNLOCKED",
-        "icon": "trophy",
-        "detail": "LEVEL 29",
-        "at": "2026-11-19T07:23:57.234Z",
-        "until": "2026-11-21T07:23:57.234Z"
-      },
-      {
-        "id": "quest:recover:2026-11-19",
-        "type": "milestone",
-        "title": "QUEST COMPLETE",
-        "icon": "trophy",
-        "detail": "THE CI IS FIXED",
-        "at": "2026-11-19T07:23:57.234Z",
-        "until": "2026-11-21T07:23:57.234Z"
-      },
-      {
-        "id": "quest:streak:14",
-        "type": "milestone",
-        "title": "QUEST COMPLETE",
-        "icon": "trophy",
-        "detail": "HOLD A 14 DAY STREAK",
-        "at": "2026-11-19T07:23:57.234Z",
-        "until": "2026-11-21T07:23:57.234Z"
       }
     ],
     "recent": [
@@ -2894,7 +2853,7 @@
       "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-11-21T07:05:33.562Z"
+    "checkedAt": "2026-11-21T07:40:10.013Z"
   },
   "v": 2,
   "featured": [
@@ -2923,7 +2882,7 @@
       "WORKING",
       "ACTIVE"
     ],
-    "frame": 3,
+    "frame": 4,
     "hero": {
       "state": "working",
       "spot": "ci",
@@ -3000,7 +2959,7 @@
         "id": "recovery:ScreenPeek",
         "type": "recovery",
         "phase": "start",
-        "ageMinutes": 208,
+        "ageMinutes": 243,
         "stage": "firefighter",
         "where": {
           "repo": "ScreenPeek",
@@ -3011,7 +2970,7 @@
         "id": "recovery:CareerNewsroomBot",
         "type": "recovery",
         "phase": "start",
-        "ageMinutes": 300,
+        "ageMinutes": 334,
         "stage": "firefighter",
         "where": {
           "repo": "CareerNewsroomBot",
@@ -3022,7 +2981,7 @@
         "id": "recovery:ScienceNewsroomBot",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 485,
+        "ageMinutes": 519,
         "stage": "repair",
         "where": {
           "repo": "ScienceNewsroomBot",
@@ -3033,7 +2992,7 @@
         "id": "recovery:GamingNewsroomBot",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 796,
+        "ageMinutes": 831,
         "stage": "repair",
         "where": {
           "repo": "GamingNewsroomBot",
@@ -3044,7 +3003,7 @@
         "id": "recovery:EntertainmentNewsBot",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 803,
+        "ageMinutes": 838,
         "stage": "repair",
         "where": {
           "repo": "EntertainmentNewsBot",
@@ -3055,7 +3014,7 @@
         "id": "recovery:TheTechNewsroomBot",
         "type": "recovery",
         "phase": "peak",
-        "ageMinutes": 806,
+        "ageMinutes": 841,
         "stage": "repair",
         "where": {
           "repo": "TheTechNewsroomBot",
@@ -3066,7 +3025,7 @@
         "id": "recovery:VocabularyBot",
         "type": "recovery",
         "phase": "aftermath",
-        "ageMinutes": 1281,
+        "ageMinutes": 1316,
         "stage": "fade",
         "where": {
           "repo": "VocabularyBot",
@@ -3076,41 +3035,11 @@
       {
         "id": "quest:recover:2026-11-21",
         "type": "milestone",
-        "phase": "start",
-        "ageMinutes": 0,
+        "phase": "peak",
+        "ageMinutes": 35,
         "stage": null,
         "where": {
           "anchor": "ci"
-        }
-      },
-      {
-        "id": "levelup:29",
-        "type": "milestone",
-        "phase": "aftermath",
-        "ageMinutes": 2862,
-        "stage": null,
-        "where": {
-          "anchor": "castle"
-        }
-      },
-      {
-        "id": "quest:recover:2026-11-19",
-        "type": "milestone",
-        "phase": "aftermath",
-        "ageMinutes": 2862,
-        "stage": null,
-        "where": {
-          "anchor": "ci"
-        }
-      },
-      {
-        "id": "quest:streak:14",
-        "type": "milestone",
-        "phase": "aftermath",
-        "ageMinutes": 2862,
-        "stage": null,
-        "where": {
-          "anchor": "farm"
         }
       }
     ],
@@ -3142,5 +3071,5 @@
       }
     ]
   },
-  "contentHash": "59d30d2a98bac7ee"
+  "contentHash": "d1b52b6d27649729"
 }
