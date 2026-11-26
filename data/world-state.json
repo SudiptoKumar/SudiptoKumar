@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-26T08:15:00.821Z",
+  "generatedAt": "2026-11-26T08:52:10.307Z",
   "level": 29,
   "xp": 21927,
   "stars": 20,
@@ -31,9 +31,9 @@
     "kingdomDay": 1223
   },
   "time": {
-    "iso": "2026-11-26T08:15:00.821Z",
+    "iso": "2026-11-26T08:52:10.307Z",
     "tz": "Asia/Dhaka",
-    "hour": 14.25,
+    "hour": 14.87,
     "phase": "day",
     "season": "autumn",
     "date": "2026-11-26"
@@ -525,6 +525,46 @@
       }
     },
     {
+      "name": "SudiptoKumar",
+      "url": "https://github.com/SudiptoKumar/SudiptoKumar",
+      "description": "Hello, Dev!",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "JavaScript",
+      "color": "#f1e05a",
+      "archetype": "house",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-11-26T08:15:15Z",
+      "pushedDays": 0,
+      "createdAt": "2026-10-01T15:17:58Z",
+      "importance": 505,
+      "commits": 324,
+      "commits90": 324,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 55,
+      "evolution": {
+        "level": 4,
+        "name": "SPECIALIZED",
+        "score": 70,
+        "toNext": 2,
+        "capped": null,
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 3,
+          "depth": 15,
+          "release": 0,
+          "reputation": 2
+        }
+      }
+    },
+    {
       "name": "BusinessNewsBot",
       "url": "https://github.com/SudiptoKumar/BusinessNewsBot",
       "description": "Business News 🗞️",
@@ -558,46 +598,6 @@
           "activity": 30,
           "recency": 20,
           "maturity": 5,
-          "depth": 15,
-          "release": 0,
-          "reputation": 2
-        }
-      }
-    },
-    {
-      "name": "SudiptoKumar",
-      "url": "https://github.com/SudiptoKumar/SudiptoKumar",
-      "description": "Hello, Dev!",
-      "stars": 1,
-      "forks": 0,
-      "issues": 0,
-      "prs": 0,
-      "language": "JavaScript",
-      "color": "#f1e05a",
-      "archetype": "house",
-      "state": "building",
-      "workflow": "passing",
-      "recovered": false,
-      "lastFailAt": null,
-      "pushedAt": "2026-11-25T21:40:38Z",
-      "pushedDays": 0,
-      "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 503.5,
-      "commits": 323,
-      "commits90": 323,
-      "releases": 0,
-      "recoveredAt": null,
-      "ageDays": 55,
-      "evolution": {
-        "level": 4,
-        "name": "SPECIALIZED",
-        "score": 70,
-        "toNext": 2,
-        "capped": null,
-        "parts": {
-          "activity": 30,
-          "recency": 20,
-          "maturity": 3,
           "depth": 15,
           "release": 0,
           "reputation": 2
@@ -2246,7 +2246,7 @@
         "icon": "flame",
         "detail": "ScreenPeek",
         "at": "2026-11-23T22:31:43Z",
-        "until": "2026-11-26T09:15:00.821Z"
+        "until": "2026-11-26T09:52:10.307Z"
       }
     ],
     "recent": [
@@ -2257,7 +2257,7 @@
         "icon": "flame",
         "detail": "ScreenPeek",
         "at": "2026-11-23T22:31:43Z",
-        "until": "2026-11-26T09:15:00.821Z"
+        "until": "2026-11-26T09:52:10.307Z"
       },
       {
         "id": "quest:recover:2026-11-21",
@@ -2832,7 +2832,7 @@
       "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-11-26T08:15:00.821Z"
+    "checkedAt": "2026-11-26T08:52:10.307Z"
   },
   "v": 2,
   "featured": [
@@ -2925,7 +2925,7 @@
         "id": "emergency:ScreenPeek",
         "type": "emergency",
         "phase": "peak",
-        "ageMinutes": 3463,
+        "ageMinutes": 3500,
         "stage": "fire",
         "where": {
           "repo": "ScreenPeek",
@@ -2953,5 +2953,5 @@
       }
     ]
   },
-  "contentHash": "e0247c424489cb7c"
+  "contentHash": "b8ec069212b5ef89"
 }
