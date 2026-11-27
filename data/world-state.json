@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-26T21:30:02.029Z",
+  "generatedAt": "2026-11-27T08:29:51.769Z",
   "level": 29,
   "xp": 21927,
   "stars": 20,
@@ -11,9 +11,9 @@
   "streak": 0,
   "activeRepositories": 23,
   "topLanguage": "TypeScript",
-  "weather": "clear",
-  "weatherReason": "Healthy activity",
-  "timeOfDay": "night",
+  "weather": "aurora",
+  "weatherReason": "A release or milestone is being celebrated",
+  "timeOfDay": "day",
   "season": "autumn",
   "meta": {
     "demo": false,
@@ -31,10 +31,10 @@
     "kingdomDay": 1224
   },
   "time": {
-    "iso": "2026-11-26T21:30:02.029Z",
+    "iso": "2026-11-27T08:29:51.769Z",
     "tz": "Asia/Dhaka",
-    "hour": 3.5,
-    "phase": "night",
+    "hour": 14.48,
+    "phase": "day",
     "season": "autumn",
     "date": "2026-11-27"
   },
@@ -51,9 +51,9 @@
     "xpNext": 23200,
     "activity": "low",
     "position": "home",
-    "sleeping": false,
+    "sleeping": true,
     "stats": {
-      "codePower": 97,
+      "codePower": 96,
       "reliability": 100,
       "streak": 0,
       "reputation": 20
@@ -61,7 +61,7 @@
     "streak": {
       "current": 0,
       "longest": 22,
-      "idleDays": 2,
+      "idleDays": 3,
       "today": 0,
       "yesterday": 0
     },
@@ -84,9 +84,9 @@
         "icon": "book"
       }
     ],
-    "state": "working",
+    "state": "walking",
     "spot": "ci",
-    "status": "FIXING THE CI"
+    "status": "HEADING TO THE FORTRESS"
   },
   "totals": {
     "stars": 20,
@@ -104,11 +104,9 @@
     "followers": 1,
     "yearContrib": 1349,
     "workflowHealth": 100,
-    "failingRepos": [
-      "ScreenPeek"
-    ],
+    "failingRepos": [],
     "openPRs": 0,
-    "codeKb": 330034
+    "codeKb": 332054
   },
   "xpBreakdown": {
     "base": 4758,
@@ -125,17 +123,17 @@
   "quests": {
     "list": [
       {
-        "title": "FIX THE FAILING CI",
-        "progress": 100,
-        "target": 100,
-        "pct": 100,
-        "id": "recover:open",
+        "id": "recover:2026-11-27",
         "track": "recover",
+        "title": "THE CI IS FIXED",
         "icon": "flame",
-        "state": "ACTIVE",
+        "state": "COMPLETE",
+        "progress": 1,
+        "target": 1,
+        "pct": 100,
         "xp": 0,
-        "at": null,
-        "isNew": false
+        "at": "2026-11-27T08:29:51.769Z",
+        "isNew": true
       },
       {
         "id": "streak:30",
@@ -209,19 +207,6 @@
     ],
     "rows": [
       {
-        "title": "FIX THE FAILING CI",
-        "progress": 100,
-        "target": 100,
-        "pct": 100,
-        "id": "recover:open",
-        "track": "recover",
-        "icon": "flame",
-        "state": "ACTIVE",
-        "xp": 0,
-        "at": null,
-        "isNew": false
-      },
-      {
         "id": "streak:30",
         "track": "streak",
         "title": "HOLD A 30 DAY STREAK",
@@ -236,36 +221,49 @@
         "isNew": false
       },
       {
-        "id": "streak:60",
-        "track": "streak",
-        "title": "HOLD A 60 DAY STREAK",
-        "icon": "wheat",
-        "state": "LOCKED",
+        "id": "release:month",
+        "track": "release",
+        "title": "SHIP A RELEASE",
+        "icon": "rocket",
+        "state": "ACTIVE",
         "progress": 0,
-        "target": 60,
+        "target": 1,
         "pct": 0,
-        "xp": 100,
-        "unit": "DAYS",
+        "xp": 0,
         "at": null,
         "isNew": false
+      },
+      {
+        "id": "recover:2026-11-27",
+        "track": "recover",
+        "title": "THE CI IS FIXED",
+        "icon": "flame",
+        "state": "COMPLETE",
+        "progress": 1,
+        "target": 1,
+        "pct": 100,
+        "xp": 0,
+        "at": "2026-11-27T08:29:51.769Z",
+        "isNew": true
       }
     ],
     "current": {
-      "title": "FIX THE FAILING CI",
-      "progress": 100,
-      "target": 100,
-      "pct": 100,
-      "id": "recover:open",
-      "track": "recover",
-      "icon": "flame",
+      "id": "streak:30",
+      "track": "streak",
+      "title": "HOLD A 30 DAY STREAK",
+      "icon": "wheat",
       "state": "ACTIVE",
-      "xp": 0,
+      "progress": 0,
+      "target": 30,
+      "pct": 0,
+      "xp": 80,
+      "unit": "DAYS",
       "at": null,
       "isNew": false
     },
     "counts": {
-      "active": 4,
-      "complete": 16
+      "active": 3,
+      "complete": 17
     },
     "xp": 120
   },
@@ -339,12 +337,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-26T16:45:19Z",
+      "pushedAt": "2026-11-27T01:41:45Z",
       "pushedDays": 0,
       "createdAt": "2026-09-17T18:58:59Z",
-      "importance": 805,
-      "commits": 524,
-      "commits90": 524,
+      "importance": 806.5,
+      "commits": 525,
+      "commits90": 525,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 70,
@@ -405,46 +403,6 @@
       }
     },
     {
-      "name": "EntertainmentNewsBot",
-      "url": "https://github.com/SudiptoKumar/EntertainmentNewsBot",
-      "description": "Entertainment News 🗞️",
-      "stars": 1,
-      "forks": 0,
-      "issues": 0,
-      "prs": 0,
-      "language": "Python",
-      "color": "#3572A5",
-      "archetype": "tower",
-      "state": "building",
-      "workflow": "passing",
-      "recovered": false,
-      "lastFailAt": null,
-      "pushedAt": "2026-11-26T19:34:15Z",
-      "pushedDays": 0,
-      "createdAt": "2026-08-29T04:24:35Z",
-      "importance": 572.5,
-      "commits": 369,
-      "commits90": 369,
-      "releases": 0,
-      "recoveredAt": null,
-      "ageDays": 89,
-      "evolution": {
-        "level": 4,
-        "name": "SPECIALIZED",
-        "score": 71,
-        "toNext": 1,
-        "capped": null,
-        "parts": {
-          "activity": 30,
-          "recency": 20,
-          "maturity": 4,
-          "depth": 15,
-          "release": 0,
-          "reputation": 2
-        }
-      }
-    },
-    {
       "name": "GamingNewsroomBot",
       "url": "https://github.com/SudiptoKumar/GamingNewsroomBot",
       "description": "Gaming News 🎮",
@@ -462,9 +420,9 @@
       "pushedAt": "2026-11-26T09:20:56Z",
       "pushedDays": 0,
       "createdAt": "2026-08-28T14:21:15Z",
-      "importance": 569.5,
+      "importance": 568,
       "commits": 422,
-      "commits90": 367,
+      "commits90": 366,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 90,
@@ -502,9 +460,9 @@
       "pushedAt": "2026-11-26T19:51:38Z",
       "pushedDays": 0,
       "createdAt": "2026-08-28T19:08:24Z",
-      "importance": 536.5,
+      "importance": 518.5,
       "commits": 357,
-      "commits90": 345,
+      "commits90": 333,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 90,
@@ -525,9 +483,9 @@
       }
     },
     {
-      "name": "BusinessNewsBot",
-      "url": "https://github.com/SudiptoKumar/BusinessNewsBot",
-      "description": "Business News 🗞️",
+      "name": "EntertainmentNewsBot",
+      "url": "https://github.com/SudiptoKumar/EntertainmentNewsBot",
+      "description": "Entertainment News 🗞️",
       "stars": 1,
       "forks": 0,
       "issues": 0,
@@ -539,15 +497,15 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-26T19:55:04Z",
+      "pushedAt": "2026-11-26T19:34:15Z",
       "pushedDays": 0,
-      "createdAt": "2026-08-27T10:01:41Z",
-      "importance": 506.5,
-      "commits": 370,
-      "commits90": 325,
+      "createdAt": "2026-08-29T04:24:35Z",
+      "importance": 518.5,
+      "commits": 369,
+      "commits90": 333,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 91,
+      "ageDays": 90,
       "evolution": {
         "level": 5,
         "name": "LANDMARK",
@@ -579,12 +537,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-26T08:52:23Z",
+      "pushedAt": "2026-11-26T21:30:15Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 506.5,
-      "commits": 325,
-      "commits90": 325,
+      "importance": 508,
+      "commits": 326,
+      "commits90": 326,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 56,
@@ -598,6 +556,46 @@
           "activity": 30,
           "recency": 20,
           "maturity": 3,
+          "depth": 15,
+          "release": 0,
+          "reputation": 2
+        }
+      }
+    },
+    {
+      "name": "BusinessNewsBot",
+      "url": "https://github.com/SudiptoKumar/BusinessNewsBot",
+      "description": "Business News 🗞️",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "Python",
+      "color": "#3572A5",
+      "archetype": "tower",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-11-26T19:55:04Z",
+      "pushedDays": 0,
+      "createdAt": "2026-08-27T10:01:41Z",
+      "importance": 503.5,
+      "commits": 370,
+      "commits90": 323,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 91,
+      "evolution": {
+        "level": 5,
+        "name": "LANDMARK",
+        "score": 72,
+        "toNext": 0,
+        "capped": null,
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 5,
           "depth": 15,
           "release": 0,
           "reputation": 2
@@ -659,12 +657,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-26T21:00:47Z",
+      "pushedAt": "2026-11-27T03:33:47Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T10:49:10Z",
-      "importance": 460,
-      "commits": 294,
-      "commits90": 294,
+      "importance": 461.5,
+      "commits": 295,
+      "commits90": 295,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 67,
@@ -699,12 +697,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-26T10:49:39Z",
+      "pushedAt": "2026-11-26T22:59:44Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T16:56:23Z",
-      "importance": 442.9,
-      "commits": 284,
-      "commits90": 284,
+      "importance": 444.7,
+      "commits": 285,
+      "commits90": 285,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 67,
@@ -775,12 +773,12 @@
       "language": "TypeScript",
       "color": "#3178c6",
       "archetype": "house",
-      "state": "failing",
-      "workflow": "failing",
+      "state": "active",
+      "workflow": "passing",
       "recovered": false,
-      "lastFailAt": "2026-11-23T22:31:43Z",
+      "lastFailAt": null,
       "pushedAt": "2026-11-24T06:23:59Z",
-      "pushedDays": 2,
+      "pushedDays": 3,
       "createdAt": "2026-11-10T09:12:34Z",
       "importance": 195.2,
       "commits": 126,
@@ -791,8 +789,8 @@
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
-        "score": 51,
-        "toNext": 21,
+        "score": 66,
+        "toNext": 6,
         "capped": null,
         "parts": {
           "activity": 30,
@@ -980,14 +978,14 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-02T05:34:12Z",
-      "pushedDays": 55,
+      "pushedDays": 56,
       "createdAt": "2026-09-28T22:15:20Z",
       "importance": 62.9,
       "commits": 38,
       "commits90": 38,
       "releases": 2,
       "recoveredAt": null,
-      "ageDays": 58,
+      "ageDays": 59,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1020,7 +1018,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-08T04:03:23Z",
-      "pushedDays": 49,
+      "pushedDays": 50,
       "createdAt": "2026-10-01T13:12:44Z",
       "importance": 50.2,
       "commits": 33,
@@ -1067,7 +1065,7 @@
       "commits90": 16,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 58,
+      "ageDays": 59,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1140,14 +1138,14 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-30T07:31:35Z",
-      "pushedDays": 57,
+      "pushedDays": 58,
       "createdAt": "2026-09-28T22:00:39Z",
       "importance": 24.2,
       "commits": 11,
       "commits90": 11,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 58,
+      "ageDays": 59,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1180,14 +1178,14 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-30T06:49:50Z",
-      "pushedDays": 57,
+      "pushedDays": 58,
       "createdAt": "2026-09-28T22:07:51Z",
       "importance": 16.5,
       "commits": 6,
       "commits90": 6,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 58,
+      "ageDays": 59,
       "evolution": {
         "level": 2,
         "name": "FRAME",
@@ -1220,14 +1218,14 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-28T22:13:31Z",
-      "pushedDays": 58,
+      "pushedDays": 59,
       "createdAt": "2026-09-28T22:11:39Z",
       "importance": 10.6,
       "commits": 4,
       "commits90": 4,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 58,
+      "ageDays": 59,
       "evolution": {
         "level": 2,
         "name": "FRAME",
@@ -1246,10 +1244,6 @@
     }
   ],
   "calendar": [
-    {
-      "date": "2026-05-22",
-      "count": 0
-    },
     {
       "date": "2026-05-23",
       "count": 0
@@ -2048,6 +2042,10 @@
     {
       "date": "2026-11-26",
       "count": 0
+    },
+    {
+      "date": "2026-11-27",
+      "count": 0
     }
   ],
   "achievements": {
@@ -2240,24 +2238,24 @@
   "events": {
     "active": [
       {
-        "id": "emergency:ScreenPeek",
-        "type": "emergency",
-        "title": "WORKFLOW EMERGENCY",
-        "icon": "flame",
-        "detail": "ScreenPeek",
-        "at": "2026-11-23T22:31:43Z",
-        "until": "2026-11-26T22:30:02.029Z"
+        "id": "quest:recover:2026-11-27",
+        "type": "milestone",
+        "title": "QUEST COMPLETE",
+        "icon": "trophy",
+        "detail": "THE CI IS FIXED",
+        "at": "2026-11-27T08:29:51.769Z",
+        "until": "2026-11-29T08:29:51.769Z"
       }
     ],
     "recent": [
       {
-        "id": "emergency:ScreenPeek",
-        "type": "emergency",
-        "title": "WORKFLOW EMERGENCY",
-        "icon": "flame",
-        "detail": "ScreenPeek",
-        "at": "2026-11-23T22:31:43Z",
-        "until": "2026-11-26T22:30:02.029Z"
+        "id": "quest:recover:2026-11-27",
+        "type": "milestone",
+        "title": "QUEST COMPLETE",
+        "icon": "trophy",
+        "detail": "THE CI IS FIXED",
+        "at": "2026-11-27T08:29:51.769Z",
+        "until": "2026-11-29T08:29:51.769Z"
       },
       {
         "id": "quest:recover:2026-11-21",
@@ -2840,15 +2838,15 @@
       "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-11-26T21:30:02.029Z"
+    "checkedAt": "2026-11-27T08:29:51.769Z"
   },
   "v": 2,
   "featured": [
     "GamingNewsroomBot",
-    "TheTechNewsroomBot",
+    "EntertainmentNewsBot",
     "TelegramForwarder",
     "DailyFacts",
-    "Sudipto-Portfolio"
+    "ScreenPeek"
   ],
   "power": {
     "value": 68,
@@ -2862,24 +2860,26 @@
     }
   },
   "scene": {
-    "mode": "DANGER",
+    "mode": "CELEBRATION",
     "modes": [
-      "DANGER",
-      "NIGHT",
+      "CELEBRATION",
+      "SLEEP",
       "WORKING",
       "ACTIVE"
     ],
-    "frame": 0,
+    "frame": 4,
     "hero": {
-      "state": "working",
+      "state": "walking",
       "spot": "ci",
-      "why": "emergency",
-      "label": "FIXING THE CI",
+      "from": "home",
+      "t": 0,
+      "why": "milestone",
+      "label": "HEADING TO THE FORTRESS",
       "umbrella": false
     },
     "npcs": {
       "builder": 6,
-      "farmer": 1,
+      "farmer": 0,
       "miner": 1,
       "guard": 2,
       "merchant": 3,
@@ -2889,20 +2889,18 @@
       "villager": 6
     },
     "light": {
-      "phase": "night",
-      "windows": true,
-      "torches": true,
-      "moon": true,
-      "accent": "danger",
-      "danger": [
-        "ScreenPeek"
-      ],
+      "phase": "day",
+      "windows": false,
+      "torches": false,
+      "moon": false,
+      "accent": "gold",
+      "danger": [],
       "gate": false,
       "repair": [],
-      "gold": false
+      "gold": true
     },
     "weather": {
-      "kind": "clear",
+      "kind": "aurora",
       "rain": 0,
       "lightning": false,
       "snow": false,
@@ -2916,13 +2914,11 @@
       "home": true,
       "returning": false,
       "shelter": false,
-      "patrol": true,
+      "patrol": false,
       "farmersIn": true
     },
     "stages": {
-      "fail": {
-        "ScreenPeek": "fire"
-      },
+      "fail": {},
       "repair": {},
       "build": {},
       "release": null,
@@ -2931,36 +2927,34 @@
     },
     "phases": [
       {
-        "id": "emergency:ScreenPeek",
-        "type": "emergency",
-        "phase": "peak",
-        "ageMinutes": 4258,
-        "stage": "fire",
+        "id": "quest:recover:2026-11-27",
+        "type": "milestone",
+        "phase": "start",
+        "ageMinutes": 0,
+        "stage": null,
         "where": {
-          "repo": "ScreenPeek",
           "anchor": "ci"
         }
       }
     ],
     "fx": [
-      "alarm",
-      "smoke",
-      "fire"
+      "shrineGlow",
+      "confetti"
     ],
     "labels": {
-      "ci": true,
+      "ci": false,
       "issues": 0,
       "raid": false,
-      "event": "emergency"
+      "event": null
     },
     "hud": [
       {
-        "kind": "ALERT",
-        "text": "SCREENPEEK CI DOWN",
-        "icon": "flame",
-        "tone": "danger"
+        "kind": "QUEST",
+        "text": "THE CI IS FIXED",
+        "icon": "trophy",
+        "tone": "gold"
       }
     ]
   },
-  "contentHash": "4ade12bed6e53595"
+  "contentHash": "b32c48099aa57620"
 }

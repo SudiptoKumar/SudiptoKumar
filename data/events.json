@@ -2,6 +2,15 @@
   "version": 1,
   "events": [
     {
+      "id": "quest:recover:2026-11-27",
+      "type": "milestone",
+      "title": "QUEST COMPLETE",
+      "icon": "trophy",
+      "detail": "THE CI IS FIXED",
+      "at": "2026-11-27T08:29:51.769Z",
+      "until": "2026-11-29T08:29:51.769Z"
+    },
+    {
       "id": "quest:recover:2026-11-21",
       "type": "milestone",
       "title": "QUEST COMPLETE",
