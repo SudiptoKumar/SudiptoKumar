@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-27T08:29:51.769Z",
+  "generatedAt": "2026-11-27T09:02:01.966Z",
   "level": 29,
   "xp": 21927,
   "stars": 20,
@@ -31,9 +31,9 @@
     "kingdomDay": 1224
   },
   "time": {
-    "iso": "2026-11-27T08:29:51.769Z",
+    "iso": "2026-11-27T09:02:01.966Z",
     "tz": "Asia/Dhaka",
-    "hour": 14.48,
+    "hour": 15.03,
     "phase": "day",
     "season": "autumn",
     "date": "2026-11-27"
@@ -84,9 +84,9 @@
         "icon": "book"
       }
     ],
-    "state": "walking",
+    "state": "celebrating",
     "spot": "ci",
-    "status": "HEADING TO THE FORTRESS"
+    "status": "CELEBRATING A MILESTONE"
   },
   "totals": {
     "stars": 20,
@@ -500,9 +500,9 @@
       "pushedAt": "2026-11-26T19:34:15Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T04:24:35Z",
-      "importance": 518.5,
+      "importance": 515.5,
       "commits": 369,
-      "commits90": 333,
+      "commits90": 331,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 90,
@@ -537,12 +537,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-26T21:30:15Z",
+      "pushedAt": "2026-11-27T08:30:05Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 508,
-      "commits": 326,
-      "commits90": 326,
+      "importance": 509.5,
+      "commits": 327,
+      "commits90": 327,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 56,
@@ -2838,12 +2838,12 @@
       "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-11-27T08:29:51.769Z"
+    "checkedAt": "2026-11-27T09:02:01.966Z"
   },
   "v": 2,
   "featured": [
     "GamingNewsroomBot",
-    "EntertainmentNewsBot",
+    "TheTechNewsroomBot",
     "TelegramForwarder",
     "DailyFacts",
     "ScreenPeek"
@@ -2867,14 +2867,12 @@
       "WORKING",
       "ACTIVE"
     ],
-    "frame": 4,
+    "frame": 3,
     "hero": {
-      "state": "walking",
+      "state": "celebrating",
       "spot": "ci",
-      "from": "home",
-      "t": 0,
       "why": "milestone",
-      "label": "HEADING TO THE FORTRESS",
+      "label": "CELEBRATING A MILESTONE",
       "umbrella": false
     },
     "npcs": {
@@ -2929,8 +2927,8 @@
       {
         "id": "quest:recover:2026-11-27",
         "type": "milestone",
-        "phase": "start",
-        "ageMinutes": 0,
+        "phase": "peak",
+        "ageMinutes": 32,
         "stage": null,
         "where": {
           "anchor": "ci"
@@ -2956,5 +2954,5 @@
       }
     ]
   },
-  "contentHash": "b32c48099aa57620"
+  "contentHash": "a6e24e0ebbb1c022"
 }
