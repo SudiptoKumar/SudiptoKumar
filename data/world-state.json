@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-27T09:02:01.966Z",
+  "generatedAt": "2026-11-27T21:16:12.667Z",
   "level": 29,
   "xp": 21927,
   "stars": 20,
@@ -13,7 +13,7 @@
   "topLanguage": "TypeScript",
   "weather": "aurora",
   "weatherReason": "A release or milestone is being celebrated",
-  "timeOfDay": "day",
+  "timeOfDay": "night",
   "season": "autumn",
   "meta": {
     "demo": false,
@@ -28,15 +28,15 @@
     "createdAt": "2023-07-22T03:36:18Z",
     "followers": 1,
     "following": 0,
-    "kingdomDay": 1224
+    "kingdomDay": 1225
   },
   "time": {
-    "iso": "2026-11-27T09:02:01.966Z",
+    "iso": "2026-11-27T21:16:12.667Z",
     "tz": "Asia/Dhaka",
-    "hour": 15.03,
-    "phase": "day",
+    "hour": 3.27,
+    "phase": "night",
     "season": "autumn",
-    "date": "2026-11-27"
+    "date": "2026-11-28"
   },
   "hero": {
     "class": {
@@ -84,9 +84,9 @@
         "icon": "book"
       }
     ],
-    "state": "celebrating",
+    "state": "idle",
     "spot": "ci",
-    "status": "CELEBRATING A MILESTONE"
+    "status": "ENJOYING THE AFTERGLOW"
   },
   "totals": {
     "stars": 20,
@@ -106,7 +106,7 @@
     "workflowHealth": 100,
     "failingRepos": [],
     "openPRs": 0,
-    "codeKb": 332054
+    "codeKb": 338058
   },
   "xpBreakdown": {
     "base": 4758,
@@ -337,55 +337,15 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-27T01:41:45Z",
+      "pushedAt": "2026-11-27T21:06:53Z",
       "pushedDays": 0,
       "createdAt": "2026-09-17T18:58:59Z",
-      "importance": 806.5,
-      "commits": 525,
-      "commits90": 525,
+      "importance": 809.5,
+      "commits": 527,
+      "commits90": 527,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 70,
-      "evolution": {
-        "level": 4,
-        "name": "SPECIALIZED",
-        "score": 71,
-        "toNext": 1,
-        "capped": null,
-        "parts": {
-          "activity": 30,
-          "recency": 20,
-          "maturity": 4,
-          "depth": 15,
-          "release": 0,
-          "reputation": 2
-        }
-      }
-    },
-    {
-      "name": "TelegramForwarder",
-      "url": "https://github.com/SudiptoKumar/TelegramForwarder",
-      "description": "Post pass though the channel",
-      "stars": 1,
-      "forks": 0,
-      "issues": 0,
-      "prs": 0,
-      "language": "Python",
-      "color": "#3572A5",
-      "archetype": "house",
-      "state": "building",
-      "workflow": "passing",
-      "recovered": false,
-      "lastFailAt": null,
-      "pushedAt": "2026-11-26T20:27:15Z",
-      "pushedDays": 0,
-      "createdAt": "2026-08-29T17:29:46Z",
-      "importance": 587.9,
-      "commits": 380,
-      "commits90": 380,
-      "releases": 0,
-      "recoveredAt": null,
-      "ageDays": 89,
+      "ageDays": 71,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -417,12 +377,52 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-26T09:20:56Z",
+      "pushedAt": "2026-11-27T19:34:06Z",
       "pushedDays": 0,
       "createdAt": "2026-08-28T14:21:15Z",
       "importance": 568,
-      "commits": 422,
+      "commits": 424,
       "commits90": 366,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 91,
+      "evolution": {
+        "level": 5,
+        "name": "LANDMARK",
+        "score": 72,
+        "toNext": 0,
+        "capped": null,
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 5,
+          "depth": 15,
+          "release": 0,
+          "reputation": 2
+        }
+      }
+    },
+    {
+      "name": "TelegramForwarder",
+      "url": "https://github.com/SudiptoKumar/TelegramForwarder",
+      "description": "Post pass though the channel",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "Python",
+      "color": "#3572A5",
+      "archetype": "house",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-11-27T20:11:14Z",
+      "pushedDays": 0,
+      "createdAt": "2026-08-29T17:29:46Z",
+      "importance": 528,
+      "commits": 382,
+      "commits90": 340,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 90,
@@ -457,55 +457,15 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-26T19:51:38Z",
+      "pushedAt": "2026-11-27T19:37:22Z",
       "pushedDays": 0,
       "createdAt": "2026-08-28T19:08:24Z",
       "importance": 518.5,
-      "commits": 357,
+      "commits": 359,
       "commits90": 333,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 90,
-      "evolution": {
-        "level": 5,
-        "name": "LANDMARK",
-        "score": 72,
-        "toNext": 0,
-        "capped": null,
-        "parts": {
-          "activity": 30,
-          "recency": 20,
-          "maturity": 5,
-          "depth": 15,
-          "release": 0,
-          "reputation": 2
-        }
-      }
-    },
-    {
-      "name": "EntertainmentNewsBot",
-      "url": "https://github.com/SudiptoKumar/EntertainmentNewsBot",
-      "description": "Entertainment News 🗞️",
-      "stars": 1,
-      "forks": 0,
-      "issues": 0,
-      "prs": 0,
-      "language": "Python",
-      "color": "#3572A5",
-      "archetype": "tower",
-      "state": "building",
-      "workflow": "passing",
-      "recovered": false,
-      "lastFailAt": null,
-      "pushedAt": "2026-11-26T19:34:15Z",
-      "pushedDays": 0,
-      "createdAt": "2026-08-29T04:24:35Z",
-      "importance": 515.5,
-      "commits": 369,
-      "commits90": 331,
-      "releases": 0,
-      "recoveredAt": null,
-      "ageDays": 90,
+      "ageDays": 91,
       "evolution": {
         "level": 5,
         "name": "LANDMARK",
@@ -537,15 +497,15 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-27T08:30:05Z",
+      "pushedAt": "2026-11-27T09:02:16Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 509.5,
-      "commits": 327,
-      "commits90": 327,
+      "importance": 511,
+      "commits": 328,
+      "commits90": 328,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 56,
+      "ageDays": 57,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -556,6 +516,46 @@
           "activity": 30,
           "recency": 20,
           "maturity": 3,
+          "depth": 15,
+          "release": 0,
+          "reputation": 2
+        }
+      }
+    },
+    {
+      "name": "EntertainmentNewsBot",
+      "url": "https://github.com/SudiptoKumar/EntertainmentNewsBot",
+      "description": "Entertainment News 🗞️",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "Python",
+      "color": "#3572A5",
+      "archetype": "tower",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-11-27T19:26:16Z",
+      "pushedDays": 0,
+      "createdAt": "2026-08-29T04:24:35Z",
+      "importance": 505,
+      "commits": 371,
+      "commits90": 324,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 90,
+      "evolution": {
+        "level": 5,
+        "name": "LANDMARK",
+        "score": 72,
+        "toNext": 0,
+        "capped": null,
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 5,
           "depth": 15,
           "release": 0,
           "reputation": 2
@@ -577,15 +577,15 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-26T19:55:04Z",
+      "pushedAt": "2026-11-27T19:35:48Z",
       "pushedDays": 0,
       "createdAt": "2026-08-27T10:01:41Z",
       "importance": 503.5,
-      "commits": 370,
+      "commits": 372,
       "commits90": 323,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 91,
+      "ageDays": 92,
       "evolution": {
         "level": 5,
         "name": "LANDMARK",
@@ -617,25 +617,25 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-26T19:39:35Z",
+      "pushedAt": "2026-11-27T19:22:51Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T16:33:20Z",
-      "importance": 497.5,
-      "commits": 319,
-      "commits90": 319,
+      "importance": 482.5,
+      "commits": 321,
+      "commits90": 309,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 89,
+      "ageDays": 90,
       "evolution": {
-        "level": 4,
-        "name": "SPECIALIZED",
-        "score": 71,
-        "toNext": 1,
+        "level": 5,
+        "name": "LANDMARK",
+        "score": 72,
+        "toNext": 0,
         "capped": null,
         "parts": {
           "activity": 30,
           "recency": 20,
-          "maturity": 4,
+          "maturity": 5,
           "depth": 15,
           "release": 0,
           "reputation": 2
@@ -657,15 +657,15 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-27T03:33:47Z",
+      "pushedAt": "2026-11-27T16:11:31Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T10:49:10Z",
-      "importance": 461.5,
-      "commits": 295,
-      "commits90": 295,
+      "importance": 463,
+      "commits": 296,
+      "commits90": 296,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 67,
+      "ageDays": 68,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -697,15 +697,15 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-26T22:59:44Z",
+      "pushedAt": "2026-11-27T10:50:11Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T16:56:23Z",
-      "importance": 444.7,
-      "commits": 285,
-      "commits90": 285,
+      "importance": 446.2,
+      "commits": 286,
+      "commits90": 286,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 67,
+      "ageDays": 68,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -737,15 +737,15 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-26T20:01:30Z",
+      "pushedAt": "2026-11-27T19:50:23Z",
       "pushedDays": 0,
       "createdAt": "2026-09-21T10:44:06Z",
-      "importance": 304.2,
-      "commits": 195,
-      "commits90": 195,
+      "importance": 307.2,
+      "commits": 197,
+      "commits90": 197,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 66,
+      "ageDays": 67,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -785,7 +785,7 @@
       "commits90": 126,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 16,
+      "ageDays": 17,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -817,7 +817,7 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-26T20:04:59Z",
+      "pushedAt": "2026-11-27T19:52:46Z",
       "pushedDays": 0,
       "createdAt": "2026-09-22T15:26:48Z",
       "importance": 150.7,
@@ -825,7 +825,7 @@
       "commits90": 92,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 65,
+      "ageDays": 66,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -858,14 +858,14 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-11-03T13:46:44Z",
-      "pushedDays": 23,
+      "pushedDays": 24,
       "createdAt": "2026-09-28T15:28:45Z",
       "importance": 146.2,
       "commits": 87,
       "commits90": 87,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 59,
+      "ageDays": 60,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -898,7 +898,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-14T12:08:44Z",
-      "pushedDays": 43,
+      "pushedDays": 44,
       "createdAt": "2026-10-02T21:18:15Z",
       "importance": 114.1,
       "commits": 73,
@@ -937,7 +937,7 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-26T10:30:21Z",
+      "pushedAt": "2026-11-27T10:34:34Z",
       "pushedDays": 0,
       "createdAt": "2026-09-25T11:07:52Z",
       "importance": 93,
@@ -945,7 +945,7 @@
       "commits90": 54,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 62,
+      "ageDays": 63,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -1025,7 +1025,7 @@
       "commits90": 33,
       "releases": 1,
       "recoveredAt": null,
-      "ageDays": 56,
+      "ageDays": 57,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1058,7 +1058,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-30T12:21:58Z",
-      "pushedDays": 57,
+      "pushedDays": 58,
       "createdAt": "2026-09-28T22:18:56Z",
       "importance": 29.5,
       "commits": 16,
@@ -1098,14 +1098,14 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-04T21:07:31Z",
-      "pushedDays": 53,
+      "pushedDays": 54,
       "createdAt": "2026-10-04T19:12:38Z",
       "importance": 27.2,
       "commits": 18,
       "commits90": 18,
       "releases": 3,
       "recoveredAt": null,
-      "ageDays": 53,
+      "ageDays": 54,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -2245,9 +2245,27 @@
         "detail": "THE CI IS FIXED",
         "at": "2026-11-27T08:29:51.769Z",
         "until": "2026-11-29T08:29:51.769Z"
+      },
+      {
+        "id": "nightstars:2026-11-28",
+        "type": "nightstars",
+        "title": "NIGHT OF THE STARS",
+        "icon": "star",
+        "detail": "THE SKY IS FULL OF STARS",
+        "at": "2026-11-27T21:16:12.667Z",
+        "until": "2026-11-27T22:16:12.667Z"
       }
     ],
     "recent": [
+      {
+        "id": "nightstars:2026-11-28",
+        "type": "nightstars",
+        "title": "NIGHT OF THE STARS",
+        "icon": "star",
+        "detail": "THE SKY IS FULL OF STARS",
+        "at": "2026-11-27T21:16:12.667Z",
+        "until": "2026-11-27T22:16:12.667Z"
+      },
       {
         "id": "quest:recover:2026-11-27",
         "type": "milestone",
@@ -2292,15 +2310,6 @@
         "detail": "LEVEL 29",
         "at": "2026-11-19T07:23:57.234Z",
         "until": "2026-11-21T07:23:57.234Z"
-      },
-      {
-        "id": "quest:recover:2026-11-16",
-        "type": "milestone",
-        "title": "QUEST COMPLETE",
-        "icon": "trophy",
-        "detail": "THE CI IS FIXED",
-        "at": "2026-11-16T06:27:00.261Z",
-        "until": "2026-11-18T06:27:00.261Z"
       }
     ]
   },
@@ -2822,6 +2831,14 @@
         "s": 20,
         "c": 1183,
         "p": 1379
+      },
+      {
+        "d": "2026-11-28",
+        "l": 29,
+        "x": 21927,
+        "s": 20,
+        "c": 1183,
+        "p": 1379
       }
     ]
   },
@@ -2838,13 +2855,13 @@
       "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-11-27T09:02:01.966Z"
+    "checkedAt": "2026-11-27T21:16:12.667Z"
   },
   "v": 2,
   "featured": [
     "GamingNewsroomBot",
-    "TheTechNewsroomBot",
     "TelegramForwarder",
+    "TheTechNewsroomBot",
     "DailyFacts",
     "ScreenPeek"
   ],
@@ -2864,15 +2881,16 @@
     "modes": [
       "CELEBRATION",
       "SLEEP",
+      "NIGHT",
       "WORKING",
       "ACTIVE"
     ],
     "frame": 3,
     "hero": {
-      "state": "celebrating",
+      "state": "idle",
       "spot": "ci",
-      "why": "milestone",
-      "label": "CELEBRATING A MILESTONE",
+      "why": "milestone-after",
+      "label": "ENJOYING THE AFTERGLOW",
       "umbrella": false
     },
     "npcs": {
@@ -2887,10 +2905,10 @@
       "villager": 6
     },
     "light": {
-      "phase": "day",
-      "windows": false,
-      "torches": false,
-      "moon": false,
+      "phase": "night",
+      "windows": true,
+      "torches": true,
+      "moon": true,
       "accent": "gold",
       "danger": [],
       "gate": false,
@@ -2902,7 +2920,7 @@
       "rain": 0,
       "lightning": false,
       "snow": false,
-      "aurora": 0,
+      "aurora": 1,
       "sunrise": false,
       "wet": false,
       "frozen": false,
@@ -2912,7 +2930,7 @@
       "home": true,
       "returning": false,
       "shelter": false,
-      "patrol": false,
+      "patrol": true,
       "farmersIn": true
     },
     "stages": {
@@ -2927,17 +2945,26 @@
       {
         "id": "quest:recover:2026-11-27",
         "type": "milestone",
-        "phase": "peak",
-        "ageMinutes": 32,
+        "phase": "aftermath",
+        "ageMinutes": 766,
         "stage": null,
         "where": {
           "anchor": "ci"
         }
+      },
+      {
+        "id": "nightstars:2026-11-28",
+        "type": "nightstars",
+        "phase": "start",
+        "ageMinutes": 0,
+        "stage": null,
+        "where": null
       }
     ],
     "fx": [
       "shrineGlow",
-      "confetti"
+      "confetti",
+      "shootingStars"
     ],
     "labels": {
       "ci": false,
@@ -2951,8 +2978,14 @@
         "text": "THE CI IS FIXED",
         "icon": "trophy",
         "tone": "gold"
+      },
+      {
+        "kind": "NIGHT",
+        "text": "A SKY FULL OF STARS",
+        "icon": "star",
+        "tone": "info"
       }
     ]
   },
-  "contentHash": "a6e24e0ebbb1c022"
+  "contentHash": "79c4081e1a4c340b"
 }
