@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-28T07:46:27.152Z",
+  "generatedAt": "2026-11-28T08:24:03.238Z",
   "level": 29,
   "xp": 22067,
   "stars": 20,
@@ -31,9 +31,9 @@
     "kingdomDay": 1225
   },
   "time": {
-    "iso": "2026-11-28T07:46:27.152Z",
+    "iso": "2026-11-28T08:24:03.238Z",
     "tz": "Asia/Dhaka",
-    "hour": 13.77,
+    "hour": 14.4,
     "phase": "day",
     "season": "autumn",
     "date": "2026-11-28"
@@ -511,12 +511,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-27T21:16:25Z",
+      "pushedAt": "2026-11-28T07:46:39Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 512.5,
-      "commits": 329,
-      "commits90": 329,
+      "importance": 514,
+      "commits": 330,
+      "commits90": 330,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 57,
@@ -2298,7 +2298,7 @@
         "icon": "flame",
         "detail": "VELVET",
         "at": "2026-11-28T05:46:44Z",
-        "until": "2026-11-28T08:46:27.152Z"
+        "until": "2026-11-28T09:24:03.238Z"
       },
       {
         "id": "quest:recover:2026-11-27",
@@ -2327,7 +2327,7 @@
         "icon": "flame",
         "detail": "VELVET",
         "at": "2026-11-28T05:46:44Z",
-        "until": "2026-11-28T08:46:27.152Z"
+        "until": "2026-11-28T09:24:03.238Z"
       },
       {
         "id": "expansion:VELVET",
@@ -2918,7 +2918,7 @@
       "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-11-28T07:46:27.152Z"
+    "checkedAt": "2026-11-28T08:24:03.238Z"
   },
   "v": 2,
   "featured": [
@@ -2999,7 +2999,7 @@
     },
     "stages": {
       "fail": {
-        "VELVET": "warning"
+        "VELVET": "alarm"
       },
       "repair": {},
       "build": {
@@ -3013,9 +3013,9 @@
       {
         "id": "emergency:VELVET",
         "type": "emergency",
-        "phase": "start",
-        "ageMinutes": 120,
-        "stage": "warning",
+        "phase": "peak",
+        "ageMinutes": 157,
+        "stage": "alarm",
         "where": {
           "repo": "VELVET",
           "anchor": "ci"
@@ -3025,7 +3025,7 @@
         "id": "quest:recover:2026-11-27",
         "type": "milestone",
         "phase": "aftermath",
-        "ageMinutes": 1397,
+        "ageMinutes": 1434,
         "stage": null,
         "where": {
           "anchor": "ci"
@@ -3035,7 +3035,7 @@
         "id": "expansion:VELVET",
         "type": "expansion",
         "phase": "start",
-        "ageMinutes": 120,
+        "ageMinutes": 158,
         "stage": "foundation",
         "where": {
           "repo": "VELVET"
@@ -3077,5 +3077,5 @@
       }
     ]
   },
-  "contentHash": "85074a9e5491731c"
+  "contentHash": "50f54d4b00122135"
 }
