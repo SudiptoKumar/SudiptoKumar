@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-28T08:24:03.238Z",
+  "generatedAt": "2026-11-28T20:00:04.992Z",
   "level": 29,
-  "xp": 22067,
+  "xp": 22085,
   "stars": 20,
-  "commits": 1186,
+  "commits": 1189,
   "issues": 0,
   "pullRequests": 128,
-  "workflowHealth": 100,
+  "workflowHealth": 99,
   "streak": 1,
   "activeRepositories": 24,
   "topLanguage": "TypeScript",
   "weather": "aurora",
   "weatherReason": "A release or milestone is being celebrated",
-  "timeOfDay": "day",
+  "timeOfDay": "night",
   "season": "autumn",
   "meta": {
     "demo": false,
@@ -28,15 +28,15 @@
     "createdAt": "2023-07-22T03:36:18Z",
     "followers": 1,
     "following": 0,
-    "kingdomDay": 1225
+    "kingdomDay": 1226
   },
   "time": {
-    "iso": "2026-11-28T08:24:03.238Z",
+    "iso": "2026-11-28T20:00:04.992Z",
     "tz": "Asia/Dhaka",
-    "hour": 14.4,
-    "phase": "day",
+    "hour": 2,
+    "phase": "night",
     "season": "autumn",
-    "date": "2026-11-28"
+    "date": "2026-11-29"
   },
   "hero": {
     "class": {
@@ -45,16 +45,16 @@
       "archetype": "paladin",
       "name": "PALADIN"
     },
-    "xpInto": 367,
+    "xpInto": 385,
     "xpNeed": 1500,
-    "xpPct": 24,
+    "xpPct": 26,
     "xpNext": 23200,
     "activity": "normal",
     "position": "farm",
     "sleeping": false,
     "stats": {
       "codePower": 96,
-      "reliability": 100,
+      "reliability": 99,
       "streak": 1,
       "reputation": 20
     },
@@ -62,7 +62,7 @@
       "current": 1,
       "longest": 22,
       "idleDays": 0,
-      "today": 4,
+      "today": 7,
       "yesterday": 0
     },
     "title": "ARCHITECT",
@@ -91,7 +91,7 @@
   "totals": {
     "stars": 20,
     "forks": 0,
-    "commits": 1186,
+    "commits": 1189,
     "prs": 128,
     "mergedPrs": 121,
     "reviews": 0,
@@ -102,16 +102,16 @@
     "activeRepos": 24,
     "archivedRepos": 0,
     "followers": 1,
-    "yearContrib": 1353,
-    "workflowHealth": 100,
+    "yearContrib": 1356,
+    "workflowHealth": 99,
     "failingRepos": [
       "VELVET"
     ],
     "openPRs": 0,
-    "codeKb": 341242
+    "codeKb": 347696
   },
   "xpBreakdown": {
-    "base": 4798,
+    "base": 4816,
     "streakBonus": 449,
     "bonus": {
       "pullRequests": 3280,
@@ -126,9 +126,9 @@
     "list": [
       {
         "title": "FIX THE FAILING CI",
-        "progress": 100,
+        "progress": 99,
         "target": 100,
-        "pct": 100,
+        "pct": 99,
         "id": "recover:open",
         "track": "recover",
         "icon": "flame",
@@ -223,9 +223,9 @@
     "rows": [
       {
         "title": "FIX THE FAILING CI",
-        "progress": 100,
+        "progress": 99,
         "target": 100,
-        "pct": 100,
+        "pct": 99,
         "id": "recover:open",
         "track": "recover",
         "icon": "flame",
@@ -264,9 +264,9 @@
     ],
     "current": {
       "title": "FIX THE FAILING CI",
-      "progress": 100,
+      "progress": 99,
       "target": 100,
-      "pct": 100,
+      "pct": 99,
       "id": "recover:open",
       "track": "recover",
       "icon": "flame",
@@ -282,7 +282,7 @@
     "xp": 120
   },
   "population": {
-    "total": 1402,
+    "total": 1403,
     "npcs": 13,
     "houses": 12
   },
@@ -351,15 +351,15 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-28T07:27:06Z",
+      "pushedAt": "2026-11-28T17:31:50Z",
       "pushedDays": 0,
       "createdAt": "2026-09-17T18:58:59Z",
-      "importance": 811,
-      "commits": 528,
-      "commits90": 528,
+      "importance": 812.5,
+      "commits": 529,
+      "commits90": 529,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 71,
+      "ageDays": 72,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -391,55 +391,15 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-27T19:34:06Z",
+      "pushedAt": "2026-11-28T17:35:39Z",
       "pushedDays": 0,
       "createdAt": "2026-08-28T14:21:15Z",
-      "importance": 566.5,
-      "commits": 424,
-      "commits90": 365,
+      "importance": 563.5,
+      "commits": 426,
+      "commits90": 363,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 91,
-      "evolution": {
-        "level": 5,
-        "name": "LANDMARK",
-        "score": 72,
-        "toNext": 0,
-        "capped": null,
-        "parts": {
-          "activity": 30,
-          "recency": 20,
-          "maturity": 5,
-          "depth": 15,
-          "release": 0,
-          "reputation": 2
-        }
-      }
-    },
-    {
-      "name": "TheTechNewsroomBot",
-      "url": "https://github.com/SudiptoKumar/TheTechNewsroomBot",
-      "description": "Tech News 🗞️",
-      "stars": 1,
-      "forks": 0,
-      "issues": 0,
-      "prs": 0,
-      "language": "Python",
-      "color": "#3572A5",
-      "archetype": "tower",
-      "state": "building",
-      "workflow": "passing",
-      "recovered": false,
-      "lastFailAt": null,
-      "pushedAt": "2026-11-27T19:37:22Z",
-      "pushedDays": 0,
-      "createdAt": "2026-08-28T19:08:24Z",
-      "importance": 517,
-      "commits": 359,
-      "commits90": 332,
-      "releases": 0,
-      "recoveredAt": null,
-      "ageDays": 91,
+      "ageDays": 92,
       "evolution": {
         "level": 5,
         "name": "LANDMARK",
@@ -471,15 +431,15 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-27T20:11:14Z",
+      "pushedAt": "2026-11-28T19:04:07Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T17:29:46Z",
-      "importance": 516,
-      "commits": 382,
-      "commits90": 332,
+      "importance": 519,
+      "commits": 384,
+      "commits90": 334,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 90,
+      "ageDays": 91,
       "evolution": {
         "level": 5,
         "name": "LANDMARK",
@@ -511,15 +471,15 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-28T07:46:39Z",
+      "pushedAt": "2026-11-28T08:24:13Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 514,
-      "commits": 330,
-      "commits90": 330,
+      "importance": 515.5,
+      "commits": 331,
+      "commits90": 331,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 57,
+      "ageDays": 58,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -537,9 +497,9 @@
       }
     },
     {
-      "name": "EntertainmentNewsBot",
-      "url": "https://github.com/SudiptoKumar/EntertainmentNewsBot",
-      "description": "Entertainment News 🗞️",
+      "name": "TheTechNewsroomBot",
+      "url": "https://github.com/SudiptoKumar/TheTechNewsroomBot",
+      "description": "Tech News 🗞️",
       "stars": 1,
       "forks": 0,
       "issues": 0,
@@ -551,15 +511,15 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-27T19:26:16Z",
+      "pushedAt": "2026-11-28T17:30:44Z",
       "pushedDays": 0,
-      "createdAt": "2026-08-29T04:24:35Z",
-      "importance": 503.5,
-      "commits": 371,
-      "commits90": 323,
+      "createdAt": "2026-08-28T19:08:24Z",
+      "importance": 511,
+      "commits": 361,
+      "commits90": 328,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 91,
+      "ageDays": 92,
       "evolution": {
         "level": 5,
         "name": "LANDMARK",
@@ -591,15 +551,55 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-27T19:35:48Z",
+      "pushedAt": "2026-11-28T17:37:03Z",
       "pushedDays": 0,
       "createdAt": "2026-08-27T10:01:41Z",
       "importance": 502,
-      "commits": 372,
+      "commits": 374,
       "commits90": 322,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 92,
+      "ageDays": 93,
+      "evolution": {
+        "level": 5,
+        "name": "LANDMARK",
+        "score": 72,
+        "toNext": 0,
+        "capped": null,
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 5,
+          "depth": 15,
+          "release": 0,
+          "reputation": 2
+        }
+      }
+    },
+    {
+      "name": "EntertainmentNewsBot",
+      "url": "https://github.com/SudiptoKumar/EntertainmentNewsBot",
+      "description": "Entertainment News 🗞️",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "Python",
+      "color": "#3572A5",
+      "archetype": "tower",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-11-28T17:32:28Z",
+      "pushedDays": 0,
+      "createdAt": "2026-08-29T04:24:35Z",
+      "importance": 499,
+      "commits": 373,
+      "commits90": 320,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 91,
       "evolution": {
         "level": 5,
         "name": "LANDMARK",
@@ -631,15 +631,15 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-27T19:22:51Z",
+      "pushedAt": "2026-11-28T17:25:21Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T16:33:20Z",
       "importance": 481,
-      "commits": 321,
+      "commits": 323,
       "commits90": 308,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 90,
+      "ageDays": 91,
       "evolution": {
         "level": 5,
         "name": "LANDMARK",
@@ -671,15 +671,15 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-28T01:10:03Z",
+      "pushedAt": "2026-11-28T19:37:31Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T10:49:10Z",
-      "importance": 464.5,
-      "commits": 297,
-      "commits90": 297,
+      "importance": 467.5,
+      "commits": 299,
+      "commits90": 299,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 68,
+      "ageDays": 69,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -711,15 +711,15 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-27T22:42:28Z",
+      "pushedAt": "2026-11-28T10:20:01Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T16:56:23Z",
-      "importance": 448,
-      "commits": 287,
-      "commits90": 287,
+      "importance": 449.5,
+      "commits": 288,
+      "commits90": 288,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 68,
+      "ageDays": 69,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -751,15 +751,15 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-27T19:50:23Z",
+      "pushedAt": "2026-11-28T18:43:18Z",
       "pushedDays": 0,
       "createdAt": "2026-09-21T10:44:06Z",
-      "importance": 307.2,
-      "commits": 197,
-      "commits90": 197,
+      "importance": 310.2,
+      "commits": 199,
+      "commits90": 199,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 67,
+      "ageDays": 68,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -799,7 +799,7 @@
       "commits90": 127,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 17,
+      "ageDays": 18,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -831,7 +831,7 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-27T19:52:46Z",
+      "pushedAt": "2026-11-28T18:45:28Z",
       "pushedDays": 0,
       "createdAt": "2026-09-22T15:26:48Z",
       "importance": 150.7,
@@ -839,7 +839,7 @@
       "commits90": 92,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 66,
+      "ageDays": 67,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -872,14 +872,14 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-11-03T13:46:44Z",
-      "pushedDays": 24,
+      "pushedDays": 25,
       "createdAt": "2026-09-28T15:28:45Z",
       "importance": 146.2,
       "commits": 87,
       "commits90": 87,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 60,
+      "ageDays": 61,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -912,7 +912,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-14T12:08:44Z",
-      "pushedDays": 44,
+      "pushedDays": 45,
       "createdAt": "2026-10-02T21:18:15Z",
       "importance": 114.1,
       "commits": 73,
@@ -951,7 +951,7 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-27T10:34:34Z",
+      "pushedAt": "2026-11-28T09:51:20Z",
       "pushedDays": 0,
       "createdAt": "2026-09-25T11:07:52Z",
       "importance": 93,
@@ -959,7 +959,7 @@
       "commits90": 54,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 63,
+      "ageDays": 64,
       "evolution": {
         "level": 4,
         "name": "SPECIALIZED",
@@ -1039,7 +1039,7 @@
       "commits90": 33,
       "releases": 1,
       "recoveredAt": null,
-      "ageDays": 57,
+      "ageDays": 58,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1072,7 +1072,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-30T12:21:58Z",
-      "pushedDays": 58,
+      "pushedDays": 59,
       "createdAt": "2026-09-28T22:18:56Z",
       "importance": 29.5,
       "commits": 16,
@@ -1119,7 +1119,7 @@
       "commits90": 18,
       "releases": 3,
       "recoveredAt": null,
-      "ageDays": 54,
+      "ageDays": 55,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1217,6 +1217,46 @@
       }
     },
     {
+      "name": "VELVET",
+      "url": "https://github.com/SudiptoKumar/VELVET",
+      "description": "VELVET — premium typography-only adult fiction platform (18+). Cloudflare Workers + D1 + ~",
+      "stars": 0,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "JavaScript",
+      "color": "#f1e05a",
+      "archetype": "house",
+      "state": "failing",
+      "workflow": "failing",
+      "recovered": false,
+      "lastFailAt": "2026-11-28T12:23:13Z",
+      "pushedAt": "2026-11-28T12:23:05Z",
+      "pushedDays": 0,
+      "createdAt": "2026-11-28T05:46:04Z",
+      "importance": 12.6,
+      "commits": 5,
+      "commits90": 5,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 0,
+      "evolution": {
+        "level": 1,
+        "name": "FOUNDATION",
+        "score": 18,
+        "toNext": 0,
+        "capped": "age",
+        "parts": {
+          "activity": 8,
+          "recency": 20,
+          "maturity": 0,
+          "depth": 6,
+          "release": 0,
+          "reputation": 0
+        }
+      }
+    },
+    {
       "name": "ContrastLab-",
       "url": "https://github.com/SudiptoKumar/ContrastLab-",
       "description": "a web-based WCAG color contrast checker and color exploration workbench.",
@@ -1253,46 +1293,6 @@
           "depth": 5,
           "release": 0,
           "reputation": 2
-        }
-      }
-    },
-    {
-      "name": "VELVET",
-      "url": "https://github.com/SudiptoKumar/VELVET",
-      "description": "VELVET — premium typography-only adult fiction platform (18+). Cloudflare Workers + D1 + ~",
-      "stars": 0,
-      "forks": 0,
-      "issues": 0,
-      "prs": 0,
-      "language": "JavaScript",
-      "color": "#f1e05a",
-      "archetype": "house",
-      "state": "failing",
-      "workflow": "failing",
-      "recovered": false,
-      "lastFailAt": "2026-11-28T05:46:44Z",
-      "pushedAt": "2026-11-28T05:46:28Z",
-      "pushedDays": 0,
-      "createdAt": "2026-11-28T05:46:04Z",
-      "importance": 8.1,
-      "commits": 2,
-      "commits90": 2,
-      "releases": 0,
-      "recoveredAt": null,
-      "ageDays": 0,
-      "evolution": {
-        "level": 1,
-        "name": "FOUNDATION",
-        "score": 11,
-        "toNext": 1,
-        "capped": null,
-        "parts": {
-          "activity": 3,
-          "recency": 20,
-          "maturity": 0,
-          "depth": 3,
-          "release": 0,
-          "reputation": 0
         }
       }
     }
@@ -2099,7 +2099,7 @@
     },
     {
       "date": "2026-11-28",
-      "count": 4
+      "count": 7
     }
   ],
   "achievements": {
@@ -2297,8 +2297,8 @@
         "title": "WORKFLOW EMERGENCY",
         "icon": "flame",
         "detail": "VELVET",
-        "at": "2026-11-28T05:46:44Z",
-        "until": "2026-11-28T09:24:03.238Z"
+        "at": "2026-11-28T12:23:13Z",
+        "until": "2026-11-28T21:00:04.992Z"
       },
       {
         "id": "quest:recover:2026-11-27",
@@ -2317,17 +2317,35 @@
         "detail": "VELVET",
         "at": "2026-11-28T05:46:04Z",
         "until": "2026-12-05T05:46:04.000Z"
+      },
+      {
+        "id": "nightstars:2026-11-29",
+        "type": "nightstars",
+        "title": "NIGHT OF THE STARS",
+        "icon": "star",
+        "detail": "THE SKY IS FULL OF STARS",
+        "at": "2026-11-28T20:00:04.992Z",
+        "until": "2026-11-28T21:00:04.992Z"
       }
     ],
     "recent": [
+      {
+        "id": "nightstars:2026-11-29",
+        "type": "nightstars",
+        "title": "NIGHT OF THE STARS",
+        "icon": "star",
+        "detail": "THE SKY IS FULL OF STARS",
+        "at": "2026-11-28T20:00:04.992Z",
+        "until": "2026-11-28T21:00:04.992Z"
+      },
       {
         "id": "emergency:VELVET",
         "type": "emergency",
         "title": "WORKFLOW EMERGENCY",
         "icon": "flame",
         "detail": "VELVET",
-        "at": "2026-11-28T05:46:44Z",
-        "until": "2026-11-28T09:24:03.238Z"
+        "at": "2026-11-28T12:23:13Z",
+        "until": "2026-11-28T21:00:04.992Z"
       },
       {
         "id": "expansion:VELVET",
@@ -2362,15 +2380,6 @@
         "title": "QUEST COMPLETE",
         "icon": "trophy",
         "detail": "HOLD A 14 DAY STREAK",
-        "at": "2026-11-19T07:23:57.234Z",
-        "until": "2026-11-21T07:23:57.234Z"
-      },
-      {
-        "id": "quest:recover:2026-11-19",
-        "type": "milestone",
-        "title": "QUEST COMPLETE",
-        "icon": "trophy",
-        "detail": "THE CI IS FIXED",
         "at": "2026-11-19T07:23:57.234Z",
         "until": "2026-11-21T07:23:57.234Z"
       }
@@ -2902,6 +2911,14 @@
         "s": 20,
         "c": 1186,
         "p": 1402
+      },
+      {
+        "d": "2026-11-29",
+        "l": 29,
+        "x": 22085,
+        "s": 20,
+        "c": 1189,
+        "p": 1403
       }
     ]
   },
@@ -2918,13 +2935,13 @@
       "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-11-28T08:24:03.238Z"
+    "checkedAt": "2026-11-28T20:00:04.992Z"
   },
   "v": 2,
   "featured": [
     "GamingNewsroomBot",
-    "TheTechNewsroomBot",
     "TelegramForwarder",
+    "TheTechNewsroomBot",
     "DailyFacts",
     "ScreenPeek"
   ],
@@ -2933,7 +2950,7 @@
     "parts": {
       "progress": 26.2,
       "consistency": 0.7,
-      "reliability": 20,
+      "reliability": 19.8,
       "reach": 6.3,
       "vitality": 15,
       "gate": 0
@@ -2944,10 +2961,11 @@
     "modes": [
       "DANGER",
       "CELEBRATION",
+      "NIGHT",
       "WORKING",
       "ACTIVE"
     ],
-    "frame": 2,
+    "frame": 5,
     "hero": {
       "state": "working",
       "spot": "ci",
@@ -2967,10 +2985,10 @@
       "villager": 6
     },
     "light": {
-      "phase": "day",
-      "windows": false,
-      "torches": false,
-      "moon": false,
+      "phase": "night",
+      "windows": true,
+      "torches": true,
+      "moon": true,
       "accent": "danger",
       "danger": [
         "VELVET"
@@ -2984,18 +3002,18 @@
       "rain": 0,
       "lightning": false,
       "snow": false,
-      "aurora": 0,
+      "aurora": 1,
       "sunrise": false,
       "wet": false,
       "frozen": false,
       "season": "autumn"
     },
     "behavior": {
-      "home": false,
+      "home": true,
       "returning": false,
       "shelter": false,
-      "patrol": false,
-      "farmersIn": false
+      "patrol": true,
+      "farmersIn": true
     },
     "stages": {
       "fail": {
@@ -3014,7 +3032,7 @@
         "id": "emergency:VELVET",
         "type": "emergency",
         "phase": "peak",
-        "ageMinutes": 157,
+        "ageMinutes": 457,
         "stage": "alarm",
         "where": {
           "repo": "VELVET",
@@ -3025,7 +3043,7 @@
         "id": "quest:recover:2026-11-27",
         "type": "milestone",
         "phase": "aftermath",
-        "ageMinutes": 1434,
+        "ageMinutes": 2130,
         "stage": null,
         "where": {
           "anchor": "ci"
@@ -3035,11 +3053,19 @@
         "id": "expansion:VELVET",
         "type": "expansion",
         "phase": "start",
-        "ageMinutes": 158,
+        "ageMinutes": 854,
         "stage": "foundation",
         "where": {
           "repo": "VELVET"
         }
+      },
+      {
+        "id": "nightstars:2026-11-29",
+        "type": "nightstars",
+        "phase": "start",
+        "ageMinutes": 0,
+        "stage": null,
+        "where": null
       }
     ],
     "fx": [
@@ -3048,7 +3074,8 @@
       "fire",
       "shrineGlow",
       "confetti",
-      "construction"
+      "construction",
+      "shootingStars"
     ],
     "labels": {
       "ci": true,
@@ -3077,5 +3104,5 @@
       }
     ]
   },
-  "contentHash": "50f54d4b00122135"
+  "contentHash": "d7eeaf07bcdc87dc"
 }
