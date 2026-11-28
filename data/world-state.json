@@ -1,26 +1,26 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-27T21:16:12.667Z",
+  "generatedAt": "2026-11-28T07:46:27.152Z",
   "level": 29,
-  "xp": 21927,
+  "xp": 22067,
   "stars": 20,
-  "commits": 1183,
+  "commits": 1186,
   "issues": 0,
   "pullRequests": 128,
   "workflowHealth": 100,
-  "streak": 0,
-  "activeRepositories": 23,
+  "streak": 1,
+  "activeRepositories": 24,
   "topLanguage": "TypeScript",
   "weather": "aurora",
   "weatherReason": "A release or milestone is being celebrated",
-  "timeOfDay": "night",
+  "timeOfDay": "day",
   "season": "autumn",
   "meta": {
     "demo": false,
     "source": "github",
     "dataStatus": "fresh",
     "errors": [],
-    "apiCalls": 30
+    "apiCalls": 31
   },
   "profile": {
     "login": "SudiptoKumar",
@@ -31,10 +31,10 @@
     "kingdomDay": 1225
   },
   "time": {
-    "iso": "2026-11-27T21:16:12.667Z",
+    "iso": "2026-11-28T07:46:27.152Z",
     "tz": "Asia/Dhaka",
-    "hour": 3.27,
-    "phase": "night",
+    "hour": 13.77,
+    "phase": "day",
     "season": "autumn",
     "date": "2026-11-28"
   },
@@ -45,24 +45,24 @@
       "archetype": "paladin",
       "name": "PALADIN"
     },
-    "xpInto": 227,
+    "xpInto": 367,
     "xpNeed": 1500,
-    "xpPct": 15,
+    "xpPct": 24,
     "xpNext": 23200,
-    "activity": "low",
-    "position": "home",
-    "sleeping": true,
+    "activity": "normal",
+    "position": "farm",
+    "sleeping": false,
     "stats": {
       "codePower": 96,
       "reliability": 100,
-      "streak": 0,
+      "streak": 1,
       "reputation": 20
     },
     "streak": {
-      "current": 0,
+      "current": 1,
       "longest": 22,
-      "idleDays": 3,
-      "today": 0,
+      "idleDays": 0,
+      "today": 4,
       "yesterday": 0
     },
     "title": "ARCHITECT",
@@ -84,56 +84,58 @@
         "icon": "book"
       }
     ],
-    "state": "idle",
+    "state": "working",
     "spot": "ci",
-    "status": "ENJOYING THE AFTERGLOW"
+    "status": "FIXING THE CI"
   },
   "totals": {
     "stars": 20,
     "forks": 0,
-    "commits": 1183,
+    "commits": 1186,
     "prs": 128,
     "mergedPrs": 121,
     "reviews": 0,
     "issuesOpen": 0,
     "issuesClosed": 4,
     "releases": 6,
-    "repos": 23,
-    "activeRepos": 23,
+    "repos": 24,
+    "activeRepos": 24,
     "archivedRepos": 0,
     "followers": 1,
-    "yearContrib": 1349,
+    "yearContrib": 1353,
     "workflowHealth": 100,
-    "failingRepos": [],
+    "failingRepos": [
+      "VELVET"
+    ],
     "openPRs": 0,
-    "codeKb": 338058
+    "codeKb": 341242
   },
   "xpBreakdown": {
-    "base": 4758,
+    "base": 4798,
     "streakBonus": 449,
     "bonus": {
       "pullRequests": 3280,
       "mergedPullRequests": 6420,
       "issuesClosed": 100,
       "releases": 1500,
-      "repositories": 5300
+      "repositories": 5400
     },
     "quests": 120
   },
   "quests": {
     "list": [
       {
-        "id": "recover:2026-11-27",
-        "track": "recover",
-        "title": "THE CI IS FIXED",
-        "icon": "flame",
-        "state": "COMPLETE",
-        "progress": 1,
-        "target": 1,
+        "title": "FIX THE FAILING CI",
+        "progress": 100,
+        "target": 100,
         "pct": 100,
+        "id": "recover:open",
+        "track": "recover",
+        "icon": "flame",
+        "state": "ACTIVE",
         "xp": 0,
-        "at": "2026-11-27T08:29:51.769Z",
-        "isNew": true
+        "at": null,
+        "isNew": false
       },
       {
         "id": "streak:30",
@@ -141,9 +143,9 @@
         "title": "HOLD A 30 DAY STREAK",
         "icon": "wheat",
         "state": "ACTIVE",
-        "progress": 0,
+        "progress": 1,
         "target": 30,
-        "pct": 0,
+        "pct": 3,
         "xp": 80,
         "unit": "DAYS",
         "at": null,
@@ -177,6 +179,19 @@
         "isNew": false
       },
       {
+        "id": "build:month",
+        "track": "build",
+        "title": "START A NEW PROJECT",
+        "icon": "hammer",
+        "state": "COMPLETE",
+        "progress": 1,
+        "target": 1,
+        "pct": 100,
+        "xp": 0,
+        "at": null,
+        "isNew": true
+      },
+      {
         "id": "stars:25",
         "track": "stars",
         "title": "EARN 25 STARS",
@@ -207,68 +222,67 @@
     ],
     "rows": [
       {
+        "title": "FIX THE FAILING CI",
+        "progress": 100,
+        "target": 100,
+        "pct": 100,
+        "id": "recover:open",
+        "track": "recover",
+        "icon": "flame",
+        "state": "ACTIVE",
+        "xp": 0,
+        "at": null,
+        "isNew": false
+      },
+      {
         "id": "streak:30",
         "track": "streak",
         "title": "HOLD A 30 DAY STREAK",
         "icon": "wheat",
         "state": "ACTIVE",
-        "progress": 0,
+        "progress": 1,
         "target": 30,
-        "pct": 0,
+        "pct": 3,
         "xp": 80,
         "unit": "DAYS",
         "at": null,
         "isNew": false
       },
       {
-        "id": "release:month",
-        "track": "release",
-        "title": "SHIP A RELEASE",
-        "icon": "rocket",
-        "state": "ACTIVE",
-        "progress": 0,
-        "target": 1,
-        "pct": 0,
-        "xp": 0,
-        "at": null,
-        "isNew": false
-      },
-      {
-        "id": "recover:2026-11-27",
-        "track": "recover",
-        "title": "THE CI IS FIXED",
-        "icon": "flame",
+        "id": "build:month",
+        "track": "build",
+        "title": "START A NEW PROJECT",
+        "icon": "hammer",
         "state": "COMPLETE",
         "progress": 1,
         "target": 1,
         "pct": 100,
         "xp": 0,
-        "at": "2026-11-27T08:29:51.769Z",
+        "at": null,
         "isNew": true
       }
     ],
     "current": {
-      "id": "streak:30",
-      "track": "streak",
-      "title": "HOLD A 30 DAY STREAK",
-      "icon": "wheat",
+      "title": "FIX THE FAILING CI",
+      "progress": 100,
+      "target": 100,
+      "pct": 100,
+      "id": "recover:open",
+      "track": "recover",
+      "icon": "flame",
       "state": "ACTIVE",
-      "progress": 0,
-      "target": 30,
-      "pct": 0,
-      "xp": 80,
-      "unit": "DAYS",
+      "xp": 0,
       "at": null,
       "isNew": false
     },
     "counts": {
-      "active": 3,
+      "active": 4,
       "complete": 17
     },
     "xp": 120
   },
   "population": {
-    "total": 1379,
+    "total": 1402,
     "npcs": 13,
     "houses": 12
   },
@@ -287,12 +301,12 @@
   "languages": [
     {
       "name": "TypeScript",
-      "pct": 37,
+      "pct": 36,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "pct": 35,
+      "pct": 36,
       "color": "#3572A5"
     },
     {
@@ -317,7 +331,7 @@
     },
     {
       "name": "Shell",
-      "pct": 0,
+      "pct": 1,
       "color": "#89e051"
     }
   ],
@@ -337,12 +351,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-27T21:06:53Z",
+      "pushedAt": "2026-11-28T07:27:06Z",
       "pushedDays": 0,
       "createdAt": "2026-09-17T18:58:59Z",
-      "importance": 809.5,
-      "commits": 527,
-      "commits90": 527,
+      "importance": 811,
+      "commits": 528,
+      "commits90": 528,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 71,
@@ -380,9 +394,49 @@
       "pushedAt": "2026-11-27T19:34:06Z",
       "pushedDays": 0,
       "createdAt": "2026-08-28T14:21:15Z",
-      "importance": 568,
+      "importance": 566.5,
       "commits": 424,
-      "commits90": 366,
+      "commits90": 365,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 91,
+      "evolution": {
+        "level": 5,
+        "name": "LANDMARK",
+        "score": 72,
+        "toNext": 0,
+        "capped": null,
+        "parts": {
+          "activity": 30,
+          "recency": 20,
+          "maturity": 5,
+          "depth": 15,
+          "release": 0,
+          "reputation": 2
+        }
+      }
+    },
+    {
+      "name": "TheTechNewsroomBot",
+      "url": "https://github.com/SudiptoKumar/TheTechNewsroomBot",
+      "description": "Tech News 🗞️",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "Python",
+      "color": "#3572A5",
+      "archetype": "tower",
+      "state": "building",
+      "workflow": "passing",
+      "recovered": false,
+      "lastFailAt": null,
+      "pushedAt": "2026-11-27T19:37:22Z",
+      "pushedDays": 0,
+      "createdAt": "2026-08-28T19:08:24Z",
+      "importance": 517,
+      "commits": 359,
+      "commits90": 332,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 91,
@@ -420,52 +474,12 @@
       "pushedAt": "2026-11-27T20:11:14Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T17:29:46Z",
-      "importance": 528,
+      "importance": 516,
       "commits": 382,
-      "commits90": 340,
+      "commits90": 332,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 90,
-      "evolution": {
-        "level": 5,
-        "name": "LANDMARK",
-        "score": 72,
-        "toNext": 0,
-        "capped": null,
-        "parts": {
-          "activity": 30,
-          "recency": 20,
-          "maturity": 5,
-          "depth": 15,
-          "release": 0,
-          "reputation": 2
-        }
-      }
-    },
-    {
-      "name": "TheTechNewsroomBot",
-      "url": "https://github.com/SudiptoKumar/TheTechNewsroomBot",
-      "description": "Tech News 🗞️",
-      "stars": 1,
-      "forks": 0,
-      "issues": 0,
-      "prs": 0,
-      "language": "Python",
-      "color": "#3572A5",
-      "archetype": "tower",
-      "state": "building",
-      "workflow": "passing",
-      "recovered": false,
-      "lastFailAt": null,
-      "pushedAt": "2026-11-27T19:37:22Z",
-      "pushedDays": 0,
-      "createdAt": "2026-08-28T19:08:24Z",
-      "importance": 518.5,
-      "commits": 359,
-      "commits90": 333,
-      "releases": 0,
-      "recoveredAt": null,
-      "ageDays": 91,
       "evolution": {
         "level": 5,
         "name": "LANDMARK",
@@ -497,12 +511,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-27T09:02:16Z",
+      "pushedAt": "2026-11-27T21:16:25Z",
       "pushedDays": 0,
       "createdAt": "2026-10-01T15:17:58Z",
-      "importance": 511,
-      "commits": 328,
-      "commits90": 328,
+      "importance": 512.5,
+      "commits": 329,
+      "commits90": 329,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 57,
@@ -540,12 +554,12 @@
       "pushedAt": "2026-11-27T19:26:16Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T04:24:35Z",
-      "importance": 505,
+      "importance": 503.5,
       "commits": 371,
-      "commits90": 324,
+      "commits90": 323,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 90,
+      "ageDays": 91,
       "evolution": {
         "level": 5,
         "name": "LANDMARK",
@@ -580,9 +594,9 @@
       "pushedAt": "2026-11-27T19:35:48Z",
       "pushedDays": 0,
       "createdAt": "2026-08-27T10:01:41Z",
-      "importance": 503.5,
+      "importance": 502,
       "commits": 372,
-      "commits90": 323,
+      "commits90": 322,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 92,
@@ -620,9 +634,9 @@
       "pushedAt": "2026-11-27T19:22:51Z",
       "pushedDays": 0,
       "createdAt": "2026-08-29T16:33:20Z",
-      "importance": 482.5,
+      "importance": 481,
       "commits": 321,
-      "commits90": 309,
+      "commits90": 308,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 90,
@@ -657,12 +671,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-27T16:11:31Z",
+      "pushedAt": "2026-11-28T01:10:03Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T10:49:10Z",
-      "importance": 463,
-      "commits": 296,
-      "commits90": 296,
+      "importance": 464.5,
+      "commits": 297,
+      "commits90": 297,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 68,
@@ -697,12 +711,12 @@
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-27T10:50:11Z",
+      "pushedAt": "2026-11-27T22:42:28Z",
       "pushedDays": 0,
       "createdAt": "2026-09-20T16:56:23Z",
-      "importance": 446.2,
-      "commits": 286,
-      "commits90": 286,
+      "importance": 448,
+      "commits": 287,
+      "commits90": 287,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 68,
@@ -773,16 +787,16 @@
       "language": "TypeScript",
       "color": "#3178c6",
       "archetype": "house",
-      "state": "active",
+      "state": "building",
       "workflow": "passing",
       "recovered": false,
       "lastFailAt": null,
-      "pushedAt": "2026-11-24T06:23:59Z",
-      "pushedDays": 3,
+      "pushedAt": "2026-11-28T05:46:21Z",
+      "pushedDays": 0,
       "createdAt": "2026-11-10T09:12:34Z",
-      "importance": 195.2,
-      "commits": 126,
-      "commits90": 126,
+      "importance": 196.7,
+      "commits": 127,
+      "commits90": 127,
       "releases": 0,
       "recoveredAt": null,
       "ageDays": 17,
@@ -905,7 +919,7 @@
       "commits90": 73,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 55,
+      "ageDays": 56,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -978,14 +992,14 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-02T05:34:12Z",
-      "pushedDays": 56,
+      "pushedDays": 57,
       "createdAt": "2026-09-28T22:15:20Z",
       "importance": 62.9,
       "commits": 38,
       "commits90": 38,
       "releases": 2,
       "recoveredAt": null,
-      "ageDays": 59,
+      "ageDays": 60,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1018,7 +1032,7 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-10-08T04:03:23Z",
-      "pushedDays": 50,
+      "pushedDays": 51,
       "createdAt": "2026-10-01T13:12:44Z",
       "importance": 50.2,
       "commits": 33,
@@ -1065,7 +1079,7 @@
       "commits90": 16,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 59,
+      "ageDays": 60,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1138,14 +1152,14 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-30T07:31:35Z",
-      "pushedDays": 58,
+      "pushedDays": 59,
       "createdAt": "2026-09-28T22:00:39Z",
       "importance": 24.2,
       "commits": 11,
       "commits90": 11,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 59,
+      "ageDays": 60,
       "evolution": {
         "level": 3,
         "name": "BUILDING",
@@ -1178,14 +1192,14 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-30T06:49:50Z",
-      "pushedDays": 58,
+      "pushedDays": 59,
       "createdAt": "2026-09-28T22:07:51Z",
       "importance": 16.5,
       "commits": 6,
       "commits90": 6,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 59,
+      "ageDays": 60,
       "evolution": {
         "level": 2,
         "name": "FRAME",
@@ -1218,14 +1232,14 @@
       "recovered": false,
       "lastFailAt": null,
       "pushedAt": "2026-09-28T22:13:31Z",
-      "pushedDays": 59,
+      "pushedDays": 60,
       "createdAt": "2026-09-28T22:11:39Z",
       "importance": 10.6,
       "commits": 4,
       "commits90": 4,
       "releases": 0,
       "recoveredAt": null,
-      "ageDays": 59,
+      "ageDays": 60,
       "evolution": {
         "level": 2,
         "name": "FRAME",
@@ -1241,13 +1255,49 @@
           "reputation": 2
         }
       }
+    },
+    {
+      "name": "VELVET",
+      "url": "https://github.com/SudiptoKumar/VELVET",
+      "description": "VELVET — premium typography-only adult fiction platform (18+). Cloudflare Workers + D1 + ~",
+      "stars": 0,
+      "forks": 0,
+      "issues": 0,
+      "prs": 0,
+      "language": "JavaScript",
+      "color": "#f1e05a",
+      "archetype": "house",
+      "state": "failing",
+      "workflow": "failing",
+      "recovered": false,
+      "lastFailAt": "2026-11-28T05:46:44Z",
+      "pushedAt": "2026-11-28T05:46:28Z",
+      "pushedDays": 0,
+      "createdAt": "2026-11-28T05:46:04Z",
+      "importance": 8.1,
+      "commits": 2,
+      "commits90": 2,
+      "releases": 0,
+      "recoveredAt": null,
+      "ageDays": 0,
+      "evolution": {
+        "level": 1,
+        "name": "FOUNDATION",
+        "score": 11,
+        "toNext": 1,
+        "capped": null,
+        "parts": {
+          "activity": 3,
+          "recency": 20,
+          "maturity": 0,
+          "depth": 3,
+          "release": 0,
+          "reputation": 0
+        }
+      }
     }
   ],
   "calendar": [
-    {
-      "date": "2026-05-23",
-      "count": 0
-    },
     {
       "date": "2026-05-24",
       "count": 0
@@ -2046,6 +2096,10 @@
     {
       "date": "2026-11-27",
       "count": 0
+    },
+    {
+      "date": "2026-11-28",
+      "count": 4
     }
   ],
   "achievements": {
@@ -2238,6 +2292,15 @@
   "events": {
     "active": [
       {
+        "id": "emergency:VELVET",
+        "type": "emergency",
+        "title": "WORKFLOW EMERGENCY",
+        "icon": "flame",
+        "detail": "VELVET",
+        "at": "2026-11-28T05:46:44Z",
+        "until": "2026-11-28T08:46:27.152Z"
+      },
+      {
         "id": "quest:recover:2026-11-27",
         "type": "milestone",
         "title": "QUEST COMPLETE",
@@ -2247,24 +2310,33 @@
         "until": "2026-11-29T08:29:51.769Z"
       },
       {
-        "id": "nightstars:2026-11-28",
-        "type": "nightstars",
-        "title": "NIGHT OF THE STARS",
-        "icon": "star",
-        "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-11-27T21:16:12.667Z",
-        "until": "2026-11-27T22:16:12.667Z"
+        "id": "expansion:VELVET",
+        "type": "expansion",
+        "title": "KINGDOM EXPANSION",
+        "icon": "crown",
+        "detail": "VELVET",
+        "at": "2026-11-28T05:46:04Z",
+        "until": "2026-12-05T05:46:04.000Z"
       }
     ],
     "recent": [
       {
-        "id": "nightstars:2026-11-28",
-        "type": "nightstars",
-        "title": "NIGHT OF THE STARS",
-        "icon": "star",
-        "detail": "THE SKY IS FULL OF STARS",
-        "at": "2026-11-27T21:16:12.667Z",
-        "until": "2026-11-27T22:16:12.667Z"
+        "id": "emergency:VELVET",
+        "type": "emergency",
+        "title": "WORKFLOW EMERGENCY",
+        "icon": "flame",
+        "detail": "VELVET",
+        "at": "2026-11-28T05:46:44Z",
+        "until": "2026-11-28T08:46:27.152Z"
+      },
+      {
+        "id": "expansion:VELVET",
+        "type": "expansion",
+        "title": "KINGDOM EXPANSION",
+        "icon": "crown",
+        "detail": "VELVET",
+        "at": "2026-11-28T05:46:04Z",
+        "until": "2026-12-05T05:46:04.000Z"
       },
       {
         "id": "quest:recover:2026-11-27",
@@ -2299,15 +2371,6 @@
         "title": "QUEST COMPLETE",
         "icon": "trophy",
         "detail": "THE CI IS FIXED",
-        "at": "2026-11-19T07:23:57.234Z",
-        "until": "2026-11-21T07:23:57.234Z"
-      },
-      {
-        "id": "levelup:29",
-        "type": "milestone",
-        "title": "MILESTONE UNLOCKED",
-        "icon": "trophy",
-        "detail": "LEVEL 29",
         "at": "2026-11-19T07:23:57.234Z",
         "until": "2026-11-21T07:23:57.234Z"
       }
@@ -2835,10 +2898,10 @@
       {
         "d": "2026-11-28",
         "l": 29,
-        "x": 21927,
+        "x": 22067,
         "s": 20,
-        "c": 1183,
-        "p": 1379
+        "c": 1186,
+        "p": 1402
       }
     ]
   },
@@ -2855,13 +2918,13 @@
       "camp": "ok",
       "status": "ok"
     },
-    "checkedAt": "2026-11-27T21:16:12.667Z"
+    "checkedAt": "2026-11-28T07:46:27.152Z"
   },
   "v": 2,
   "featured": [
     "GamingNewsroomBot",
-    "TelegramForwarder",
     "TheTechNewsroomBot",
+    "TelegramForwarder",
     "DailyFacts",
     "ScreenPeek"
   ],
@@ -2869,7 +2932,7 @@
     "value": 68,
     "parts": {
       "progress": 26.2,
-      "consistency": 0,
+      "consistency": 0.7,
       "reliability": 20,
       "reach": 6.3,
       "vitality": 15,
@@ -2877,25 +2940,24 @@
     }
   },
   "scene": {
-    "mode": "CELEBRATION",
+    "mode": "DANGER",
     "modes": [
+      "DANGER",
       "CELEBRATION",
-      "SLEEP",
-      "NIGHT",
       "WORKING",
       "ACTIVE"
     ],
-    "frame": 3,
+    "frame": 2,
     "hero": {
-      "state": "idle",
+      "state": "working",
       "spot": "ci",
-      "why": "milestone-after",
-      "label": "ENJOYING THE AFTERGLOW",
+      "why": "emergency",
+      "label": "FIXING THE CI",
       "umbrella": false
     },
     "npcs": {
       "builder": 6,
-      "farmer": 0,
+      "farmer": 1,
       "miner": 1,
       "guard": 2,
       "merchant": 3,
@@ -2905,12 +2967,14 @@
       "villager": 6
     },
     "light": {
-      "phase": "night",
-      "windows": true,
-      "torches": true,
-      "moon": true,
-      "accent": "gold",
-      "danger": [],
+      "phase": "day",
+      "windows": false,
+      "torches": false,
+      "moon": false,
+      "accent": "danger",
+      "danger": [
+        "VELVET"
+      ],
       "gate": false,
       "repair": [],
       "gold": true
@@ -2920,59 +2984,85 @@
       "rain": 0,
       "lightning": false,
       "snow": false,
-      "aurora": 1,
+      "aurora": 0,
       "sunrise": false,
       "wet": false,
       "frozen": false,
       "season": "autumn"
     },
     "behavior": {
-      "home": true,
+      "home": false,
       "returning": false,
       "shelter": false,
-      "patrol": true,
-      "farmersIn": true
+      "patrol": false,
+      "farmersIn": false
     },
     "stages": {
-      "fail": {},
+      "fail": {
+        "VELVET": "warning"
+      },
       "repair": {},
-      "build": {},
+      "build": {
+        "VELVET": "foundation"
+      },
       "release": null,
       "visitor": null,
       "raid": "idle"
     },
     "phases": [
       {
+        "id": "emergency:VELVET",
+        "type": "emergency",
+        "phase": "start",
+        "ageMinutes": 120,
+        "stage": "warning",
+        "where": {
+          "repo": "VELVET",
+          "anchor": "ci"
+        }
+      },
+      {
         "id": "quest:recover:2026-11-27",
         "type": "milestone",
         "phase": "aftermath",
-        "ageMinutes": 766,
+        "ageMinutes": 1397,
         "stage": null,
         "where": {
           "anchor": "ci"
         }
       },
       {
-        "id": "nightstars:2026-11-28",
-        "type": "nightstars",
+        "id": "expansion:VELVET",
+        "type": "expansion",
         "phase": "start",
-        "ageMinutes": 0,
-        "stage": null,
-        "where": null
+        "ageMinutes": 120,
+        "stage": "foundation",
+        "where": {
+          "repo": "VELVET"
+        }
       }
     ],
     "fx": [
+      "alarm",
+      "smoke",
+      "fire",
       "shrineGlow",
       "confetti",
-      "shootingStars"
+      "construction"
     ],
     "labels": {
-      "ci": false,
+      "ci": true,
       "issues": 0,
       "raid": false,
-      "event": null
+      "event": "emergency"
     },
     "hud": [
+      {
+        "kind": "ALERT",
+        "text": "VELVET CI DOWN",
+        "icon": "flame",
+        "tone": "danger"
+      },
       {
         "kind": "QUEST",
         "text": "THE CI IS FIXED",
@@ -2980,12 +3070,12 @@
         "tone": "gold"
       },
       {
-        "kind": "NIGHT",
-        "text": "A SKY FULL OF STARS",
-        "icon": "star",
+        "kind": "BUILD",
+        "text": "VELVET",
+        "icon": "house",
         "tone": "info"
       }
     ]
   },
-  "contentHash": "79c4081e1a4c340b"
+  "contentHash": "85074a9e5491731c"
 }
